@@ -7,6 +7,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AdminController {
 	
+	//관리자 ->메인:예매확인
+	@RequestMapping(value="/admin", method = RequestMethod.GET)
+	public String admin() {
+		return "/Admin/admin";
+	}
+	
 	//관리자 ->1:1문의 리스트
 	@RequestMapping(value="/admin_help_list", method = RequestMethod.GET)
 	public String admin_help_list() {

@@ -8,8 +8,8 @@
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
-	<div id="wrap">
-		<div id="admin_help_list">
+	<div id="a_wrap">
+		<div id="a_main">
 			1:1문의 
 			<table>
 				<tr>

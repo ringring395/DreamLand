@@ -4,12 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
+	<link rel="stylesheet" href="../../../resources/css/admin.css">
 <title>관리자 1:1답변</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
-	<div id="wrap">
-		<div id="admin_help">
+	<div id="a_wrap">
+		<jsp:include page="admin_menu.jsp"></jsp:include>
+		<div id="a_main">
 			관리자용_1:1문의
 			<table id="admin_help_table">
 				<tr>
