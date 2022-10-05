@@ -1,0 +1,79 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="../../../resources/css/header.css">
+
+</head>
+<body>
+	<div id="header">
+		<div id="h_size">
+			<div id="h_header">
+				<div id="h_logo">
+					<h3>로고로고</h3>
+				</div>
+
+				<div id="login_no">
+					<div id="h_login" class="m_Btn"
+						onclick="location.href='../member/login'">
+						<p>로그인</p>
+					</div>
+					<div id="h_signup" class="m_Btn"
+						onclick="location.href='../member/signup'">
+						<p>회원가입</p>
+					</div>
+					<div id="h_ticketBuy" class="m_Btn">
+						<p>예매 바로가기</p>
+					</div>
+				</div>
+
+				<div id="login_user">
+					<div id="h_user" class="m_Btn"
+						onclick="location.href='../member/membermodify'">
+						<p>로그인된 아이디</p>
+					</div>
+					<div id="h_logout" class="m_Btn">
+						<p>로그아웃</p>
+					</div>
+					<div id="h_ticketBuy" class="m_Btn">
+						<p>예매 바로가기</p>
+					</div>
+				</div>
+
+				<div id="login_admin">
+					<div id="h_logout" class="m_Btn">
+						<p>로그아웃관리자</p>
+					</div>
+					<div id="h_managing" class="m_Btn">
+						<p>관리자페이지</p>
+					</div>
+				</div>
+			</div>
+			<div id="navimenu">
+				<ul class="menu">
+					<li class="menu1">둘러보기</li>
+					<li class="menu2">이벤트
+						<ul id="menu2_sub" class="menusub">
+							<li>행사 일정</li>
+							<li>할인 혜택</li>
+							<li>퍼레이드 일정</li>
+						</ul>
+					</li>
+					<li class="menu3">오시는길</li>
+					<li class="menu4">고객센터
+						<ul id="menu4_sub" class="menusub">
+							<li>공지사항</li>
+							<li>자주하는 질문</li>
+							<li>1:1문의</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
