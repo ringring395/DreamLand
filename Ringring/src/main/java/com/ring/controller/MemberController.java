@@ -71,7 +71,7 @@ public class MemberController {
 	}
 	
 	//회원정보 수정(정보 select)
-	@RequestMapping(value="/member/membermodify", method = RequestMethod.GET)
+	@RequestMapping(value="/membermodify", method = RequestMethod.GET)
 	public String membermodify(){
 		return "member/membermodify";
 	}

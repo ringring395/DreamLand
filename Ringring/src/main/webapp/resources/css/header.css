@@ -54,6 +54,11 @@
 	position:relative;
 }
 
+.menu > li > a, .menusub >li >a{
+	text-decoration:none;
+	color:black;
+}
+
 .menusub{
 	display:none;
 	position:absolute;

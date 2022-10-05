@@ -33,7 +33,7 @@
 
 				<div id="login_user">
 					<div id="h_user" class="m_Btn"
-						onclick="location.href='../member/membermodify'">
+						onclick="location.href='../membermodify'">
 						<p>로그인된 아이디</p>
 					</div>
 					<div id="h_logout" class="m_Btn">
@@ -55,15 +55,15 @@
 			</div>
 			<div id="navimenu">
 				<ul class="menu">
-					<li class="menu1">둘러보기</li>
+					<li class="menu1"><a href="../map">둘러보기</a></li>
 					<li class="menu2">이벤트
 						<ul id="menu2_sub" class="menusub">
-							<li>행사 일정</li>
-							<li>할인 혜택</li>
-							<li>퍼레이드 일정</li>
+							<li><a href="../event">행사 일정</a></li>
+							<li><a href="../sale">할인 혜택</a></li>
+							<li><a href="../parade">퍼레이드 일정</a></li>
 						</ul>
 					</li>
-					<li class="menu3">오시는길</li>
+					<li class="menu3"><a href="../here">오시는길</a></li>
 					<li class="menu4">고객센터
 						<ul id="menu4_sub" class="menusub">
 							<li>공지사항</li>

@@ -52,4 +52,5 @@
 		<div id="m_signup_kakao">카카오 간편가입</div>
 	</div>
 </body>
+<jsp:include page="../Footer/footer.jsp"></jsp:include>
 </html>

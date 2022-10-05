@@ -62,4 +62,5 @@
 		<button id="m_signup" onclick="location.href='../member/signup'">회원가입</button>
 	</div>
 </body>
+<jsp:include page="../Footer/footer.jsp"></jsp:include>
 </html>

@@ -23,7 +23,7 @@
 
 <title>main</title>
 </head>
-<jsp:include page="Header/header.jsp"></jsp:include>
+<jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="main">
 		<div class="slider">
@@ -43,4 +43,5 @@
 
 	</div>
 </body>
+<jsp:include page="../Footer/footer.jsp"></jsp:include>
 </html>
