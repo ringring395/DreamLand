@@ -13,6 +13,12 @@ public class AdminController {
 		return "/Admin/admin";
 	}
 	
+	//관리자 -> 이벤트 등록
+	@RequestMapping(value="/admin_event", method = RequestMethod.GET)
+	public String admin_event() {
+		return "/Admin/admin_event";
+	}
+	
 	//관리자 ->1:1문의 리스트
 	@RequestMapping(value="/admin_help_list", method = RequestMethod.GET)
 	public String admin_help_list() {
