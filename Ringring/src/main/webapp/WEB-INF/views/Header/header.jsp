@@ -66,9 +66,9 @@
 					<li class="menu3"><a href="../here">오시는길</a></li>
 					<li class="menu4">고객센터
 						<ul id="menu4_sub" class="menusub">
-							<li>공지사항</li>
-							<li>자주하는 질문</li>
-							<li>1:1문의</li>
+							<li><a href="../notice">공지사항</a></li>
+							<li><a href="../faq">자주하는 질문</a></li>
+							<li><a href="../help">1:1 문의</a></li>
 						</ul>
 					</li>
 				</ul>

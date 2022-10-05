@@ -28,7 +28,28 @@ public class BoardController {
 	
 	@Autowired
 	BoardService bs;
+	
+	//공지사항
+	@RequestMapping(value = "/notice", method = RequestMethod.GET)
+	public String notice() {
+		return "/board/notice";
+	}
 
+	//자주하는질문
+	@RequestMapping(value = "/faq", method = RequestMethod.GET)
+	public String faq() {
+		return "/board/faq";
+	}
+	
+	//1:1문의
+	@RequestMapping(value = "/help", method = RequestMethod.GET)
+	public String contact() {
+		return "/board/help";
+	}
+	
+	
+	
+	
 	//게시판 글쓰기 페이지(화면)
 	@RequestMapping(value = "/board/write", method = RequestMethod.GET)
 	public String write() {

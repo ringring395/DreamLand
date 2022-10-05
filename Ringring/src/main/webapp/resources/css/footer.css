@@ -7,14 +7,13 @@
 }
 
 #f_size{
-	width:1050px;
+	width:900px;
 	margin:10px auto;
 	display:flex;
 	justify-content:space-between;
 }
 
 #f_info{
-	padding:0 50px;
 	font-size:10px;
 	color:#c0c0c0;
 }
