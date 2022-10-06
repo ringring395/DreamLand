@@ -19,6 +19,12 @@ public class AdminController {
 		return "/Admin/admin_event";
 	}
 	
+	//관리자 ->게시판(공지사항/자주하는질문)등록
+	@RequestMapping(value = "/admin_board", method = RequestMethod.GET)
+	public String admin_board() {
+		return "/Admin/admin_board";
+	}
+	
 	//관리자 ->1:1문의 리스트
 	@RequestMapping(value="/admin_help_list", method = RequestMethod.GET)
 	public String admin_help_list() {
@@ -30,4 +36,10 @@ public class AdminController {
 	public String admin_help() {
 		return "/Admin/admin_help";
 	}	
+	
+	//관리자 -> 회원 관리
+	@RequestMapping(value = "/admin_member", method = RequestMethod.GET)
+	public String admin_member() {
+		return "/Admin/admin_member";
+	}
 }

@@ -45,11 +45,14 @@
 				</div>
 
 				<div id="login_admin">
+					<div class="m_Btn">
+						<p>관리자<br>로그인중</p>
+					</div>				
 					<div id="h_logout" class="m_Btn">
-						<p>로그아웃관리자</p>
+						<p>관리자<br>로그아웃</p>
 					</div>
-					<div id="h_managing" class="m_Btn">
-						<p>관리자페이지</p>
+					<div id="h_managing" class="m_Btn" onclick="location.href='../admin'">
+						<p>관리자<br>페이지</p>
 					</div>
 				</div>
 			</div>

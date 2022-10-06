@@ -5,27 +5,28 @@
 <head>
 <meta charset="UTF-8">
 	<link rel="stylesheet" href="../../../resources/css/admin.css">
-<title>관리자 1:1답변</title>
+<title>관리자 공지사항/자주하는질문</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="a_wrap">
 		<jsp:include page="admin_menu.jsp"></jsp:include>
 		<div id="a_main">
-			관리자용_1:1문의
-			<table id="a_help_table">
+			관리자용_게시판/공지사항/자주하는질문
+			<table id="a_board">
 				<tr>
-					<td>카테고리 출력</td>
-					<td>문의 제목</td>
-					<td>문의 회원 메일주소</td>
-				</tr>
-				<tr>
-					<td colspan="3">문의내용</td>
-				</tr>
-				<tr>
-					<td colspan="3">
-						<textarea rows="20" cols="100" placeholder="문의 답변"></textarea>
+					<td>
+						<select>
+							<option>공지사항</option>
+							<option>자주하는질문</option>
+						</select>
 					</td>
+					<td><input type="text" placeholder="제목"></td>					
+				</tr>
+				<tr>
+					<td colspan="2">
+						<textarea rows="20" cols="60" placeholder="내용 입력"></textarea>
+					</td>					
 				</tr>
 				<tr>
 					<th colspan="3">
@@ -33,7 +34,8 @@
 				</tr>				
 			</table>
 			
-			<button onclick="location.href='../admin_help_list'">관리자-1:1문의 목록으로 가기</button>
+			<button>공지사항<br>바로가기</button>
+			<button>1:1문의<br>바로가기</button>
 		</div>
 	</div>
 </body>

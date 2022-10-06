@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* 관리자페이지 메뉴 */
+/* 관리자페이지 (왼쪽)메뉴 */
 #a_wrap{
 	margin:0 auto;
 	width:1000px;
@@ -9,6 +9,7 @@
 
 #a_menu{
 	width:200px;
+	margin:0 40px 0 0;
 }
 
 #a_menu_ul{
@@ -31,5 +32,11 @@
 
 .a_menu_li:hover{
 	background-color:#ff8000;
+}
+
+/* 관리자 페이지 속 내용 */
+#a_main{
+	width:600px;
+	height:auto;
 }
 
