@@ -43,9 +43,26 @@ public class BoardController {
 	
 	//1:1문의
 	@RequestMapping(value = "/help", method = RequestMethod.GET)
-	public String contact() {
+	public String help() {
 		return "/board/help";
 	}
+	
+	//1:1문의: 답변
+	@RequestMapping(value = "/helpdetail", method = RequestMethod.GET)
+	public String helpdetail() {
+		return "/board/helpdetail";
+	}
+	
+	//1:1문의 내역
+	@RequestMapping(value = "/helplist", method = RequestMethod.GET)
+	public String helplist() {
+		return "/board/helplist";
+	}
+	
+	
+	
+	
+	
 	
 	
 	

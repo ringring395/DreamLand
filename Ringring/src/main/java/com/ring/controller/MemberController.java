@@ -19,6 +19,30 @@ public class MemberController {
 	@Autowired
 	MemberService ms;
 	
+	//아이디,비번찾기
+	@RequestMapping(value="/member/memberfind", method = RequestMethod.GET)
+	public String memberfind() {
+		return "/member/memberfind";
+	}
+	
+	//마이페이지
+	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
+	public String mypage() {
+		return "/member/mypage";
+	}
+
+	//회원정보 수정(정보 select)
+	@RequestMapping(value="/membermodify", method = RequestMethod.GET)
+	public String membermodify(){
+		return "member/membermodify";
+	}
+	
+	
+	
+	
+	
+	
+	
 	//로그인
 	@RequestMapping(value = "/member/login", method = RequestMethod.GET)
 	public String login(MemberVO member) {
@@ -48,12 +72,6 @@ public class MemberController {
 
 	}
 	
-	//아이디,비번찾기
-	@RequestMapping(value="/member/memberfind", method = RequestMethod.GET)
-	public String memberfind() {
-		return "/member/memberfind";
-	}
-	
 	//회원목록리스트
 	@RequestMapping(value = "/member/memberlist", method=RequestMethod.GET)
 	public String list(Model model) {
@@ -68,12 +86,6 @@ public class MemberController {
 		ms.memberdetail(member);
 		model.addAttribute("memberdetail", ms.memberdetail(member));
 		return "member/memberdetail";
-	}
-	
-	//회원정보 수정(정보 select)
-	@RequestMapping(value="/membermodify", method = RequestMethod.GET)
-	public String membermodify(){
-		return "member/membermodify";
 	}
 	
 	//회원 정보 수정(update 이뤄짐)

@@ -33,13 +33,13 @@
 
 				<div id="login_user">
 					<div id="h_user" class="m_Btn"
-						onclick="location.href='../membermodify'">
+						onclick="location.href='../mypage'">
 						<p>로그인된 아이디</p>
 					</div>
 					<div id="h_logout" class="m_Btn">
 						<p>로그아웃</p>
 					</div>
-					<div id="h_ticketBuy" class="m_Btn">
+					<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../booking'">
 						<p>예매 바로가기</p>
 					</div>
 				</div>
