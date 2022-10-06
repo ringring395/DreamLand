@@ -5,6 +5,13 @@
 	margin:0 auto;
 }
 
+#pagetitle{
+	font-size:25px;
+	font-weight:bold;
+	margin:5px 0;
+	border-bottom:3px solid #ff8000;
+}
+
 
 /* main 메인*/
 
@@ -23,3 +30,30 @@
 	margin:10px 0;
 	background-color:#8080c0;
 }
+
+
+/* here 오시는길*/
+
+#here{
+	display:flex;
+	justify-content:space-between;
+}
+
+#here_map{
+	width:350px;
+	height:350px;
+	background-color:#8080c0;
+}
+
+#here_info{
+	width:600px;
+	background-color:#8080c0;
+}
+
+
+
+
+
+
+
+

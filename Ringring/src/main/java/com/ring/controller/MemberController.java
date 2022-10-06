@@ -20,7 +20,7 @@ public class MemberController {
 	MemberService ms;
 	
 	//아이디,비번찾기
-	@RequestMapping(value="/member/memberfind", method = RequestMethod.GET)
+	@RequestMapping(value="/memberfind", method = RequestMethod.GET)
 	public String memberfind() {
 		return "/member/memberfind";
 	}
