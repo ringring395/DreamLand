@@ -15,26 +15,40 @@
 /* signup 회원가입*/
 
 #signup{
+	width:400px;
 	margin:0 auto;
 }
 
-#signup_table{
-	margin:0 auto;
+.signup2_info >input{
+	margin:10px 0;
+	font-size:20px;
+	width:300px;
 }
 
-#signup_tel >input{
-	width:50px;
+.signup_tel{
+	width:87px;
+	margin:10px 0;
+	font-size:20px;
+}
+
+#signupBtn{
+	width:400px;
+	margin:10px 0;
+	font-size:20px;
 }
 
 #signup_another{
 	width:400px;
 	margin:0 auto;
+	padding:10px 0 0 0;
 	display:flex;
-	justify-content:space-evenly;
+	justify-content:space-between;
+	border-top:3px solid #ff8000;
 }
 
-#signup_naver, #signup_kakao{
-	width:80px;
+#signup_naver, 
+#signup_kakao{
+	width:180px;
 	padding:5px;
 	text-align:center;
 	background-color:#c0c0c0;
@@ -49,33 +63,170 @@
 	margin:0 auto;
 }
 
+.login2_info >input{
+	margin:10px 0;
+	font-size:20px;
+	width:300px;
+}
+
+.login_messege{
+	padding:0;
+	margin:0;
+	font-size:15px;
+	text-align:center;
+	color:red;
+	font-weight:bold;
+}
+
 #loginBtn, #login_signup{
 	width:400px;
+	font-size:20px;
 }
 
 #loginfind{
+	margin:5px 0;
+	font-size:10px;
+}
+
+#loginfind >a{
 	text-decoration:none;
-	color:black;
+	color:gray;
 }
 
 #loginapi{
 	width:400px;
 	display:flex;
 	justify-content:space-between;
-}
-
-#loginapi{
-	margin:10px 0;
-	padding:10px 0;
+	margin:20px 0;
+	padding:20px 0;
 	border-bottom:3px solid #ff8000;
-	border-top:3px solid #ff8000;
+	border-top:3px solid #ff8000;	
+}
+
+#login_naver >button,
+#login_kakao >button{
+	width:180px;
 }
 
 
+/* mypage 마이페이지*/
+
+#mypage{
+	display:flex;
+	justify-content:center;
+}
+
+.mypageBtn{
+	width:150px;
+	height:250px;
+	margin:10px;
+	background-color:#8080c0;
+}
+
+/* membermodify 정보수정*/
+
+#modify{
+	width:400px;
+	margin:0 auto;
+}
+
+.modify_info >input{
+	margin:10px 0;
+	font-size:20px;
+	width:320px;
+}
+
+.modify_tel{
+	width:93px;
+	margin:10px 0;
+	font-size:20px;
+}
+
+#modifyBtn{
+	width:400px;
+	font-size:20px;
+}
+
+#resignDiv{
+	width:400px;
+	margin:20px auto;
+	border-top:3px solid #ff8000;	
+}
+
+#resignBtn{
+	width:60px;
+	font-size:10px;
+	margin:10px 0;
+	color:gray;
+}
 
 
+/* memberfind 아이디비밀번호찾기*/
 
+#memberfind{
+	width:980px;
+}
 
+#find_messege{
+	text-align:center;
+	font-size:12px;
+}
+
+#find_click{
+	display:flex;
+	justify-content:space-between;
+	margin:10px 0;
+	border-bottom:3px solid #ff8000;	
+}
+
+#find_click >div{
+	width:460px;
+	padding:10px;
+	background-color:#8080c0;
+}	
+
+#find_info{
+	display:flex;
+	justify-content:space-between;
+}
+
+#findID, #findPW{
+	text-align:center;
+	width:460px;
+	padding:10px;
+	background-color:#8080c0;
+}
+
+.find_input{
+	margin:10px 0;
+	font-size:20px;
+	width:320px;
+}
+
+.find_tel{
+	width:93px;
+	margin:10px 0;
+	font-size:20px;	
+}
+
+#findIDBtn,
+#findPWBtn{
+	width:320px;
+	font-size:20px;	
+}
+
+.f_signupBtnDiv{
+	width:350px;
+	margin:20px auto;
+	border-top:3px solid #ff8000;	
+	
+}
+
+.find_signupBtn{	
+	width:320px;
+	margin:10px;
+	font-size:20px;
+}
 
 
 

@@ -18,33 +18,28 @@
 			<span>로그인</span>
 		</div>
 		<div id="login">
-		<div >
-		<form action="/member/login" method="post">
-			<table id="login_table">
-				<tr>
-					<td>
-						유저
-						<input type="text" id="ii" name="id" placeholder="아이디(메일주소)">
-						<span id="si"></span>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						비번
-						<input type="password" id="ip" name="pw" placeholder="password">
-						<span id="sp"></span>
-					</td>
-				</tr>
-				<tr>
-					<td><input type="submit" value="로그인" id="loginBtn"></td>
-				</tr>
-			</table>			
+		
+		<form action="/login" method="post">
+		<div id="login2">
+			<div class="login2_info">
+				<img alt="유저" src="">
+				<input type="text" id="ii" name="id" placeholder="아이디(메일주소)">
+			</div>
+			<span id="si" class="login_messege"></span>
+			
+			<div class="login2_info">
+				<img alt="비번" src="">
+				<input type="password" id="ip" name="pw" placeholder="password">
+			</div>
+			<span id="sp" class="login_messege"></span>			
+			
+			<input type="submit" id="loginBtn" value="로그인" >
+		</div><!-- login2 -->
 		</form>
-		</div>
-
+		
 		<div id="loginfind">
 			<a href="../memberfind">
-			<span>아이디 / 비밀번호를 잊으셨나요?</span>
+			<span>아이디 / 비밀번호가 생각나지 않으세요?</span>
 			</a>	
 		</div>
 		
