@@ -20,7 +20,7 @@
 			ⓒ0000000000.All Rights Reserved	
 			</p>
 		</div>
-		<div id="f_logo">
+		<div id="f_logo" onclick="location.href='../'">
 			로고로고
 		</div>
 	</div>

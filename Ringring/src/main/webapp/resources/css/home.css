@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+#wrap{
+	width:980px;
+	margin:0 auto;
+}
+
+
+/* main 메인*/
+
+.slider_img{
+	height:400px;
+}
+
+#main_sub{
+	display:flex;
+	justify-content:space-between;
+}
+
+#main_cal, #main_notice{
+	height:200px;
+	width:450px;
+	margin:10px 0;
+	background-color:#8080c0;
+}

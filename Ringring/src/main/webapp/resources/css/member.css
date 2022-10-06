@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+#wrap{
+	width:980px;
+	margin:0 auto;
+}
+
+/* signup 회원가입*/
+
+#signup{
+	margin:0 auto;
+}
+
+#signup_table{
+	margin:0 auto;
+}
+
+#signup_tel >input{
+	width:50px;
+}
+
+#signup_another{
+	width:400px;
+	margin:0 auto;
+	display:flex;
+	justify-content:space-evenly;
+}
+
+#signup_naver, #signup_kakao{
+	width:80px;
+	padding:5px;
+	text-align:center;
+	background-color:#c0c0c0;
+	border-radius:5px;
+}

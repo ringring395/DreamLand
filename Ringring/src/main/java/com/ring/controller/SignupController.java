@@ -16,14 +16,14 @@ public class SignupController {
 	SignupService ss;
 	
 	//회원가입
-	@RequestMapping(value = "/signup", method = RequestMethod.GET)
-	public String Signp(SignupVO signup) {
+	@RequestMapping(value = "/signup2", method = RequestMethod.GET)
+	public String Signp2(SignupVO signup) {
 		return "/signup";
 	}
 	
 	//회원가입(insert이뤄짐)
-	@RequestMapping(value = "/signup", method = RequestMethod.POST)
-	public String SignupPost(SignupVO signup) {
+	@RequestMapping(value = "/signup2", method = RequestMethod.POST)
+	public String SignupPost2(SignupVO signup) {
 		ss.Signup(signup);
 		return "redirect:/";
 	}

@@ -10,30 +10,48 @@
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
-		<div id="orderlist">
-			<div id="orderlist_img">사진사진</div>
-			<table id="orderlist_table" border="1">
-				<tr>
-					<td>입장일</td>
-					<td>22/10/06</td>
-					<td>입장시간</td>
-					<td>올데이</td>
-					<td></td><td></td>
-					<td>결제금액</td>
-				</tr>
-				<tr>
-					<td>성인</td>
-					<td>3 명</td>
-					<td>청소년</td>
-					<td>1 명</td>
-					<td>아동</td>
-					<td>0 명</td>
-					<td>80000 원</td>
-				</tr>
-			</table>	
+		<div id="booking">
+			<div id="booking_cal">달력달력</div>
+			
+			<div id="booking_detail">
+				<select>
+					<option>주간</option>
+					<option>야간</option>
+					<option>올데이</option>
+				</select>
+				
+				<div>
+					성인 가격가격
+					<div>
+						<button>-</button>
+						<input type="text" value="0">
+						<button>+</button>
+					</div>
+				</div>
 
+				<div>
+					청소년 가격가격
+					<div>
+						<button>-</button>
+						<input type="text" value="0">
+						<button>+</button>
+					</div>
+				</div>
 
-
+				<div>
+					아동 가격가격
+					<div>
+						<button>-</button>
+						<input type="text" value="0">
+						<button>+</button>
+					</div>
+				</div>				
+			</div>
+			
+			<div>
+				합계<input type="text" value="0 원">
+				<button>구매</button>
+			</div>	
 		</div>
 	</div>
 </body>

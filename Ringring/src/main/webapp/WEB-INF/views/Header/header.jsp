@@ -13,20 +13,20 @@
 	<div id="header">
 		<div id="h_size">
 			<div id="h_header">
-				<div id="h_logo">
+				<div id="h_logo" onclick="location.href='../'">
 					<h3>로고로고</h3>
 				</div>
 
 				<div id="login_no">
 					<div id="h_login" class="m_Btn"
-						onclick="location.href='../member/login'">
+						onclick="location.href='../login'">
 						<p>로그인</p>
 					</div>
 					<div id="h_signup" class="m_Btn"
-						onclick="location.href='../member/signup'">
+						onclick="location.href='../signup'">
 						<p>회원가입</p>
 					</div>
-					<div id="h_ticketBuy" class="m_Btn">
+					<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../booking'">
 						<p>예매 바로가기</p>
 					</div>
 				</div>

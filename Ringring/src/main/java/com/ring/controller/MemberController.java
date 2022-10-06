@@ -37,20 +37,35 @@ public class MemberController {
 		return "member/membermodify";
 	}
 	
+	//회원가입
+	@RequestMapping(value = "/signup", method = RequestMethod.GET)
+	public String signup() {
+		return "/member/signup";
+	}
+	
+	//회원가입 (insert이뤄짐)
+	@RequestMapping(value = "/signup", method = RequestMethod.POST)
+	public String signupPost(MemberVO member) {
+		ms.signup(member);
+		return "redirect:/member/login";
+
+	}	
 	
 	
 	
 	
 	
 	
+	
+
 	//로그인
-	@RequestMapping(value = "/member/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(MemberVO member) {
 		return "member/login";
 	}
 	
 	//로그인 서버(select)
-	@RequestMapping(value = "/member/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String loginPost(MemberVO member, HttpSession session, RedirectAttributes rttr) {
 		ms.login(member);	
 		session.setAttribute("id", member.getId());
@@ -58,19 +73,7 @@ public class MemberController {
 		return "redirect:/member/memberdetail";
 	}
 	
-	//회원가입
-	@RequestMapping(value = "/member/signup", method = RequestMethod.GET)
-	public String signup(MemberVO member) {
-		return "member/signup";
-	}
-	
-	//회원가입(insert이뤄짐)
-	@RequestMapping(value = "/member/signup", method = RequestMethod.POST)
-	public String signupPost(MemberVO member) {
-		ms.signup(member);
-		return "redirect:/member/login";
 
-	}
 	
 	//회원목록리스트
 	@RequestMapping(value = "/member/memberlist", method=RequestMethod.GET)

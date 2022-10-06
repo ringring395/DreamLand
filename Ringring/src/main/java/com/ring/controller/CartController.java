@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class CartController {
 	
-	//티켓구매내역
+	//티켓구매리스트
 	@RequestMapping(value = "/orderlist", method = RequestMethod.GET)
 	public String orderlist() {
 		return "/Cart/orderlist";
@@ -18,5 +18,11 @@ public class CartController {
 	public String booking() {
 		return "/Cart/booking";
 	}
+	
+	//예매내역
+	@RequestMapping(value = "/ticket", method = RequestMethod.GET)
+	public String ticket() {
+		return "/Cart/ticket";
+	}	
 
 }

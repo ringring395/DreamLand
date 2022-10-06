@@ -5,15 +5,11 @@
 <head>
 <meta charset="UTF-8">
 
-<link rel="stylesheet"
-	href="../../../resources/css/main.css">
+<link rel="stylesheet" href="../../../resources/css/home.css">
 
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <script>
 	$(document).ready(function() {
@@ -25,23 +21,32 @@
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
-	<div id="main">
-		<div class="slider">
-			<div>대표사진 하나</div>
-			<div>대표 사진 둘</div>
-			<div>대표 사진 셋</div>
+	<div id="wrap">
+		<div id="main">
+			<div class="slider">
+				<div class="slider_img">대표사진 하나</div>
+				<div class="slider_img">대표 사진 둘</div>
+				<div class="slider_img">대표 사진 셋</div>
+			</div>
+
+			<div id="main_sub">
+				<div id="main_cal">
+					<p>여기는 달력달력</p>
+				</div>
+				<div id="main_notice">
+					<p>공지사항
+					<button onclick="location.href='../notice'">더보기</button>
+					</p>
+					<table border="1">
+						<tr>
+							<td>공지제목제목</td>
+							<td>공지등록한 날짜날짜</td>										
+						</tr>						
+					</table>
+				</div>
+			</div><!-- main_sub -->
 		</div>
-
-
-		<div>
-			<div>대표 사진 스팟</div>
-		</div>
-
-		<div id="m_cal">
-			<p>여기는 달력달력</p>
-		</div>
-
-	</div>
+	</div><!-- wrap -->
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>
 </html>
