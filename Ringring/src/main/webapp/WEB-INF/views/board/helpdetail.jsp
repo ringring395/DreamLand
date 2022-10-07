@@ -4,14 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="../../../resources/css/board.css">
 <title>help1:1문의답변확인</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
-		<div id="help">
-			1:1문의
-			<table id="helpdetail">
+		<div id="pagetitle">
+			<span>페이지제목</span>
+		</div>
+		
+		<div id="helpdetail">
+			<table id="helpdetail_table">
 				<tr>
 					<td>카테고리</td>
 					<td>문의 제목</td>
@@ -19,18 +23,18 @@
 				</tr>
 				<tr>
 					<td colspan="3">
-						<input type="text" readonly value="문의내용">
+						<input readonly type="text" class="helpdetail_text" value="문의내용">
 					</td>
 				</tr>
 				<tr>
 					<td colspan="3">
-						<input type="text" readonly value="문의답변">
+						<input readonly type="text" class="helpdetail_text" value="문의답변">
 					</td>
 				</tr>				
 			</table>
 			
-			<div id="help_Btn">
-				<button onclick="location.href='../faq'">1:1문의 목록으로</button>
+			<div id="helpdetail_Btn">
+				<button onclick="location.href='../helplist'">1:1문의 목록으로</button>
 			</div>
 		</div>
 	</div>

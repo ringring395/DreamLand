@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+#wrap{
+	width:980px;
+	margin:0 auto;
+}
+
+#pagetitle{
+	font-size:25px;
+	font-weight:bold;
+	margin:5px 0;
+	border-bottom:3px solid #ff8000;
+}
+
+
+/* faq 자주하는질문*/
+
+#faq_sub{
+	display:flex;
+	justify-content:space-between;
+	margin:10px;
+	padding:10px;
+	background-color:#8080c0;	
+}
+
+#faq_category{
+	width:150px;
+}
+
+#faq_search >input{
+	width:300px;
+}
+
+#faq_table{
+	margin:10px;
+	padding:10px;
+	background-color:#8080c0;	
+}
+
+
+/* help 1:1문의*/
+
+#help_sub{
+	display:flex;
+	justify-content:space-between;
+	margin:10px;
+	padding:10px;
+	background-color:#8080c0;	
+}
+
+#help_category{
+	width:150px;
+}
+
+#help_title >input,
+#help_email >input{
+	width:300px;
+}
+
+#help_contents{
+	margin:10px;
+	padding:10px;
+	background-color:#8080c0;		
+}
+
+#help_Btn{
+	text-align:right;
+	margin:10px;
+	padding:10px;
+	background-color:#8080c0;		
+}
+
+
+/* helpdetail 1:1문의 답변확인*/
+
+#helpdetail{
+	margin:10px;
+	padding:10px;
+	background-color:#8080c0;	
+}
+
+.helpdetail_text{
+	width:920px;
+}
+
+#helpdetail_Btn{
+	text-align:right;
+}
+
+
+/* helplsit 1:1문의 내역*/
+
+#helplist{
+	margin:10px;
+	padding:10px;
+	background-color:#8080c0;	
+}
+
+#helplist_Btn{
+	text-align:right;
+}
+
+
+/* notice 공지사항*/
+
+#notice_table{
+	margin:10px auto;
+	padding:10px;
+	background-color:#8080c0;	
+}
+
+#notice_search{
+	margin:10px auto;
+	padding:10px;
+	background-color:#8080c0;
+		display:flex;
+	justify-content:right;
+}
+
+#notice_search >input{
+	width:300px;
+}
