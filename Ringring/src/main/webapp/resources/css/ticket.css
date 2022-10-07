@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+#wrap{
+	width:980px;
+	margin:0 auto;
+}
+
+#pagetitle{
+	font-size:25px;
+	font-weight:bold;
+	margin:5px 0;
+	border-bottom:3px solid #ff8000;
+}
+
+
+/* booking 예매페이지*/
+
+#booking{
+	display:flex;
+	justify-content:left;	
+}
+
+#booking_cal{
+	width:600px;
+	height:400px;
+	margin:10px;
+	background-color:#8080c0;		
+}
+
+#booking_detail{
+	width:300px;
+	margin:10px;
+	padding:10px;
+	background-color:#8080c0;	
+}
+
+#booking_time{
+	width:250px;
+	font-size:20px;
+}
+
+.booking_age >input{
+	width:50px;
+}
+
+
+/* orderlist 주문내역*/
+
+#orderlist{
+	display:flex;
+	justify-content:left;	
+}
+
+#orderlist_img{
+	width:150px;
+	height:150px;
+	margin:10px;
+	background-color:#8080c0;		
+}
+
+#orderlist_table{
+	width:800px;
+	margin:10px;
+	background-color:#8080c0;
+}
+
+
+/* ticket 티켓*/
+#ticket_img{
+	width:700px;
+	margin:10px auto;
+	padding:20px;
+	background-color:#8080c0;		
+}
+
+#ticket_table{
+	width:500px;
+	height:400px;
+	margin:10px auto;
+	background-color:white;	
+}
+
+#ticket_info{
+	width:500px;
+	margin:10px auto;
+	background-color:white;
+	text-align:center;
+	font-size:10px;		
+}
