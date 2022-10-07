@@ -12,6 +12,10 @@
 	<div id="a_wrap">
 		<jsp:include page="admin_menu.jsp"></jsp:include>
 		<div id="a_main">
+			<div id="a_pagetitle">
+				<span>페이지제목</span>
+			</div>
+			
 			<table id="a_event_upload">
 				<tr>
 					<th>종류</th>
@@ -37,7 +41,7 @@
 				</tr>
 				<tr>
 					<th>설명</th>
-					<td><textarea rows="15" cols="60"></textarea>
+					<td><textarea rows="15" cols="90"></textarea>
 					</td>
 				</tr>
 				<tr>
@@ -52,12 +56,11 @@
 					<th colspan="2">
 						<input type="submit" value="등록">
 					</th>
-				</tr>
-							
+				</tr>							
 			</table>
-		</div>
-	</div>	
 
+		</div><!-- a_main -->
+	</div>	
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>
 </html>

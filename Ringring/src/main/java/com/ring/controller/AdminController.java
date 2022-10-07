@@ -26,9 +26,9 @@ public class AdminController {
 	}
 	
 	//관리자 ->1:1문의 리스트
-	@RequestMapping(value="/admin_help_list", method = RequestMethod.GET)
+	@RequestMapping(value="/admin_helplist", method = RequestMethod.GET)
 	public String admin_help_list() {
-		return "/Admin/admin_help_list";
+		return "/Admin/admin_helplist";
 	}
 	
 	//관리자 ->1:1문의 답변
@@ -38,8 +38,8 @@ public class AdminController {
 	}	
 	
 	//관리자 -> 회원 관리
-	@RequestMapping(value = "/admin_member", method = RequestMethod.GET)
-	public String admin_member() {
-		return "/Admin/admin_member";
+	@RequestMapping(value = "/admin_user", method = RequestMethod.GET)
+	public String admin_user() {
+		return "/Admin/admin_user";
 	}
 }

@@ -12,7 +12,10 @@
 	<div id="a_wrap">
 		<jsp:include page="admin_menu.jsp"></jsp:include>
 		<div id="a_main">
-			관리자용_1:1문의
+			<div id="a_pagetitle">
+				<span>페이지제목</span>
+			</div>
+
 			<table id="a_help_table">
 				<tr>
 					<td>카테고리 출력</td>
@@ -33,7 +36,7 @@
 				</tr>				
 			</table>
 			
-			<button onclick="location.href='../admin_help_list'">관리자-1:1문의 목록으로 가기</button>
+			<button onclick="location.href='../admin_helplist'">관리자-1:1문의 목록으로 가기</button>
 		</div>
 	</div>
 </body>

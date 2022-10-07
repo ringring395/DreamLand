@@ -13,8 +13,11 @@
 	<div id="a_wrap">
 	<jsp:include page="admin_menu.jsp"></jsp:include>
 		<div id="a_main">
-			1:1문의 
-			<table id="a_help_list">
+			<div id="a_pagetitle">
+				<span>페이지제목</span>
+			</div>
+			
+			<table id="a_helplist_table">
 				<tr>
 					<th>No.</th>
 					<th>제목</th>
@@ -28,7 +31,8 @@
 					<td>1:1문의 답변여부(Y/N)</td>										
 				</tr>				
 			</table>
-		</div>
+			
+		</div><!-- a_main -->
 	</div>
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>

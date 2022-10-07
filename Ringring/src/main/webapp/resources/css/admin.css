@@ -1,11 +1,13 @@
 @charset "UTF-8";
 
-/* 관리자페이지 (왼쪽)메뉴 */
+/* 관리자 페이지 전체*/
 #a_wrap{
 	margin:0 auto;
 	width:980px;
 	display:flex;
 }
+
+/* 관리자페이지 (왼쪽)메뉴 */
 
 #a_menu{
 	width:200px;
@@ -34,9 +36,33 @@
 	background-color:#ff8000;
 }
 
-/* 관리자 페이지 속 내용 */
+/* 관리자 페이지 메뉴 오른쪽 내용 */
 #a_main{
-	width:600px;
-	height:auto;
+	width:740px;
+	background-color:#8080c0;	
 }
 
+#a_pagetitle{
+	font-size:25px;
+	font-weight:bold;
+	margin:5px 0;
+	border-bottom:3px solid #ff8000;	
+}
+
+/* admin 예매현황*/
+
+#a_ticket{
+	width:700px;
+	height:400px;
+	margin:10px;
+	background-color:white;	
+}
+/* admin_event 행사/할인/퍼레이드 등록*/
+
+/* admin_board 공지사항/자주하는질문 등록*/
+
+/* admin_helplist 1:1문의 목록*/
+
+/* admin_help 1:1문의 답변 달기*/
+
+/* admin_user 회원목록*/

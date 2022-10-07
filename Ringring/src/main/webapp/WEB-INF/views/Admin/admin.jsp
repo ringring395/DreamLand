@@ -11,10 +11,17 @@
 <body>
 	<div id="a_wrap">
 		<jsp:include page="admin_menu.jsp"></jsp:include>
-		<div id="a_ticket">
-			티켓상황알려주세요.
-			달력달력
-		</div>
+		<div id="a_main">
+			<div id="a_pagetitle">
+				<span>페이지제목</span>
+			</div>
+					
+			<div id="a_ticket">
+				티켓상황알려주세요.
+				달력달력
+			</div>
+		
+		</div><!-- a_main -->
 	</div>
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>

@@ -12,8 +12,11 @@
 	<div id="a_wrap">
 		<jsp:include page="admin_menu.jsp"></jsp:include>
 		<div id="a_main">
-			회원관리
-			<table id="a_member_table">
+			<div id="a_pagetitle">
+				<span>페이지제목</span>
+			</div>
+
+			<table id="a_user_table">
 				<tr>
 					<th>No.</th>
 					<th>아이디(메일)</th>
@@ -29,7 +32,8 @@
 					<td>22/10/06</td>
 				</tr>
 			</table>
-		</div>
+			
+		</div><!-- a_main -->
 	</div>
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>
