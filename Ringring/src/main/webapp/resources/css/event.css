@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+#wrap{
+	width:980px;
+	margin:0 auto;
+}
+
+#pagetitle{
+	font-size:25px;
+	font-weight:bold;
+	margin:5px 0;
+	border-bottom:3px solid #ff8000;
+}
+
+
+/* event 행사일정*/
+
+#event{
+	display:flex;
+	justify-content:left;
+}
+
+#event_pic{
+	width:300px;
+	height:150px;
+	margin:10px;
+	background-color:#8080c0;	
+}
+
+#event_info{
+	width:600px;
+	margin:10px;
+	background-color:#8080c0;		
+}
+
+#event_more{
+	display:flex;
+	justify-content:right;
+}
+
+
+/* parade 행사일정*/
+
+#parade{
+	display:flex;
+	justify-content:left;
+}
+
+#parade_pic{
+	width:300px;
+	height:150px;
+	margin:10px;
+	background-color:#8080c0;	
+}
+
+#parade_info{
+	width:600px;
+	margin:10px;
+	background-color:#8080c0;		
+}
+
+#parade_more{
+	display:flex;
+	justify-content:right;
+}
+
+/* parade 행사일정*/
+
+#sale_pic{
+	width:250px;
+	height:200px;
+	margin:10px;
+	background-color:#8080c0;	
+}
+
+#sale_title{
+	width:250px;
+	height:40px;
+	margin:10px;
+	background-color:#8080c0;	
+}
+
+
+

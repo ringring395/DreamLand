@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+#wrap{
+	width:980px;
+	margin:0 auto;
+}
+
+#pagetitle{
+	font-size:25px;
+	font-weight:bold;
+	margin:5px 0;
+	border-bottom:3px solid #ff8000;
+}
+
+
+/* map 전체지도*/
+

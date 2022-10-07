@@ -4,14 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="../../../resources/css/event.css">
 <title>할인혜택</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
-		<div id="sale_table">
-			테이블 형식 어케할지 고민이넴
-			일단 
+		<div id="pagetitle">
+			<span>페이지제목</span>
+		</div>
+		
+		<div id="sale">
 			<div id="sale_pic">할인 사진</div>
 			<div id="sale_title">할인혜택 제목</div>
 		</div>
