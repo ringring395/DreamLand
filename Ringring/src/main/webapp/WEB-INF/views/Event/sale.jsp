@@ -15,7 +15,7 @@
 		</div>
 		
 		<div id="sale">
-			<div id="sale_pic">할인 사진</div>
+			<div id="sale_img">할인 사진</div>
 			<div id="sale_title">할인혜택 제목</div>
 		</div>
 	</div>

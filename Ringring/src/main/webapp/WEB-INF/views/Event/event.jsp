@@ -15,7 +15,7 @@
 		</div>
 		
 		<div id="event">
-			<div id="event_pic">사진사진사진</div>
+			<div id="event_img">사진사진사진</div>
 			<div id="event_info">
 				<div id="event_title">이벤트 제목</div>
 				<div id="event_start">이벤트 시작</div>

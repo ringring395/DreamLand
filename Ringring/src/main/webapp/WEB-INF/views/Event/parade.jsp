@@ -15,7 +15,7 @@
 		</div>
 		
 		<div id="parade">
-			<div id="parade_pic">
+			<div id="parade_img">
 				사진사진사진
 			</div>
 			<div id="parade_info">

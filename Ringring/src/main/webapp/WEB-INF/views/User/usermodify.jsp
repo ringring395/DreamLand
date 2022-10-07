@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../../../resources/css/member.css">
+<link rel="stylesheet" href="../../../resources/css/user.css">
 <title>회원정보 수정</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -15,8 +15,8 @@
 			<span>정보 수정</span>
 		</div>
 		
-		<div id="membermodify">
-			<form action="/membermodify" method="post">
+		<div id="usermodify">
+			<form action="/usermodify" method="post">
 				<div id="modify">
 					<div class="modify_info">
 						<input readonly type="text" placeholder="아이디(메일주소)" name="id">
@@ -52,7 +52,7 @@
 				<div id="resignDiv">
 					<div id="resignBtn">회원 탈퇴</div>
 				</div>
-		</div><!-- membermodify -->	
+		</div><!-- usermodify -->	
 	</div>
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>

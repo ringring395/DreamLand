@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../../../resources/css/member.css">
-<title>memberfind</title>
+<link rel="stylesheet" href="../../../resources/css/user.css">
+<title>userfind</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
@@ -14,7 +14,7 @@
 			<span>아이디 / 비밀번호 찾기</span>
 		</div>
 		
-		<div id="memberfind">
+		<div id="userfind">
 			<div id="find_messege">
 				<p>아이디, 비밀번호가 생각나지 않으세요?<br>
 				회원정보를 입력하신 후 찾기 버튼을 클릭해주세요.</p>
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 			</div><!-- find_info -->
-		</div><!-- memberfind -->
+		</div><!-- userfind -->
 	</div>
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>

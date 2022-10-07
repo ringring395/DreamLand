@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../../../resources/css/member.css">
+<link rel="stylesheet" href="../../../resources/css/user.css">
 <title>login</title>
 <script type="text/javascript"
 	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -38,7 +38,7 @@
 		</form>
 		
 		<div id="loginfind">
-			<a href="../memberfind">
+			<a href="../userfind">
 			<span>아이디 / 비밀번호가 생각나지 않으세요?</span>
 			</a>	
 		</div>
@@ -52,7 +52,7 @@
 			</div>			
 		</div>
 		
-		<button id="login_signup" onclick="location.href='../member/signup'">회원가입</button>
+		<button id="login_signupBtn" onclick="location.href='../signup'">회원가입</button>
 	</div>
 	</div>
 </body>

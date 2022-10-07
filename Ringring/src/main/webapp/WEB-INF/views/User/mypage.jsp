@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../../../resources/css/member.css">
+<link rel="stylesheet" href="../../../resources/css/user.css">
 <title>마이페이지</title>
 
 </head>
@@ -16,7 +16,7 @@
 		</div>
 		
 		<div id="mypage">
-			<div class="mypageBtn" onclick="location.href='../membermodify'">
+			<div class="mypageBtn" onclick="location.href='../usermodify'">
 			회원정보수정
 			</div>
 			<div class="mypageBtn" onclick="location.href='../orderlist'">

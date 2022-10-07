@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../../../resources/css/member.css">
+<link rel="stylesheet" href="../../../resources/css/user.css">
 <title>signup</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -49,7 +49,6 @@
 					<input type="submit" value="회원가입" id="signupBtn">
 				</div>
 			</form>
-			<hr>
 			<div id="signup_another">
 				<div id="signup_naver">네이버<br>간편가입</div>
 				<div id="signup_kakao">카카오<br>간편가입</div>
