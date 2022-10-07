@@ -5,7 +5,35 @@
 <head>
 <meta charset="UTF-8">
 	<link rel="stylesheet" href="../../../resources/css/admin.css">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><!-- include summernote css/js-->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="/resources/js/summernote-lite.min.js"></script>
+<!-- include summernote-ko-KR -->
+<script src="/resources/js/summernote-ko-KR.js"></script>
+
 <title>관리자 공지사항/자주하는질문</title>
+
+<script>
+$(document).ready(function() {
+	  $('#summernote').summernote({
+ 	    	placeholder: '내용입력',
+	        minHeight: 370,
+	        maxHeight: null,
+            lang : 'ko-KR',
+    		toolbar: [
+    		    ['style', ['style']],
+    		    ['font', ['bold', 'underline', 'clear']],
+    		    ['fontname', ['fontname']],
+    		    ['color', ['color']],
+    		    ['para', ['ul', 'ol', 'paragraph']],
+    		    ['table', ['table']],
+    		    ['insert', ['link', 'picture']]
+    		  ]	        
+	  });
+	});
+</script>
+
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
@@ -29,7 +57,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<textarea rows="20" cols="90" placeholder="내용 입력"></textarea>
+						<textarea id="summernote" name="content"></textarea>
 					</td>					
 				</tr>
 				<tr>
