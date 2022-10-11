@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.ring.model.AttachFileVO;
+import com.ring.model.AttachVO;
 
 import net.coobird.thumbnailator.Thumbnailator;
 
@@ -91,10 +91,10 @@ public class UploadController {
 	}
 	
 	@RequestMapping(value = "/uploadAjaxAction", method = RequestMethod.POST)
-	public ResponseEntity<ArrayList<AttachFileVO>> uploadAjaxPost(MultipartFile[] uploadFile) {
+	public ResponseEntity<ArrayList<AttachVO>> uploadAjaxPost(MultipartFile[] uploadFile) {
 		
 		//AttachFileVO 클래스 포함 관계로 만들어줌, 다중선택 :배열
-		ArrayList<AttachFileVO> list = new ArrayList<>(); 
+		ArrayList<AttachVO> list = new ArrayList<>(); 
 		
 		//폴더 경로
 		String uploadFolder="D:\\01-STUDY\\upload";
@@ -109,9 +109,9 @@ public class UploadController {
 		//for(변수명:배열명)
 		for(MultipartFile multipartFile : uploadFile) {
 			
-			//AttachFileVO클래스의 새로운 주소를 반복적으로 생성하여
+			//AttachVO클래스의 새로운 주소를 반복적으로 생성하여
 			//ArrayList에 저장
-			AttachFileVO attachvo = new AttachFileVO();
+			AttachVO attach = new AttachVO();
 			
 			System.out.println("파일명="+multipartFile.getOriginalFilename());
 			System.out.println("파일사이즈="+multipartFile.getSize());
@@ -122,12 +122,12 @@ public class UploadController {
 			UUID uuid = UUID.randomUUID();
 			System.out.println("UUID="+uuid.toString());
 			
-			//AttachFileVO의 uploadPath 변수에 저장() : getFolder 호출
-			attachvo.setUploadPath(getFolder());
-			//AttachFileVO의 fileName 변수에 저장() : 실제 파일 이름
-			attachvo.setFileName(multipartFile.getOriginalFilename());
-			//AttachFileVO의 uuid 변수에 저장()
-			attachvo.setUuid(uuid.toString());
+			//AttachVO의 uploadPath 변수에 저장() : getFolder 호출
+			attach.setUploadPath(getFolder());
+			//AttachVO의 fileName 변수에 저장() : 실제 파일 이름
+			attach.setFileName(multipartFile.getOriginalFilename());
+			//AttachVO의 uuid 변수에 저장()
+			attach.setUuid(uuid.toString());
 			
 			
 			//					어느 폴더에(D:\\01-STUDY\\upload\\현재날짜),	어떤 파일이름으로(UUID_파일명)
@@ -140,7 +140,7 @@ public class UploadController {
 				if(checkImageType(saveFile)) {
 					
 					//AttachFileVO의 image 변수에 저장()
-					attachvo.setImage(true);
+					attach.setImage(true);
 					
 					//파일 생성
 					FileOutputStream thumbnail = new FileOutputStream(new File(uploadPath,"s_"+uuid.toString()+"_"+multipartFile.getOriginalFilename()));
@@ -150,7 +150,7 @@ public class UploadController {
 					thumbnail.close();				
 				}//checkImageType 메소드 닫음
 				//AttachFileVO에 저장된 데이터를 배열에 추가 (add메소드)
-				list.add(attachvo);
+				list.add(attach);
 				
 			}catch(Exception e) {//예외를 처리하라
 				System.out.println(e.getMessage());

@@ -65,13 +65,6 @@ public class BoardController {
 	
 	
 	
-	
-	
-	//게시판 글쓰기 페이지(화면)
-	@RequestMapping(value = "/board/write", method = RequestMethod.GET)
-	public String write() {
-		return "board/write";
-	}
 	//게시판 글쓰기 페이지(insert이루어짐)
 	@RequestMapping(value = "/board/write", method = RequestMethod.POST)
 	public String writePost(BoardVO board, HttpSession session) {

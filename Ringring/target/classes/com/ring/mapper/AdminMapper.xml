@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.ring.mapper.AdminMapper">
+	<!-- 관리자: 이벤트 등록 -->
+		<insert id="event">
+		insert into event(e_type, e_title, e_start, e_end, e_summary, e_contents) 
+		values (#{e_type}, #{e_title}, #{e_start}, #{e_end}, #{e_summary}, #{e_contents})			
+		</insert>
+</mapper>  

@@ -32,7 +32,7 @@ $(document).ready(function(){
 	
 	
 	// 파일 전송 버튼(id="uploadBtn")을 클릭하면
-	$("#uploadBtn").on("click",function(){
+	$("#a_eventSubmitBtn").on("click",function(){
 		//e.preventDefault();	//이벤트 작동x
 		alert("버튼누르면 연결되는지 확인용");
 		//파일 업로드 관련 로직 처리
