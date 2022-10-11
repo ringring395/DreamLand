@@ -43,21 +43,22 @@ $(document).ready(function() {
 			<div id="a_pagetitle">
 				<span>페이지제목</span>
 			</div>
-			
+
+			<form id="form" action="/admin_board" method="post">			
 			<table id="a_board_table">
 				<tr>
 					<td>
-						<select>
+						<select name="b_type">
 							<option>==카테고리==</option>
-							<option>공지사항</option>
-							<option>자주하는질문</option>
+							<option value="notice">공지사항</option>
+							<option value="faq">자주하는질문</option>
 						</select>
 					</td>
-					<td><input type="text" placeholder="제목"></td>					
+					<td><input type="text" name="b_title" placeholder="제목"></td>					
 				</tr>
 				<tr>
 					<td colspan="2">
-						<textarea id="summernote" name="content"></textarea>
+						<textarea id="summernote" name="b_content"></textarea>
 					</td>					
 				</tr>
 				<tr>
@@ -65,7 +66,7 @@ $(document).ready(function() {
 						<input type="submit" value="등록"></th>
 				</tr>				
 			</table>
-		
+			</form>
 			<button onclick="location.href='../notice'">공지사항<br>바로가기</button>
 			<button onclick="location.href='../faq'">자주하는질문<br>바로가기</button>
 			

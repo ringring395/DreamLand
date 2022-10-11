@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ring.model.AttachVO;
+import com.ring.model.BoardVO;
 import com.ring.model.EventVO;
 import com.ring.service.AdminService;
 
@@ -56,6 +57,18 @@ public class AdminController {
 	@RequestMapping(value = "/admin_board", method = RequestMethod.GET)
 	public String admin_board() {
 		return "/Admin/admin_board";
+	}
+	
+	//관리자 -> 게시판(공지사항/자주하는질문)등록(insert이루어짐)
+	@RequestMapping(value = "/admin_board", method = RequestMethod.POST)
+	public String boardPost(BoardVO board, HttpSession session) {
+//		String id = (String)session.getAttribute("id");
+//		board.setId(id);
+//		System.out.println("로그인된아이디 : "+id);
+		System.out.println(board);
+
+		as.board(board);
+		return "redirect:/notice";
 	}
 	
 	//관리자 ->1:1문의 리스트

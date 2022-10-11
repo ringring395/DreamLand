@@ -10,4 +10,10 @@
 		insert into event(e_type, e_title, e_start, e_end, e_summary, e_contents) 
 		values (#{e_type}, #{e_title}, #{e_start}, #{e_end}, #{e_summary}, #{e_contents})			
 		</insert>
+		
+	<!-- 관리자: 고객센터 글 등록 -->
+		<insert id="board">
+		insert into board(b_type, b_title, b_content) 
+		values (#{b_type}, #{b_title}, #{b_content})			
+		</insert>	
 </mapper>  

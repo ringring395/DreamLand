@@ -3,6 +3,7 @@ package com.ring.service;
 import java.util.ArrayList;
 
 import com.ring.model.AttachVO;
+import com.ring.model.BoardVO;
 import com.ring.model.EventVO;
 
 public interface AdminService {
@@ -12,4 +13,7 @@ public interface AdminService {
 	
 	//첨부파일 조회
 	public ArrayList<AttachVO> attachlist(int i_no);
+	
+	//고객센터 글 등록
+	public void board(BoardVO board);
 }
