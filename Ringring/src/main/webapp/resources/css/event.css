@@ -12,6 +12,14 @@
 	border-bottom:3px solid #ff8000;
 }
 
+/* paging 페이징 처리*/
+
+#paging{
+	font-size:20px;
+	display:flex;
+	justify-content:center;	
+}
+
 
 /* event 행사일정*/
 
@@ -66,19 +74,24 @@
 
 /* sale 할인혜택*/
 
+#sale_table
+
 #sale_img{
-	width:250px;
+	width:300px;
 	height:200px;
 	margin:10px;
 	background-color:#8080c0;	
 }
 
 #sale_title{
-	width:250px;
+	width:300px;
 	height:40px;
 	margin:10px;
-	background-color:#8080c0;	
+	background-color:#8080c0;
+	text-align:center;	
 }
+
+
 
 
 

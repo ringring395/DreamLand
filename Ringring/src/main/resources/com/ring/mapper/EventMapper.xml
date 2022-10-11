@@ -25,6 +25,26 @@
 		select count(*) from event
 		where e_type=&apos;event&apos;
 	</select>
+
+	<!-- sale 목록 출력 -->
+	<select id="salelist" resultType="com.ring.model.EventVO">
+		select *
+		from (
+				select @rownum:=@rownum+1 rownum, event.* 
+				from event, (select @rownum:=0) as tmp
+				where e_type=&apos;sale&apos;
+		        order by e_no desc
+		) as e 
+		<![CDATA[
+		where rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}
+		]]> 
+	</select>
+	
+	<!-- sale 건수 조회 -->
+	<select id="saleTotal" resultType="int">
+		select count(*) from event
+		where e_type=&apos;sale&apos;
+	</select>	
 	
 	<!-- 퍼레이드 목록 출력 -->
 	<select id="paradelist" resultType="com.ring.model.EventVO">

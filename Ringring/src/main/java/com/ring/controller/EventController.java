@@ -34,7 +34,14 @@ public class EventController {
 	
 	//이벤트 -> 할인 혜택
 	@RequestMapping(value = "/sale", method = RequestMethod.GET)
-	public String sale() {
+	public String sale(EventVO event, HttpSession session, Model model,
+			CriteriaVO cri) {
+		
+		model.addAttribute("sale", es.salelist(cri));
+		
+		int total = es.saleTotal(cri);
+		model.addAttribute("paging", new PageVO(cri, total));
+		
 		return "/Event/sale";
 	}
 	

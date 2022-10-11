@@ -12,7 +12,7 @@
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>이벤트 >퍼레이드 일정</span>
 		</div>
 	
 		<c:forEach items="${parade}" var="parade">	

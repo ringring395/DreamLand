@@ -14,7 +14,7 @@
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>이벤트 >행사 일정</span>
 		</div>
 		
 	<c:forEach items="${event}" var="event">		
