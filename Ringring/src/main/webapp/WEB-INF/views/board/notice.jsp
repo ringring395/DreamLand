@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../../../resources/css/board.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../resources/js/list.js"></script>
+<script type="text/javascript" src="../../../resources/js/board.js"></script>
 <title>공지사항</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -25,8 +26,14 @@
 				</tr>
 				<tr>
 					<td class="n_table_text" id="n_table_no">${notice.b_no}</td>
-					<td class="n_table_text" id="n_table_title">${notice.b_title}</td>
+					<td class="n_table_text" id="n_table_title">${notice.b_title}
+						<span> + 더보기</span></td>
 					<td class="n_table_text" id="n_table_date">${notice.b_regdate}</td>										
+				</tr>
+				<tr>
+					<td></td>
+					<td id="n_table_content">${notice.b_content}</td>
+					<td></td>
 				</tr>				
 			</table>
 			</c:forEach>
