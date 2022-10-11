@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/event.css">
+
 <title>이벤트_행사일정</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
