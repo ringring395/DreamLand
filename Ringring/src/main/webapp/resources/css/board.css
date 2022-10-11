@@ -105,8 +105,23 @@
 #notice_table{
 	margin:10px auto;
 	padding:10px;
+	width:980px;
 	background-color:#8080c0;	
 }
+
+.n_table_text{
+	padding:20px 10px;
+	text-align:center;
+}
+
+#n_table_title{
+	width:600px;
+}
+
+#n_table_date{
+	width:200px;
+}
+
 
 #notice_search{
 	margin:10px auto;
