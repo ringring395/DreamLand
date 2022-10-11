@@ -28,5 +28,14 @@ public class BoardServiceImpl implements BoardService{
 		return bm.noticeTotal(cri);
 	}
 
+	//자주하는질문 메소드
+	public ArrayList<BoardVO> faqlist(CriteriaVO cri){
+		return bm.faqlist(cri);
+	}
+	
+	//자주하는질문 전체 건수 조회
+	public int faqTotal(CriteriaVO cri) {
+		return bm.faqTotal(cri);
+	}
 
 }

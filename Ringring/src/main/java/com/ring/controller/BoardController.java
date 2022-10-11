@@ -34,7 +34,14 @@ public class BoardController {
 
 	//자주하는질문
 	@RequestMapping(value = "/faq", method = RequestMethod.GET)
-	public String faq() {
+	public String faq(BoardVO board, HttpSession session, Model model,
+			CriteriaVO cri) {
+		
+		model.addAttribute("faq", bs.faqlist(cri));
+		
+		int total = bs.faqTotal(cri);
+		model.addAttribute("paging", new PageVO(cri, total));
+		
 		return "/board/faq";
 	}
 	

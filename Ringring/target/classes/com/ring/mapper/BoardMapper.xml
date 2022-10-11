@@ -12,8 +12,13 @@
 				select @rownum:=@rownum+1 rownum, board.* 
 				from board, (select @rownum:=0) as tmp
 				where b_type=&apos;notice&apos;
+				<if test="keyword !=null">
+					and (b_title like concat('%',#{keyword},'%')
+						or b_content like concat('%',#{keyword},'%'))
+				</if>
+				
 		        order by b_no desc
-		) as e 
+		) as b 
 		<![CDATA[
 		where rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}
 		]]> 
@@ -23,9 +28,39 @@
 	<select id="noticeTotal" resultType="int">
 		select count(*) from board
 		where b_type=&apos;notice&apos;
+			<if test="keyword !=null">
+					and (b_title like concat('%',#{keyword},'%')
+						or b_content like concat('%',#{keyword},'%'))
+			</if>			
 	</select>
 
-
+		<!-- 자주하는질문 목록 출력 -->
+	<select id="faqlist" resultType="com.ring.model.BoardVO">
+		select *
+		from (
+				select @rownum:=@rownum+1 rownum, board.* 
+				from board, (select @rownum:=0) as tmp
+				where b_type=&apos;faq&apos;
+				<if test="keyword !=null">
+					and (b_title like concat('%',#{keyword},'%')
+						or b_content like concat('%',#{keyword},'%'))
+				</if>				
+		        order by b_no desc
+		) as b 
+		<![CDATA[
+		where rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}
+		]]> 
+	</select>
+	
+	<!-- 자주하는질문 건수 조회 -->
+	<select id="faqTotal" resultType="int">
+		select count(*) from board
+		where b_type=&apos;faq&apos;
+			<if test="keyword !=null">
+					and (b_title like concat('%',#{keyword},'%')
+						or b_content like concat('%',#{keyword},'%'))
+			</if>			
+	</select>
 
 
 

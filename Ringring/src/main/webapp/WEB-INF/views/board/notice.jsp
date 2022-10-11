@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/board.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../../resources/js/list.js"></script>
 <title>공지사항</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -19,9 +21,7 @@
 			<c:forEach items="${notice}" var="notice">
 			<table id="notice_table">
 				<tr>
-					<th>No.</th>
-					<th>공지사항</th>
-					<th>등록일</th>										
+					<th>No.</th><th>공지사항</th><th>등록일</th>										
 				</tr>
 				<tr>
 					<td class="n_table_text" id="n_table_no">${notice.b_no}</td>
@@ -31,28 +31,35 @@
 			</table>
 			</c:forEach>
 			
+			<form id="searchBtn" action="/notice">
 			<div id="notice_search">
-				<input type="text" placeholder="제목&내용 검색창검색창">
-				<img alt="검색그림" src="">
+				<input type="text" name="keyword" placeholder="제목+내용 검색">
+					<input type="hidden" name="pageNum" value="${paging.cri.pageNum}">
+					<input type="hidden" name="amount" value="${paging.cri.amount}">
+				
+				<div id="notice_searchBtn">
+					<input type="button" value="검색" >
+					<img alt="사진" src="">
+				</div>	
 			</div>
-			
+			</form>
 		</div><!-- notice -->
 		
 		<div id="paging">	
 				<div>	
 <!-- 이전버튼 -->
 					<c:if test="${paging.prev }">
-						<a href="/notice?pageNum=${paging.startPage-1}&amount=${paging.cri.amount}">이전</a>
+						<a href="/notice?keyword=${paging.cri.keyword}&pageNum=${paging.startPage-1}&amount=${paging.cri.amount}">이전</a>
 					</c:if>
 
 <!-- 페이징 처리 -->		
 					<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="num">
-						<a href="/notice?pageNum=${num}&amount=${paging.cri.amount}">${num }</a>
+						<a href="/notice?keyword=${paging.cri.keyword}&pageNum=${num}&amount=${paging.cri.amount}">${num }</a>
 					</c:forEach>
 
 <!-- 다음버튼 -->			
 					<c:if test="${paging.next}">
-						<a href="/notice?pageNum=${paging.startPage+1}&amount=${paging.cri.amount}">다음</a>
+						<a href="/notice?keyword=${paging.cri.keyword}&pageNum=${paging.startPage+1}&amount=${paging.cri.amount}">다음</a>
 					</c:if>					
 				</div>		
 			</div><!-- paging -->		

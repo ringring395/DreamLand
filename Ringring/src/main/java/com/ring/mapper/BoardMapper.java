@@ -13,5 +13,9 @@ public interface BoardMapper {
 	//공지사항 전체 건수 조회 DB작업 설계
 	public int noticeTotal(CriteriaVO cri);
 	
-
+	//자주하는질문 목록 조회 DB작업 설계
+	public ArrayList<BoardVO> faqlist(CriteriaVO cri);
+	
+	//자주하는질문 전체 건수 조회 DB작업 설계
+	public int faqTotal(CriteriaVO cri);
 }
