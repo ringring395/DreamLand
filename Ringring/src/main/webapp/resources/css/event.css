@@ -15,6 +15,11 @@
 
 /* event 행사일정*/
 
+#event{
+	display:flex;
+	justify-content:left;
+}
+
 #event_img{
 	width:300px;
 	height:150px;

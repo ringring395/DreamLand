@@ -14,9 +14,10 @@
 	<div id="wrap">
 		<div id="pagetitle">
 			<span>페이지제목</span>
-		</div>	
-		<div id="event">
-			<c:forEach items="${event}" var="event">		
+		</div>
+		
+	<c:forEach items="${event}" var="event">		
+		<div id="event">				
 			<div id="event_img">사진사진사진</div>
 			<div id="event_info">
 				<div id="event_title">${event.e_title}</div>
@@ -25,10 +26,11 @@
 				<div id="event_end">종료일 : ${event.e_end}</div>
 				<div id="event_point">${event.e_summary}</div>
 				<div id="event_more">+ 더보기</div>
-			</div>	
-			</c:forEach>				
+			</div>								
 		</div><!-- event -->
-
+	</c:forEach>
+	
+	
 		<div id="paging">	
 				<div>	
 <!-- 이전버튼 -->
