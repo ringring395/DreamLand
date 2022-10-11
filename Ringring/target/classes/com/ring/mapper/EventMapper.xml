@@ -20,11 +20,30 @@
 		]]> 
 	</select>
 	
+	<!-- 이벤트 건수 조회 -->
 	<select id="eventTotal" resultType="int">
 		select count(*) from event
 		where e_type=&apos;event&apos;
 	</select>
 	
+	<!-- 퍼레이드 목록 출력 -->
+	<select id="paradelist" resultType="com.ring.model.EventVO">
+		select *
+		from (
+				select @rownum:=@rownum+1 rownum, event.* 
+				from event, (select @rownum:=0) as tmp
+				where e_type=&apos;parade&apos;
+		        order by e_no desc
+		) as e 
+		<![CDATA[
+		where rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}
+		]]> 
+	</select>
 	
+	<!-- 퍼레이드 건수 조회 -->
+	<select id="paradeTotal" resultType="int">
+		select count(*) from event
+		where e_type=&apos;parade&apos;
+	</select>	
 	
 </mapper>

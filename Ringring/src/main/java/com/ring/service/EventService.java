@@ -12,5 +12,11 @@ public interface EventService {
 	
 	//이벤트 건수 설계
 	public int eventTotal(CriteriaVO cri);
+	
+	//퍼레이드 목록 조회
+	public ArrayList<EventVO> paradelist(CriteriaVO cri);
+	
+	//퍼레이드 건수 설계
+	public int paradeTotal(CriteriaVO cri);
 
 }

@@ -40,7 +40,14 @@ public class EventController {
 	
 	//이벤트 -> 퍼레이드 일정
 	@RequestMapping(value = "/parade", method = RequestMethod.GET)
-	public String parade() {
+	public String parade(EventVO event, HttpSession session, Model model,
+			CriteriaVO cri) {
+		
+		model.addAttribute("parade", es.paradelist(cri));
+		
+		int total = es.paradeTotal(cri);
+		model.addAttribute("paging", new PageVO(cri, total));
+		
 		return "/Event/parade";
 	}
 

@@ -42,7 +42,7 @@ public class AdminController {
 		System.out.println(event);
 
 		as.event(event);
-		return "redirect:/notice";
+		return "redirect:/event";
 	}
 	
 	//관리자 -> 게시물의 첨부파일의 데이터를 ajax로 전송

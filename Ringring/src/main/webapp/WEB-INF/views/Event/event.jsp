@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/event.css">
 
+ 
 <title>이벤트_행사일정</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -17,13 +18,12 @@
 		</div>
 		
 	<c:forEach items="${event}" var="event">		
-		<div id="event">				
+		<div id="event">	
+		
 			<div id="event_img">사진사진사진</div>
 			<div id="event_info">
 				<div id="event_title">${event.e_title}</div>
-				<div id="event_start">시작일 : ${event.e_start}</div>
-				~
-				<div id="event_end">종료일 : ${event.e_end}</div>
+				<div id="event_day">시작일 : ${event.e_start}	~ 종료일 : ${event.e_end}</div>
 				<div id="event_point">${event.e_summary}</div>
 				<div id="event_more">+ 더보기</div>
 			</div>								

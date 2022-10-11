@@ -12,5 +12,11 @@ public interface EventMapper {
 	
 	//이벤트 전체 건수 DB작업
 	public int eventTotal(CriteriaVO cri);
+	
+	//퍼레이드 목록 출력
+	public ArrayList<EventVO> paradelist(CriteriaVO cri);
+	
+	//퍼레이드 전체 건수 DB작업
+	public int paradeTotal(CriteriaVO cri);
 
 }

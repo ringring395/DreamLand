@@ -24,5 +24,15 @@ public class EventServiceImpl implements EventService{
 	public int eventTotal(CriteriaVO cri) {
 		return em.eventTotal(cri);
 	}
+	
+	//퍼레이드 list
+	public ArrayList<EventVO> paradelist(CriteriaVO cri){
+		return em.paradelist(cri);
+	}
+	
+	//퍼레이드 목록 전체 건수 조회
+	public int paradeTotal(CriteriaVO cri) {
+		return em.paradeTotal(cri);
+	}
 
 }
