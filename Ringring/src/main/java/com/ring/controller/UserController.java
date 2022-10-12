@@ -2,7 +2,6 @@ package com.ring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -37,6 +36,15 @@ public class UserController {
 	public int idcheck(String id) {
 		
 		int result = us.idcheck(id);
+		return result;
+	}
+	
+	//전화번호 중복 검사(select 이뤄짐)
+	@RequestMapping(value ="/phonecheck", method = RequestMethod.GET)
+	@ResponseBody
+	public int phonecheck(int phone) {
+		
+		int result = us.phonecheck(phone);
 		return result;
 	}
 	

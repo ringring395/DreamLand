@@ -22,4 +22,8 @@ public class UserServiceImpl implements UserService{
 		return um.idcheck(id);
 	}
 
+	//전화번호 중복검사
+	public int phonecheck(int phone) {
+		return um.phonecheck(phone);
+	}
 }

@@ -23,7 +23,8 @@
 					<div class="signup2_info">
 						<input type="text" placeholder="아이디(메일주소)" name="id">
 						<label class="checkBtn" id="idBtn">중복 확인</label>
-						<span id="sid"></span>					
+						<span id="sid"></span>
+						<span id="sid2"></span>					
 					</div>
 					
 					<div class="signup2_info">
@@ -46,8 +47,7 @@
 						<input type="tel" class="signup_tel" name="phone2">-
 						<input type="tel" class="signup_tel" name="phone3">
 						<input type="hidden" id="totalphone" name="phone" value="">
-						<label class="checkBtn" id="phoneBtn">중복 확인</label>
-						<span id="sph"></span>				
+						<span id="sph"></span>			
 					</div>
 					<input type="submit" value="회원가입" id="signupBtn">
 				</div>

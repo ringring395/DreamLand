@@ -9,5 +9,7 @@ public interface UserService {
 	
 	//아이디 중복검사
 	public int idcheck(String id);
-
+	
+	//전화번호 중복검사
+	public int phonecheck(int phone);
 }

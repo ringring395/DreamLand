@@ -36,9 +36,11 @@ $(document).ready(function (){
             dataType: 'json',
             success: function(result) {
                 if (result == '0') {
-                	$("#sid").html("사용할 수 있는 아이디입니다.").css("color","blue");
+                	$("#sid").html("");
+                	$("#sid2").html("사용할 수 있는 아이디입니다.").css("color","blue");
                 } else {
-                	$("#sid").html("사용 중인 아이디 입니다.").css("color","red");
+                	$("#sid").html("");
+                	$("#sid2").html("사용 중인 아이디 입니다.").css("color","red");
                 }
             },
             error: function(e) {
@@ -103,8 +105,8 @@ $(document).ready(function (){
 		var phone1 = $("input[name=phone1]").val();
 		var phonecheck = /^\d{3}$/;
 		if(phonecheck.test(phone1)){
-			phone();
 			$("#sph").html("").css("color","red");
+			phone();
 		}else{
 			$("#sph").html("전화번호에는 숫자만 입력 가능합니다.").css("color","red");
 		}		
@@ -114,8 +116,8 @@ $(document).ready(function (){
 		var phone2 = $("input[name=phone2]").val();
 		var phonecheck = /^\d{3,4}$/;
 		if(phonecheck.test(phone2)){
-			phone();
 			$("#sph").html("").css("color","red");
+			phone();
 		}else{
 			$("#sph").html("전화번호에는 숫자만 입력 가능합니다.").css("color","red");
 		}	
@@ -125,15 +127,13 @@ $(document).ready(function (){
 		var phone3 = $("input[name=phone3]").val();
 		var phonecheck = /^\d{3,4}$/;
 		if(phonecheck.test(phone3)){
-			phone();
 			$("#sph").html("").css("color","red");
+			phone();
 		}else{
 			$("#sph").html("전화번호에는 숫자만 입력 가능합니다.").css("color","red");
 		}
 	});	
 
-//결합된 전화번호값 저장.
-var phone;	
 	function phone(){
 		var phone1 = $("input[name=phone1]").val();
 		var phone2 = $("input[name=phone2]").val();
@@ -142,46 +142,17 @@ var phone;
 		//전화번호 입력값이 null값이 아니면
 		if(phone1 != "" && phone2 != "" && phone3 != ""){
 			//전화번호 전체 정규식 체크(9~11자 사이의 숫자로만 이뤄짐)
-			phone = phone1+phone2+phone3;
+			var phone = phone1+phone2+phone3;
 			var phonecheck = /^\d{9,11}$/;
 			//정규식 체크되면
 			if(phonecheck.test(phone)){
 				//hidden으로 숨겨둔 곳에 전체 전화번호넣음(-없이)
-				$("#totalphone").val(phone);
-				phone = $("#totalphone").val();
+				$("#totalphone").val(phone);				
 			}
 		}
 	};
 	
-	
-//전화번호 중복 체크 버튼 누르면
-	$("#phoneBtn").on("click", function(){
-		console.log(phone);
-		//중복체크 함수 호출
-		phonecheck(phone);
-	});
-	
-	
-//전화번호 중복체크 함수 선언	
-	function phonecheck(){
-		
-        $.ajax({				
-            type: 'GET',
-            url: '/phonecheck',
-            data: {phone:phone},
-            dataType: 'json',
-            success: function(result) {
-                if (result == '0') {
-                	$("#sph").html("등록할 수 있는 전화번호입니다.").css("color","blue");
-                } else {
-                	$("#sph").html("등록 중인 전화번호 입니다.").css("color","red");
-                }
-            },
-            error: function(e) {
-            	alert("error: "+e);
-            } 					
-        });			
-	}//phonecheck 닫음	
+
 	
 	
 	
