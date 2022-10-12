@@ -13,5 +13,4 @@ public interface UserMapper {
 	//로그인
 	public void login(UserVO user);
 
-
 }

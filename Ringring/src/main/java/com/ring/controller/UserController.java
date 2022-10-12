@@ -49,13 +49,20 @@ public class UserController {
 	
 	//로그인(select 진행)
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String loginPost(UserVO user, HttpSession session, RedirectAttributes rttr) {
-		
-		us.login(user);
-		session.setAttribute("id", user.getId());
-		rttr.addAttribute("id", user.getId());
+	@ResponseBody
+	public Object loginPost(UserVO user, HttpSession session, RedirectAttributes rttr) {		
 
-		return "/Home/main";
+        us.login(user);
+        System.out.println(user.getId());
+        
+        if(user.getId() != null) {
+        	session.setAttribute("id", user.getId());
+        	rttr.addAttribute("id", user.getId());
+           
+        	return "redirect:/mypage";
+        }else {
+        	return "/User/login";
+        }
 	}
 	
 	//로그아웃
