@@ -14,8 +14,12 @@ public class UserServiceImpl implements UserService{
 	
 	//회원가입
 	public void signup(UserVO user) {
-		um.signup(user);
-		
+		um.signup(user);		
+	}
+	
+	//아이디 중복검사
+	public int idcheck(String id) {
+		return um.idcheck(id);
 	}
 
 }

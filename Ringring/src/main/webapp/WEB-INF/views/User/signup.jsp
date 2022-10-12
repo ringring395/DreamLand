@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/user.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="../../../resources/js/user.js"></script>
+<script type="text/javascript" src="../../../resources/js/user_signup.js"></script>
 <title>signup</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -22,7 +22,7 @@
 				<div id="signup2">
 					<div class="signup2_info">
 						<input type="text" placeholder="아이디(메일주소)" name="id">
-						<button>중복 확인</button>
+						<label class="checkBtn" id="idBtn">중복 확인</label>
 						<span id="sid"></span>					
 					</div>
 					
@@ -46,7 +46,7 @@
 						<input type="tel" class="signup_tel" name="phone2">-
 						<input type="tel" class="signup_tel" name="phone3">
 						<input type="hidden" id="totalphone" name="phone" value="">
-						<button>중복 확인</button>	
+						<label class="checkBtn" id="phoneBtn">중복 확인</label>
 						<span id="sph"></span>				
 					</div>
 					<input type="submit" value="회원가입" id="signupBtn">

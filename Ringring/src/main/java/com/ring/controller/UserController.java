@@ -2,8 +2,10 @@ package com.ring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ring.model.MemberVO;
 import com.ring.model.UserVO;
@@ -27,7 +29,16 @@ public class UserController {
 		
 		us.signup(user);
 		return "redirect:/login";
-	}	
+	}
+	
+	//아이디 중복 검사(select 이뤄짐)
+	@RequestMapping(value = "/idcheck", method = RequestMethod.GET)
+	@ResponseBody
+	public int idcheck(String id) {
+		
+		int result = us.idcheck(id);
+		return result;
+	}
 	
 	//아이디,비번찾기
 	@RequestMapping(value="/userfind", method = RequestMethod.GET)

@@ -11,4 +11,10 @@
 		insert into user(id, pw, name, phone) 
 		values (#{id}, #{pw}, #{name}, #{phone})	
 	</insert>
+	
+<!-- 아이디 중복검사 -->
+	<select id="idcheck" resultType="int">
+		select count(*) from user
+		where id = #{id}
+	</select>
 </mapper>

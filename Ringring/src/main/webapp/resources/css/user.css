@@ -55,6 +55,12 @@
 	border-radius:5px;
 }
 
+.checkBtn{
+	padding:5px;
+	background-color:#ff8000;
+	border-radius:5px;
+	cursor:pointer;
+}
 
 /* login 로그인*/
 
