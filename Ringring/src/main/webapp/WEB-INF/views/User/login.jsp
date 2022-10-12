@@ -8,7 +8,7 @@
 <title>login</title>
 <script type="text/javascript"
 	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="/resources/js/login.js"></script>
+<script type="text/javascript" src="/resources/js/user_signup.js"></script>
 
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -23,15 +23,17 @@
 		<div id="login2">
 			<div class="login2_info">
 				<img alt="유저" src="">
-				<input type="text" id="ii" name="id" placeholder="아이디(메일주소)">
+				<input type="text" name="id" placeholder="아이디(메일주소)">
+				<br><span id="sid"></span>
 			</div>
-			<span id="si" class="login_messege"></span>
+			
 			
 			<div class="login2_info">
 				<img alt="비번" src="">
-				<input type="password" id="ip" name="pw" placeholder="password">
+				<input type="password" name="pw" placeholder="password">
+				<br><span id="spw"></span>
 			</div>
-			<span id="sp" class="login_messege"></span>			
+						
 			
 			<input type="submit" id="loginBtn" value="로그인" >
 		</div><!-- login2 -->

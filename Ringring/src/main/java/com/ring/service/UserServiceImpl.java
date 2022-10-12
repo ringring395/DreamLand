@@ -21,9 +21,11 @@ public class UserServiceImpl implements UserService{
 	public int idcheck(String id) {
 		return um.idcheck(id);
 	}
-
-	//전화번호 중복검사
-	public int phonecheck(int phone) {
-		return um.phonecheck(phone);
+	
+	//로그인
+	public void login(UserVO user) {
+		um.login(user);
 	}
+
+
 }

@@ -11,7 +11,7 @@ $(document).ready(function (){
 		var idcheck =/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-z]([-_\.]?[0-9a-z])*\.[a-z]{2,3}$/;
 		
 		if(!idcheck.test(id)){
-			$("#sid").html("아이디는 올바른 이메일로 입력해주세요.").css("color","red");
+			$("#sid").html("아이디는 올바른 형식의 이메일로 입력해주세요.").css("color","red");
 		}else{
 			$("#sid").html("올바른 이메일 형식입니다.").css("color","blue");
 		}		
@@ -59,7 +59,7 @@ $(document).ready(function (){
 		if(!pwcheck.test(pw)){
 			$("#spw").html("비밀번호는 8~15자의 영어소문자, 숫자를 조합하여 입력해주세요.").css("color","red");
 		}else{
-			$("#spw").html("올바른 비밀번호 형식입니다.").css("color","blue");
+			$("#spw").html("").css("color","blue");
 		}		
 		
 	});//비밀번호 정규식 닫음

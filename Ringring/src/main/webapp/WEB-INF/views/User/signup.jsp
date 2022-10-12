@@ -28,7 +28,7 @@
 					</div>
 					
 					<div class="signup2_info">
-						<input type="text" placeholder="비밀번호" name="pw">
+						<input type="password" placeholder="비밀번호" name="pw">
 						<br><span id="spw"></span>					
 					</div>
 				
