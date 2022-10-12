@@ -1,0 +1,10 @@
+package com.ring.service;
+
+import com.ring.model.UserVO;
+
+public interface UserService {
+	
+	//회원가입
+	public void signup(UserVO user);
+
+}

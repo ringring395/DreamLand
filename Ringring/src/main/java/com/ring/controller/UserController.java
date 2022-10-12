@@ -1,13 +1,34 @@
 package com.ring.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ring.model.MemberVO;
+import com.ring.model.UserVO;
+import com.ring.service.UserService;
 
 @Controller
 public class UserController {
+	
+	@Autowired
+	UserService us;
+	
+	//회원가입
+	@RequestMapping(value = "/signup", method = RequestMethod.GET)
+	public String signup() {
+		return "/User/signup";
+	}
+	
+	//회원가입 (insert이뤄짐)
+	@RequestMapping(value = "/signup", method = RequestMethod.POST)
+	public String signupPost(UserVO user) {
+		
+		us.signup(user);
+		return "redirect:/login";
+	}	
+	
 	//아이디,비번찾기
 	@RequestMapping(value="/userfind", method = RequestMethod.GET)
 	public String userfind() {
@@ -26,19 +47,7 @@ public class UserController {
 		return "User/usermodify";
 	}
 	
-	//회원가입
-	@RequestMapping(value = "/signup", method = RequestMethod.GET)
-	public String signup() {
-		return "/User/signup";
-	}
 	
-	//회원가입 (insert이뤄짐)
-//	@RequestMapping(value = "/signup", method = RequestMethod.POST)
-//	public String signupPost(MemberVO member) {
-//		ms.signup(member);
-//		return "redirect:/member/login";
-//
-//	}	
 	
 	
 	

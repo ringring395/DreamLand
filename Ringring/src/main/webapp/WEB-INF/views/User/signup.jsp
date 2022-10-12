@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/user.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../../resources/js/user.js"></script>
 <title>signup</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -26,26 +28,27 @@
 					
 					<div class="signup2_info">
 						<input type="text" placeholder="비밀번호" name="pw">
-						<span id="spw"></span>					
+						<br><span id="spw"></span>					
 					</div>
 				
 					<div class="signup2_info">
-						<input type="text" placeholder="비밀번호 재확인" name="pw2">
-						<span id="spw2"></span>					
+						<input type="password" placeholder="비밀번호 재확인" name="pw2">
+						<br><span id="spw2"></span>					
 					</div>
 
 					<div class="signup2_info">
 						<input type="text" placeholder="이름" name="name">
-						<span id="sna"></span>					
+						<br><span id="sna"></span>					
 					</div>
 					
 					<div>
 						<input type="tel" class="signup_tel" name="phone1" placeholder="010">-
 						<input type="tel" class="signup_tel" name="phone2">-
 						<input type="tel" class="signup_tel" name="phone3">
-						<button>중복 확인</button>					
+						<input type="hidden" id="totalphone" name="phone" value="">
+						<button>중복 확인</button>	
+						<span id="sph"></span>				
 					</div>
-
 					<input type="submit" value="회원가입" id="signupBtn">
 				</div>
 			</form>
