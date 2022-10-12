@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../../../resources/css/board.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../resources/js/list.js"></script>
+<script type="text/javascript" src="../../../resources/js/board.js"></script>
 <title>faq</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -49,11 +50,14 @@
 			<div id="faq_table">
 			<c:forEach items="${faq}" var="faq">
 				<table>
-					<tr>
-						<th>제목</th><td>${faq.b_title }</td>										
+					<tr class="f_table_show">
+						<th>제목</th>
+						<td class="f_table_center">${faq.b_title }</td>
+						<td id="f_table_date">${faq.b_regdate }</td>										
 					</tr>
-					<tr>
-						<th>내용</th><td>${faq.b_content }</td>											
+					<tr class="f_table_hide">
+						<th>내용</th>
+						<td colspan="2" class="f_table_center">${faq.b_content }</td>											
 					</tr>					
 				</table>
 			</c:forEach>

@@ -19,24 +19,25 @@
 		</div>
 		
 		<div id="notice">	
-			<c:forEach items="${notice}" var="notice">
+
 			<table id="notice_table">
 				<tr>
 					<th>No.</th><th>공지사항</th><th>등록일</th>										
 				</tr>
-				<tr>
+			<c:forEach items="${notice}" var="notice">	
+				<tr class="n_table_show">
 					<td class="n_table_text" id="n_table_no">${notice.b_no}</td>
-					<td class="n_table_text" id="n_table_title">${notice.b_title}
-						<span> + 더보기</span></td>
+					<td class="n_table_text" id="n_table_title">${notice.b_title}</td>
 					<td class="n_table_text" id="n_table_date">${notice.b_regdate}</td>										
 				</tr>
-				<tr>
+				<tr class="n_table_hide">
 					<td></td>
-					<td id="n_table_content">${notice.b_content}</td>
+					<td class="n_table_content">${notice.b_content}</td>
 					<td></td>
-				</tr>				
+				</tr>
+			</c:forEach>					
 			</table>
-			</c:forEach>
+			
 			
 			<form id="searchBtn" action="/notice">
 			<div id="notice_search">

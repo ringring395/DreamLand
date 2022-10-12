@@ -37,6 +37,25 @@
 	background-color:#8080c0;	
 }
 
+.f_table_center{
+	width:600px;
+	padding:0 40px;
+}
+
+#f_table_date{
+	font-size:13px;
+	width:200px;
+	text-align:center;	
+}
+
+.f_table_show{
+	cursor:pointer;
+}
+
+.f_table_hide{
+	display:none;
+}
+
 
 /* help 1:1문의*/
 
@@ -112,6 +131,7 @@
 .n_table_text{
 	padding:20px 10px;
 	text-align:center;
+	cursor:pointer;
 }
 
 #n_table_title{
@@ -120,6 +140,10 @@
 
 #n_table_date{
 	width:200px;
+}
+
+.n_table_hide{
+	display:none;
 }
 
 
