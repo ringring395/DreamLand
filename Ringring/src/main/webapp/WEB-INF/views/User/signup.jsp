@@ -47,7 +47,7 @@
 						<input type="tel" class="signup_tel" name="phone2">-
 						<input type="tel" class="signup_tel" name="phone3">
 						<input type="hidden" id="totalphone" name="phone" value="">
-						<span id="sph"></span>			
+						<br><span id="sph"></span>			
 					</div>
 					<input type="submit" value="회원가입" id="signupBtn">
 				</div>
