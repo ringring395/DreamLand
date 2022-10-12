@@ -54,8 +54,16 @@ public class UserController {
 		us.login(user);
 		session.setAttribute("id", user.getId());
 		rttr.addAttribute("id", user.getId());
-		
-		
+
+		return "/Home/main";
+	}
+	
+	//로그아웃
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String logout(HttpSession session, RedirectAttributes rttr) {
+		session.invalidate();
+		rttr.addAttribute("logout");
+
 		return "/Home/main";
 	}
 	

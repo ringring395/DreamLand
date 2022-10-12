@@ -18,12 +18,10 @@
 				</div>
 
 				<div id="login_no">
-					<div id="h_login" class="m_Btn"
-						onclick="location.href='../login'">
+					<div id="h_login" class="m_Btn" onclick="location.href='../login'">
 						<p>로그인</p>
 					</div>
-					<div id="h_signup" class="m_Btn"
-						onclick="location.href='../signup'">
+					<div id="h_signup" class="m_Btn" onclick="location.href='../signup'">
 						<p>회원가입</p>
 					</div>
 					<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../booking'">
@@ -32,11 +30,10 @@
 				</div>
 
 				<div id="login_user">
-					<div id="h_user" class="m_Btn"
-						onclick="location.href='../mypage'">
+					<div id="h_user" class="m_Btn" onclick="location.href='../mypage'">
 						<p>로그인된 아이디</p>
 					</div>
-					<div id="h_logout" class="m_Btn">
+					<div id="h_logout" class="m_Btn" onclick="location.href='../logout'">
 						<p>로그아웃</p>
 					</div>
 					<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../booking'">
@@ -48,7 +45,7 @@
 					<div class="m_Btn">
 						<p>관리자<br>로그인중</p>
 					</div>				
-					<div id="h_logout" class="m_Btn">
+					<div id="h_logout" class="m_Btn" onclick="location.href='../logout'">
 						<p>관리자<br>로그아웃</p>
 					</div>
 					<div id="h_managing" class="m_Btn" onclick="location.href='../admin'">
