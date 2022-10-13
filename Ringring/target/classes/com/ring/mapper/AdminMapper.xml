@@ -15,5 +15,24 @@
 		<insert id="board">
 		insert into board(b_type, b_title, b_content) 
 		values (#{b_type}, #{b_title}, #{b_content})			
-		</insert>	
+		</insert>
+		
+	<!-- 회원 목록 출력 -->
+	<select id="userlist" resultType="com.ring.model.UserVO">
+		select *
+		from (
+				select @rownum:=@rownum+1 rownum, user.* 
+				from user, (select @rownum:=0) as tmp
+		        order by signup desc
+		) as u 
+		<![CDATA[
+		where rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}
+		]]> 
+	</select>
+	
+	<!-- 회원 건수 조회 -->
+	<select id="userTotal" resultType="int">
+		select count(*) from user
+	</select>			
+			
 </mapper>  

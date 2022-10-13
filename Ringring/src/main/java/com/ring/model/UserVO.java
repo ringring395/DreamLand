@@ -7,8 +7,22 @@ public class UserVO {
 	private String name;	//이름
 	private int phone;	//전화번호
 	private String signup;	//가입일
+	private int rownum;	//순번
+	private int grp;	//권한확인
 	
 	
+	public int getGrp() {
+		return grp;
+	}
+	public void setGrp(int grp) {
+		this.grp = grp;
+	}
+	public int getRownum() {
+		return rownum;
+	}
+	public void setRownum(int rownum) {
+		this.rownum = rownum;
+	}
 	public String getId() {
 		return id;
 	}
@@ -41,7 +55,8 @@ public class UserVO {
 	}
 	@Override
 	public String toString() {
-		return "UserVO [id=" + id + ", pw=" + pw + ", name=" + name + ", phone=" + phone + ", signup=" + signup + "]";
+		return "UserVO [id=" + id + ", pw=" + pw + ", name=" + name + ", phone=" + phone + ", signup=" + signup
+				+ ", rownum=" + rownum + ", grp=" + grp + "]";
 	}
 
 	

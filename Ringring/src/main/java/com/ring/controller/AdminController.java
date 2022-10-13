@@ -8,12 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ring.model.AttachVO;
 import com.ring.model.BoardVO;
+import com.ring.model.CriteriaVO;
 import com.ring.model.EventVO;
+import com.ring.model.PageVO;
+import com.ring.model.UserVO;
 import com.ring.service.AdminService;
 
 @Controller
@@ -85,7 +89,14 @@ public class AdminController {
 	
 	//관리자 -> 회원 관리
 	@RequestMapping(value = "/admin_user", method = RequestMethod.GET)
-	public String admin_user() {
+	public String admin_user(UserVO user, HttpSession session, Model model,
+			CriteriaVO cri) {
+		
+		model.addAttribute("user", as.userlist(cri));
+		
+		int total = as.userTotal(cri);
+		model.addAttribute("paging", new PageVO(cri, total));
+		
 		return "/Admin/admin_user";
 	}
 }

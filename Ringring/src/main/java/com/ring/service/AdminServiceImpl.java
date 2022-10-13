@@ -9,7 +9,9 @@ import com.ring.mapper.AdminMapper;
 import com.ring.mapper.AttachMapper;
 import com.ring.model.AttachVO;
 import com.ring.model.BoardVO;
+import com.ring.model.CriteriaVO;
 import com.ring.model.EventVO;
+import com.ring.model.UserVO;
 
 @Service
 public class AdminServiceImpl implements AdminService{
@@ -36,6 +38,16 @@ public class AdminServiceImpl implements AdminService{
 	//관리자: 고객센터 글 등록
 	public void board(BoardVO board) {
 		am.board(board);
+	}
+	
+	//회원 목록
+	public ArrayList<UserVO> userlist(CriteriaVO cri){
+		return am.userlist(cri);
+	}
+	
+	//회원 목록 건수 조회
+	public int userTotal(CriteriaVO cri) {
+		return am.userTotal(cri);
 	}
 
 }

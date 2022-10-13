@@ -49,6 +49,14 @@
 	border-bottom:3px solid #ff8000;	
 }
 
+/* paging 페이징 처리*/
+
+#paging{
+	font-size:20px;
+	display:flex;
+	justify-content:center;	
+}
+
 /* admin 예매현황*/
 
 #a_ticket{
@@ -71,3 +79,13 @@
 /* admin_help 1:1문의 답변 달기*/
 
 /* admin_user 회원목록*/
+
+#a_user_table{
+	width:inherit;
+	margin:10px auto; 
+}
+
+.a_user_table_td{
+	padding:10px;
+	text-align:center;
+}
