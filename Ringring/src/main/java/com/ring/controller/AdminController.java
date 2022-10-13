@@ -89,7 +89,7 @@ public class AdminController {
 	}
 	
 	//관리자 ->1:1문의 답변
-	@RequestMapping(value="/admin_help", method = RequestMethod.GET)
+	@RequestMapping(value="/admin_help/", method = RequestMethod.GET)
 	public String admin_help() {
 		return "/Admin/admin_help";
 	}	

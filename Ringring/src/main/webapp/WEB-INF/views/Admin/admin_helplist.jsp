@@ -6,6 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/admin.css">
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/admin.js"></script>
+
 <title>관리자용_1:1문의 리스트</title>
 
 </head>
@@ -26,7 +30,7 @@
 					<th>답변여부</th>									
 				</tr>
 			<c:forEach items="${helplist}" var="helplist">	
-				<tr>
+				<tr id="helplistGo">
 					<td class="a_helplist_table_td">${helplist.h_no}</td>
 					<td class="a_helplist_table_td">${helplist.h_title}</td>
 					<td class="a_helplist_table_td">${helplist.h_id}</td>
