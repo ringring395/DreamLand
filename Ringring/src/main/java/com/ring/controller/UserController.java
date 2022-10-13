@@ -49,20 +49,22 @@ public class UserController {
 	
 	//로그인(select 진행)
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String loginPost(UserVO user, HttpSession session, RedirectAttributes rttr) {		
+	@ResponseBody
+	public String loginPost(UserVO user, HttpSession session) 
+	throws Exception{		
 
         boolean result = us.login(user, session);
+        String msg="";
         
         if(result) {
         	session.setAttribute("id", user.getId());
-        	rttr.addAttribute("login_success");
+        	msg = "<script>alert('login_success');location.href='../mypage'</script>";
         	
-        	
-        	return "redirect:/mypage";
         }else {
-        	rttr.addAttribute("login_fail");
-        	return "/User/login";
+        	msg = "<script>alert('login_fail');location.href='../login'</script>";
+        	
         }
+        return msg;
 	}
 	
 	//로그아웃
