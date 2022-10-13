@@ -76,6 +76,16 @@
 
 /* admin_helplist 1:1문의 목록*/
 
+#a_helplist_table{
+	width:inherit;
+	margin:10px auto;
+}
+
+.a_helplist_table_td{
+	padding:10px;
+	text-align:center;
+}
+
 /* admin_help 1:1문의 답변 달기*/
 
 /* admin_user 회원목록*/

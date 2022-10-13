@@ -40,6 +40,16 @@ public class AdminServiceImpl implements AdminService{
 		am.board(board);
 	}
 	
+	//1:1문의 목록
+	public ArrayList<BoardVO> helplist(CriteriaVO cri){
+		return am.helplist(cri);
+	}
+	
+	//1:1문의 목록 건수
+	public int helpTotal(CriteriaVO cri) {
+		return am.helpTotal(cri);
+	}
+	
 	//회원 목록
 	public ArrayList<UserVO> userlist(CriteriaVO cri){
 		return am.userlist(cri);

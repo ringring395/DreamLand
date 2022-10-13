@@ -15,6 +15,12 @@ public interface AdminMapper {
 	//관리자: 고객센터 글 등록
 	public void board(BoardVO board);
 	
+	//1:1문의 목록 DB작업
+	public ArrayList<BoardVO> helplist(CriteriaVO cri);
+	
+	//1:1문의 목록 건수 DB작업
+	public int helpTotal(CriteriaVO cri);
+	
 	//회원 목록 DB작업
 	public ArrayList<UserVO> userlist(CriteriaVO cri);
 	

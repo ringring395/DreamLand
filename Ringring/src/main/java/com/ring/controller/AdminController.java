@@ -77,7 +77,14 @@ public class AdminController {
 	
 	//관리자 ->1:1문의 리스트
 	@RequestMapping(value="/admin_helplist", method = RequestMethod.GET)
-	public String admin_help_list() {
+	public String admin_helplist(BoardVO board, HttpSession session, Model model,
+			CriteriaVO cri) {
+		
+		model.addAttribute("helplist", as.helplist(cri));
+		
+		int total = as.helpTotal(cri);
+		model.addAttribute("paging", new PageVO(cri, total));
+		
 		return "/Admin/admin_helplist";
 	}
 	

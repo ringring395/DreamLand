@@ -5,19 +5,37 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.ring.mapper.AdminMapper">
-	<!-- 관리자: 이벤트 등록 -->
+<!-- 관리자: 이벤트 등록 -->
 		<insert id="event">
 		insert into event(e_type, e_title, e_start, e_end, e_summary, e_contents) 
 		values (#{e_type}, #{e_title}, #{e_start}, #{e_end}, #{e_summary}, #{e_contents})			
 		</insert>
 		
-	<!-- 관리자: 고객센터 글 등록 -->
+<!-- 관리자: 고객센터 글 등록 -->
 		<insert id="board">
 		insert into board(b_type, b_title, b_content) 
 		values (#{b_type}, #{b_title}, #{b_content})			
 		</insert>
+
+<!-- 1:1 목록 출력 -->
+	<select id="helplist" resultType="com.ring.model.BoardVO">
+		select *
+		from (
+				select @rownum:=@rownum+1 rownum, help.* 
+				from help, (select @rownum:=0) as tmp
+		        order by h_no desc
+		) as h 
+		<![CDATA[
+		where rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}
+		]]> 
+	</select>
+	
+<!-- 1:1 목록 건수 조회 -->
+	<select id="helpTotal" resultType="int">
+		select count(*) from help
+	</select>	
 		
-	<!-- 회원 목록 출력 -->
+<!-- 회원 목록 출력 -->
 	<select id="userlist" resultType="com.ring.model.UserVO">
 		select *
 		from (
@@ -30,7 +48,7 @@
 		]]> 
 	</select>
 	
-	<!-- 회원 건수 조회 -->
+<!-- 회원 건수 조회 -->
 	<select id="userTotal" resultType="int">
 		select count(*) from user
 	</select>			

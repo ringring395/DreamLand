@@ -19,9 +19,16 @@ public interface AdminService {
 	//고객센터 글 등록
 	public void board(BoardVO board);
 	
+	//1:1문의 목록 설계
+	public ArrayList<BoardVO> helplist(CriteriaVO cri);
+	
+	//1:1문의 목록 건수 설계
+	public int helpTotal(CriteriaVO cri);
+	
 	//회원목록 조회
 	public ArrayList<UserVO> userlist(CriteriaVO cri);
 	
 	//회원 목록 건수 설계
 	public int userTotal(CriteriaVO cri);
+
 }
