@@ -51,6 +51,13 @@ public class BoardController {
 		return "/board/help";
 	}
 	
+	//1:1문의 (insert이루어짐)
+	@RequestMapping(value = "/help", method = RequestMethod.POST)
+	public String helpPost(BoardVO board, HttpSession session) {
+		bs.help(board);
+		return "redirect:/mypage";
+	}
+	
 	//1:1문의: 답변
 	@RequestMapping(value = "/helpdetail", method = RequestMethod.GET)
 	public String helpdetail() {

@@ -19,6 +19,7 @@ public interface BoardService {
 	//자주하는질문 건수 설계
 	public int faqTotal(CriteriaVO cri);	
 	
-
+	//1:1 문의
+	public void help(BoardVO board);
 	
 }

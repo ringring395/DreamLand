@@ -18,4 +18,7 @@ public interface BoardMapper {
 	
 	//자주하는질문 전체 건수 조회 DB작업 설계
 	public int faqTotal(CriteriaVO cri);
+	
+	//1:1문의 등록
+	public void help(BoardVO board);
 }

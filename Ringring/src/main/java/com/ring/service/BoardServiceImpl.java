@@ -37,5 +37,10 @@ public class BoardServiceImpl implements BoardService{
 	public int faqTotal(CriteriaVO cri) {
 		return bm.faqTotal(cri);
 	}
+	
+	//1:1문의
+	public void help(BoardVO board) {
+		bm.help(board);
+	}
 
 }

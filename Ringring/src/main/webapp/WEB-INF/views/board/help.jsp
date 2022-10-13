@@ -44,28 +44,31 @@ $(document).ready(function() {
 		</div>
 			
 		<div id="help">
-		<form method="post" action="/write">
+		<form method="post" action="/help">
 			<div id="help_sub">
 			
-				<div id="help_category">
-					<select>
-						<option>행사</option>
-						<option>티켓구매</option>
-						<option>대관</option>
-						<option>등등</option>
-					</select>
+				<div id="help_type">
+					<select name="h_type">
+						<option>==카테고리==</option>
+						<option value="ticket">티켓구매</option>
+						<option value="group">단체문의</option>
+						<option value="event">행사</option>
+						<option value="etc">기타</option>
+					</select>				
+
 				</div>
 				<div id="help_title">
-					<input type="text" value="문의 제목">
+					<input type="text" name="h_title" placeholder="문의 제목">
 				</div>
 				<div id="help_email">
-					<input type="email" value="가입시 입력한 아이디">
-					<p>가입시 입력한 메일로 답변여부가 전송됩니다.</p>
+					<input type="hidden" name="h_id" value="${sessionScope.id }">
+					<input type="email" name="h_email" value="${sessionScope.id }">
+					<br><span>가입시 입력한 메일로 답변여부가 전송됩니다.</span>
 				</div>				
 			</div><!-- help_sub -->			
 
 			<div id="help_contents">
-				<textarea id="summernote" name="content"></textarea>
+				<textarea id="summernote" name="h_content"></textarea>
 			</div>
 			
 			<div id="help_Btn">
