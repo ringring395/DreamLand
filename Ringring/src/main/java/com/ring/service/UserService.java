@@ -1,5 +1,7 @@
 package com.ring.service;
 
+import javax.servlet.http.HttpSession;
+
 import com.ring.model.UserVO;
 
 public interface UserService {
@@ -11,6 +13,6 @@ public interface UserService {
 	public int idcheck(String id);
 	
 	//로그인
-	public void login(UserVO user);
+	public boolean login(UserVO user, HttpSession session);
 
 }

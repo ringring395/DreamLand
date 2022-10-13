@@ -49,18 +49,18 @@ public class UserController {
 	
 	//로그인(select 진행)
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	@ResponseBody
-	public Object loginPost(UserVO user, HttpSession session, RedirectAttributes rttr) {		
+	public String loginPost(UserVO user, HttpSession session, RedirectAttributes rttr) {		
 
-        us.login(user);
-        System.out.println(user.getId());
+        boolean result = us.login(user, session);
         
-        if(user.getId() != null) {
+        if(result) {
         	session.setAttribute("id", user.getId());
-        	rttr.addAttribute("id", user.getId());
-           
+        	rttr.addAttribute("login_success");
+        	
+        	
         	return "redirect:/mypage";
         }else {
+        	rttr.addAttribute("login_fail");
         	return "/User/login";
         }
 	}

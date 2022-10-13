@@ -1,5 +1,7 @@
 package com.ring.service;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,8 +25,14 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	//로그인
-	public void login(UserVO user) {
-		um.login(user);
+	public boolean login(UserVO user, HttpSession session) {
+		UserVO login = um.login(user);
+		boolean result = false;
+		if(login != null) {
+			session.setAttribute("login", login);
+			result = true;
+		}
+		return result;
 	}
 
 

@@ -11,6 +11,6 @@ public interface UserMapper {
 	public int idcheck(String id);
 	
 	//로그인
-	public void login(UserVO user);
+	public UserVO login(UserVO user);
 
 }
