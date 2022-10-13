@@ -50,12 +50,12 @@
 			<div id="faq_table">
 			<c:forEach items="${faq}" var="faq">
 				<table>
-					<tr class="f_table_show">
+					<tr class="table_show">
 						<th>제목</th>
 						<td class="f_table_center">${faq.b_title }</td>
 						<td id="f_table_date">${faq.b_regdate }</td>										
 					</tr>
-					<tr class="f_table_hide">
+					<tr class="table_hide">
 						<th>내용</th>
 						<td colspan="2" class="f_table_center">${faq.b_content }</td>											
 					</tr>					

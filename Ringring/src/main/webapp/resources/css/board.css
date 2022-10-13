@@ -12,6 +12,22 @@
 	border-bottom:3px solid #ff8000;
 }
 
+/* paging 페이징 처리*/
+
+#paging{
+	font-size:20px;
+	display:flex;
+	justify-content:center;	
+}
+
+/* 테이블 열고닫기*/
+.table_show{
+	cursor:pointer;
+}
+
+.table_hide{
+	display:none;
+}
 
 /* faq 자주하는질문*/
 
@@ -47,15 +63,6 @@
 	width:200px;
 	text-align:center;	
 }
-
-.f_table_show{
-	cursor:pointer;
-}
-
-.f_table_hide{
-	display:none;
-}
-
 
 /* help 1:1문의*/
 
@@ -128,8 +135,9 @@
 	text-align:center;	
 }
 
-#h_title{
+.h_title{
 	width:650px;
+	padding:10px 50px;
 }
 
 #h_date{
@@ -158,11 +166,6 @@
 #n_table_date{
 	width:200px;
 }
-
-.n_table_hide{
-	display:none;
-}
-
 
 #notice_search{
 	margin:10px auto;

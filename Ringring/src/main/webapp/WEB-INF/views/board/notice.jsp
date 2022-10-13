@@ -25,12 +25,12 @@
 					<th>No.</th><th>공지사항</th><th>등록일</th>										
 				</tr>
 			<c:forEach items="${notice}" var="notice">	
-				<tr class="n_table_show">
+				<tr class="table_show">
 					<td class="n_table_text" id="n_table_no">${notice.b_no}</td>
 					<td class="n_table_text" id="n_table_title">${notice.b_title}</td>
 					<td class="n_table_text" id="n_table_date">${notice.b_regdate}</td>										
 				</tr>
-				<tr class="n_table_hide">
+				<tr class="table_hide">
 					<td></td>
 					<td class="n_table_content">${notice.b_content}</td>
 					<td></td>
