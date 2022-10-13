@@ -25,7 +25,8 @@
 	cursor:pointer;
 }
 
-.table_hide{
+.table_hide,
+.table_more{
 	display:none;
 }
 
