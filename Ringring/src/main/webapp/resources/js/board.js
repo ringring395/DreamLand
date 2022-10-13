@@ -12,7 +12,7 @@ $(document).ready(function (){
 	//해당 줄 클릭하면 내용 보여짐.
 	$(".table_show").on("click",function (){
 
-		var content = $(this).nextAll("tr");
+		var content = $(this).next("tr");
 		//보이는상태이면		
 		if(content.is(":visible")){
 			//사라지게!

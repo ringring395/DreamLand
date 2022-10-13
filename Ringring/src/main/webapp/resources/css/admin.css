@@ -57,6 +57,16 @@
 	justify-content:center;	
 }
 
+/* 테이블 열고닫기*/
+.table_show{
+	cursor:pointer;
+}
+
+.table_hide,
+.table_more{
+	display:none;
+}
+
 /* admin 예매현황*/
 
 #a_ticket{
