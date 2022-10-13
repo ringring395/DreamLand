@@ -118,6 +118,23 @@
 	text-align:right;
 }
 
+#helplist_table{
+	width:inherit;
+	margin:10px auto;
+}
+
+.helplist_table_td{
+	padding:10px;
+	text-align:center;	
+}
+
+#h_title{
+	width:650px;
+}
+
+#h_date{
+	font-size:10px;
+}
 
 /* notice 공지사항*/
 

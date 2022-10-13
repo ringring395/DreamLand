@@ -35,10 +35,10 @@
 					<td class="a_user_table_td">${user.signup}</td>
 					<c:choose>
 						<c:when test="${user.grp eq '0'}">
-							<td class="a_user_table_td">Y</td>
+							<td class="a_user_table_td">N</td>
 						</c:when>
 						<c:otherwise>
-							<td class="a_user_table_td">N</td>
+							<td class="a_user_table_td">Y</td>
 						</c:otherwise>
 					</c:choose>
 				</tr>		

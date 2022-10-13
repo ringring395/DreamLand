@@ -7,6 +7,15 @@ public class CriteriaVO {
 	private String keyword;	//검색창에 입력한 키워드
 	private String type;	//키워드의 종류
 	
+	//아이디
+	private String id;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	//생성자
 	public CriteriaVO() {
 		this(1,10);		
@@ -44,7 +53,7 @@ public class CriteriaVO {
 	@Override
 	public String toString() {
 		return "CriteriaVO [pageNum=" + pageNum + ", amount=" + amount + ", keyword=" + keyword + ", type=" + type
-				+ "]";
+				+ ", id=" + id + "]";
 	}
 	
 }
