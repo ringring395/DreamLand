@@ -40,13 +40,13 @@
 }
 
 #here_map{
-	width:350px;
-	height:350px;
+	width:500px;
+	height:400px;
 	background-color:#8080c0;
 }
 
 #here_info{
-	width:600px;
+	width:450px;
 	background-color:#8080c0;
 }
 
