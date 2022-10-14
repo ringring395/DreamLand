@@ -31,8 +31,9 @@ $(document).ready(function() {
     		    ['para', ['ul', 'ol', 'paragraph']],
     		    ['table', ['table']],
     		    ['insert', ['link', 'picture']]
-    		  ]	        
+    		  ]
 	  });
+
 	});
 </script>
 
