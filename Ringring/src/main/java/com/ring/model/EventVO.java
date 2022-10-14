@@ -21,6 +21,6 @@ public class EventVO {
     private String e_upload;	//이벤트 등록날짜
     
 	//AttachVO(파일 업로드 관련 Model), 배열
-	private ArrayList<AttachVO> attach;
+	private ArrayList<ImgVO> img;
     
 }

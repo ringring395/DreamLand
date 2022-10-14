@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 	<link rel="stylesheet" href="../../../resources/css/admin.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="/resources/js/uploadAjax.js"></script>
+<script type="text/javascript" src="/resources/js/img.js"></script>
 
 <title>관리자_이벤트 등록</title>
 </head>
@@ -50,12 +50,17 @@
 				</tr>
 				<tr>
 					<th>메인사진</th>
-					<td><input type="file"></td>
+					<td><input type="file" name="imgMain" id="main">
+						<div id="imgMainResult">
+							<ul>								
+							</ul>	
+						</div>					
+					</td>
 				</tr>
 				<tr>
 					<th>서브사진</th>
-					<td><input type="file">
-						<div id="uploadResult">
+					<td><input type="file" name="imgSub" id="sub" multiple>
+						<div id="imgSubResult">
 							<ul>								
 							</ul>	
 						</div>
