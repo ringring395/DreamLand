@@ -37,9 +37,11 @@ public class BoardVO {
     private String h_type;			// 1:1 종류
     private String h_title;			// 1:1 제목
     private String h_id;			// 1:1 작성자 id
-    private String h_email;			// 1:1 답변 메일
+    private String h_email;			// 1:1 회신 메일
     private String h_content; 		// 1:1 내용
     private String h_regdate; 		// 1:1 등록날짜
 	private int h_answer;			// 1:1 답변등록 여부
+	private String h_an_content;	// 1:1 답변 내용
+	private String h_an_date;		// 1:1 답변등록 날짜
 	
 }
