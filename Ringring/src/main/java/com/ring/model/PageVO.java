@@ -1,18 +1,21 @@
 package com.ring.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
 public class PageVO {
-	//시작번호
-	private int startPage;
-	//끝번호
-	private int endPage;
-	//이전버튼 (true일때는 보여주고, false일때는 보여주지마!)
-	private boolean prev;
-	//다음버튼
-	private boolean next;
-	//CriteriaVO 포함
-	private CriteriaVO cri;
-	//board테이블의 전체 건수를 저장
-	private int total;
+	
+	private int startPage;	//시작번호	
+	private int endPage;	//끝번호	
+	private boolean prev;	//이전버튼 (true일때는 보여주고, false일때는 보여주지마!)	
+	private boolean next;	//다음버튼	
+	private CriteriaVO cri;	//CriteriaVO 포함	
+	private int total;		//board테이블의 전체 건수를 저장
+	
 	
 	//생성자(매개변수가 2개인 생성자) 선언
 	public PageVO(CriteriaVO cri, int total) {
@@ -46,61 +49,6 @@ public class PageVO {
 		
 	}
 
-	public int getStartPage() {
-		return startPage;
-	}
 
-	public void setStartPage(int startPage) {
-		this.startPage = startPage;
-	}
-
-	public int getEndPage() {
-		return endPage;
-	}
-
-	public void setEndPage(int endPage) {
-		this.endPage = endPage;
-	}
-
-	public boolean isPrev() {
-		return prev;
-	}
-
-	public void setPrev(boolean prev) {
-		this.prev = prev;
-	}
-
-	public boolean isNext() {
-		return next;
-	}
-
-	public void setNext(boolean next) {
-		this.next = next;
-	}
-
-	public CriteriaVO getCri() {
-		return cri;
-	}
-
-	public void setCri(CriteriaVO cri) {
-		this.cri = cri;
-	}
-
-	public int getTotal() {
-		return total;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
-	}
-
-	@Override
-	public String toString() {
-		return "PageVO [startPage=" + startPage + ", endPage=" + endPage + ", prev=" + prev + ", next=" + next
-				+ ", cri=" + cri + ", total=" + total + "]";
-	}
-	
-	
-	
 	
 }
