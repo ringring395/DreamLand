@@ -20,6 +20,16 @@
 	justify-content:center;	
 }
 
+/* 더보기 */
+.event_more{
+	display:flex;
+	justify-content:right;
+	cursor:pointer;
+}
+
+.event_hide{
+	display:none;
+}
 
 /* event 행사일정*/
 
@@ -39,11 +49,6 @@
 	width:600px;
 	margin:10px;
 	background-color:#8080c0;		
-}
-
-#event_more{
-	display:flex;
-	justify-content:right;
 }
 
 
@@ -67,10 +72,6 @@
 	background-color:#8080c0;		
 }
 
-#parade_more{
-	display:flex;
-	justify-content:right;
-}
 
 /* sale 할인혜택*/
 

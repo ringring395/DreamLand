@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/event.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/event.js"></script>
 <title>parade퍼레이드</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -24,7 +26,8 @@
 				<div id="parade_title">${parade.e_title }</div>
 				<div id="parade_day">시작일 : ${parade.e_start } ~ 종료일 : ${parade.e_end }</div>
 				<div id="parade_point">${parade.e_summary }</div>
-				<div id="parade_more">${parade.e_contents }+더보기</div>
+				<div class="event_more">+더보기</div>
+				<div class="event_hide">${parade.e_contents }</div>
 			</div>			
 		</div><!-- parade -->
 		</c:forEach>

@@ -6,7 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/event.css">
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/event.js"></script>
  
 <title>이벤트_행사일정</title>
 </head>
@@ -14,7 +15,7 @@
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>이벤트 >행사 일정</span>
+			<span>페이지제목</span>
 		</div>
 		
 	<c:forEach items="${event}" var="event">		
@@ -25,7 +26,8 @@
 				<div id="event_title">${event.e_title}</div>
 				<div id="event_day">시작일 : ${event.e_start}	~ 종료일 : ${event.e_end}</div>
 				<div id="event_point">${event.e_summary}</div>
-				<div id="event_more">+ 더보기</div>
+				<div class="event_more">+ 더보기</div>
+				<div class="event_hide">${event.e_contents}</div>
 			</div>								
 		</div><!-- event -->
 	</c:forEach>
