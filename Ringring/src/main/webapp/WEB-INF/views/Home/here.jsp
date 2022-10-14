@@ -22,7 +22,7 @@
 	var container = document.getElementById('here_map');
 	var options = {
 		center: new kakao.maps.LatLng(33.450701, 126.570667),
-		level: 3
+		level: 5
 	};
 
 	var map = new kakao.maps.Map(container, options);
@@ -33,6 +33,7 @@
 				<p>자가용 : 요리조리 </p>
 				<p>버스 : 움짝움짝 </p>
 				<p>지하철 : 둠둠둠 </p>
+				<label><a href="https://map.kakao.com/link/to/테스트,33.450701,126.570667">길찾기 바로가기</a></label>
 			</div>
 		</div><!-- here -->
 	</div><!-- wrap -->
