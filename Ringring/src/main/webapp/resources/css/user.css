@@ -104,6 +104,9 @@
 #login_naver >button,
 #login_kakao >button{
 	width:180px;
+	background-color:orange;
+	border-radius:5px;
+	border-style:none;
 }
 
 
