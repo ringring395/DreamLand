@@ -83,7 +83,7 @@ $(document).ready(function(){
 	})//main 닫음
 	
 // 서브사진을 등록한 후 이벤트
-	$("#sub").on("change",function(){
+	$("#a_eventSubmitBtn").on("click",function(){
 
 		var formData = new FormData();
 		
