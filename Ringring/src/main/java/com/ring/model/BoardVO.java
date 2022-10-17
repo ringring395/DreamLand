@@ -1,7 +1,5 @@
 package com.ring.model;
 
-import java.util.ArrayList;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -19,11 +17,7 @@ public class BoardVO {
 	private int count;			//조회수 count
 	private String id;			//id
 	private int lcnt;			//좋아요 갯수
-		
-	//AttachFileVO(파일 업로드 관련 Model), 배열
-	private ArrayList<AttachFileVO> attach;
-
-	
+			
 //dreamland DB	
 	//board
 	private int b_no;		//고객센터 내 글 번호

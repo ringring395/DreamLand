@@ -97,14 +97,13 @@ $(document).ready(function(){
 		var files = inputFile[0].files;
 		console.log(files);
 		
-		for(var i=0; i<files.length; i++){			
-			//checkExtension 함수 호출
-			if(!checkExtension(files[i].name, files[i].size)){
-				return false;
-			}		
-			// .jsp의 파일 선택을 통해 선택한 파일들을 formData에 추가
-			formData.append("imgMain", files[i]);
-		}
+		
+		//checkExtension 함수 호출
+		if(!checkExtension(files[0].name, files[0].size)){
+			return false;
+		}		
+		// .jsp의 파일 선택을 통해 선택한 파일들을 formData에 추가
+		formData.append("imgMain", files[0]);
 		
 		//ajax를 통해 ImgController에 파일 관련 데이터 전송
 		$.ajax({
