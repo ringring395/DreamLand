@@ -34,8 +34,7 @@ public class UploadController {
 	}
 	
 //년,월,일 폴더 생성하는 메소드 선언
-	private String getFolder() {
-		
+	private String getFolder() {		
 		//현재 날짜 : Mon Oct 17 09:23:12 KST 2022
 		Date date = new Date();
 		//간단날짜형식 : Mon Oct 17 09:23:12 KST 2022 -> 2022-10-17
@@ -47,10 +46,8 @@ public class UploadController {
 	}
 	
 	
-// 업로드 파일이 이미지 파일인지 아닌지 구분하는 메소드 선언
-	//		반환타입	메소드명		타입	변수명
+// 이미지 파일인지 구분하는 메소드 checkImageType
 	private boolean checkImageType(File file) {
-		// probeContentType(파일 경로) : 파일 경로에 있는 파일 타입을 알아내는 메소드
 		try {
 			String contentType = Files.probeContentType(file.toPath());
 			System.out.println("contentType="+contentType);	
@@ -61,61 +58,52 @@ public class UploadController {
 			e.printStackTrace();
 		}
 		return false;
-	}
+	}//checkImageType 닫음
 	
 	
 	// 이미지 메인
 	@RequestMapping(value = "/imgMain", method = RequestMethod.POST)
 	public ResponseEntity<UploadVO> uploadMain(MultipartFile imgMain) {
-		// UploadVO
+
 		UploadVO up = new UploadVO();
-		// 폴더 경로
+
 		String uploadFolder = "D:\\01-STUDY\\upload";
 
-		// 서버 업로드 경로와 getFolder 메서드의 날짜문자열을 이어서 하나의 폴더 생성
 		File uploadPath = new File(uploadFolder, getFolder());
 
-		// 폴더생성(D:\\01-STUDY\\upload\\현재날짜)
-		if (uploadPath.exists() == false) {// uploadPath가 존재하지 않으면,
+		// uploadPath가 존재하지 않으면, 폴더생성(D:\\01-STUDY\\upload\\현재날짜)
+		if (uploadPath.exists() == false) {	
 			uploadPath.mkdirs();
 		}
 		
-			//System.out.println(imgMain.getOriginalFilename());
-			//System.out.println(imgMain.getSize());
-			// 실제 파일명( getOriginalFilename())
-			// UUID 적용(UUID_ getOriginalFilename());
-			UUID uuid = UUID.randomUUID();
-			System.out.println("UUID=" + uuid.toString());
+		UUID uuid = UUID.randomUUID();
+		//System.out.println("UUID=" + uuid.toString());
+		
+		up.setUploadPath(getFolder());					// UploadVO의 uploadPath 변수에 저장()			
+		up.setFileName(imgMain.getOriginalFilename());	// UploadVO의 fileName 변수에 저장()
+		up.setUuid(uuid.toString());					// UploadVO의 uuid 변수에 저장()			
+		up.setI_type("m");								// UploadVO의 i_type 변수에 저장
+		
+		// 지정된 저장폴더에, 지정된 파일 이름형식으로
+		File saveFile = new File(uploadPath, uuid.toString() + "_" + imgMain.getOriginalFilename());
 
-			// UploadVO의 uploadPath 변수에 저장()
-			up.setUploadPath(getFolder());
-			// UploadVO의 fileName 변수에 저장()
-			up.setFileName(imgMain.getOriginalFilename());
-			// UploadVO의 uuid 변수에 저장()
-			up.setUuid(uuid.toString());
-			// UploadVO의 i_type 변수에 저장
-			up.setI_type("m");
+		try {	// transferTo() 메소드에 예외가 있으면
+			imgMain.transferTo(saveFile); // 서버로 원본파일 전송
+			// 내가 서버에 올리고자 하는 파일이 이미지이면,
+			if (checkImageType(saveFile)) {		
+				
+				//UploadVO의 image변수에 저장
+				up.setImage(true);
+				//파일 생성
+				FileOutputStream thumbnail = new FileOutputStream(new File(uploadPath,"th_"+uuid.toString()+"_"+imgMain.getOriginalFilename()));
+				//썸네일 생성	(너비,높이)
+				Thumbnailator.createThumbnail(imgMain.getInputStream(),thumbnail,150,150);
+				thumbnail.close();			
+			} // checkImageType메서드 끝
+		} catch (Exception e) {// 예외를 처리하라.
+			System.out.println(e.getMessage());
+		}
 
-			// 파일 저장 어느폴더에( D:\\01-STUDY\\upload\\ 현재날짜) ,어떤 파일이름으로 (비정규식.png)
-			File saveFile = new File(uploadPath, uuid.toString() + "_" + imgMain.getOriginalFilename());
-
-			// D:\\01-STUDY\\upload\\비정규식.png에 파일을 전송(transferTo)
-			try {// transferTo() 메소드에 예외가 있으면
-				imgMain.transferTo(saveFile); // 서버로 원본파일 전송
-				// 내가 서버에 올리고자 하는 파일이 이미지이면,
-				if (checkImageType(saveFile)) {					
-					//파일 생성
-					FileOutputStream thumbnail = new FileOutputStream(new File(uploadPath,"th_"+uuid.toString()+"_"+imgMain.getOriginalFilename()));
-					//썸네일 생성	(너비,높이)
-					Thumbnailator.createThumbnail(imgMain.getInputStream(),thumbnail,150,150);
-					thumbnail.close();			
-				} // checkImageType메서드 끝
-
-			} catch (Exception e) {// 예외를 처리하라.
-				System.out.println(e.getMessage());
-			}
-
-		//} // for문 끝
 		return new ResponseEntity<>(up, HttpStatus.OK);
 	}// uploadMain 끝
 	
@@ -123,49 +111,43 @@ public class UploadController {
 	// 이미지 서브
 	@RequestMapping(value = "/imgSub", method = RequestMethod.POST)
 	public ResponseEntity<ArrayList<UploadVO>> uploadSub(MultipartFile[] imgSub) {
-		// UploadVO
+
 		ArrayList<UploadVO> uplist = new ArrayList<>();
-		// 폴더 경로
+
 		String uploadFolder = "D:\\01-STUDY\\upload";
 
-		// 서버 업로드 경로와 getFolder 메서드의 날짜문자열을 이어서 하나의 폴더 생성
 		File uploadPath = new File(uploadFolder, getFolder());
-
-		// 폴더생성(D:\\01-STUDY\\upload\\현재날짜)
-		if (uploadPath.exists() == false) {// uploadPath가 존재하지 않으면,
-			uploadPath.mkdirs();
+		
+		// uploadPath가 존재하지 않으면, 폴더생성(D:\\01-STUDY\\upload\\현재날짜)
+		if (uploadPath.exists() == false) {	
+			uploadPath.mkdirs();			
 		}
 
 		// for(변수명:배열명)
 		for (MultipartFile multi : imgSub) {
-			// UploadVO클래스의 새로운 주소를 반복적으로 생성하여
-			// ArrayList에 저장
+			// UploadVO클래스의 새로운 주소를 반복적으로 생성하여  ArrayList에 저장
 			UploadVO up = new UploadVO();
 
-			System.out.println(multi.getOriginalFilename());
-			System.out.println(multi.getSize());
-			// 실제 파일명( multi.getOriginalFilename())
-			// UUID 적용(UUID_ multi.getOriginalFilename());
+			//System.out.println("파일명="+multi.getOriginalFilename());
+			//System.out.println("파일size="+multi.getSize());
 			UUID uuid = UUID.randomUUID();
-			System.out.println("UUID=" + uuid.toString());
+			//System.out.println("UUID=" + uuid.toString());
 
-			// UploadVO의 uploadPath 변수에 저장()
-			up.setUploadPath(getFolder());
-			// UploadVO의 fileName 변수에 저장()
-			up.setFileName(multi.getOriginalFilename());
-			// UploadVO의 uuid 변수에 저장()
-			up.setUuid(uuid.toString());
-			// UploadVO의 i_type 변수에 저장
-			up.setI_type("s");
-
-			// 파일 저장 어느폴더에( D:\\01-STUDY\\upload\\ 현재날짜) ,어떤 파일이름으로 (비정규식.png)
+			up.setUploadPath(getFolder());					// UploadVO의 uploadPath 변수에 저장()	
+			up.setFileName(multi.getOriginalFilename());	// UploadVO의 fileName 변수에 저장()		
+			up.setUuid(uuid.toString());					// UploadVO의 uuid 변수에 저장()		
+			up.setI_type("s");								// UploadVO의 i_type 변수에 저장
+			
+			// 지정된 저장폴더에, 지정된 파일 이름형식으로
 			File saveFile = new File(uploadPath, uuid.toString() + "_" + multi.getOriginalFilename());
 
-			// D:\\01-STUDY\\upload\\비정규식.png에 파일을 전송(transferTo)
 			try {// transferTo() 메소드에 예외가 있으면
 				multi.transferTo(saveFile); // 서버로 원본파일 전송
 				// 내가 서버에 올리고자 하는 파일이 이미지이면,
 				if (checkImageType(saveFile)) {
+					//이미지 파일이면 true 저장
+					up.setImage(true);
+					
 					//파일 생성
 					FileOutputStream thumbnail = new FileOutputStream(new File(uploadPath,"th_"+uuid.toString()+"_"+multi.getOriginalFilename()));
 					//썸네일 생성	(너비,높이)

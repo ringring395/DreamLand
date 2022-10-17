@@ -8,45 +8,55 @@ $(document).ready(function(){
 	
 	//내용 등록 체크
 	$("#a_eventSubmitBtn").on("click",function(){
+		
+		/* 체크 대상*/
+		var type = $("input[name=e_type]:checked").val();			//종류
+		var title = $("input[name=e_title]:checked").val();			//제목			
+		var start = $("input[name=e_start]:checked").val();			//시작일			
+		var end = $("input[name=e_end]:checked").val();				//종료일	
+		var summary = $("input[name=e_summary]:checked").val();		//한줄소개			
+		var contents = $("input[name=e_contents]:checked").val();	//상세내용
+			
 		/* 체크 대상 기본값*/
 		var typechk = false;		//종류 체크
 		var titlechk = false;		//제목 체크
 		var startchk = false;		//시작일 체크
 		var endchk = false;			//종료일 체크
 		var summarychk = false;		//한줄소개 체크
-		var contentschk = false;	//상세내용 체크
+		var contentschk = false;	//상세내용 체크	
 		
-		/* 체크 대상 변수 */
-		var type = $("input[name=e_type]:checked").val();	//종류
-		var title = $("input[name=e_title]").val();			//제목
-		var start = $("input[name=e_start]").val();			//시작일
-		var end = $("input[name=e_end]").val();				//종료일
-		var summary = $("input[name=e_summary]").val();		//한줄소개
-		var contents = $("textarea[name=e_contents]").val();//상세내용
-		
-		/*공란 체크*/
-		if(type >0){				//종류
+		/*공란 체크 : 입력값 길이로 판단*/
+		if(type.length >0){			//종류
 			typechk = true;
 		}
-		if(title >0){				//제목
+		if(title.length >0){		//제목
 			titlechk = true;
 		}		
-		if(start >0){				//시작일
+		if(start.length >0){		//시작일
 			startchk = true;
 		}		
-		if(end >0){					//종료일
+		if(end.length >0){			//종료일
 			endchk = true;
 		}		
-		if(summary >0){				//한줄소개
+		if(summary.length >0){		//한줄소개
 			summarychk = true;
 		}		
-		if(contents >0){				//상세내용
+		if(contents.length >0){		//상세내용
 			contentschk = true;
-		}		
-		
+		}
+					
 		if(typechk && titlechk && startchk && endchk && summarychk && contentschk){
+
+			alert(type.length);
+			alert(title.length);			
+			alert(start.length);			
+			alert(end.length);			
+			alert(summary.length);			
+			alert(contents.length);
+			
 			$("#form").append(input).submit();
 		}else{
+			alert("빠짐없이 입력해주세요.");
 			return false;
 		}	
 	
@@ -77,7 +87,7 @@ $(document).ready(function(){
 
 // 메인사진을 등록한 후 이벤트
 	$("#main").on("change", function(){
-//		e.preventDefault();
+		event.preventDefault();
 
 		//파일 업로드 관련 로직 처리
 		// .jsp의 form태그를 대체(FormData함수)
@@ -134,14 +144,14 @@ $(document).ready(function(){
 	
 // 서브사진을 등록한 후 이벤트
 	$("#sub").on("change",function(){
-//		e.preventDefault();
+		event.preventDefault();
 
 		var formData = new FormData();
 		
 		var inputFile = $("input[name=imgSub]");
 		var files = inputFile[0].files;
 		console.log(files);
-		
+
 		for(var i=0; i<files.length; i++){	
 			if(!checkExtension(files[i].name, files[i].size)){
 				return false;
