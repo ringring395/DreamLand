@@ -53,7 +53,7 @@ public class UploadController {
 		// probeContentType(파일 경로) : 파일 경로에 있는 파일 타입을 알아내는 메소드
 		try {
 			String contentType = Files.probeContentType(file.toPath());
-			//System.out.println("contentType="+contentType);	
+			System.out.println("contentType="+contentType);	
 			//파일타입이 image이면 true, 그 외에는 false
 			return contentType.startsWith("image");
 			
@@ -100,7 +100,6 @@ public class UploadController {
 			File saveFile = new File(uploadPath, uuid.toString() + "_" + imgMain.getOriginalFilename());
 
 			// D:\\01-STUDY\\upload\\비정규식.png에 파일을 전송(transferTo)
-
 			try {// transferTo() 메소드에 예외가 있으면
 				imgMain.transferTo(saveFile); // 서버로 원본파일 전송
 				// 내가 서버에 올리고자 하는 파일이 이미지이면,

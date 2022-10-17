@@ -19,7 +19,7 @@
 				<span>관리자_이벤트 등록</span>
 			</div>
 			
-			<form action="/admin_event" method="post">
+			<form action="/admin_event" method="post" id="form" enctype="multipart/form-data">
 			<table id="a_event_upload">
 				<tr>
 					<th>종류</th>
