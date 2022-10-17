@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.ring.mapper.UploadMapper">
+
+<!-- 이미지 정보 insert -->
+	<insert id="uploadInsert">
+		insert into upload(uuid, uploadPath, filename, image, e_no, i_type)
+		values(#{uuid}, #{uploadPath}, #{filename}, #{image}, #{e_no}, #{i_type})
+	</insert>
+
+<!-- 이미지 정보 조회 -->
+	<select id="uploadList" resultType="com.ring.model.UploadVO">
+		select * from upload
+		where e_no=#{e_no}
+	</select>
+
+</mapper>

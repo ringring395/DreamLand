@@ -20,7 +20,7 @@ public class EventVO {
     private String e_contents;	//이벤트 설명
     private String e_upload;	//이벤트 등록날짜
     
-	//AttachVO(파일 업로드 관련 Model), 배열
-	private ArrayList<ImgVO> img;
+	//UploadVO(파일 업로드 관련 Model), 배열
+	private ArrayList<UploadVO> up;
     
 }

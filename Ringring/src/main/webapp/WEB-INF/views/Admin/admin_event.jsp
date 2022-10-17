@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 	<link rel="stylesheet" href="../../../resources/css/admin.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="/resources/js/img.js"></script>
+<script type="text/javascript" src="/resources/js/upload.js"></script>
 
 <title>관리자_이벤트 등록</title>
 </head>
@@ -19,7 +19,7 @@
 				<span>관리자_이벤트 등록</span>
 			</div>
 			
-			<form id="form" action="/admin_event" method="post">
+			<form action="/admin_event" method="post">
 			<table id="a_event_upload">
 				<tr>
 					<th>종류</th>
@@ -48,15 +48,17 @@
 					<td><textarea rows="15" cols="90" name="e_contents" ></textarea>
 					</td>
 				</tr>
-				<tr>
+ 			<tr>
 					<th>메인사진</th>
 					<td><input type="file" name="imgMain" id="main">
+
 						<div id="imgMainResult">
 							<ul>								
 							</ul>	
 						</div>					
 					</td>
 				</tr>
+					
 				<tr>
 					<th>서브사진</th>
 					<td><input type="file" name="imgSub" id="sub" multiple>

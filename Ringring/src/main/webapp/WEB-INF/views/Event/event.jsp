@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../../../resources/css/event.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/event.js"></script>
- 
+<script type="text/javascript" src="/resources/js/attach.js"></script> 
 <title>이벤트_행사일정</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -21,8 +21,9 @@
 	<c:forEach items="${event}" var="event">		
 		<div id="event">	
 		
-			<div id="event_img">사진사진사진</div>
+			<div id="event_img"><table></table></div>
 			<div id="event_info">
+				<input type="hidden" name="e_no" value="${event.e_no }">
 				<div id="event_title">${event.e_title}</div>
 				<div id="event_day">시작일 : ${event.e_start}	~ 종료일 : ${event.e_end}</div>
 				<div id="event_point">${event.e_summary}</div>
