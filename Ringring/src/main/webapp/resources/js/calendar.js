@@ -84,10 +84,10 @@ function calendarMaker(target, date){
 		$(".calendar_table").on("click", "td", function(){
 			$(".calendar_table .select_day").removeClass("select_day");
 			$(this).removeClass("select_day").addClass("select_day");
-			//선택한 월/일/요일 출력하기
+			//선택한 월/일/요일 추출하기
 			var selectDate = $(this).html();		//선택 일 추출하기
-			$("#booking_date").text(selectDate);	//선택 일 출력
-			$("#booking_month").text(month);		//해당 월 출력
+			//$("#booking_date").text(selectDate);	//선택 일 출력
+			//$("#booking_month").text(month);		//해당 월 출력
 			var select = (year+"-"+month+"-"+selectDate);
 			getDay(select);							//선택한 날짜의 요일 구하기
 			
@@ -99,8 +99,19 @@ function calendarMaker(target, date){
 	function getDay(select){
 		var dayKo = ['일', '월', '화', '수', '목', '금', '토'];
 		var day = dayKo[new Date(select).getDay()];
-		$("#booking_day").text(day);
-		$("#selectPrice").val(40000);
+		//$("#booking_day").text(day);
+		
+		//선택날짜가 주말(일,토)이면
+		if(day=='일' || day=='토'){
+			$("#selectPrice").val(60000);	//종일권(성인) 60000원
+		//평일(월~금)이면	
+		}else{
+			$("#selectPrice").val(50000);	//종일권(성인) 50000원
+		}
+		//날짜선택하고나면 
+		$("#selectBefore").hide();	//선택전 안내문구는 숨기고,
+		$("#optBox").show();		//옵션박스 보이기
+		
 	}//getDay 닫음
 
 	

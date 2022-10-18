@@ -24,7 +24,16 @@
 	width:300px;
 	margin:10px;
 	padding:10px;
-	background-color:#8080c0;	
+	background-color:#8080c0;
+	
+}
+
+#selectBefore{
+	text-align:center;	
+}
+
+#optBox{
+	display:none;
 }
 
 #booking_time{
