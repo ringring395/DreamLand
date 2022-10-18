@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+#calendarDiv{
+	width:600px;
+	height:400px;
+	margin:10px;
+	background-color:#8080c0;
+}
+
+.calendar_table{
+	width:600px;
+	height:400px;
+	padding:0 10px 10px;
+}
+
+
+.cal_date {
+    font-size: 30px;
+}
+
+.prev,
+.next {
+    font-size: 30px;
+    background: none;
+    border: none;
+}
+
+.cal_week {
+    background-color: #288CFF;
+    color: #fff;
+}
+
+#price{
+	font-size:5px;
+	margin:0;
+    color: black;	
+}
+
+.calendar_table tbody td {
+	font-size:25px;
+	text-align:center;
+    cursor: pointer;
+}
+
+.calendar_table tbody td:nth-child(1) {
+    color: red;
+}
+
+.calendar_table tbody td:nth-child(7) {
+    color: #288CFF;
+}
+
+.calendar_table tbody td.select_day {
+    background-color: #288CFF;
+    color: #fff;
+}
