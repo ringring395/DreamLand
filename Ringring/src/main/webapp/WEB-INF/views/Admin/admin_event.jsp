@@ -70,7 +70,7 @@
 				</tr>
 				<tr>
 					<th colspan="2">
-						<input type="submit" id="a_eventSubmitBtn" value="등록">
+						<input type="button" id="a_eventSubmitBtn" value="등록">
 					</th>
 				</tr>							
 			</table>

@@ -85,7 +85,7 @@ public class UploadController {
 		up.setI_type("m");								// UploadVO의 i_type 변수에 저장
 		
 		// 지정된 저장폴더에, 지정된 파일 이름형식으로
-		File saveFile = new File(uploadPath, uuid.toString() + "_" + imgMain.getOriginalFilename());
+		File saveFile = new File(uploadPath, "m_"+uuid.toString() + "_" + imgMain.getOriginalFilename());
 
 		try {	// transferTo() 메소드에 예외가 있으면
 			imgMain.transferTo(saveFile); // 서버로 원본파일 전송
@@ -128,18 +128,15 @@ public class UploadController {
 			// UploadVO클래스의 새로운 주소를 반복적으로 생성하여  ArrayList에 저장
 			UploadVO up = new UploadVO();
 
-			//System.out.println("파일명="+multi.getOriginalFilename());
-			//System.out.println("파일size="+multi.getSize());
 			UUID uuid = UUID.randomUUID();
-			//System.out.println("UUID=" + uuid.toString());
 
 			up.setUploadPath(getFolder());					// UploadVO의 uploadPath 변수에 저장()	
 			up.setFileName(multi.getOriginalFilename());	// UploadVO의 fileName 변수에 저장()		
 			up.setUuid(uuid.toString());					// UploadVO의 uuid 변수에 저장()		
 			up.setI_type("s");								// UploadVO의 i_type 변수에 저장
-			
+						
 			// 지정된 저장폴더에, 지정된 파일 이름형식으로
-			File saveFile = new File(uploadPath, uuid.toString() + "_" + multi.getOriginalFilename());
+			File saveFile = new File(uploadPath, "s_"+uuid.toString() + "_" + multi.getOriginalFilename());
 
 			try {// transferTo() 메소드에 예외가 있으면
 				multi.transferTo(saveFile); // 서버로 원본파일 전송
@@ -157,6 +154,8 @@ public class UploadController {
 
 				// UploadVO에 저장된 데이터를 배열의 추가
 				uplist.add(up);
+				
+				System.out.println("데이터배열추가된거 확인"+uplist);
 
 			} catch (Exception e) {// 예외를 처리하라.
 				System.out.println(e.getMessage());

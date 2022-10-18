@@ -11,11 +11,11 @@ $(document).ready(function(){
 		
 		/* 체크 대상*/
 		var type = $("input[name=e_type]:checked").val();			//종류
-		var title = $("input[name=e_title]:checked").val();			//제목			
-		var start = $("input[name=e_start]:checked").val();			//시작일			
-		var end = $("input[name=e_end]:checked").val();				//종료일	
-		var summary = $("input[name=e_summary]:checked").val();		//한줄소개			
-		var contents = $("input[name=e_contents]:checked").val();	//상세내용
+		var title = $("input[name=e_title]").val();			//제목			
+		var start = $("input[name=e_start]").val();			//시작일			
+		var end = $("input[name=e_end]").val();				//종료일	
+		var summary = $("input[name=e_summary]").val();		//한줄소개			
+		var contents = $("textarea[name=e_contents]").val();	//상세내용
 			
 		/* 체크 대상 기본값*/
 		var typechk = false;		//종류 체크
@@ -26,39 +26,50 @@ $(document).ready(function(){
 		var contentschk = false;	//상세내용 체크	
 		
 		/*공란 체크 : 입력값 길이로 판단*/
-		if(type.length >0){			//종류
+		if(type != null){			//종류
 			typechk = true;
+		}else{
+			alert("종류를 선택해주세요.");
 		}
-		if(title.length >0){		//제목
+		if(title != ''){			//제목
 			titlechk = true;
+		}else{
+			alert("제목을 입력해주세요.");
 		}		
-		if(start.length >0){		//시작일
+		if(start.length>0){			//시작일
 			startchk = true;
+		}else{
+			alert("시작일을 선택해주세요.");
 		}		
-		if(end.length >0){			//종료일
+		if(end.length>0){			//종료일
 			endchk = true;
-		}		
-		if(summary.length >0){		//한줄소개
+		}else{
+			alert("종료일을 선택해주세요.");
+		}
+		if(start > end){			//시작일과 종료일 비교
+			alert("종료일이 시작일보다 빠를 수 없습니다.");
+			startchk = false;
+		}
+		if(summary.length>0){		//한줄소개
 			summarychk = true;
+		}else{
+			alert("한줄소개를 입력해주세요.");
 		}		
-		if(contents.length >0){		//상세내용
+		if(contents.length>0){		//상세내용
 			contentschk = true;
+		}else{
+			alert("상세내용을 입력해주세요.");
 		}
 					
 		if(typechk && titlechk && startchk && endchk && summarychk && contentschk){
-
-			alert(type.length);
-			alert(title.length);			
-			alert(start.length);			
-			alert(end.length);			
-			alert(summary.length);			
-			alert(contents.length);
 			
 			$("#form").append(input).submit();
+			
 		}else{
-			alert("빠짐없이 입력해주세요.");
 			return false;
 		}	
+		
+		
 	
 	})//내용등록 닫음		
 	
