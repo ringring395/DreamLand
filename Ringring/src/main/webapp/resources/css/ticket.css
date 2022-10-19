@@ -39,15 +39,18 @@
 #booking_time{
 	width:250px;
 	font-size:20px;
+	margin:0 auto;
 }
 
-.booking_age >input{
+.booking_age {
+	display:flex;
+	justify-content:space-between;
+	align-items:baseline;
+}
+
+.booking_cnt >input{
 	width:50px;
 }
-
-        .colToday{
-            background-color: #FFA07A;
-        }
 
 
 /* orderlist 주문내역*/

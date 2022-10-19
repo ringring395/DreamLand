@@ -99,13 +99,14 @@ function calendarMaker(target, date){
 				alert("오늘 날짜부터 선택가능합니다. 😊😊");
 			}else{	//최소 오늘부터 선택 가능.
 				//클릭하면 옆에 옵션박스는 초기화해야함.
-				$("#booking_time option:eq(0)").prop("selected", true);
-				$(".booking_age input").val('');
+				$("#booking_time option:eq(0)").prop("selected", true);	//종일 or 야간 재선택
+				$(".defaultPrice").empty();								//가격 표시 초기화
+				$(".booking_cnt input").val('');						//수량 표시 초기화
 				
 				$(".calendar_table .select_day").removeClass("select_day");
 				$(this).removeClass("select_day").addClass("select_day");
-				
-				getDay(select);							//선택한 날짜의 요일 구하기
+				//선택한 날짜의 요일 구하기
+				getDay(select);							
 								
 			}
 
