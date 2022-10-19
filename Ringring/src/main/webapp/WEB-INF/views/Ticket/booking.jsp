@@ -34,7 +34,8 @@
 					</select>
 
 					<div id="booking_adult" class="booking_age">
-						성인(18세 이상)	
+						<p>성인(18세 이상)</p>
+						<span></span>	
 							<button id="adult_minus" class="minus">-</button>
 							<input type="text" id="adult_price">
 							<button id="adult_plus" class="plus">+</button>

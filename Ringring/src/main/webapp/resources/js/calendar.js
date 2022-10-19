@@ -8,17 +8,20 @@ calendarMaker($("#calendarDiv")), new Date();
 
 var nowDate = new Date();
 
+//오늘 날짜를 저장
+var today_month = ("0"+(nowDate.getMonth()+1)).slice(-2);//현재 월(두 자릿수로 정리)
+var today_date = ("0"+nowDate.getDate()).slice(-2);		// 현재 일(두 자릿수로 정리)
+var now = (nowDate.getFullYear()+"-"+today_month+"-"+today_date);	//오늘 날짜
+
 function calendarMaker(target, date){
 	if(date == null || date ==undefined){
 		date = new Date();
 	}
 	nowDate = date;
 	if($(target).length >0){
-		var year = nowDate.getFullYear();		// 현재 년도
-		var month = nowDate.getMonth() +1;		// 현재 월
-		var today = nowDate.getDate();			// 현재 일
-		var now = (year+"-"+month+"-"+today);	//오늘 날짜
-		
+		var year = nowDate.getFullYear();		
+		var month = ("0"+(nowDate.getMonth() +1)).slice(-2);	//선택 월(두 자릿수로 정리)
+
 		$(target).empty().append(assembly(year, month));
 	}else{
 		console.error("calendar target is empty!!");
@@ -85,14 +88,15 @@ function calendarMaker(target, date){
 		//일자 선택 클릭
 		$(".calendar_table").on("click", "td", function(){
 
-			//선택한 월/일/요일 추출하기
-			var selectDate = $(this).html();		//선택 일 추출하기
+			//선택 일 추출하기(두 자릿수로 정리)
+			var selectDate = ("0"+$(this).html()).slice(-2);	
+			//선택 년/월/일 합치기
 			var select = (year+"-"+month+"-"+selectDate);
-			console.log(select);			
-			
+			console.log("선택"+select);
+			console.log("지금"+now);
 			//오늘보다 예전이면
 			if(select < now){
-				alert("해당 날짜는 선택불가");
+				alert("오늘 날짜부터 선택가능합니다. 😊😊");
 			}else{	//최소 오늘부터 선택 가능.
 				//클릭하면 옆에 옵션박스는 초기화해야함.
 				$("#booking_time option:eq(0)").prop("selected", true);
