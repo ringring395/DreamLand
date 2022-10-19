@@ -103,13 +103,13 @@ function sumPrice(){
 	var c_price = a_price*0.6;					//선택한 요일+시간의 어린이 가격	
 	//수량
 	var a_cnt = $("#adult_cnt").val();			//선택한 성인 수량
-	var j_cnt = $("#junior_cnt").val();		//선택한 청소년 수량
+	var j_cnt = $("#junior_cnt").val();			//선택한 청소년 수량
 	var c_cnt = $("#child_cnt").val();			//선택한 어린이 수량	
 	//나이별 가격*수량
 	var sumPrice = (a_price*a_cnt)+(j_price*j_cnt)+(c_price*c_cnt);
 	
 	$("#totalPrice").text(addComma(sumPrice));
-	
+	$("#bookingTotal").val(sumPrice);
 }//sumPrice 닫음
 	
 	

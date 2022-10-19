@@ -133,6 +133,7 @@ function calendarMaker(target, date){
 			$("#selectPrice").val(50000);	//종일권(성인) 50000원
 		}
 		//날짜선택하고나면 
+		$("#selectDay").val(day);
 		$("#selectBefore").hide();	//선택전 안내문구는 숨기고,
 		$("#optBox").show();		//옵션박스 보이기
 		

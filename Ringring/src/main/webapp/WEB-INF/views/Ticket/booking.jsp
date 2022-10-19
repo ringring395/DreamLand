@@ -26,9 +26,11 @@
 				<p id="selectBefore">👈👈👈날짜를 선택해주세요.</p>
 				<div id="optBox">
 					<input type="text" id="selectDate">
+					<input type="text" id="selectDay">
 					<input type="text" id="selectPrice">
 					<input type="text" id="selectTime">
 					<input type="text" id="selectDefault">
+					<input type="text" id="bookingTotal">
 					
 					<select id="booking_time">
 						<option value="">종류를 선택해주세요👇👇</option>
