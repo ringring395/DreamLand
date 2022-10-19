@@ -60,10 +60,22 @@ $("#ticketBtn").on("click", function(){
 })
 
 //선택한 티켓 구매 함수 선언
-function ticketOrder(od){
-	console.log(od);
+function ticketOrder(order){
+	console.log(order);
+//	$.ajax({
+//		type:'post',
+//		url: '/booking',
+//		date: JSON.stringify(order),
+//		contentType: 'application/json; charset=utf-8',
+//		success: function(result){
+//			//구매 성공하면 티켓 이미지로 이동
+//			location.href="/ticket";
+//		},error: function(e){
+//			alert("티켓 구매 실패 👽👽");
+//		}
+//	})//ajax닫음
 
-}
+}//ticketOrder 닫음
 
 
 })//전체 닫음

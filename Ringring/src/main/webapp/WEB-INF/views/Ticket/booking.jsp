@@ -26,13 +26,13 @@
 			<div id="booking_detail">
 				<p id="selectBefore">👈👈👈날짜를 선택해주세요.</p>
 				<div id="optBox">
-					<input type="text" name="user" value="${sessionScope.id}">
-					<input type="text" id="selectDate">
-					<input type="text" id="selectDay">
-					<input type="text" id="selectPrice">
-					<input type="text" id="selectTime">
-					<input type="text" id="selectDefault">
-					<input type="text" id="bookingTotal">
+					<input type="hidden" name="user" value="${sessionScope.id}">
+					<input type="hidden" id="selectDate">
+					<input type="hidden" id="selectDay">
+					<input type="hidden" id="selectPrice">
+					<input type="hidden" id="selectTime">
+					<input type="hidden" id="selectDefault">
+					<input type="hidden" id="bookingTotal">
 					
 					<select id="booking_time">
 						<option value="">종류를 선택해주세요👇👇</option>
