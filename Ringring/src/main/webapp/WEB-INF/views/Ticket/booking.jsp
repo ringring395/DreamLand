@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../../../resources/css/calendar.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/calendar.js"></script>
-<script type="text/javascript" src="/resources/js/ticket.js"></script>
+<script type="text/javascript" src="/resources/js/ticket_booking.js"></script>
 <title>티켓예매</title>
 
 </head>
