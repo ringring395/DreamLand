@@ -9,6 +9,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/calendar.js"></script>
 <script type="text/javascript" src="/resources/js/ticket_booking.js"></script>
+<script type="text/javascript" src="/resources/js/ticket_order.js"></script>
 <title>티켓예매</title>
 
 </head>
@@ -25,6 +26,7 @@
 			<div id="booking_detail">
 				<p id="selectBefore">👈👈👈날짜를 선택해주세요.</p>
 				<div id="optBox">
+					<input type="text" name="user" value="${sessionScope.id}">
 					<input type="text" id="selectDate">
 					<input type="text" id="selectDay">
 					<input type="text" id="selectPrice">
@@ -76,7 +78,7 @@
 													
 					<div>
 						<p>합계 <span id="totalPrice"></span>원</p>
-						<button>구매</button>
+						<button id="ticketBtn">구매</button>
 					</div>
 				</div><!-- optBox -->	
 			</div><!-- booking_detail -->			

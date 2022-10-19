@@ -1,5 +1,5 @@
 /**
- * 예매 관련 js 파일
+ * ticket 폴더 > 티켓 선택 js 파일
  */
 $(document).ready(function (){
 		
