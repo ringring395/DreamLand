@@ -25,7 +25,10 @@
 			<div id="booking_detail">
 				<p id="selectBefore">👈👈👈날짜를 선택해주세요.</p>
 				<div id="optBox">
-					<input type="hidden" id="selectPrice">
+					<input type="text" id="selectDate">
+					<input type="text" id="selectPrice">
+					<input type="text" id="selectTime">
+					<input type="text" id="selectDefault">
 					
 					<select id="booking_time">
 						<option value="">종류를 선택해주세요👇👇</option>
@@ -70,7 +73,7 @@
 					</div>
 													
 					<div>
-						<p>합계 <span id="sumPrice"></span>원</p>
+						<p>합계 <span id="totalPrice"></span>원</p>
 						<button>구매</button>
 					</div>
 				</div><!-- optBox -->	
