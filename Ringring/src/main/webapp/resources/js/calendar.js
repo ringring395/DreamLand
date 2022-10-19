@@ -14,17 +14,22 @@ function calendarMaker(target, date){
 	}
 	nowDate = date;
 	if($(target).length >0){
-		var year = nowDate.getFullYear();
-		var month = nowDate.getMonth() +1;
+		var year = nowDate.getFullYear();		// 현재 년도
+		var month = nowDate.getMonth() +1;		// 현재 월
+		var today = nowDate.getDate();			// 현재 일
+		var now = (year+"-"+month+"-"+today);	//오늘 날짜
+		
 		$(target).empty().append(assembly(year, month));
 	}else{
 		console.error("calendar target is empty!!");
 		return;
 	}
 	
-	//현재월
+	//해당 월
 	var thisMonth = new Date(nowDate.getFullYear(), nowDate.getMonth(), 1);
+	//해당 달의 마지막 날
 	var thisLastDay = new Date(nowDate.getFullYear(), nowDate.getMonth()+1, 0);
+
 	
 	var tag = "<tr>";
 	var cnt = 0;
@@ -66,9 +71,6 @@ function calendarMaker(target, date){
 		return calendar_html;			
 	}//assembly 닫음
 	
-	
-
-	
 	function calMove(){
 		//이전달 prev 클릭
 		$(".calendar_table").on("click", ".prev", function(){
@@ -82,21 +84,27 @@ function calendarMaker(target, date){
 		});
 		//일자 선택 클릭
 		$(".calendar_table").on("click", "td", function(){
-			//클릭하면 옆에 옵션박스는 초기화해야함.
-			$("#booking_time option:eq(0)").prop("selected", true);
-			$("#adult_price").val('');
-			$("#junior_price").val('');
-			$("#child_price").val('');
-			
-			$(".calendar_table .select_day").removeClass("select_day");
-			$(this).removeClass("select_day").addClass("select_day");
-			
+
 			//선택한 월/일/요일 추출하기
 			var selectDate = $(this).html();		//선택 일 추출하기
 			var select = (year+"-"+month+"-"+selectDate);
-			console.log(select);
-			getDay(select);							//선택한 날짜의 요일 구하기
+			console.log(select);			
 			
+			//오늘보다 예전이면
+			if(select < now){
+				alert("해당 날짜는 선택불가");
+			}else{	//최소 오늘부터 선택 가능.
+				//클릭하면 옆에 옵션박스는 초기화해야함.
+				$("#booking_time option:eq(0)").prop("selected", true);
+				$(".booking_age input").val('');
+				
+				$(".calendar_table .select_day").removeClass("select_day");
+				$(this).removeClass("select_day").addClass("select_day");
+				
+				getDay(select);							//선택한 날짜의 요일 구하기
+								
+			}
+
 		});		
 	}//calMove 닫음
 
