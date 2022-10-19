@@ -47,7 +47,7 @@
 						</div>
 						<div  class="booking_cnt">
 							<button id="adult_minus" class="minus">-</button>
-							<input type="text" id="adult_cnt">
+							<input type="text" id="adult_cnt" readonly>
 							<button id="adult_plus" class="plus">+</button>						
 						</div>
 					</div>
@@ -59,7 +59,7 @@
 						</div>
 						<div  class="booking_cnt">
 							<button id="junior_minus" class="minus">-</button>
-							<input type="text" id="junior_cnt">
+							<input type="text" id="junior_cnt" readonly>
 							<button id="junior_plus" class="plus">+</button>						
 						</div>
 					</div>
@@ -71,7 +71,7 @@
 						</div>
 						<div  class="booking_cnt">
 							<button id="child_minus" class="minus">-</button>
-							<input type="text" id="child_cnt">
+							<input type="text" id="child_cnt" readonly>
 							<button id="child_plus" class="plus">+</button>						
 						</div>
 					</div>
