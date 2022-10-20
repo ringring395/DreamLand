@@ -66,15 +66,15 @@
 #discountBox{
 	display:none;
 	justify-content:space-around;
-	width:700px;
+	width:max;
 	margin:0 auto;
-	
+	padding:10px;
+	border-bottom:3px solid #ff8000;	
 }
 
-#finalPrice{
+#finalBox{
 	display:none;
-	margin:10px 0;
-	border-top:3px solid #ff8000;	
+	margin:10px 0;	
 }
 
 /* order 주문페이지 */

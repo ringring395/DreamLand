@@ -112,8 +112,12 @@ function sumPrice(){
 	
 	$("#totalPrice").text(addComma(sumPrice));
 	$("#selectTotal").val(sumPrice);
+	finalPrice(sumPrice);
 }//sumPrice 닫음
 	
+function finalPrice(sumPrice){
+	console.log(sumPrice);
+}	
 	
 	
 //천단위 콤마 함수 선언
@@ -121,6 +125,7 @@ function addComma(won){
 	return won.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }	
 
+//할인선택 클릭하면
 $("#discountBtn").on("click", function(){
 	$("#discountBox").slideDown();
 })

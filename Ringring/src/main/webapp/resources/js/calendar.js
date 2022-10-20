@@ -136,7 +136,7 @@ function calendarMaker(target, date){
 		$("#selectDay").val(day);
 		$("#selectBefore").hide();	//선택전 안내문구는 숨기고,
 		$("#optBox").show();		//옵션박스 보이기
-		$("#finalPrice").show();	//최종금액 보이기
+		$("#finalBox").show();	//최종금액 보이기
 		
 	}//getDay 닫음
 

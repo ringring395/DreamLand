@@ -92,8 +92,8 @@
 					<input type="radio" name="tttt">ddd					
 				</div><!-- discountBox -->
 				
-				<div id="finalPrice">
-					<p>최종금액 <span id="totalPrice"></span>원</p>
+				<div id="finalBox">
+					<p>최종금액 <span id="finalPrice"></span>원</p>
 					<button id="ticketBtn">구매</button>				
 				</div><!-- finalPrice -->
 				
