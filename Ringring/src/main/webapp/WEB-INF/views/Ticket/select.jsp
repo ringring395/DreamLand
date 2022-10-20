@@ -86,6 +86,7 @@
 				
 				<div id="discountBox">
 					<p>현재 진행중인 할인 이벤트</p>
+					${nowsale }
 					<input type="radio" name="tttt">ddd
 					<input type="radio" name="tttt">ddd
 					<input type="radio" name="tttt">ddd
