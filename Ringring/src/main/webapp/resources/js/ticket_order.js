@@ -18,7 +18,6 @@ $("#ticketBtn").on("click", function(){
 	}else{//로그인 되어있고,
 		//상품 합계가 비어있지 않으면 구매를 진행함.
 		if(priceChk != ""){
-			alert("호잇호잇");
 			
 			var t_date = $("#selectDate").val();	//예매 날짜
 			var t_day = $("#selectDay").val();		//예매 요일
@@ -33,19 +32,8 @@ $("#ticketBtn").on("click", function(){
 			
 			var t_total = $("#bookingTotal").val();	//예매 총가격
 			
-//			console.log("예매일: "+t_date);
-//			console.log("요일: "+t_day);
-//			console.log("타입: "+t_time);
-//			console.log("어른가격: "+t_a_price);
-//			console.log("청소년가격: "+t_j_price);
-//			console.log("어린이가격: "+t_c_price);
-//			console.log("어른수량: "+t_a_cnt);
-//			console.log("청소년수량: "+t_j_cnt);
-//			console.log("어린이수량: "+t_c_cnt);
-//			console.log("예매총합: "+t_total);
-			
 			//선택한 티켓 구매 함수 호출
-			ticketOrder({t_date:t_date, t_day:t_day, t_time:t_time,
+			ticketOrder({id:id, t_date:t_date, t_day:t_day, t_time:t_time,
 				t_a_price:t_a_price, t_j_price:t_j_price, t_c_price:t_c_price,
 				t_a_cnt:t_a_cnt, t_j_cnt:t_j_cnt, t_c_cnt:t_c_cnt, t_total:t_total});
 						
@@ -59,21 +47,24 @@ $("#ticketBtn").on("click", function(){
 	
 })
 
-//선택한 티켓 구매 함수 선언
+//선택한 티켓 구매 함수 선언(선택한 데이터 담기)
 function ticketOrder(order){
 	console.log(order);
-//	$.ajax({
-//		type:'post',
-//		url: '/booking',
-//		date: JSON.stringify(order),
-//		contentType: 'application/json; charset=utf-8',
-//		success: function(result){
-//			//구매 성공하면 티켓 이미지로 이동
-//			location.href="/ticket";
-//		},error: function(e){
-//			alert("티켓 구매 실패 👽👽");
-//		}
-//	})//ajax닫음
+
+    $.ajax({
+        url:'/order',
+        method : 'POST',
+        data: JSON.stringify(order),
+        contentType : 'application/json; charset=UTF-8',
+        dataType : 'json',
+        success :function(result){
+            alert( JSON.stringify(order));
+            location.href="/order";
+            
+        },error: function(e){
+			alert("티켓 구매 실패 👽👽");
+		}
+	})//ajax닫음
 
 }//ticketOrder 닫음
 

@@ -7,6 +7,17 @@
 <mapper namespace="com.ring.mapper.TicketMapper">
 
 <!-- 티켓 구매 -->
+	<insert id="order">
+		insert into ticket(id, t_date, t_day, t_time, 
+						t_a_price, t_j_price, t_c_price, 
+						t_a_cnt, t_j_cnt, t_c_cnt, t_total)
+		values (#{id}, #{t_date}, #{t_day}, #{t_time}, 
+				#{t_a_price}, #{t_j_price}, #{t_c_price}, 
+				#{t_a_cnt}, #{t_j_cnt}, #{t_c_cnt}, #{t_total})				
+	</insert>
+
+
+
 
 
 </mapper>
