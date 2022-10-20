@@ -75,24 +75,31 @@
 
 /* sale 할인혜택*/
 
-#sale_table
+#sale_table{
+	margin:0 auto;
+}
 
 #sale_img{
-	width:300px;
+	width:450px;
 	height:200px;
 	margin:10px;
 	background-color:#8080c0;	
 }
 
 #sale_title{
-	width:300px;
-	height:40px;
+	width:450px;
+	height:150px;
 	margin:10px;
 	background-color:#8080c0;
-	text-align:center;	
 }
 
+#sale_info{
+	display:none;
+}
 
-
-
+.sale_more{
+	display:flex;
+	justify-content:right;
+	cursor:pointer;
+}
 

@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/event.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/event.js"></script>
 <title>할인혜택</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -16,7 +18,7 @@
 		</div>
 
 		<c:set var="i" value="0" />
-		<c:set var="j" value="3" />
+		<c:set var="j" value="2" />
 		
 		<div id="sale">	
 		<table id="sale_table">
@@ -27,7 +29,17 @@
 			</c:if>
 					<td>
 						<div id="sale_img">사진사진</div>
-						<div id="sale_title">${sale.e_title }</div>
+						<div id="sale_title">
+							<div>${sale.e_title }<br>
+							기간 : ${sale.e_start} ~ ${sale.e_end}<br>
+							${sale.e_summary}</div>
+							<div class="event_more">상세보기</div>
+
+							<div id="sale_info">
+								할인율 : ${sale.e_discount}<br>
+								${sale.e_contents}
+							</div>
+						</div>
 					</td>
 			<c:if test="${i%j == j-1 }">
 				</tr>

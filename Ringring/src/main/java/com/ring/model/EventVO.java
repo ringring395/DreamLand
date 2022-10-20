@@ -19,6 +19,7 @@ public class EventVO {
     private String e_summary;	//이벤트 한줄설명
     private String e_contents;	//이벤트 설명
     private String e_upload;	//이벤트 등록날짜
+    private int e_discount;		//이벤트_할인혜택 할인율
     
 	//UploadVO(파일 업로드 관련 Model), 배열
 	private ArrayList<UploadVO> up;
