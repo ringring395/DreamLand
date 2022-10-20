@@ -77,6 +77,10 @@
 }
 /* admin_event 행사/할인/퍼레이드 등록*/
 
+#a_event_salebox{
+	display:none;
+}
+
 /* admin_board 공지사항/자주하는질문 등록*/
 
 #a_board_table{

@@ -9,7 +9,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/calendar.js"></script>
 <script type="text/javascript" src="/resources/js/ticket_select.js"></script>
-<script type="text/javascript" src="/resources/js/ticket_order.js"></script>
 <title>티켓예매</title>
 
 </head>
@@ -66,7 +65,7 @@
 	
 					<div class="select_age">
 						<div id="select_child">
-							<p>아동(초등학교 입학전)</p>
+							<p>아동(미취학)</p>
 							<span id="child_price" class="defaultPrice"></span>
 						</div>
 						<div  class="select_cnt">
@@ -78,9 +77,26 @@
 													
 					<div>
 						<p>합계 <span id="totalPrice"></span>원</p>
-						<button id="ticketBtn">구매</button>
 					</div>
-				</div><!-- optBox -->	
+				</div><!-- optBox -->
+				
+				<div>
+					<label id="discountBtn">할인선택하기</label>
+				</div>
+				
+				<div id="discountBox">
+					<p>현재 진행중인 할인 이벤트</p>
+					<input type="radio" name="tttt">ddd
+					<input type="radio" name="tttt">ddd
+					<input type="radio" name="tttt">ddd
+					<input type="radio" name="tttt">ddd					
+				</div><!-- discountBox -->
+				
+				<div id="finalPrice">
+					<p>최종금액 <span id="totalPrice"></span>원</p>
+					<button id="ticketBtn">구매</button>				
+				</div><!-- finalPrice -->
+				
 			</div><!-- select_detail -->			
 		</div><!-- select -->
 	</div>

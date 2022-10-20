@@ -16,7 +16,8 @@ $(document).ready(function(){
 		var end = $("input[name=e_end]").val();				//종료일	
 		var summary = $("input[name=e_summary]").val();		//한줄소개			
 		var contents = $("textarea[name=e_contents]").val();	//상세내용
-			
+		
+					
 		/* 체크 대상 기본값*/
 		var typechk = false;		//종류 체크
 		var titlechk = false;		//제목 체크
@@ -68,10 +69,13 @@ $(document).ready(function(){
 		}else{
 			return false;
 		}	
-		
-		
+
+	})//내용등록 닫음	
 	
-	})//내용등록 닫음		
+//할인을 클릭하면 할인율 옵션박스 표시됨
+	$("input[value=sale]").on("click", function(){
+		$("#a_event_salebox").show();
+	})
 	
 	
 /** 1. 첨부파일 공격에 대비하기 위한 업로드 파일 확장자 제한

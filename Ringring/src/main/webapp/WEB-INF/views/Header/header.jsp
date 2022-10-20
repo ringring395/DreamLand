@@ -45,7 +45,7 @@
 						<div id="h_logout" class="m_Btn" onclick="location.href='../logout'">
 							<p>로그아웃</p>
 						</div>
-						<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../booking'">
+						<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../select'">
 							<p>예매 바로가기</p>
 						</div>
 					</div>
@@ -62,7 +62,7 @@
 				<div id="h_signup" class="m_Btn" onclick="location.href='../signup'">
 					<p>회원가입</p>
 				</div>
-				<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../booking'">
+				<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../select'">
 					<p>예매 바로가기</p>
 				</div>
 			</div>		

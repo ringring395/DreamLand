@@ -19,12 +19,56 @@
 		</div>
 		
 		<div id="order">
-${ticket }
-${ticket.t_no }
-${ticket.t_date }
-${result }
+		
+			<table id="order_table">
+				<tr>
+					<td class="order_tableT" rowspan="2">방문일</td>
+					<td>${ticket.t_date}</td>
+					<td>${ticket.t_day}</td>
+				</tr>
+				<tr>
+					<td colspan="2">${ticket.t_time}</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="order_tableT">수량</td>
+					<td class="order_tableT">가격</td>
+				</tr>
+				<tr>
+					<td class="order_tableT" >성인<br>(만18세 이상)</td>
+					<td>${ticket.t_a_cnt}</td>
+					<td>${ticket.t_a_price}</td>
+				</tr>
+				<tr>
+					<td class="order_tableT" >청소년<br>(초,중,고등학생)</td>
+					<td>${ticket.t_j_cnt}</td>
+					<td>${ticket.t_j_price}</td>
+				</tr>
+				<tr>
+					<td class="order_tableT" >어린이<br>(미취학)</td>
+					<td>${ticket.t_c_cnt}</td>
+					<td>${ticket.t_c_price}</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="order_tableT" >합계</td>
+					<td>${ticket.t_total}</td>					
+				</tr>																														
+			</table>
+			
+			<div id="order_discountBtn">
+				할인선택하기
+			</div>
+			
+			<div id="order_discount">
 
-<p></p>			
+			</div>
+			
+			<div id="order_final">
+				<div>최종 금액</div>
+				<div>위에 합계랑 밑에 할인이벤트 가격 계산해서 넣으면됨</div>
+			</div>
+		
 		</div><!-- order -->
 	</div>
 </body>

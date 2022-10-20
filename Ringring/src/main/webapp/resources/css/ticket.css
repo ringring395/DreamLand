@@ -34,6 +34,8 @@
 
 #optBox{
 	display:none;
+	margin:10px 0;
+	border-bottom:3px solid #ff8000;
 }
 
 #select_time{
@@ -52,6 +54,68 @@
 	width:50px;
 }
 
+#discountBtn{
+	display:none;
+    cursor: pointer;
+    padding:5px;
+	margin:10px auto;	
+	background-color:orange;
+	border-radius:5px;
+}
+
+#discountBox{
+	display:none;
+	justify-content:space-around;
+	width:700px;
+	margin:0 auto;
+	
+}
+
+#finalPrice{
+	display:none;
+	margin:10px 0;
+	border-top:3px solid #ff8000;	
+}
+
+/* order 주문페이지 */
+#order_table{
+	width:700px;
+	margin:0 auto;
+	text-align:center;
+	border-bottom:3px solid #ff8000;	
+}
+
+.order_tableT{
+	padding:10px;
+	background-color:#8080c0;
+	border-radius:5px;	
+}
+
+#order_discountBtn{
+	margin:10px auto;	
+	width:100px;
+	text-align:center;
+    cursor: pointer;
+	padding:10px;
+	background-color:#8080c0;
+	border-radius:5px;
+}
+
+#order_discount{
+	display:none;
+	justify-content:space-around;
+	width:700px;
+	margin:0 auto;
+}
+
+#order_final{
+	display:flex;
+	justify-content:space-around;
+	width:700px;
+	margin:0 auto;
+	padding:10px;
+	border-top:3px solid #ff8000;	
+}
 
 /* orderlist 주문내역*/
 

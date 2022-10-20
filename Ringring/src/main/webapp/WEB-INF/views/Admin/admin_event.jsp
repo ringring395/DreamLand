@@ -27,8 +27,32 @@
 						<input type="radio" name="e_type" value="event">행사
 						<input type="radio" name="e_type" value="sale">할인
 						<input type="radio" name="e_type" value="parade">퍼레이드
+						
+						<div id="a_event_salebox">
+							할인율
+							<select name="e_discount">
+								<option value="0.05">5%</option>
+								<option value="0.1">10%</option>
+								<option value="0.15">15%</option>
+								<option value="0.2">20%</option>
+								<option value="0.25">25%</option>
+								<option value="0.3">30%</option>
+								<option value="0.35">35%</option>
+								<option value="0.3">30%</option>
+								<option value="0.35">35%</option>
+								<option value="0.4">40%</option>
+								<option value="0.45">45%</option>
+								<optgroup label="50% 이상"></optgroup>	
+								<option value="0.5">50%</option>
+								<option value="0.6">60%</option>
+								<option value="0.7">70%</option>
+								<option value="0.8">80%</option>
+								<option value="0.9">90%</option>													
+							</select>
+						</div>
 					</td>
 				</tr>
+
 				<tr>
 					<th>제목</th>
 					<td><input type="text" name="e_title" placeholder="제목을 입력하세요"></td>
