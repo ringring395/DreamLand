@@ -72,9 +72,17 @@ $(document).ready(function(){
 
 	})//내용등록 닫음	
 	
-//할인을 클릭하면 할인율 옵션박스 표시됨
-	$("input[value=sale]").on("click", function(){
-		$("#a_event_salebox").show();
+//등록하는 종류가 할인일때, 할인율 옵션박스 오픈함
+	$("input[name=e_type]").on("click", function(){
+		//이벤트 종류에서 체크한 값
+		var radioValue = $("input[name=e_type]:checked").val();
+		//sale이면
+		if(radioValue == 'sale'){
+			$("#a_event_salebox").show();	//할인율 옵션박스 표시
+		}else{	//event나 parade면
+			$("#a_event_salebox").hide();	//할인율 옵션박스 감춤
+		}
+		
 	})
 	
 	
