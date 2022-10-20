@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../../../resources/css/calendar.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/calendar.js"></script>
-<script type="text/javascript" src="/resources/js/ticket_booking.js"></script>
+<script type="text/javascript" src="/resources/js/ticket_select.js"></script>
 <script type="text/javascript" src="/resources/js/ticket_order.js"></script>
 <title>티켓예매</title>
 
@@ -20,10 +20,10 @@
 			<span>페이지제목</span>
 		</div>
 		
-		<div id="booking">
+		<div id="select">
 			<div id="calendarDiv"></div>
 
-			<div id="booking_detail">
+			<div id="select_detail">
 				<p id="selectBefore">👈👈👈날짜를 선택해주세요.</p>
 				<div id="optBox">
 					<input type="hidden" name="user" value="${sessionScope.id}">
@@ -32,44 +32,44 @@
 					<input type="hidden" id="selectPrice">
 					<input type="hidden" id="selectTime">
 					<input type="hidden" id="selectDefault">
-					<input type="hidden" id="bookingTotal">
+					<input type="hidden" id="selectTotal">
 					
-					<select id="booking_time">
+					<select id="select_time">
 						<option value="">종류를 선택해주세요👇👇</option>
 						<option value="allday">종일</option>
 						<option value="night">야간</option>
 					</select>
 
-					<div class="booking_age">
-						<div id="booking_adult">
+					<div class="select_age">
+						<div id="select_adult">
 							<p>성인(만18세 이상)</p>
 							<span id="adult_price" class="defaultPrice"></span>
 						</div>
-						<div  class="booking_cnt">
+						<div  class="select_cnt">
 							<button id="adult_minus" class="minus">-</button>
 							<input type="text" id="adult_cnt" readonly>
 							<button id="adult_plus" class="plus">+</button>						
 						</div>
 					</div>
 
-					<div class="booking_age">
-						<div id="booking_junior">
+					<div class="select_age">
+						<div id="select_junior">
 							<p>청소년(초,중,고등학생)</p>
 							<span id="junior_price" class="defaultPrice"></span>
 						</div>
-						<div  class="booking_cnt">
+						<div  class="select_cnt">
 							<button id="junior_minus" class="minus">-</button>
 							<input type="text" id="junior_cnt" readonly>
 							<button id="junior_plus" class="plus">+</button>						
 						</div>
 					</div>
 	
-					<div class="booking_age">
-						<div id="booking_child">
+					<div class="select_age">
+						<div id="select_child">
 							<p>아동(초등학교 입학전)</p>
 							<span id="child_price" class="defaultPrice"></span>
 						</div>
-						<div  class="booking_cnt">
+						<div  class="select_cnt">
 							<button id="child_minus" class="minus">-</button>
 							<input type="text" id="child_cnt" readonly>
 							<button id="child_plus" class="plus">+</button>						
@@ -81,8 +81,8 @@
 						<button id="ticketBtn">구매</button>
 					</div>
 				</div><!-- optBox -->	
-			</div><!-- booking_detail -->			
-		</div><!-- booking -->
+			</div><!-- select_detail -->			
+		</div><!-- select -->
 	</div>
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>

@@ -20,10 +20,10 @@ public class TicketController {
 		return "/Ticket/orderlist";
 	}
 	
-	//티켓예매
-	@RequestMapping(value = "/booking", method = RequestMethod.GET)
+	//티켓선택
+	@RequestMapping(value = "/select", method = RequestMethod.GET)
 	public String booking() {
-		return "/Ticket/booking";
+		return "/Ticket/select";
 	}
 	
 	//티켓 구매

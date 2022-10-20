@@ -100,9 +100,9 @@ function calendarMaker(target, date){
 				alert("오늘 날짜부터 선택가능합니다. 😊😊");
 			}else{	//최소 오늘부터 선택 가능.
 				//클릭하면 옆에 옵션박스는 초기화해야함.
-				$("#booking_time option:eq(0)").prop("selected", true);	//종일 or 야간 재선택
+				$("#select_time option:eq(0)").prop("selected", true);	//종일 or 야간 재선택
 				$(".defaultPrice").empty();								//가격 표시 초기화
-				$(".booking_cnt input").val('');						//수량 표시 초기화
+				$(".select_cnt input").val('');						//수량 표시 초기화
 				$("#totalPrice").empty();								//총합 표시 초기화
 				
 				$(".calendar_table .select_day").removeClass("select_day");
@@ -123,7 +123,7 @@ function calendarMaker(target, date){
 	function getDay(select){
 		var dayKo = ['일', '월', '화', '수', '목', '금', '토'];
 		var day = dayKo[new Date(select).getDay()];
-		//$("#booking_day").text(day);
+		//$("#select_day").text(day);
 		
 		//선택날짜가 주말(일,토)이면
 		if(day=='일' || day=='토'){

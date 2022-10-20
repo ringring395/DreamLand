@@ -13,14 +13,14 @@
 }
 
 
-/* booking 예매페이지*/
+/* select 예매 선택 페이지*/
 
-#booking{
+#select{
 	display:flex;
 	justify-content:left;	
 }
 
-#booking_detail{
+#select_detail{
 	width:300px;
 	margin:10px;
 	padding:10px;
@@ -36,19 +36,19 @@
 	display:none;
 }
 
-#booking_time{
+#select_time{
 	width:250px;
 	font-size:20px;
 	margin:0 auto;
 }
 
-.booking_age {
+.select_age {
 	display:flex;
 	justify-content:space-between;
 	align-items:baseline;
 }
 
-.booking_cnt >input{
+.select_cnt >input{
 	width:50px;
 }
 

@@ -5,9 +5,9 @@ $(document).ready(function (){
 		
 	
 //(select)종일 vs.야간을 선택하면	
-	$("#booking_time").on("change", function(){
+	$("#select_time").on("change", function(){
 		//선택된 종류의 val값
-		var time = $("#booking_time option:selected").val();
+		var time = $("#select_time option:selected").val();
 		
 		//종일 or 야간이면
 		if(time == "allday"){
@@ -31,7 +31,7 @@ function dayPrice(){
 		$("#adult_price").text(addComma(dayPrice));
 		$("#junior_price").text(addComma(dayPrice*0.8));
 		$("#child_price").text(addComma(dayPrice*0.6));
-		$(".booking_cnt input").val(0);
+		$(".select_cnt input").val(0);
 		$("#totalPrice").empty();
 	}	
 		
@@ -43,7 +43,7 @@ function nightPrice(){
 		$("#adult_price").text(addComma(nightPrice));
 		$("#junior_price").text(addComma(nightPrice*0.8));
 		$("#child_price").text(addComma(nightPrice*0.6));	
-		$(".booking_cnt input").val(0);
+		$(".select_cnt input").val(0);
 		$("#totalPrice").empty();
 	}
 	
@@ -54,7 +54,7 @@ function nightPrice(){
 		var cnt = $(this).next().val();
 		
 		//선택된 종류의 val값
-		var time = $("#booking_time option:selected").val();
+		var time = $("#select_time option:selected").val();
 		//종류를 선택했을때,
 		if(time != ""){
 			//현재 수량이 0이면
@@ -78,7 +78,7 @@ function nightPrice(){
 		var cnt = $(this).prev().val();
 		
 		//선택된 종류의 val값
-		var time = $("#booking_time option:selected").val();
+		var time = $("#select_time option:selected").val();
 		//종류를 선택했을때,
 		if(time != ""){
 			//나이별 4매씩 구매가능.
@@ -109,7 +109,7 @@ function sumPrice(){
 	var sumPrice = (a_price*a_cnt)+(j_price*j_cnt)+(c_price*c_cnt);
 	
 	$("#totalPrice").text(addComma(sumPrice));
-	$("#bookingTotal").val(sumPrice);
+	$("#selectTotal").val(sumPrice);
 }//sumPrice 닫음
 	
 	

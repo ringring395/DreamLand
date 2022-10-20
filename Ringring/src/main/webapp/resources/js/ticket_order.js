@@ -30,7 +30,7 @@ $("#ticketBtn").on("click", function(){
 			var t_j_cnt = $("#junior_cnt").val();	//예매할 청소년 수량
 			var t_c_cnt = $("#child_cnt").val();	//예매할 어린이 수량
 			
-			var t_total = $("#bookingTotal").val();	//예매 총가격
+			var t_total = $("#selectTotal").val();	//예매 총가격
 			
 			//선택한 티켓 구매 함수 호출
 			ticketOrder({id:id, t_date:t_date, t_day:t_day, t_time:t_time,
