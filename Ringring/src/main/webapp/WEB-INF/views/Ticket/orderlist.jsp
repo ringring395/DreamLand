@@ -21,25 +21,26 @@
 
 			<table id="orderlist_table">
 			<c:forEach items="${orderlist}" var="orderlist">
+			
 				<tr>
-					<td rowspan="2">
-						<div id="orderlist_img">사진사진</div>
-					</td>
-				</tr>			
-				<tr>
-					<td>입장일</td><td>${orderlist.t_date}</td>
-					<td>입장시간</td><td>${orderlist.t_time}</td>
-					<td></td><td></td>
+					<td rowspan="3">사진사진</td>
+					<td rowspan="2">방문일</td><td>${orderlist.t_date}</td>
+					<td>성인</td><td>${orderlist.t_a_cnt} 명</td>
 					<td>결제금액</td>
 				</tr>
 				<tr>
-					<td>성인</td><td>${orderlist.t_a_cnt} 명</td>
+					<td>${orderlist.t_day}</td>
 					<td>청소년</td><td>${orderlist.t_j_cnt} 명</td>
-					<td>아동</td><td>${orderlist.t_c_cnt} 명</td>
 					<td>
 						<fmt:formatNumber value="${orderlist.t_final}" pattern="#,###" /> 원
 					</td>
 				</tr>
+				<tr>
+					<td>입장시간</td><td>${orderlist.t_time}</td>
+					<td>어린이</td><td>${orderlist.t_c_cnt} 명</td>
+					<td>티켓보기</td>
+				</tr>			
+			
 			</c:forEach>
 			</table>	
 
