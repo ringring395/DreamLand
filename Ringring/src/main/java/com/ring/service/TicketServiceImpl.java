@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ring.mapper.TicketMapper;
+import com.ring.model.CriteriaVO;
 import com.ring.model.EventVO;
 import com.ring.model.TicketVO;
 
@@ -24,5 +25,14 @@ public class TicketServiceImpl implements TicketService{
 	public int order(TicketVO ticket) {
 		return tm.order(ticket);
 	}
-
+	
+	//티켓 구매 내역
+	public ArrayList<TicketVO> orderlist(CriteriaVO cri){
+		return tm.orderlist(cri);
+	}
+	
+	//티켓 구매 내역 건수 조회
+	public int orderlistTotal(CriteriaVO cri) {
+		return tm.orderlistTotal(cri);
+	}
 }

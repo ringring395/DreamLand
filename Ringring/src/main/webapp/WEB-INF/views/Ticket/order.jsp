@@ -80,7 +80,10 @@
 				</tr>
 			</table>
 			
-					
+			<div id="shortcutDiv">
+				<button id="order_listBtn" class="shortcut">구매내역<br>바로가기</button>
+				<button id="order_ticketBtn" class="shortcut">💕티켓💕<br>바로가기</button>
+			</div><!-- shortcutDiv -->		
 		</div><!-- order -->
 	</div>
 </body>

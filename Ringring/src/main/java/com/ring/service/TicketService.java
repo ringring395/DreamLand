@@ -2,6 +2,7 @@ package com.ring.service;
 
 import java.util.ArrayList;
 
+import com.ring.model.CriteriaVO;
 import com.ring.model.EventVO;
 import com.ring.model.TicketVO;
 
@@ -12,5 +13,10 @@ public interface TicketService {
 	
 	//선택한 티켓을 구매하기 위한 설계
 	public int order(TicketVO ticket);
-
+	
+	//티켓 구매내역 조회
+	public ArrayList<TicketVO> orderlist(CriteriaVO cri);
+	
+	//티켓 구매내역 건수 설계
+	public int orderlistTotal(CriteriaVO cri);
 }

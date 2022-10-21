@@ -78,6 +78,8 @@
 	margin:10px 0;	
 }
 
+
+
 /* order 주문페이지 */
 #order_table,
 #order_table2{
@@ -93,6 +95,17 @@
 	background-color:#8080c0;
 	border-radius:5px;	
 }
+
+.shortcut{
+	width:150px;
+	margin:10px;
+	padding:5px;
+	background-color:orange;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+}
+
 
 
 /* orderlist 주문내역*/

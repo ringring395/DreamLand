@@ -21,7 +21,7 @@ public class TicketVO {
 	private int t_j_cnt;	//청소년 수량
 	private int t_c_cnt;	//어린이 수량
 	private int t_total;	//선택한 티켓 총 가격
-	private int t_regdate;	//결제한 시각
+	private String t_regdate;	//결제한 시각
 	private int t_discount;	//할인
 	private int t_final;	//할인적용한 최종금액
 

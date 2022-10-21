@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,25 +16,55 @@
 		<div id="pagetitle">
 			<span>페이지제목</span>
 		</div>
-		
+	
 		<div id="orderlist">
-			<div id="orderlist_img">사진사진</div>
+
 			<table id="orderlist_table">
+			<c:forEach items="${orderlist}" var="orderlist">
 				<tr>
-					<td>입장일</td><td>22/10/06</td>
-					<td>입장시간</td><td>올데이</td>
+					<td rowspan="2">
+						<div id="orderlist_img">사진사진</div>
+					</td>
+				</tr>			
+				<tr>
+					<td>입장일</td><td>${orderlist.t_date}</td>
+					<td>입장시간</td><td>${orderlist.t_time}</td>
 					<td></td><td></td>
 					<td>결제금액</td>
 				</tr>
 				<tr>
-					<td>성인</td><td>3 명</td>
-					<td>청소년</td><td>1 명</td>
-					<td>아동</td><td>0 명</td>
-					<td>80000 원</td>
+					<td>성인</td><td>${orderlist.t_a_cnt} 명</td>
+					<td>청소년</td><td>${orderlist.t_j_cnt} 명</td>
+					<td>아동</td><td>${orderlist.t_c_cnt} 명</td>
+					<td>
+						<fmt:formatNumber value="${orderlist.t_final}" pattern="#,###" /> 원
+					</td>
 				</tr>
+			</c:forEach>
 			</table>	
 
 		</div><!-- orderlist -->
+		
+		<div id="paging">	
+			<div>	
+<!-- 이전버튼 -->
+				<c:if test="${paging.prev }">
+					<a href="/orderlist?pageNum=${paging.startPage-1}&amount=${paging.cri.amount}">이전</a>
+				</c:if>
+
+<!-- 페이징 처리 -->		
+				<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="num">
+					<a href="/orderlist?pageNum=${num}&amount=${paging.cri.amount}">${num }</a>
+				</c:forEach>
+
+<!-- 다음버튼 -->			
+				<c:if test="${paging.next}">
+					<a href="/orderlist?pageNum=${paging.startPage+1}&amount=${paging.cri.amount}">다음</a>
+				</c:if>					
+			</div>		
+		</div><!-- paging -->
+
+		
 	</div>
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>

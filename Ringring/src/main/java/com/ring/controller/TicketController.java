@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.ring.model.CriteriaVO;
 import com.ring.model.EventVO;
+import com.ring.model.PageVO;
 import com.ring.model.TicketVO;
 import com.ring.service.TicketService;
 
@@ -61,7 +63,14 @@ public class TicketController {
 
 	//티켓구매리스트
 	@RequestMapping(value = "/orderlist", method = RequestMethod.GET)
-	public String orderlist() {
+	public String orderlist(TicketVO ticket, HttpSession session, Model model,
+			CriteriaVO cri) {
+		cri.setId((String)session.getAttribute("id"));
+		model.addAttribute("orderlist", ts.orderlist(cri));
+		
+		int total = ts.orderlistTotal(cri);
+		model.addAttribute("paging", new PageVO(cri, total));
+		
 		return "/Ticket/orderlist";
 	}	
 	
