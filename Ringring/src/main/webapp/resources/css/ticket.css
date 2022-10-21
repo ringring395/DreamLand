@@ -79,9 +79,11 @@
 }
 
 /* order 주문페이지 */
-#order_table{
+#order_table,
+#order_table2{
 	width:700px;
 	margin:0 auto;
+	padding:10px 0;
 	text-align:center;
 	border-bottom:3px solid #ff8000;	
 }
@@ -92,11 +94,6 @@
 	border-radius:5px;	
 }
 
-#order_table2{
-	width:700px;
-	margin:0 auto;
-	text-align:center;	
-}
 
 /* orderlist 주문내역*/
 
