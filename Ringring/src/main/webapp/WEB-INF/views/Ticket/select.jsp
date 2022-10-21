@@ -90,9 +90,12 @@
 					
 				<c:forEach items="${nowsale}" var="nowsale">									
 					<c:choose>				
-						<c:when test="${nowsale !=null}">												 
-						 <input type="radio" name="e_discount" value="${nowsale.e_discount}">
-						 	${nowsale.e_start}~${nowsale.e_end} / ${nowsale.e_title}<br>
+						<c:when test="${nowsale !=null}">
+							<div>
+								<input type="radio" name="e_discount" value="${nowsale.e_discount}">
+						 		${nowsale.e_start}~${nowsale.e_end}<br>
+						 		${nowsale.e_title} / ${nowsale.e_discount}%
+						 	</div>												 
 						</c:when>
 
 						<c:otherwise>
