@@ -18,7 +18,7 @@
 		<div id="pagetitle">
 			<span>페이지제목</span>
 		</div>
-${noworder }		
+		
 		<div id="order">
 			<table id="order_table">
 				<tr>
@@ -91,8 +91,9 @@ ${noworder }
 			<div id="shortcutDiv">
 				<button class="shortcut" onclick="location.href='../orderlist'">구매내역<br>바로가기</button>
 				<button class="shortcut" onclick="location.href='../ticket?t_no=${noworder.t_no}'">💕티켓💕<br>바로가기</button>
-			</div><!-- shortcutDiv -->		
+			</div><!-- shortcutDiv -->					
 		</div><!-- order -->
+
 	</div>
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>

@@ -34,7 +34,7 @@
 					<input type="hidden" id="selectTime">
 					<input type="hidden" id="selectDefault">
 					<input type="hidden" id="selectTotal">
-					<input type="text" id="finalTotal">
+					<input type="hidden" id="finalTotal">
 					
 					<select id="select_time">
 						<option value="">종류를 선택해주세요👇👇</option>
@@ -93,7 +93,7 @@
 					<c:choose>				
 						<c:when test="${nowsale !=null}">
 							<div>
-								<input type="text" id="e_no" value="${nowsale.e_no}">
+								<input type="hidden" id="e_no" value="${nowsale.e_no}">
 								<input type="radio" name="e_discount" value="${nowsale.e_discount}">
 						 		${nowsale.e_start}~${nowsale.e_end}<br>
 						 		${nowsale.e_title} / ${nowsale.e_discount}%
