@@ -92,30 +92,10 @@
 	border-radius:5px;	
 }
 
-#order_discountBtn{
-	margin:10px auto;	
-	width:100px;
-	text-align:center;
-    cursor: pointer;
-	padding:10px;
-	background-color:#8080c0;
-	border-radius:5px;
-}
-
-#order_discount{
-	display:none;
-	justify-content:space-around;
+#order_table2{
 	width:700px;
 	margin:0 auto;
-}
-
-#order_final{
-	display:flex;
-	justify-content:space-around;
-	width:700px;
-	margin:0 auto;
-	padding:10px;
-	border-top:3px solid #ff8000;	
+	text-align:center;	
 }
 
 /* orderlist 주문내역*/

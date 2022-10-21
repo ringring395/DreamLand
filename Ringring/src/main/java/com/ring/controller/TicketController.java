@@ -33,14 +33,14 @@ public class TicketController {
 	//티켓 선택 (insert 이뤄짐 = 구매)
 	@RequestMapping(value = "/ticketOrder", method = RequestMethod.POST)
 	public ResponseEntity<String> selectPost(HttpSession session, @RequestBody TicketVO ticket) {
-		
+		session.setAttribute("ordered", ticket);
 		int result = ts.order(ticket);
 		
 		return result==1? new ResponseEntity<>("success", HttpStatus.OK)
 						: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
-	//티켓 구매
+	//구매 완료 페이지
 	@RequestMapping(value ="/order", method = RequestMethod.GET)
 	public String order() {
 		return "/Ticket/order";

@@ -19,15 +19,14 @@
 		</div>
 		
 		<div id="order">
-		
 			<table id="order_table">
 				<tr>
 					<td class="order_tableT" rowspan="2">방문일</td>
-					<td>${ticket.t_date}</td>
-					<td>${ticket.t_day}</td>
+					<td>${ordered.t_date}</td>
+					<td>${ordered.t_day}</td>
 				</tr>
 				<tr>
-					<td colspan="2">${ticket.t_time}</td>
+					<td colspan="2">${ordered.t_time}</td>
 				</tr>
 				<tr>
 					<td></td>
@@ -36,38 +35,37 @@
 				</tr>
 				<tr>
 					<td class="order_tableT" >성인<br>(만18세 이상)</td>
-					<td>${ticket.t_a_cnt}</td>
-					<td>${ticket.t_a_price}</td>
+					<td>${ordered.t_a_cnt}</td>
+					<td>${ordered.t_a_price}</td>
 				</tr>
 				<tr>
 					<td class="order_tableT" >청소년<br>(초,중,고등학생)</td>
-					<td>${ticket.t_j_cnt}</td>
-					<td>${ticket.t_j_price}</td>
+					<td>${ordered.t_j_cnt}</td>
+					<td>${ordered.t_j_price}</td>
 				</tr>
 				<tr>
 					<td class="order_tableT" >어린이<br>(미취학)</td>
-					<td>${ticket.t_c_cnt}</td>
-					<td>${ticket.t_c_price}</td>
+					<td>${ordered.t_c_cnt}</td>
+					<td>${ordered.t_c_price}</td>
 				</tr>
 				<tr>
 					<td></td>
-					<td class="order_tableT" >합계</td>
-					<td>${ticket.t_total}</td>					
+					<td class="order_tableT">합계</td>
+					<td>${ordered.t_total} 원</td>					
 				</tr>																														
 			</table>
-			
-			<div id="order_discountBtn">
-				할인선택하기
-			</div>
-			
-			<div id="order_discount">
-
-			</div>
-			
-			<div id="order_final">
-				<div>최종 금액</div>
-				<div>위에 합계랑 밑에 할인이벤트 가격 계산해서 넣으면됨</div>
-			</div>
+			<table id="order_table2">
+				<tr>
+					<td></td>
+					<td class="order_tableT">할인 금액</td>
+					<td>${ordered.t_total - ordered.t_final} 원</td>			
+				</tr>
+				<tr>
+					<td></td>
+					<td class="order_tableT">최종 결제금액</td>
+					<td>${ordered.t_final} 원</td>
+				</tr>
+			</table>
 		
 		</div><!-- order -->
 	</div>
