@@ -23,5 +23,6 @@ public class TicketVO {
 	private int t_total;	//선택한 티켓 총 가격
 	private int t_regdate;	//결제한 시각
 	private int t_discount;	//할인
+	private int t_final;	//할인적용한 최종금액
 
 }

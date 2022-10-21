@@ -23,11 +23,21 @@ public class TicketController {
 	
 	//티켓선택
 	@RequestMapping(value = "/select", method = RequestMethod.GET)
-	public String booking(EventVO event, Model model) {
+	public String select(EventVO event, Model model) {
 		
 		model.addAttribute("nowsale", ts.nowsalelist(event));
 
 		return "/Ticket/select";
+	}
+	
+	//티켓 선택 (insert 이뤄짐 = 구매)
+	@RequestMapping(value = "/ticketOrder", method = RequestMethod.POST)
+	public ResponseEntity<String> selectPost(HttpSession session, @RequestBody TicketVO ticket) {
+		
+		int result = ts.order(ticket);
+		
+		return result==1? new ResponseEntity<>("success", HttpStatus.OK)
+						: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 	//티켓 구매
@@ -36,18 +46,18 @@ public class TicketController {
 		return "/Ticket/order";
 	}
 
-	//티켓 구매
-	@RequestMapping(value="/order", method=RequestMethod.POST)
-	public ResponseEntity<TicketVO> orderPost(@RequestBody TicketVO ticket, HttpSession session){
-		System.out.println(ticket);
-		
-		session.setAttribute("ticket", ticket);
-		
-		ResponseEntity<TicketVO> result = null;
-		result = ResponseEntity.status(HttpStatus.OK).body(ticket);
-		
-		return result;
-	}
+//	//티켓 구매
+//	@RequestMapping(value="/order", method=RequestMethod.POST)
+//	public ResponseEntity<TicketVO> orderPost(@RequestBody TicketVO ticket, HttpSession session){
+//		System.out.println(ticket);
+//		
+//		session.setAttribute("ticket", ticket);
+//		
+//		ResponseEntity<TicketVO> result = null;
+//		result = ResponseEntity.status(HttpStatus.OK).body(ticket);
+//		
+//		return result;
+//	}
 
 	//티켓구매리스트
 	@RequestMapping(value = "/orderlist", method = RequestMethod.GET)

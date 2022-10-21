@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="../../../resources/css/ticket.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/ticket_order.js"></script>
-<title>주문페이지</title>
+<title>주문완료</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>

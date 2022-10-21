@@ -10,6 +10,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/calendar.js"></script>
 <script type="text/javascript" src="/resources/js/ticket_select.js"></script>
+<script type="text/javascript" src="/resources/js/ticket_order.js"></script>
 <title>티켓예매</title>
 
 </head>
@@ -92,6 +93,7 @@
 					<c:choose>				
 						<c:when test="${nowsale !=null}">
 							<div>
+								<input type="text" id="e_no" value="${nowsale.e_no}">
 								<input type="radio" name="e_discount" value="${nowsale.e_discount}">
 						 		${nowsale.e_start}~${nowsale.e_end}<br>
 						 		${nowsale.e_title} / ${nowsale.e_discount}%
@@ -108,7 +110,7 @@
 				
 				<div id="finalBox">
 					<p>최종금액 <span id="finalPrice"></span>원</p>
-					<button id="ticketBtn">구매</button>				
+					<button id="orderBtn">구매</button>				
 				</div><!-- finalPrice -->
 				
 			</div><!-- select_detail -->			
