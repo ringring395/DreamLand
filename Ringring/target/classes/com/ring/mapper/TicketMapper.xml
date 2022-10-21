@@ -16,7 +16,13 @@
 				#{t_a_cnt}, #{t_j_cnt}, #{t_c_cnt}, #{t_total})				
 	</insert>
 
-
-
+<!-- select : 현재 진행중인 할인이벤트 출력 -->
+	<select id="nowsalelist" resultType="com.ring.model.EventVO">
+		select * from event
+		where e_type = &apos;sale&apos; 
+		<![CDATA[
+		and (e_start < now() and e_end > now())
+		]]> 
+	</select>
 
 </mapper>

@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,21 +84,21 @@
 				<div>
 					<label id="discountBtn">할인선택하기</label>
 				</div>
-				
+			
 				<div id="discountBox">
-					<p>현재 진행중인 할인 이벤트</p>
-					<jsp:useBean id="now" class="java.util.Date" />
-					<fmt:formatDate value="${now}" pattern="yyyy-mm-dd" var="today"/>
-										
-					<c:choose>
-						<c:when test="${nowsale !=null}">						 
-						 <input type="radio" name="e_discount">
+					
+				<c:forEach items="${nowsale}" var="nowsale">									
+					<c:choose>				
+						<c:when test="${nowsale !=null}">												 
+						 <input type="radio" name="e_discount" id="select_discount">
+						 	${nowsale.e_start}~${nowsale.e_end} / ${nowsale.e_title}<br>
 						</c:when>
 
 						<c:otherwise>
 							<p>현재 진행중인 할인이벤트가 없습니다.😢😢</p>
 						</c:otherwise>
 					</c:choose>					
+				</c:forEach>
 								
 				</div><!-- discountBox -->
 				

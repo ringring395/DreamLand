@@ -66,10 +66,11 @@
 #discountBox{
 	display:none;
 	justify-content:space-around;
-	width:max;
+	width:fit-content;
 	margin:0 auto;
 	padding:10px;
-	border-bottom:3px solid #ff8000;	
+	border-bottom:3px solid #ff8000;
+	font-size:80%;	
 }
 
 #finalBox{

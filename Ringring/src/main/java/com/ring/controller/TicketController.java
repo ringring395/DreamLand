@@ -11,28 +11,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.ring.model.CriteriaVO;
 import com.ring.model.EventVO;
 import com.ring.model.TicketVO;
-import com.ring.service.EventService;
+import com.ring.service.TicketService;
 
 @Controller
 public class TicketController {
 	
 	@Autowired
-	EventService es;
-	
-	//티켓구매리스트
-	@RequestMapping(value = "/orderlist", method = RequestMethod.GET)
-	public String orderlist() {
-		return "/Ticket/orderlist";
-	}
+	TicketService ts;
 	
 	//티켓선택
 	@RequestMapping(value = "/select", method = RequestMethod.GET)
-	public String booking(EventVO event, Model model, CriteriaVO cri) {
+	public String booking(EventVO event, Model model) {
 		
-		model.addAttribute("nowsale", es.salelist(cri));
+		model.addAttribute("nowsale", ts.nowsalelist(event));
 
 		return "/Ticket/select";
 	}
@@ -55,6 +48,12 @@ public class TicketController {
 		
 		return result;
 	}
+
+	//티켓구매리스트
+	@RequestMapping(value = "/orderlist", method = RequestMethod.GET)
+	public String orderlist() {
+		return "/Ticket/orderlist";
+	}	
 	
 	//예매내역
 	@RequestMapping(value = "/ticket", method = RequestMethod.GET)
