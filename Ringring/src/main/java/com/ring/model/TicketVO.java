@@ -24,5 +24,10 @@ public class TicketVO {
 	private String t_regdate;	//결제한 시각
 	private int t_discount;	//할인
 	private int t_final;	//할인적용한 최종금액
+	
+	
+	//event 폴더의 할인행사 조회
+	private String e_title;	//할인 제목
+	private int e_discount;	//할인율
 
 }

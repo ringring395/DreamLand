@@ -27,6 +27,17 @@
 				#{t_a_cnt}, #{t_j_cnt}, #{t_c_cnt},
 				#{t_total}, #{t_discount}, #{t_final})				
 	</insert>
+	
+<!-- 구매완료 확인 페이지 -->		
+	<select id="noworder" resultType="com.ring.model.TicketVO">
+		select t.*, e_title, e_discount 
+		from ticket t join event e
+		on t.t_discount = e.e_no
+		where id=#{id}
+		order by t_regdate desc limit 1
+		
+	</select>	
+	
 
 <!-- 티켓 구매내역 출력 -->
 	<select id="orderlist" resultType="com.ring.model.TicketVO">
@@ -46,7 +57,11 @@
 	<select id="orderlistTotal" resultType="int">
 		select count(*) from ticket
 		where id=#{id}
-	</select>	
+	</select>
 	
+<!-- 티켓(내용 상세보기) -->		
+	<select id="ticket" resultType="com.ring.model.TicketVO">
+		select * from ticket where t_no=#{t_no}
+	</select>
 	
 </mapper>

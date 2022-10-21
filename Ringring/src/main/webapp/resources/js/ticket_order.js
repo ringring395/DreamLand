@@ -79,15 +79,6 @@ function ticketOrder(order){
 
 }//ticketOrder 닫음
 
-//구매내역 바로가기 클릭하면
-$("#order_listBtn").on("click", function(){
-	location.href="/orderlist";
-})
-
-//티켓 바로가기 클릭하면
-$("#order_ticketBtn").on("click", function(){
-	location.href="/ticket";
-})
 
 
 })//전체 닫음

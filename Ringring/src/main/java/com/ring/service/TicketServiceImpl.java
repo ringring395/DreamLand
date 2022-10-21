@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ring.mapper.TicketMapper;
 import com.ring.model.CriteriaVO;
@@ -26,6 +27,11 @@ public class TicketServiceImpl implements TicketService{
 		return tm.order(ticket);
 	}
 	
+	//구매완료 확인 페이지
+	public TicketVO noworder(TicketVO ticket) {
+		return tm.noworder(ticket);
+	}
+	
 	//티켓 구매 내역
 	public ArrayList<TicketVO> orderlist(CriteriaVO cri){
 		return tm.orderlist(cri);
@@ -34,5 +40,10 @@ public class TicketServiceImpl implements TicketService{
 	//티켓 구매 내역 건수 조회
 	public int orderlistTotal(CriteriaVO cri) {
 		return tm.orderlistTotal(cri);
+	}
+	
+	@Transactional
+	public TicketVO ticket(TicketVO ticket) {
+		return tm.ticket(ticket);
 	}
 }

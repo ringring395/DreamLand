@@ -81,8 +81,15 @@
 
 
 /* order 주문페이지 */
-#order_table,
-#order_table2{
+#order_table{
+	width:700px;
+	margin:0 auto;
+	padding:10px 0;
+	text-align:center;
+	border-bottom:3px solid #ff8000;	
+}
+
+.order_table2{
 	width:700px;
 	margin:0 auto;
 	padding:10px 0;
@@ -130,6 +137,7 @@
 
 #orderlist_table >tr{
 	margin:10px;
+	padding:10px;
 }
 
 
@@ -145,7 +153,8 @@
 	width:500px;
 	height:400px;
 	margin:10px auto;
-	background-color:white;	
+	background-color:white;
+	text-align:center;
 }
 
 #ticket_info{

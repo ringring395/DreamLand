@@ -38,7 +38,7 @@
 				<tr>
 					<td>입장시간</td><td>${orderlist.t_time}</td>
 					<td>어린이</td><td>${orderlist.t_c_cnt} 명</td>
-					<td>티켓보기</td>
+					<td><a href="ticket?t_no=${orderlist.t_no}">티켓보기</a></td>
 				</tr>			
 			
 			</c:forEach>

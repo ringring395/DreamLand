@@ -34,8 +34,8 @@ public class TicketController {
 	
 	//티켓 선택 (insert 이뤄짐 = 구매)
 	@RequestMapping(value = "/ticketOrder", method = RequestMethod.POST)
-	public ResponseEntity<String> selectPost(HttpSession session, @RequestBody TicketVO ticket) {
-		session.setAttribute("ordered", ticket);
+	public ResponseEntity<String> selectPost(@RequestBody TicketVO ticket) {
+
 		int result = ts.order(ticket);
 		
 		return result==1? new ResponseEntity<>("success", HttpStatus.OK)
@@ -44,22 +44,15 @@ public class TicketController {
 	
 	//구매 완료 페이지
 	@RequestMapping(value ="/order", method = RequestMethod.GET)
-	public String order() {
+	public String order(TicketVO ticket, HttpSession session, Model model) {
+		String id = (String)session.getAttribute("id");
+		ticket.setId(id);
+		
+		model.addAttribute("noworder", ts.noworder(ticket));
+		
 		return "/Ticket/order";
 	}
 
-//	//티켓 구매
-//	@RequestMapping(value="/order", method=RequestMethod.POST)
-//	public ResponseEntity<TicketVO> orderPost(@RequestBody TicketVO ticket, HttpSession session){
-//		System.out.println(ticket);
-//		
-//		session.setAttribute("ticket", ticket);
-//		
-//		ResponseEntity<TicketVO> result = null;
-//		result = ResponseEntity.status(HttpStatus.OK).body(ticket);
-//		
-//		return result;
-//	}
 
 	//티켓구매리스트
 	@RequestMapping(value = "/orderlist", method = RequestMethod.GET)
@@ -74,9 +67,12 @@ public class TicketController {
 		return "/Ticket/orderlist";
 	}	
 	
-	//예매내역
+	//티켓(내역 상세보기)
 	@RequestMapping(value = "/ticket", method = RequestMethod.GET)
-	public String ticket() {
+	public String ticket(TicketVO ticket, Model model) {
+		
+		model.addAttribute("ticket", ts.ticket(ticket));
+				
 		return "/Ticket/ticket";
 	}	
 

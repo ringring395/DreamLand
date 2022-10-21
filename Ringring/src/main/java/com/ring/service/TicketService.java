@@ -14,9 +14,15 @@ public interface TicketService {
 	//선택한 티켓을 구매하기 위한 설계
 	public int order(TicketVO ticket);
 	
+	//구매완료 확인 페이지
+	public TicketVO noworder(TicketVO ticket);
+	
 	//티켓 구매내역 조회
 	public ArrayList<TicketVO> orderlist(CriteriaVO cri);
 	
 	//티켓 구매내역 건수 설계
 	public int orderlistTotal(CriteriaVO cri);
+	
+	//티켓(내용 상세보기)
+	public TicketVO ticket(TicketVO ticket);
 }
