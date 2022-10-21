@@ -102,8 +102,11 @@ function calendarMaker(target, date){
 				//클릭하면 옆에 옵션박스는 초기화해야함.
 				$("#select_time option:eq(0)").prop("selected", true);	//종일 or 야간 재선택
 				$(".defaultPrice").empty();								//가격 표시 초기화
-				$(".select_cnt input").val('');						//수량 표시 초기화
-				$("#totalPrice").empty();								//총합 표시 초기화
+				$(".select_cnt input").val('');							//수량 표시 초기화
+				$("#totalPrice").empty();								//합계 표시 초기화
+				$("#finalPrice").empty();								//최종금액 표시 초기화
+				$("#discountBox").hide();								//할인박스는 숨기기
+				$("input[name=e_discount]").prop("checked", false);		//할인선택도 초기화
 				
 				$(".calendar_table .select_day").removeClass("select_day");
 				$(this).removeClass("select_day").addClass("select_day");
@@ -136,7 +139,7 @@ function calendarMaker(target, date){
 		$("#selectDay").val(day);
 		$("#selectBefore").hide();	//선택전 안내문구는 숨기고,
 		$("#optBox").show();		//옵션박스 보이기
-		$("#finalBox").show();	//최종금액 보이기
+		$("#finalBox").show();		//최종금액 보이기
 		
 	}//getDay 닫음
 

@@ -33,6 +33,7 @@
 					<input type="hidden" id="selectTime">
 					<input type="hidden" id="selectDefault">
 					<input type="hidden" id="selectTotal">
+					<input type="text" id="finalTotal">
 					
 					<select id="select_time">
 						<option value="">종류를 선택해주세요👇👇</option>
@@ -90,7 +91,7 @@
 				<c:forEach items="${nowsale}" var="nowsale">									
 					<c:choose>				
 						<c:when test="${nowsale !=null}">												 
-						 <input type="radio" name="e_discount" id="select_discount">
+						 <input type="radio" name="e_discount" value="${nowsale.e_discount}">
 						 	${nowsale.e_start}~${nowsale.e_end} / ${nowsale.e_title}<br>
 						</c:when>
 
