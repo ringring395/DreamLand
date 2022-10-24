@@ -15,15 +15,9 @@
 		<div id="pagetitle">
 			<span>페이지제목</span>
 		</div>	
-		
-		<form action="sendMail" method="post">		
+	
 		<div id="ticket">
 
-<!-- 
-		<input type="text" name="tomail">
-		<input type="text" name="title" value="${noworder.t_date }">
-		<input type="text" name="content"> 
- -->
 			<div id="ticket_img">
 				<table id="ticket_table">
 					<tr>
@@ -58,10 +52,9 @@
 					가입 시 기입한 이메일을 확인해주세요.</p>
 				</div>
 							
-<!-- 			<input type="submit" value="메일 보내기"> -->
 			</div><!-- ticket_img -->	
 		</div><!-- ticket -->
-				</form>
+
 	</div>
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>
