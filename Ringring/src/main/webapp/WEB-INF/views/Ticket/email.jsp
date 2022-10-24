@@ -11,9 +11,9 @@
 		
 	<form action="sendMail" method="post">	
  
-		<input type="text" name="tomail">
 		<input type="text" name="title">
-		<input type="text" name="content"> 
+		<input type="text" name="content">
+
 
 		<input type="submit" value="메일 보내기">
 

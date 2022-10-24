@@ -19,7 +19,7 @@ public class MailController {
 	public String sendMailTest(HttpServletRequest request){
 		
 		String from = "ringring395@gmail.com";
-		String to = request.getParameter("tomail");		//받는 사람 이메일
+		String to = "a798019@naver.com";		//받는 사람 이메일
 		String title = request.getParameter("title");	//제목
 		String content = request.getParameter("content");	//내용
 		
@@ -31,7 +31,11 @@ public class MailController {
             messageHelper.setFrom(from);
             messageHelper.setTo(to);
             messageHelper.setSubject(title);
-            messageHelper.setText(content, true);
+            
+//            String contents = content +"<img src='https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1590/3428.jpg'>";
+            String contents = content +"<img src='D://01-STUDY/image/loopy08.jpg'>";
+            
+            messageHelper.setText(contents, true);         
             
             mailSender.send(message);
                     
