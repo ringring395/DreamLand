@@ -20,7 +20,14 @@
 		<c:set var="i" value="0" />
 		<c:set var="j" value="2" />
 		
-		<div id="sale">	
+		<div id="sale">
+		
+		<select id="sale_show">
+			<option value="sale_now">현재 할인혜택 보기</option>
+			<option value="sale_past">지난 할인혜택 보기</option>
+			<option value="sale_all">전체 할인혜택 보기</option>
+		</select>
+		
 		<table id="sale_table">
 		<c:forEach items="${sale}" var="sale">	
 
