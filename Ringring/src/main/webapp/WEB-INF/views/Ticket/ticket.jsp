@@ -6,6 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/ticket.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../../resources/js/html2canvas.js"></script>
+<script type="text/javascript" src="../../../resources/js/ticket.js"></script>
 <title>티켓보기</title>
 
 </head>
@@ -19,6 +22,7 @@
 		<div id="ticket">
 
 			<div id="ticket_img">
+			<div class="captureDiv">
 				<table id="ticket_table">
 					<tr>
 						<td>입장일</td>
@@ -46,6 +50,9 @@
 						</td>
 					</tr>										
 				</table>										
+			</div>
+			
+			<button id="capture">다운로드</button>
 			
 				<div id="ticket_info">
 					<p>발행된 티켓은 이메일로 전송되었습니다.<br>
@@ -56,6 +63,9 @@
 		</div><!-- ticket -->
 
 	</div>
+
+
+	
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>
 </html>
