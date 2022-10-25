@@ -24,5 +24,4 @@ $(document).ready(function (){
 	
 	
 	
-	
 })//docu닫음

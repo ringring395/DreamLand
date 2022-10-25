@@ -12,7 +12,28 @@
 		from (
 				select @rownum:=@rownum+1 rownum, event.* 
 				from event, (select @rownum:=0) as tmp
-				where e_type=&apos;event&apos;
+				where e_type=&apos;event&apos;				
+		<!-- 기간별 조회 -->
+	      		<choose>
+	      			<when test="sort == 'past'.toString()">
+      				<![CDATA[
+      				and e_end <now()
+      				]]>
+	      			</when>
+	      			<when test="sort == 'all'.toString()">
+	      			
+	      			</when>
+	      			<when test="sort == 'now'.toString()">
+	      			<![CDATA[
+	      			and (e_start <now() and e_end > now())
+	      			]]>
+	      			</when>
+	      			<otherwise>
+	      			<![CDATA[
+	      			and (e_start <now() and e_end > now())
+	      			]]>	      			
+	      			</otherwise>
+	      		</choose>									
 		        order by e_no desc
 		) as e 
 		<![CDATA[
@@ -33,7 +54,7 @@
 				select @rownum:=@rownum+1 rownum, event.* 
 				from event, (select @rownum:=0) as tmp
 				where e_type=&apos;sale&apos;
-
+		<!-- 기간별 조회 -->
 	      		<choose>
 	      			<when test="sort == 'past'.toString()">
       				<![CDATA[
@@ -75,6 +96,27 @@
 				select @rownum:=@rownum+1 rownum, event.* 
 				from event, (select @rownum:=0) as tmp
 				where e_type=&apos;parade&apos;
+		<!-- 기간별 조회 -->
+	      		<choose>
+	      			<when test="sort == 'past'.toString()">
+      				<![CDATA[
+      				and e_end <now()
+      				]]>
+	      			</when>
+	      			<when test="sort == 'all'.toString()">
+	      			
+	      			</when>
+	      			<when test="sort == 'now'.toString()">
+	      			<![CDATA[
+	      			and (e_start <now() and e_end > now())
+	      			]]>
+	      			</when>
+	      			<otherwise>
+	      			<![CDATA[
+	      			and (e_start <now() and e_end > now())
+	      			]]>	      			
+	      			</otherwise>
+	      		</choose>				
 		        order by e_no desc
 		) as e 
 		<![CDATA[

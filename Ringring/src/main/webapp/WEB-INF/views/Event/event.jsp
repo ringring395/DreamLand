@@ -17,6 +17,13 @@
 		<div id="pagetitle">
 			<span>페이지제목</span>
 		</div>
+
+		<div id="sortDiv">
+			<a href="/event?sort=now" class="sortBtn">현재 행사 보기</a>	
+			<a href="/event?sort=past" class="sortBtn">지난 행사 보기</a>		
+			<a href="/event?sort=all" class="sortBtn">전체 행사 보기</a>		
+		</div>
+
 		
 	<c:forEach items="${event}" var="event">		
 		<div id="event">	
