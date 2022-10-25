@@ -75,6 +75,18 @@
 	margin:10px;
 	background-color:white;	
 }
+
+
+#calendar_table{
+	background-color:gray;
+}
+
+
+
+
+
+
+
 /* admin_event 행사/할인/퍼레이드 등록*/
 
 #a_event_salebox{
