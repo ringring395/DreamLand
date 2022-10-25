@@ -18,6 +18,9 @@ public class CriteriaVO {
 	//아이디
 	private String id;
 	
+	//정렬 위한 변수 추가
+	private String sort;	//정렬
+	
 	//생성자
 	public CriteriaVO() {
 		this(1,10);		

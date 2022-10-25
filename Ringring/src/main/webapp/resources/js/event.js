@@ -21,11 +21,6 @@ $(document).ready(function (){
  * sale 페이지
 */	
 
-	$("#sale_past").on("click", function(){
-
-			alert("호잇");
-
-	})
 	
 	
 	

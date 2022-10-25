@@ -33,7 +33,29 @@
 				select @rownum:=@rownum+1 rownum, event.* 
 				from event, (select @rownum:=0) as tmp
 				where e_type=&apos;sale&apos;
-		        order by e_no desc
+
+	      		<choose>
+	      			<when test="sort == 'past'.toString()">
+      				<![CDATA[
+      				and e_end <now()
+      				]]>
+	      			</when>
+	      			<when test="sort == 'all'.toString()">
+	      			
+	      			</when>
+	      			<when test="sort == 'now'.toString()">
+	      			<![CDATA[
+	      			and (e_start <now() and e_end > now())
+	      			]]>
+	      			</when>
+	      			<otherwise>
+	      			<![CDATA[
+	      			and (e_start <now() and e_end > now())
+	      			]]>	      			
+	      			</otherwise>
+	      		</choose>	
+		      			         								
+		        order by e_no desc		       
 		) as e 
 		<![CDATA[
 		where rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}

@@ -20,6 +20,18 @@
 	justify-content:center;	
 }
 
+#sortDiv{
+	margin:10px;
+	text-align:end;
+}
+
+.sortBtn{
+	text-decoration:none;
+	color:white;
+	background-color:orange;
+	padding:5px;
+}
+
 /* 더보기 */
 .event_more{
 	display:flex;
@@ -102,4 +114,5 @@
 	justify-content:right;
 	cursor:pointer;
 }
+
 

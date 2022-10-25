@@ -22,12 +22,11 @@
 		
 		<div id="sale">
 		
-		<button onclick="location.href='/board/list?bgno=${scri.bgno}&searchType=${scri.searchType}&keyword=${scri.keyword}&sort=viewCount'"></button>
-		<select>
-		<option value="now">현재 할인혜택 보기</option>
-		<option value="past">지난 할인혜택 보기</option>
-		<option value="all">전체 할인혜택 보기</option>
-		</select>
+		<div id="sortDiv">
+			<a href="/sale?sort=now" class="sortBtn">현재 할인 보기</a>	
+			<a href="/sale?sort=past" class="sortBtn">지난 할인 보기</a>		
+			<a href="/sale?sort=all" class="sortBtn">전체 할인 보기</a>		
+		</div>
 		
 		<table id="sale_table">
 		<c:forEach items="${sale}" var="sale">	
