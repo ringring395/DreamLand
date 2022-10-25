@@ -30,6 +30,9 @@
 						<div id="h_logout" class="m_Btn" onclick="location.href='../logout'">
 							<p>관리자<br>로그아웃</p>
 						</div>
+						<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../select'">
+							<p>예매 바로가기</p>
+						</div>						
 						<div id="h_managing" class="m_Btn" onclick="location.href='../admin'">
 							<p>관리자<br>페이지</p>
 						</div>
