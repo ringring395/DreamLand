@@ -28,7 +28,7 @@ function calendarMaker(target, date){
 		return;
 	}
 	
-	//해당 월
+	//해당 월의 마지막 날
 	var thisMonth = new Date(nowDate.getFullYear(), nowDate.getMonth(), 1);
 	//해당 달의 마지막 날
 	var thisLastDay = new Date(nowDate.getFullYear(), nowDate.getMonth()+1, 0);
