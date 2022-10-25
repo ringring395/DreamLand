@@ -17,6 +17,10 @@ public class PageVO {
 	private int total;		//board테이블의 전체 건수를 저장
 	
 	
+	//정렬 위한 변수 추가
+	private String sort;	//정렬
+	
+	
 	//생성자(매개변수가 2개인 생성자) 선언
 	public PageVO(CriteriaVO cri, int total) {
 		this.cri = cri;

@@ -22,10 +22,11 @@
 		
 		<div id="sale">
 		
-		<select id="sale_show">
-			<option value="sale_now">현재 할인혜택 보기</option>
-			<option value="sale_past">지난 할인혜택 보기</option>
-			<option value="sale_all">전체 할인혜택 보기</option>
+		<button onclick="location.href='/board/list?bgno=${scri.bgno}&searchType=${scri.searchType}&keyword=${scri.keyword}&sort=viewCount'"></button>
+		<select>
+		<option value="now">현재 할인혜택 보기</option>
+		<option value="past">지난 할인혜택 보기</option>
+		<option value="all">전체 할인혜택 보기</option>
 		</select>
 		
 		<table id="sale_table">

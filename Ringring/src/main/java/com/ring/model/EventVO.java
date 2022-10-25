@@ -23,5 +23,6 @@ public class EventVO {
     
 	//UploadVO(파일 업로드 관련 Model), 배열
 	private ArrayList<UploadVO> up;
+
     
 }
