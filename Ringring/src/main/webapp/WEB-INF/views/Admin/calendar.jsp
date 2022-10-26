@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="/resources/css/admin.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<script type="text/javascript" src="/resources/js/calendar_admin.js"></script>
 <title>관리자용 메인=예매상황 확인</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -50,7 +50,7 @@
 						다음해
 					</a>
 				</div>
-
+${ticketCnt}
 			<table class="calendar_body">	
 				<tr id="calendar_table">
 					<td class="day sun">일</td>
@@ -63,6 +63,7 @@
 				</tr>
 				<tr>
 			<c:forEach var="dateList" items="${dateList}" varStatus="date_status"> 
+
 				<c:choose>
 					<c:when test="${dateList.value=='today'}">
 						<td class="today">
@@ -70,7 +71,8 @@
 								${dateList.date}
 							</div>
 							<div>
-								📌
+								📌<br>
+								<input type="text" class="daycnt" value="${dateList.year}-${dateList.month+1}-${dateList.date}">
 							</div>
 						</td>
 					</c:when>
@@ -80,7 +82,9 @@
 								${dateList.date}
 							</div>
 							<div>
-							🌊토
+							🌊토<br>
+							<input type="text" class="daycnt" value="${dateList.year}-${dateList.month+1}-${dateList.date}">
+
 							</div>
 						</td>
 					</c:when>
@@ -92,7 +96,8 @@
 								${dateList.date}
 							</div>
 							<div>
-							👻일
+							👻일<br>
+							<input type="text" class="daycnt" value="${dateList.year}-${dateList.month+1}-${dateList.date}">
 							</div>
 						</td>
 					</c:when>
@@ -102,11 +107,13 @@
 								${dateList.date}
 							</div>
 							<div>
-								🐥
+								🐥<br>
+								<input type="text" class="daycnt" value="${dateList.year}-${dateList.month+1}-${dateList.date}">
 							</div>
 						</td>
 					</c:otherwise>
 				</c:choose>
+				
 			</c:forEach>
 				</tr>
 			</table>
