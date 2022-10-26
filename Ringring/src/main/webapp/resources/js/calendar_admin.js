@@ -3,7 +3,6 @@
  */
 $(document).ready(function (){
 	
-	alert("ggg");
 	
 	
 	var cnt_date = $(".cnt_date").val();
