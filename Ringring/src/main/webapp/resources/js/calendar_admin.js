@@ -3,9 +3,16 @@
  */
 $(document).ready(function (){
 	
+	alert("ggg");
 	
-	var cnt = $(".daycnt").val();
-	console.log(cnt);
+	
+	var cnt_date = $(".cnt_date").val();
+	console.log(cnt_date);
+
+	if(cnt_date === '-1-'){
+		console.log("ggg");
+		$(this).next('div').hide();
+	}
 	
 	
 })//전체 닫음

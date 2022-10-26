@@ -50,7 +50,6 @@
 						다음해
 					</a>
 				</div>
-${ticketCnt}
 			<table class="calendar_body">	
 				<tr id="calendar_table">
 					<td class="day sun">일</td>
@@ -62,7 +61,12 @@ ${ticketCnt}
 					<td class="day sat">토</td>
 				</tr>
 				<tr>
+
 			<c:forEach var="dateList" items="${dateList}" varStatus="date_status"> 
+
+
+<c:set var="cnt" value="${dateList.year}-${dateList.month+1}-${dateList.date}"/>
+
 
 				<c:choose>
 					<c:when test="${dateList.value=='today'}">
@@ -82,9 +86,60 @@ ${ticketCnt}
 								${dateList.date}
 							</div>
 							<div>
-							🌊토<br>
-							<input type="text" class="daycnt" value="${dateList.year}-${dateList.month+1}-${dateList.date}">
-
+							<br>
+							<input type="text" class="cnt_date" value="${dateList.year}-${dateList.month+1}-${dateList.date}">							
+				<c:set var="sat_a_cnt" value="0"/>
+				<c:set var="sat_j_cnt" value="0"/>
+				<c:set var="sat_c_cnt" value="0"/>	
+				<c:set var="sat_a_cnt_night" value="0"/>
+				<c:set var="sat_j_cnt_night" value="0"/>
+				<c:set var="sat_c_cnt_night" value="0"/>						
+				<c:forEach var="ticketCnt" items="${ticketCnt}">		
+					<c:choose>
+						<c:when test="${ticketCnt.t_date eq cnt && ticketCnt.t_time == 'allday'}">							
+							<c:set var="sat_a_cnt" value="${sat_a_cnt+ticketCnt.t_a_cnt}" />
+							<c:set var="sat_j_cnt" value="${sat_j_cnt+ticketCnt.t_j_cnt}" />
+							<c:set var="sat_c_cnt" value="${sat_c_cnt+ticketCnt.t_c_cnt}" />
+						</c:when>						
+						<c:when test="${ticketCnt.t_date eq cnt && ticketCnt.t_time == 'night'}">
+							<c:set var="sat_a_cnt_night" value="${sat_a_cnt_night+ticketCnt.t_a_cnt}" />
+							<c:set var="sat_j_cnt_night" value="${sat_j_cnt_night+ticketCnt.t_j_cnt}" />
+							<c:set var="sat_c_cnt_night" value="${sat_c_cnt_night+ticketCnt.t_c_cnt}" />							
+						</c:when>
+					</c:choose>										
+				</c:forEach>
+				<div>
+							<table class="cntDetail">
+								<tr>
+									<td>토</td>
+									<td>성인</td>
+									<td>청소년</td>
+									<td>아동</td>
+									<td>합</td>
+								</tr>
+								<tr>
+									<td>allday</td>
+									<td><c:out value="${sat_a_cnt}"/></td>
+									<td><c:out value="${sat_j_cnt}"/></td>
+									<td><c:out value="${sat_c_cnt}"/></td>
+									<td><c:out value="${sat_a_cnt+sat_j_cnt+sat_c_cnt}"/></td>
+								</tr>
+								<tr>
+									<td>night</td>
+									<td><c:out value="${sat_a_cnt_night}"/></td>
+									<td><c:out value="${sat_j_cnt_night}"/></td>
+									<td><c:out value="${sat_c_cnt_night}"/></td>
+									<td><c:out value="${sat_a_cnt_night+sat_j_cnt_night+sat_c_cnt_night}"/></td>
+								</tr>
+								<tr>
+									<td>합</td>
+									<td><c:out value="${sat_a_cnt+sat_a_cnt_night}"/></td>
+									<td><c:out value="${sat_j_cnt+sat_j_cnt_night}"/></td>
+									<td><c:out value="${sat_c_cnt+sat_c_cnt_night}"/></td>
+									<td><c:out value="${sat_a_cnt+sat_j_cnt+sat_c_cnt+sat_a_cnt_night+sat_j_cnt_night+sat_c_cnt_night}"/></td>									
+								</tr>																
+							</table>
+				</div>
 							</div>
 						</td>
 					</c:when>
@@ -98,6 +153,9 @@ ${ticketCnt}
 							<div>
 							👻일<br>
 							<input type="text" class="daycnt" value="${dateList.year}-${dateList.month+1}-${dateList.date}">
+
+
+							
 							</div>
 						</td>
 					</c:when>
@@ -109,11 +167,12 @@ ${ticketCnt}
 							<div>
 								🐥<br>
 								<input type="text" class="daycnt" value="${dateList.year}-${dateList.month+1}-${dateList.date}">
+
 							</div>
 						</td>
 					</c:otherwise>
 				</c:choose>
-				
+	
 			</c:forEach>
 				</tr>
 			</table>
