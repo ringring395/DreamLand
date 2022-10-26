@@ -51,6 +51,13 @@
 						다음해
 					</a>
 				</div>
+				
+				<div>
+					a = 성인<br>
+					j = 청소년<br>
+					c = 아동
+				</div>
+				
 			<table class="calendar_body">	
 				<tr id="calendar_tr">
 					<td class="day sun">일</td>
@@ -61,6 +68,15 @@
 					<td class="day">금</td>
 					<td class="day sat">토</td>
 				</tr>
+				<tr id="calendar_tr2">
+					<td class="cntTr">a/ j/ c/ 합</td>
+					<td class="cntTr">a/ j/ c/ 합</td>
+					<td class="cntTr">a/ j/ c/ 합</td>
+					<td class="cntTr">a/ j/ c/ 합</td>
+					<td class="cntTr">a/ j/ c/ 합</td>
+					<td class="cntTr">a/ j/ c/ 합</td>
+					<td class="cntTr">a/ j/ c/ 합</td>
+				</tr>				
 				<tr>
 			<c:forEach var="dateList" items="${dateList}" varStatus="date_status"> 
 
@@ -79,7 +95,6 @@
 								${dateList.date}
 							</div>
 							<div>
-								<br>
 				<c:forEach var="ticketCnt" items="${ticketCnt}">		
 					<c:choose>
 						<c:when test="${ticketCnt.t_date eq cnt && ticketCnt.t_time == 'allday'}">							
@@ -95,13 +110,6 @@
 					</c:choose>										
 				</c:forEach>
 							<table class="cntDetail">
-								<tr>
-									<td>📌</td>
-									<td>성인</td>
-									<td>청소년</td>
-									<td>아동</td>
-									<td>합</td>
-								</tr>
 								<tr>
 									<td>allday</td>
 									<td><c:out value="${a_cnt}"/></td>
@@ -133,7 +141,6 @@
 								${dateList.date}
 							</div>
 							<div>
-							<br>
 				<c:forEach var="ticketCnt" items="${ticketCnt}">		
 					<c:choose>
 						<c:when test="${ticketCnt.t_date eq cnt && ticketCnt.t_time == 'allday'}">							
@@ -149,13 +156,6 @@
 					</c:choose>										
 				</c:forEach>
 							<table class="cntDetail">
-								<tr>
-									<td>토</td>
-									<td>성인</td>
-									<td>청소년</td>
-									<td>아동</td>
-									<td>합</td>
-								</tr>
 								<tr>
 									<td>allday</td>
 									<td><c:out value="${a_cnt}"/></td>
@@ -187,9 +187,9 @@
 						<td class="sun_day">
 							<div class="sun">
 								${dateList.date}
-							</div>
-							<div>
-							<br>
+							</div>	
+							<div>						
+							
 				<c:forEach var="ticketCnt" items="${ticketCnt}">		
 					<c:choose>
 						<c:when test="${ticketCnt.t_date eq cnt && ticketCnt.t_time == 'allday'}">							
@@ -204,14 +204,8 @@
 						</c:when>
 					</c:choose>										
 				</c:forEach>
+
 							<table class="cntDetail">
-								<tr>
-									<td>일</td>
-									<td>성인</td>
-									<td>청소년</td>
-									<td>아동</td>
-									<td>합</td>
-								</tr>
 								<tr>
 									<td>allday</td>
 									<td><c:out value="${a_cnt}"/></td>
@@ -243,7 +237,6 @@
 								${dateList.date}
 							</div>
 							<div>
-								<br>
 				<c:forEach var="ticketCnt" items="${ticketCnt}">		
 					<c:choose>
 						<c:when test="${ticketCnt.t_date eq cnt && ticketCnt.t_time == 'allday'}">							
@@ -259,13 +252,6 @@
 					</c:choose>										
 				</c:forEach>
 							<table class="cntDetail">
-								<tr>
-									<td>일</td>
-									<td>성인</td>
-									<td>청소년</td>
-									<td>아동</td>
-									<td>합</td>
-								</tr>
 								<tr>
 									<td>allday</td>
 									<td><c:out value="${a_cnt}"/></td>

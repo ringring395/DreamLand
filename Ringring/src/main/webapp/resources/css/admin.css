@@ -71,7 +71,6 @@
 
 #a_ticket{
 	width:700px;
-	height:400px;
 	margin:10px;
 	background-color:white;	
 }
@@ -81,10 +80,21 @@
 	background-color:gray;
 }
 
+#calendar_tr2{
+	background-color:lightblue;
+	text-align:right;
+	font-size:12px;
+}
 
+.cntDetail >tr> td{
+	text-align:right;
+	font-size:10px;
+}
 
-
-
+.sun_day{
+	display:flex;
+	justify-content:center;
+}
 
 
 /* admin_event 행사/할인/퍼레이드 등록*/
