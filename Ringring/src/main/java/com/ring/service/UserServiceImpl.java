@@ -39,6 +39,11 @@ public class UserServiceImpl implements UserService{
 	public UserVO userdetail(UserVO user) {
 		return um.userdetail(user);
 	}
+	
+	//회원 정보수정
+	public void usermodify(UserVO user) {
+		um.usermodify(user);
+	}
 
 
 }

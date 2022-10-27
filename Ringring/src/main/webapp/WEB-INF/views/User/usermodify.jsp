@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/user.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/user_modify.js"></script>
 <title>회원정보 수정</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -19,30 +21,33 @@
 			<form action="/usermodify" method="post">
 				<div id="modify">
 					<div class="modify_info">
-						<input readonly type="text" placeholder="${userdetail.id}" name="id">
-						<span>변경불가</span>
+						<input readonly type="text" value="${userdetail.id}" id="modify_id">
+						<br><span id="sid"></span>
 					</div>
 					
 					<div class="modify_info">
 						<input type="password" placeholder="비밀번호" name="pw">
-						<span id="spw"></span>
+						<br><span id="spw"></span>
 					</div>
 
 					<div class="modify_info">
 						<input type="password" placeholder="비밀번호 재확인" name="pw2">
-						<span id="spw2"></span>
+						<br><span id="spw2"></span>
 					</div>
 
 					<div class="modify_info">
-						<input type="text" placeholder="${userdetail.name}" name="name">
-						<span id="sna"></span>
+						<input type="text" value="${userdetail.name}" name="name">
+						<br><span id="sna"></span>
 					</div>
 
 					<div>
-						<input type="tel" class="modify_tel" name="phone1" placeholder="010">-
-						<input type="tel" class="modify_tel" name="phone2">
-						<input type="tel" class="modify_tel" name="phone3">
-						<button>중복 확인</button>
+						<input type="tel" class="modify_tel" name="phone1" value="010">-
+						<input type="tel" class="modify_tel" name="phone2" id="modify_phone2">
+						<input type="tel" class="modify_tel" name="phone3" id="modify_phone3">
+						<input type="hidden" class="modify_tel" id="modify_phone" value="${userdetail.phone}">
+						<input type="hidden" class="modify_tel" name="totalphone">
+						<label>중복 확인</label>
+						<br><span id="sph"></span>	
 					</div>
 					
 					<input type="submit" id="modifyBtn" value="정보수정">					

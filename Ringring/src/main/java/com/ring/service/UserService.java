@@ -17,5 +17,8 @@ public interface UserService {
 	
 	//회원 상세보기
 	public UserVO userdetail(UserVO user);
+	
+	//회원 정보수정
+	public void usermodify(UserVO user);
 
 }

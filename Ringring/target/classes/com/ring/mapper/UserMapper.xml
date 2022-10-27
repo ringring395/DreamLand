@@ -28,5 +28,11 @@
 	<select id="userdetail" resultType="com.ring.model.UserVO">
 		select * from user where id=#{id}
 	</select>
+	
+<!-- 회원 정보수정 -->	
+	<update id="usermodify">
+		update user set pw=#{pw}, name=#{name}, phone=#{phone} 
+		where id=#{id} 
+	</update>
 
 </mapper>

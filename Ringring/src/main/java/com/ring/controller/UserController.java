@@ -89,16 +89,25 @@ public class UserController {
 		return "/User/mypage";
 	}
 
-	//회원정보 수정(정보 select)
+	//회원정보(select)
 	@RequestMapping(value="/usermodify", method = RequestMethod.GET)
-	public String userdetail(UserVO user, RedirectAttributes rttr,
-			HttpSession session, Model model){
+	public String userdetail(UserVO user, HttpSession session, Model model){
 		
 		user.setId((String)session.getAttribute("id"));
 		us.userdetail(user);
 		model.addAttribute("userdetail", us.userdetail(user));
 		
 		return "User/usermodify";
+	}
+	
+	//회원 정보 수정(update)
+	@RequestMapping(value="/usermodify", method = RequestMethod.POST)
+	public String usermodify(UserVO user, RedirectAttributes rttr) {
+		
+		us.usermodify(user);
+		rttr.addAttribute("id", user.getId());
+		
+		return "redirect:/usermodify";
 	}
 	
 	

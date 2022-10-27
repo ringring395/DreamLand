@@ -1,56 +1,16 @@
 /**
- * 회원 user 폴더 js적용
+ * 회원 정보수정 js파일
  */
 $(document).ready(function (){
-	
-/* 회원가입 */
-	//아이디 (이메일) 정규식
-	$("input[name=id]").on("keyup",function (){
-		
-		var id = $(this).val();
-		var idcheck =/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-z]([-_\.]?[0-9a-z])*\.[a-z]{2,3}$/;
-		
-		if(!idcheck.test(id)){
-			$("#sid").html("아이디는 올바른 형식의 이메일로 입력해주세요.").css("color","red");
-		}else{
-			$("#sid").html("올바른 이메일 형식입니다.").css("color","blue");
-		}		
-		
-	});//아이디 정규식 닫음
-	
-	
-//아이디 중복 체크 버튼 누르면
-	$("#idBtn").on("click", function(){
-		var id = $("input[name=id]").val();
-		console.log(id);
-		idcheck(id);
-	});
 
-//아이디 중복체크 함수 선언	
-	function idcheck(id){
-		
-        $.ajax({				
-            type: 'GET',
-            url: '/idcheck',
-            data: {id:id},
-            dataType: 'json',
-            success: function(result) {
-                if (result == '0') {
-                	$("#sid").html("");
-                	$("#sid2").html("사용할 수 있는 아이디입니다.").css("color","blue");
-                } else {
-                	$("#sid").html("");
-                	$("#sid2").html("사용 중인 아이디 입니다.").css("color","red");
-                }
-            },
-            error: function(e) {
-            	alert("error: "+e);
-            } 					
-        });			
-	}//idcheck 닫음
-		
 	
-	//비밀번호 pw 정규식
+//아이디	
+	$("#modify_id").on("click", function(){
+		
+		$("#sid").html("아이디는 변경할 수 없습니다.").css("color","blue");
+	})
+	
+//비밀번호 pw 정규식
 	$("input[name=pw]").on("keyup",function (){
 		
 		var pw = $(this).val();
@@ -83,8 +43,8 @@ $(document).ready(function (){
 		}
 	
 	});//비밀번호 pw2 닫음
-	
 
+	
 //이름 정규식
 	$("input[name=name]").on("keyup",function (){
 		
@@ -97,8 +57,16 @@ $(document).ready(function (){
 			$("#sna").html("").css("color","blue");
 		}		
 		
-	});//이름 정규식 닫음
+	});//이름 정규식 닫음	
+
 	
+//전화번호 넣기
+	var phone = $("#modify_phone").val();
+	
+	$("#modify_phone2").val(phone.substr(2, 4));
+	$("#modify_phone3").val(phone.substr(6, 4));	
+	
+
 	
 //전화번호 (합쳐서 가져오기)
 	$("input[name=phone1]").blur(function(){
@@ -106,7 +74,7 @@ $(document).ready(function (){
 		var phonecheck = /^\d{3}$/;
 		if(phonecheck.test(phone1)){
 			$("#sph").html("").css("color","red");
-			phone();
+			modi_phone();
 		}else{
 			$("#sph").html("전화번호에는 숫자만 입력 가능합니다.").css("color","red");
 		}		
@@ -117,7 +85,7 @@ $(document).ready(function (){
 		var phonecheck = /^\d{3,4}$/;
 		if(phonecheck.test(phone2)){
 			$("#sph").html("").css("color","red");
-			phone();
+			modi_phone();
 		}else{
 			$("#sph").html("전화번호에는 숫자만 입력 가능합니다.").css("color","red");
 		}	
@@ -128,13 +96,13 @@ $(document).ready(function (){
 		var phonecheck = /^\d{3,4}$/;
 		if(phonecheck.test(phone3)){
 			$("#sph").html("").css("color","red");
-			phone();
+			modi_phone();
 		}else{
 			$("#sph").html("전화번호에는 숫자만 입력 가능합니다.").css("color","red");
 		}
 	});	
 
-	function phone(){
+	function modi_phone(){
 		var phone1 = $("input[name=phone1]").val();
 		var phone2 = $("input[name=phone2]").val();
 		var phone3 = $("input[name=phone3]").val();
@@ -143,20 +111,38 @@ $(document).ready(function (){
 		if(phone1 != "" && phone2 != "" && phone3 != ""){
 			//전화번호 전체 정규식 체크(9~11자 사이의 숫자로만 이뤄짐)
 			var phone = phone1+phone2+phone3;
+			console.log(phone);
 			var phonecheck = /^\d{9,11}$/;
 			//정규식 체크되면
 			if(phonecheck.test(phone)){
 				//hidden으로 숨겨둔 곳에 전체 전화번호넣음(-없이)
-				$("#totalphone").val(phone);				
+				$("#totalphone").val(phone);
 			}
 		}
-	};
+	};	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
+//빈값체크
+	var pwChk = $("input[name=pw]").val();
+	var pw2Chk = $("input[name=pw2]").val();
 	
+//정보수정 버튼 눌렀을때,
+	$("#modifyBtn").on("click", function(){
+
+//		if(pwChk == null || pw2Chk == null){
+			alert("비밀번호를 입력해주세요.");
+//		}	
+		
+	});
 	
-	
-	
-	
-	
-})//docu닫음
+
+})//전체 닫음
