@@ -21,7 +21,7 @@
 			<form action="/usermodify" method="post">
 				<div id="modify">
 					<div class="modify_info">
-						<input readonly type="text" value="${userdetail.id}" id="modify_id">
+						<input readonly type="text" value="${userdetail.id}" id="modify_id" name="id">
 						<br><span id="sid"></span>
 					</div>
 					
@@ -45,7 +45,7 @@
 						<input type="tel" class="modify_tel" name="phone2" id="modify_phone2">
 						<input type="tel" class="modify_tel" name="phone3" id="modify_phone3">
 						<input type="hidden" class="modify_tel" id="modify_phone" value="${userdetail.phone}">
-						<input type="hidden" class="modify_tel" name="totalphone">
+						<input type="hidden" class="modify_tel" name="phone">
 						<label>중복 확인</label>
 						<br><span id="sph"></span>	
 					</div>

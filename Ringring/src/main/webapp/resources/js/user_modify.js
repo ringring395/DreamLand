@@ -116,33 +116,20 @@ $(document).ready(function (){
 			//정규식 체크되면
 			if(phonecheck.test(phone)){
 				//hidden으로 숨겨둔 곳에 전체 전화번호넣음(-없이)
-				$("#totalphone").val(phone);
+				$("input[name=phone]").val(phone);
+				console.log($("input[name=phone]").val());
 			}
 		}
 	};	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 
 //빈값체크
 	var pwChk = $("input[name=pw]").val();
 	var pw2Chk = $("input[name=pw2]").val();
-	
-//정보수정 버튼 눌렀을때,
-	$("#modifyBtn").on("click", function(){
+//	if(pwChk == null || pw2Chk == null){
+//		alert("비밀번호를 입력해주세요.");
+//	}
 
-//		if(pwChk == null || pw2Chk == null){
-			alert("비밀번호를 입력해주세요.");
-//		}	
-		
-	});
 	
 
 })//전체 닫음
