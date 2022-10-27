@@ -31,11 +31,11 @@
 				<div class="navigation">
 				<!-- 이전해 -->
 					<a class="before_after_year" href="/admin?year=${today_info.search_year-1}&month=${today_info.search_month-1}">
-						이전해					
+						⏪					
 					</a> 
 				<!-- 이전달 -->
 					<a class="before_after_month" href="/admin?year=${today_info.before_year}&month=${today_info.before_month}">
-						이전달					
+						◀				
 					</a> 
 				<!-- 지금 년월 -->
 					<span class="this_month" onclick="location.href='/admin'">
@@ -44,21 +44,18 @@
 					</span>
 				<!-- 다음달 -->	
 					<a class="before_after_month" href="/admin?year=${today_info.after_year}&month=${today_info.after_month}">
-						다음달
+						▶
 					</a>
 				<!-- 다음해 -->	 
 					<a class="before_after_year" href="/admin?year=${today_info.search_year+1}&month=${today_info.search_month-1}">
-						다음해
+						⏩
 					</a>
 				</div>
 				
-				<div>
-					a = 성인<br>
-					j = 청소년<br>
-					c = 아동
-				</div>
-				
 			<table class="calendar_body">	
+				<tr id="adminCal_info">
+					<td colspan="7">a = 성인 / j = 청소년 / c = 아동</td>
+				</tr>			
 				<tr id="calendar_tr">
 					<td class="day sun">일</td>
 					<td class="day">월</td>
@@ -129,7 +126,7 @@
 									<td><c:out value="${a_cnt+a_cnt_night}"/></td>
 									<td><c:out value="${j_cnt+j_cnt_night}"/></td>
 									<td><c:out value="${c_cnt+c_cnt_night}"/></td>
-									<td><c:out value="${a_cnt+j_cnt+c_cnt+a_cnt_night+j_cnt_night+c_cnt_night}"/></td>									
+									<td class="adminCal_total"><c:out value="${a_cnt+j_cnt+c_cnt+a_cnt_night+j_cnt_night+c_cnt_night}"/></td>									
 								</tr>																
 							</table>
 							</div>
@@ -155,6 +152,11 @@
 						</c:when>
 					</c:choose>										
 				</c:forEach>
+				<c:choose>
+					<c:when test="${dateList.month eq ''}">
+						
+					</c:when>
+					<c:otherwise>
 							<table class="cntDetail">
 								<tr>
 									<td>allday</td>
@@ -175,9 +177,11 @@
 									<td><c:out value="${a_cnt+a_cnt_night}"/></td>
 									<td><c:out value="${j_cnt+j_cnt_night}"/></td>
 									<td><c:out value="${c_cnt+c_cnt_night}"/></td>
-									<td><c:out value="${a_cnt+j_cnt+c_cnt+a_cnt_night+j_cnt_night+c_cnt_night}"/></td>									
+									<td class="adminCal_total"><c:out value="${a_cnt+j_cnt+c_cnt+a_cnt_night+j_cnt_night+c_cnt_night}"/></td>									
 								</tr>																
 							</table>
+					</c:otherwise>
+				</c:choose>			
 							</div>
 						</td>
 					</c:when>
@@ -204,7 +208,11 @@
 						</c:when>
 					</c:choose>										
 				</c:forEach>
-
+				<c:choose>
+					<c:when test="${dateList.month eq ''}">
+						
+					</c:when>
+					<c:otherwise>
 							<table class="cntDetail">
 								<tr>
 									<td>allday</td>
@@ -225,9 +233,11 @@
 									<td><c:out value="${a_cnt+a_cnt_night}"/></td>
 									<td><c:out value="${j_cnt+j_cnt_night}"/></td>
 									<td><c:out value="${c_cnt+c_cnt_night}"/></td>
-									<td><c:out value="${a_cnt+j_cnt+c_cnt+a_cnt_night+j_cnt_night+c_cnt_night}"/></td>									
+									<td class="adminCal_total"><c:out value="${a_cnt+j_cnt+c_cnt+a_cnt_night+j_cnt_night+c_cnt_night}"/></td>									
 								</tr>																
-							</table>							
+							</table>
+					</c:otherwise>
+				</c:choose>										
 							</div>
 						</td>
 					</c:when>
@@ -251,6 +261,11 @@
 						</c:when>
 					</c:choose>										
 				</c:forEach>
+				<c:choose>
+					<c:when test="${dateList.month eq ''}">
+						
+					</c:when>
+					<c:otherwise>
 							<table class="cntDetail">
 								<tr>
 									<td>allday</td>
@@ -271,9 +286,12 @@
 									<td><c:out value="${a_cnt+a_cnt_night}"/></td>
 									<td><c:out value="${j_cnt+j_cnt_night}"/></td>
 									<td><c:out value="${c_cnt+c_cnt_night}"/></td>
-									<td><c:out value="${a_cnt+j_cnt+c_cnt+a_cnt_night+j_cnt_night+c_cnt_night}"/></td>									
+									<td class="adminCal_total"><c:out value="${a_cnt+j_cnt+c_cnt+a_cnt_night+j_cnt_night+c_cnt_night}"/></td>									
 								</tr>																
-							</table>
+							</table>					
+					</c:otherwise>
+				</c:choose>
+
 							</div>
 						</td>
 					</c:otherwise>
@@ -281,7 +299,7 @@
 	
 			</c:forEach>
 				</tr>
-			</table>
+			</table><!-- calendar_body -->
 			</div><!-- calendar -->
 			</form>				
 				

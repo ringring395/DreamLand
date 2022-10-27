@@ -7,6 +7,11 @@
 	display:flex;
 }
 
+a{
+	text-decoration:none;
+	color:black;
+}
+
 /* 관리자페이지 (왼쪽)메뉴 */
 
 #a_menu{
@@ -25,11 +30,7 @@
 	height:50px;
 	padding:5px;
 	border-bottom:1px solid #ff8000;
-}
-
-.a_menu_li >a{
-	text-decoration:none;
-	color:black;
+	cursor:pointer;
 }
 
 .a_menu_li:hover{
@@ -71,14 +72,24 @@
 
 #a_ticket{
 	width:700px;
-	margin:10px;
+	margin:10px auto;
 	background-color:white;	
 }
 
+.navigation{
+	text-align:center;
+	padding:10px;
+	font-size:20px;
+}
+
+.calendar_body{
+	margin:0 auto;
+}
 
 #calendar_tr{
 	background-color:gray;
 }
+
 
 #calendar_tr2{
 	background-color:lightblue;
@@ -86,15 +97,21 @@
 	font-size:12px;
 }
 
-.cntDetail >tr> td{
+#adminCal_info{
 	text-align:right;
-	font-size:10px;
 }
 
-.sun_day{
-	display:flex;
-	justify-content:center;
+.adminCal_total{
+	font-weight:bold;
+	color:red;
 }
+
+.cntDetail{
+	margin:5px auto;
+	text-align:right;
+	font-size:13px;
+}
+
 
 
 /* admin_event 행사/할인/퍼레이드 등록*/
