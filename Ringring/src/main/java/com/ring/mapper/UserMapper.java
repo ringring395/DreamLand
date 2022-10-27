@@ -18,5 +18,8 @@ public interface UserMapper {
 	
 	//회원 정보수정
 	public void usermodify(UserVO user);
+	
+	//회원 탈퇴
+	public void resign(UserVO user);
 
 }

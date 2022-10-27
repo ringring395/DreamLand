@@ -23,7 +23,7 @@
 					<div class="signup2_info">
 						<input type="text" placeholder="아이디(메일주소)" name="id">
 						<label class="checkBtn" id="idBtn">중복 확인</label>
-						<span id="sid"></span>
+						<span id="sid"></span><br>
 						<span id="sid2"></span>					
 					</div>
 					

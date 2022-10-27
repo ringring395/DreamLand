@@ -55,7 +55,7 @@
 			</form>
 				
 				<div id="resignDiv">
-					<div id="resignBtn">회원 탈퇴</div>
+					<div id="resignBtn" onclick="location.href='../resign'">회원 탈퇴</div>
 				</div>
 		</div><!-- usermodify -->	
 	</div>

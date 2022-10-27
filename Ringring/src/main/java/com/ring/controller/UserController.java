@@ -110,6 +110,28 @@ public class UserController {
 		return "redirect:/usermodify";
 	}
 	
+	//회원 탈퇴(페이지)
+	@RequestMapping(value="/resign", method=RequestMethod.GET)
+	public String resign(UserVO user, HttpSession session, Model model){
+		
+		user.setId((String)session.getAttribute("id"));
+		us.userdetail(user);
+		model.addAttribute("userdetail", us.userdetail(user));
+		
+		return "User/resign";
+	}
+	
+	//회원 탈퇴(delete)
+	@RequestMapping(value="/resign", method=RequestMethod.POST)
+	public String resign(UserVO user, HttpSession session) {
+		
+		user.setId((String)session.getAttribute("id"));
+		us.resign(user);
+		
+		session.invalidate();
+		return "/Home/main";
+	}
+	
 	
 	
 	

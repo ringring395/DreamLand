@@ -44,6 +44,11 @@ public class UserServiceImpl implements UserService{
 	public void usermodify(UserVO user) {
 		um.usermodify(user);
 	}
+	
+	//회원 탈퇴
+	public void resign(UserVO user) {
+		um.resign(user);
+	}
 
 
 }

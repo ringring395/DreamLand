@@ -225,5 +225,17 @@
 	font-size:20px;
 }
 
+/* resign 회원탈퇴*/
+
+#resign{
+	width:400px;
+	margin:0 auto;
+}
+
+#resignBtn_div{
+	margin:0 auto;	
+}
+
+
 
 
