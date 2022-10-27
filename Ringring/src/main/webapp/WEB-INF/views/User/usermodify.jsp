@@ -19,22 +19,22 @@
 			<form action="/usermodify" method="post">
 				<div id="modify">
 					<div class="modify_info">
-						<input readonly type="text" placeholder="아이디(메일주소)" name="id">
+						<input readonly type="text" placeholder="${userdetail.id}" name="id">
 						<span>변경불가</span>
 					</div>
 					
 					<div class="modify_info">
-						<input type="text" placeholder="비밀번호" name="pw">
+						<input type="password" placeholder="비밀번호" name="pw">
 						<span id="spw"></span>
 					</div>
 
 					<div class="modify_info">
-						<input type="text" placeholder="비밀번호 재확인" name="pw2">
+						<input type="password" placeholder="비밀번호 재확인" name="pw2">
 						<span id="spw2"></span>
 					</div>
 
 					<div class="modify_info">
-						<input type="text" placeholder="이름" name="name">
+						<input type="text" placeholder="${userdetail.name}" name="name">
 						<span id="sna"></span>
 					</div>
 

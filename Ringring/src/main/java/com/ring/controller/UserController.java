@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -90,7 +91,13 @@ public class UserController {
 
 	//회원정보 수정(정보 select)
 	@RequestMapping(value="/usermodify", method = RequestMethod.GET)
-	public String usermodify(){
+	public String userdetail(UserVO user, RedirectAttributes rttr,
+			HttpSession session, Model model){
+		
+		user.setId((String)session.getAttribute("id"));
+		us.userdetail(user);
+		model.addAttribute("userdetail", us.userdetail(user));
+		
 		return "User/usermodify";
 	}
 	

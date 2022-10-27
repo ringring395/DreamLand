@@ -12,5 +12,8 @@ public interface UserMapper {
 	
 	//로그인
 	public UserVO login(UserVO user);
+	
+	//회원 상세보기
+	public UserVO userdetail(UserVO user);
 
 }

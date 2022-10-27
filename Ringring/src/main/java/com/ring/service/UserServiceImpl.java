@@ -34,6 +34,11 @@ public class UserServiceImpl implements UserService{
 		}
 		return result;
 	}
+	
+	//회원상세보기
+	public UserVO userdetail(UserVO user) {
+		return um.userdetail(user);
+	}
 
 
 }

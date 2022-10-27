@@ -14,5 +14,8 @@ public interface UserService {
 	
 	//로그인
 	public boolean login(UserVO user, HttpSession session);
+	
+	//회원 상세보기
+	public UserVO userdetail(UserVO user);
 
 }
