@@ -23,12 +23,13 @@
 			<a href="/event?sort=past" class="sortBtn">지난 행사 보기</a>		
 			<a href="/event?sort=all" class="sortBtn">전체 행사 보기</a>		
 		</div>
-
-		
+	
 	<c:forEach items="${event}" var="event">		
-		<div id="event">	
-		
-			<div id="event_img"><table></table></div>
+		<div id="event">
+	
+			<div id="event_imgDiv">
+				<img class="event_img" src="/display?fileName=${event.fileName}">
+			</div>
 			<div id="event_info">
 				<input type="hidden" name="e_no" value="${event.e_no }">
 				<div id="event_title">${event.e_title}</div>

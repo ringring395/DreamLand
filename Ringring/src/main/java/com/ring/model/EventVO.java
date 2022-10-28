@@ -23,6 +23,9 @@ public class EventVO {
     
 	//UploadVO(파일 업로드 관련 Model), 배열
 	private ArrayList<UploadVO> up;
-
+	
+	//이미지 출력 (join)
+	private String i_type;		//사진 종류(이벤트종류+메인or서브)	
+	private String fileName;		//이미지 경로 결합
     
 }
