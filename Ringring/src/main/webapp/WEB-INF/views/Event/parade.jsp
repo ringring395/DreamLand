@@ -22,11 +22,11 @@
 			<a href="/parade?sort=past" class="sortBtn">지난 퍼레이드 보기</a>		
 			<a href="/parade?sort=all" class="sortBtn">전체 퍼레이드 보기</a>		
 		</div>
-	
+		
 		<c:forEach items="${parade}" var="parade">	
 		<div id="parade">
-			<div id="parade_img">
-				사진사진사진
+			<div id="parade_imgDiv">
+				<img class="parade_img" src="/display?fileName=${parade.fileName}">
 			</div>
 			<div id="parade_info">
 				<div id="parade_title">${parade.e_title }</div>
