@@ -53,7 +53,9 @@
 
 	<!-- sale 목록 출력 -->
 	<select id="salelist" resultType="com.ring.model.EventVO">
-		select *
+		select e.*,
+			u.i_type,
+			Concat(Replace(uploadPath,'\\','/'), '/', i_type, '_', uuid, '_' ,fileName)AS fileName
 		from (
 				select @rownum:=@rownum+1 rownum, event.* 
 				from event, (select @rownum:=0) as tmp
@@ -78,10 +80,10 @@
 	      			and (e_start <now() and e_end > now())
 	      			]]>	      			
 	      			</otherwise>
-	      		</choose>	
-		      			         								
+	      		</choose>			      			         								
 		        order by e_no desc		       
-		) as e 
+		) as e join upload u
+		on e.e_no = u.e_no
 		<![CDATA[
 		where rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}
 		]]> 

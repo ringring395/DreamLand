@@ -27,7 +27,7 @@
 			<a href="/sale?sort=past" class="sortBtn">지난 할인 보기</a>		
 			<a href="/sale?sort=all" class="sortBtn">전체 할인 보기</a>		
 		</div>
-		
+
 		<table id="sale_table">
 		<c:forEach items="${sale}" var="sale">	
 
@@ -35,7 +35,9 @@
 				<tr>
 			</c:if>
 					<td>
-						<div id="sale_img">사진사진</div>
+						<div id="sale_imgDiv">
+							<img class="sale_img" src="/display?fileName=${sale.fileName}">
+						</div>
 						<div id="sale_title">
 							<div>${sale.e_title }<br>
 							기간 : ${sale.e_start} ~ ${sale.e_end}<br>
