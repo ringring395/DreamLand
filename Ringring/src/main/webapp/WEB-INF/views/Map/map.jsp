@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/resources/js/map22.js"></script>
 <title>둘러보기</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -20,11 +19,8 @@
 			
 		<div id="map">
 			전체지도지도지도지도
-			<button id="Btn1" class="btn">버튼1번</button>
-			<button id="Btn2" class="btn">버튼2번</button>
-			<button id="Btn3" class="btn">버튼3번</button>
-			<button id="Btn4" class="btn">버튼4번</button>
-		</div>
+
+		
 		
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -77,10 +73,8 @@
 </div>
 		
 
-		
-		
-	</div>
-	
+		</div><!-- map -->		
+	</div><!-- wrap -->	
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>
 </html>
