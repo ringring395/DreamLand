@@ -74,7 +74,7 @@ public class UserController {
 		session.invalidate();
 		rttr.addAttribute("logout");
 
-		return "redirect:/Home/main";
+		return "/Home/main";
 	}
 	
 	//아이디,비번찾기

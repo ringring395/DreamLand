@@ -36,15 +36,14 @@ public class AdminController {
 	//관리자 메인 : 예매 현황
 	@RequestMapping(value="/admin", method = RequestMethod.GET)
 	public String admin(Model model, HttpServletRequest request,
-			DateVO date, TicketVO ticket) {
+			DateVO date, TicketVO ticket, HttpSession session) {
 		Calendar cal = Calendar.getInstance();
 		DateVO calDate;
-		//검색 날짜
 
+		//검색 날짜
 		if(date.getDate().equals("") && date.getMonth().equals("")){
 			date = new DateVO(String.valueOf(cal.get(Calendar.YEAR)),String.valueOf(cal.get(Calendar.MONTH)),String.valueOf(cal.get(Calendar.DATE)),null);
 		}
-		//검색 날짜 end
 
 		Map<String, Integer> today_info =  date.today_info(date);
 		List<DateVO> dateList = new ArrayList<DateVO>();
@@ -69,22 +68,31 @@ public class AdminController {
 		//달력 빈곳 빈 데이터로 삽입
 		int index = 7-dateList.size()%7;
 		
-		if(dateList.size()%7!=0){
-			
+		if(dateList.size()%7!=0){			
 			for (int i = 0; i < index; i++) {
 				calDate= new DateVO(null, null, null, null);
 				dateList.add(calDate);
 			}
 		}
-		System.out.println(dateList);
 		
 		//배열에 담음
 		model.addAttribute("dateList", dateList);		//날짜 데이터 배열
 		model.addAttribute("today_info", today_info);
 		
 		//날짜별 수량 파악
-		model.addAttribute("ticketCnt", as.ticketCnt(ticket));		
-		return "/Admin/admin";
+		model.addAttribute("ticketCnt", as.ticketCnt(ticket));	
+		
+		//세션의 아이디를 가져오기
+		String id = (String)session.getAttribute("id");		
+		//관리자 X : 메인페이지로 연결
+        if(!id.contains("admin") || !id.contains("mail.com")) {
+        	model.addAttribute("msg", "관리자만 접속 가능합니다.");
+        	model.addAttribute("url", "../");
+  	       	
+        	return "/alert";
+        }
+       //관리자 : 바로 연결
+       return "/Admin/admin";
 	}
 
 	
@@ -92,10 +100,18 @@ public class AdminController {
 	
 	//관리자 -> 이벤트 등록
 	@GetMapping(value="/admin_event")
-	public String admin_event() {
-		
-		//관리자 : 바로 연결
-		return "/Admin/admin_event";	
+	public String admin_event(HttpSession session, Model model) {
+		//세션의 아이디를 가져오기
+		String id = (String)session.getAttribute("id");		
+		//관리자 X : 메인페이지로 연결
+        if(!id.contains("admin") || !id.contains("mail.com")) {
+        	model.addAttribute("msg", "관리자만 접속 가능합니다.");
+        	model.addAttribute("url", "../");
+  	       	
+        	return "/alert";
+        }
+       //관리자 : 바로 연결
+       return "/Admin/admin_event";	
 		
 	}
 	
@@ -117,8 +133,18 @@ public class AdminController {
 	
 	//관리자 ->게시판(공지사항/자주하는질문)등록
 	@RequestMapping(value = "/admin_board", method = RequestMethod.GET)
-	public String admin_board() {
-		return "/Admin/admin_board";
+	public String admin_board(HttpSession session, Model model) {
+		//세션의 아이디를 가져오기
+		String id = (String)session.getAttribute("id");		
+		//관리자 X : 메인페이지로 연결
+        if(!id.contains("admin") || !id.contains("mail.com")) {
+        	model.addAttribute("msg", "관리자만 접속 가능합니다.");
+        	model.addAttribute("url", "../");
+  	       	
+        	return "/alert";
+        }
+       //관리자 : 바로 연결
+       return "/Admin/admin_board";
 	}
 	
 	//관리자 -> 게시판(공지사항/자주하는질문)등록(insert이루어짐)
@@ -141,16 +167,21 @@ public class AdminController {
 		int total = as.ahelpTotal(cri);
 		model.addAttribute("paging", new PageVO(cri, total));
 		
+		//1:1문의 답변 등록
 		as.ahelpAnswer(board);
-		
-		return "/Admin/admin_helplist";
+
+		//세션의 아이디를 가져오기
+		String id = (String)session.getAttribute("id");		
+		//관리자 X : 메인페이지로 연결
+        if(!id.contains("admin") || !id.contains("mail.com")) {
+        	model.addAttribute("msg", "관리자만 접속 가능합니다.");
+        	model.addAttribute("url", "../");
+  	       	
+        	return "/alert";
+        }
+       //관리자 : 바로 연결
+       return "/Admin/admin_helplist";
 	}
-	
-	//관리자 ->1:1문의 답변
-	@RequestMapping(value="/admin_help/", method = RequestMethod.GET)
-	public String admin_help() {
-		return "/Admin/admin_help";
-	}	
 	
 	//관리자 -> 회원 관리
 	@RequestMapping(value = "/admin_user", method = RequestMethod.GET)
@@ -161,8 +192,18 @@ public class AdminController {
 		
 		int total = as.userTotal(cri);
 		model.addAttribute("paging", new PageVO(cri, total));
-		
-		return "/Admin/admin_user";
+
+		//세션의 아이디를 가져오기
+		String id = (String)session.getAttribute("id");		
+		//관리자 X : 메인페이지로 연결
+        if(!id.contains("admin") || !id.contains("mail.com")) {
+        	model.addAttribute("msg", "관리자만 접속 가능합니다.");
+        	model.addAttribute("url", "../");
+  	       	
+        	return "/alert";
+        }
+       //관리자 : 바로 연결
+       return "/Admin/admin_user";
 	}
 	
 
