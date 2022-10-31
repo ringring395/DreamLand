@@ -15,7 +15,7 @@
 
 /* main 메인*/
 
-.slider_img{
+.slider_main_img{
 	height:400px;
 }
 
@@ -29,6 +29,23 @@
 	width:450px;
 	margin:10px 0;
 	background-color:#8080c0;
+}
+
+.slider_sub_img{
+	height:200px;
+}
+
+#mainNotice_table{
+	border:1px solid;
+	margin:0px auto;
+}
+
+#mainNotice_table >tr >td{
+	border-top:1px solid;
+}
+
+.mainNotice_td{
+	width:330px;
 }
 
 
