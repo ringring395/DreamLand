@@ -74,7 +74,7 @@ public class UserController {
 		session.invalidate();
 		rttr.addAttribute("logout");
 
-		return "/Home/main";
+		return "redirect:/Home/main";
 	}
 	
 	//아이디,비번찾기
@@ -85,19 +85,36 @@ public class UserController {
 	
 	//마이페이지
 	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
-	public String mypage() {
-		return "/User/mypage";
+	public String mypage(HttpSession session, Model model) {
+		//비로그인 : 로그인페이지로 연결
+        if(session.getAttribute("id") == null) {
+        	model.addAttribute("msg", "로그인 해주세요.");
+        	model.addAttribute("url", "../login");
+  	       	
+        	return "/alert";
+        }
+       //로그인된 상태 : 바로 연결
+       return "/User/mypage";
 	}
 
 	//회원정보(select)
 	@RequestMapping(value="/usermodify", method = RequestMethod.GET)
 	public String userdetail(UserVO user, HttpSession session, Model model){
+		String id = (String)session.getAttribute("id");
 		
-		user.setId((String)session.getAttribute("id"));
+		user.setId(id);
 		us.userdetail(user);
 		model.addAttribute("userdetail", us.userdetail(user));
-		
-		return "User/usermodify";
+
+		//비로그인 : 로그인페이지로 연결
+        if(id == null) {
+        	model.addAttribute("msg", "로그인 해주세요.");
+        	model.addAttribute("url", "../login");
+  	       	
+        	return "/alert";
+        }
+       //로그인된 상태 : 바로 연결
+       return "User/usermodify";
 	}
 	
 	//회원 정보 수정(update)
@@ -113,12 +130,20 @@ public class UserController {
 	//회원 탈퇴(페이지)
 	@RequestMapping(value="/resign", method=RequestMethod.GET)
 	public String resign(UserVO user, HttpSession session, Model model){
-		
-		user.setId((String)session.getAttribute("id"));
+		String id = (String)session.getAttribute("id");		
+		user.setId(id);
 		us.userdetail(user);
 		model.addAttribute("userdetail", us.userdetail(user));
-		
-		return "User/resign";
+
+		//비로그인 : 로그인페이지로 연결
+        if(id == null) {
+        	model.addAttribute("msg", "로그인 해주세요.");
+        	model.addAttribute("url", "../login");
+  	       	
+        	return "/alert";
+        }
+       //로그인된 상태 : 바로 연결
+       return "User/resign";
 	}
 	
 	//회원 탈퇴(delete)
@@ -131,17 +156,6 @@ public class UserController {
 		session.invalidate();
 		return "/Home/main";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
 	
 
 

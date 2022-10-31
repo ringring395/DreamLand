@@ -59,7 +59,15 @@ public class TicketController {
 		
 		model.addAttribute("noworder", ts.noworder(ticket));
 		
-		return "/Ticket/order";
+		//비로그인 : 로그인페이지로 연결
+        if(id == null) {
+        	model.addAttribute("msg", "로그인 해주세요.");
+        	model.addAttribute("url", "../login");
+  	       	
+        	return "/alert";
+        }
+       //로그인된 상태 : 바로 연결
+       return "/Ticket/order";
 	}
 
 
@@ -72,17 +80,33 @@ public class TicketController {
 		
 		int total = ts.orderlistTotal(cri);
 		model.addAttribute("paging", new PageVO(cri, total));
-		
-		return "/Ticket/orderlist";
+
+		//비로그인 : 로그인페이지로 연결
+        if(session.getAttribute("id") == null) {
+        	model.addAttribute("msg", "로그인 해주세요.");
+        	model.addAttribute("url", "../login");
+  	       	
+        	return "/alert";
+        }
+       //로그인된 상태 : 바로 연결
+       return "/Ticket/orderlist";
 	}	
 	
 	//티켓(내역 상세보기)
 	@RequestMapping(value = "/ticket", method = RequestMethod.GET)
-	public String ticket(TicketVO ticket, Model model) {
+	public String ticket(TicketVO ticket, Model model, HttpSession session) {
 		
 		model.addAttribute("ticket", ts.ticket(ticket));
-				
-		return "/Ticket/ticket";
+
+		//비로그인 : 로그인페이지로 연결
+        if(session.getAttribute("id") == null) {
+        	model.addAttribute("msg", "로그인 해주세요.");
+        	model.addAttribute("url", "../login");
+  	       	
+        	return "/alert";
+        }
+       //로그인된 상태 : 바로 연결
+       return "/Ticket/ticket";
 	}	
 	
 	//이메일테스트

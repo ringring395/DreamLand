@@ -33,12 +33,6 @@ public class AdminController {
 	@Autowired
 	AdminService as;
 	
-	//관리자 ->메인:예매확인
-//	@RequestMapping(value="/admin", method = RequestMethod.GET)
-//	public String admin() {
-//		return "/Admin/admin";
-//	}
-	
 	//관리자 메인 : 예매 현황
 	@RequestMapping(value="/admin", method = RequestMethod.GET)
 	public String admin(Model model, HttpServletRequest request,
@@ -99,7 +93,10 @@ public class AdminController {
 	//관리자 -> 이벤트 등록
 	@GetMapping(value="/admin_event")
 	public String admin_event() {
-		return "/Admin/admin_event";
+		
+		//관리자 : 바로 연결
+		return "/Admin/admin_event";	
+		
 	}
 	
 	//관리자 -> 이벤트 등록 페이지(insert이루어짐)
@@ -127,9 +124,7 @@ public class AdminController {
 	//관리자 -> 게시판(공지사항/자주하는질문)등록(insert이루어짐)
 	@RequestMapping(value = "/admin_board", method = RequestMethod.POST)
 	public String boardPost(BoardVO board, HttpSession session) {
-//		String id = (String)session.getAttribute("id");
-//		board.setId(id);
-//		System.out.println("로그인된아이디 : "+id);
+
 		System.out.println(board);
 
 		as.board(board);
