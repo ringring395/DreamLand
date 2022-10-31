@@ -71,7 +71,7 @@ function ticketOrder(order){
     	success: function(result){
       		alert("티켓 구매 완료");
     		//구매 후 주문완료창 이동
-    		location.href="/order";
+    		location.href="../order";
     	}, error:function(e){
     		alert("구매 실패 👽👽")
     	}

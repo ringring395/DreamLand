@@ -31,11 +31,10 @@
 <!-- 구매완료 확인 페이지 -->		
 	<select id="noworder" resultType="com.ring.model.TicketVO">
 		select t.*, e_title, e_discount 
-		from ticket t join event e
+		from ticket t left join event e
 		on t.t_discount = e.e_no
 		where id=#{id}
-		order by t_regdate desc limit 1
-		
+		order by t_regdate desc limit 1	
 	</select>	
 	
 
@@ -46,7 +45,7 @@
 				select @rownum:=@rownum+1 rownum, ticket.* 
 				from ticket, (select @rownum:=0) as tmp
 				where id=#{id}
-		        order by t_no desc
+		        order by t_date desc
 		) as t 
 		<![CDATA[
 		where rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}

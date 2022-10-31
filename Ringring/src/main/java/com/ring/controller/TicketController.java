@@ -59,14 +59,6 @@ public class TicketController {
 		
 		model.addAttribute("noworder", ts.noworder(ticket));
 		
-		//비로그인 : 로그인페이지로 연결
-        if(id == null) {
-        	model.addAttribute("msg", "로그인 해주세요.");
-        	model.addAttribute("url", "../login");
-  	       	
-        	return "/alert";
-        }
-       //로그인된 상태 : 바로 연결
        return "/Ticket/order";
 	}
 
