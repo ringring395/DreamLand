@@ -21,4 +21,13 @@ public interface BoardMapper {
 	
 	//1:1문의 등록
 	public void help(BoardVO board);
+	
+	//1:1문의 목록 DB작업
+	public ArrayList<BoardVO> helplist(CriteriaVO cri);
+	
+	//1:1문의 목록 건수 DB작업
+	public int helpTotal(CriteriaVO cri);
+	
+	//메인_공지사항 목록 DB작업
+	public ArrayList<BoardVO> mainNotice(BoardVO board);
 }

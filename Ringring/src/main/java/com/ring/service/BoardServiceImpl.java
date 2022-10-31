@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ring.mapper.BoardAttachMapper;
 import com.ring.mapper.BoardMapper;
 import com.ring.model.BoardVO;
 import com.ring.model.CriteriaVO;
@@ -15,8 +14,6 @@ public class BoardServiceImpl implements BoardService{
 	
 	@Autowired
 	BoardMapper bm;	//board테이블 mapper
-	@Autowired
-	BoardAttachMapper bam;//attach테이블 mapper
 	
 	//공지사항 메소드
 	public ArrayList<BoardVO> noticelist(CriteriaVO cri){
@@ -41,6 +38,21 @@ public class BoardServiceImpl implements BoardService{
 	//1:1문의
 	public void help(BoardVO board) {
 		bm.help(board);
+	}
+	
+	//1:1문의 목록
+	public ArrayList<BoardVO> helplist(CriteriaVO cri){
+		return bm.helplist(cri);
+	}
+	
+	//1:1문의 목록 건수
+	public int helpTotal(CriteriaVO cri) {
+		return bm.helpTotal(cri);
+	}
+	
+	//메인_공지사항 목록
+	public ArrayList<BoardVO> mainNotice(BoardVO board){
+		return bm.mainNotice(board);
 	}
 
 }

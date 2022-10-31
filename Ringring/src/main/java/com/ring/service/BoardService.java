@@ -22,4 +22,13 @@ public interface BoardService {
 	//1:1 문의
 	public void help(BoardVO board);
 	
+	//1:1문의 목록 설계
+	public ArrayList<BoardVO> helplist(CriteriaVO cri);
+	
+	//1:1문의 목록 건수 설계
+	public int helpTotal(CriteriaVO cri);
+	
+	//메인_공지사항 목록 설계
+	public ArrayList<BoardVO> mainNotice(BoardVO board);
+	
 }

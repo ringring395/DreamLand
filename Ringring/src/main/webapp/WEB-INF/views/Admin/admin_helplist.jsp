@@ -6,11 +6,39 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/admin.css">
-<script type="text/javascript"
-	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="/resources/js/admin.js"></script>
 
+<!-- include summernote -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- include summernote css/js-->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="/resources/js/summernote-lite.min.js"></script>
+<!-- include summernote-ko-KR -->
+<script src="/resources/js/summernote-ko-KR.js"></script>
+
+
+<script type="text/javascript" src="/resources/js/admin.js"></script>
 <title>관리자용_1:1문의 리스트</title>
+
+<script>
+$(document).ready(function() {
+	  $('.summernote').summernote({
+ 	    	placeholder: '문의 내용을 입력하세요.',
+	        minHeight: 370,
+	        maxHeight: null,
+            lang : 'ko-KR',
+    		toolbar: [
+    		    ['style', ['style']],
+    		    ['font', ['bold', 'underline', 'clear']],
+    		    ['fontname', ['fontname']],
+    		    ['color', ['color']],
+    		    ['para', ['ul', 'ol', 'paragraph']],
+    		    ['table', ['table']],
+    		    ['insert', ['link', 'picture']]
+    		  ]	        
+	  });
+	});
+</script>
 
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -26,24 +54,51 @@
 				<tr>
 					<th>No.</th>
 					<th>제목</th>
-					<th>작성자</th>
+					<th>작성자<br>문의일</th>
 					<th>답변여부</th>									
 				</tr>
-			<c:forEach items="${helplist}" var="helplist">	
-				<tr id="helplistGo">
-					<td class="a_helplist_table_td">${helplist.h_no}</td>
-					<td class="a_helplist_table_td">${helplist.h_title}</td>
-					<td class="a_helplist_table_td">${helplist.h_id}</td>
+			<c:forEach items="${ahelplist}" var="ahelplist">	
+				<tr class="table_show">
+				<c:choose>
+					<c:when test="${ahelplist.h_answer eq '0'}">
+						<td class="a_helplist_table_td">${ahelplist.h_no}</td>
+						<td class="a_helplist_table_td">${ahelplist.h_title}📌답변 입력</td>
+						<td class="a_helplist_table_td">${ahelplist.h_id}<br>${ahelplist.h_regdate}</td>
+						<td class="a_helplist_table_td">N</td>
+					</c:when>
+					<c:otherwise>
+						<td class="a_helplist_table_td">${ahelplist.h_no}</td>
+						<td class="a_helplist_table_td">${ahelplist.h_title}</td>
+						<td class="a_helplist_table_td">${ahelplist.h_id}<br>${ahelplist.h_regdate}</td>
+						<td class="a_helplist_table_td">Y</td>
+					</c:otherwise>
+				</c:choose>						
+				</tr>	
+				<tr class="table_hide">	
 					<c:choose>
-						<c:when test="${helplist.h_answer eq '0'}">
-							<td  class="a_helplist_table_td">N</td>
+						<c:when test="${ahelplist.h_answer eq '0'}">						
+							<td colspan="4" class="h_title">${ahelplist.h_content}
+							<form action="">
+								<div class="table_answer">
+									<input type="hidden" name="h_no" value="${ahelplist.h_no}">
+									<textarea class="summernote" name="h_an_content"></textarea>
+									<input type="submit" value="답변 등록">
+								</div>	
+							</form>	
+							</td>						
 						</c:when>
 						<c:otherwise>
-							<td  class="a_helplist_table_td">Y</td>
+							<td colspan="4" class="h_title">${ahelplist.h_content}
+								<hr>
+								<div class="table_answer">
+									<div>${ahelplist.h_an_content}</div>
+									<div>답변일 :${ahelplist.h_an_date}</div>
+								</div>
+							</td>														 						
 						</c:otherwise>
-					</c:choose>						
-				</tr>
-			</c:forEach>					
+					</c:choose>				
+				</tr>				
+			</c:forEach>							
 			</table>
 
 		<div id="paging">	

@@ -47,9 +47,20 @@ public class BoardController {
 	
 	//1:1문의
 	@RequestMapping(value = "/help", method = RequestMethod.GET)
-	public String help() {
-		return "/board/help";
-	}
+	public String help(HttpSession session, Model model){
+		//비로그인 : 로그인페이지로 연결
+        if(session.getAttribute("id") == null) {
+        	model.addAttribute("msg", "로그인 해주세요.");
+        	model.addAttribute("url", "../login");
+  	
+        	
+        	
+        	return "/alert";
+        }
+       //로그인된 상태는 바로 1:1로 연결
+       return "/board/help";	
+
+	}	
 	
 	//1:1문의 (insert이루어짐)
 	@RequestMapping(value = "/help", method = RequestMethod.POST)
@@ -66,7 +77,16 @@ public class BoardController {
 	
 	//1:1문의 내역
 	@RequestMapping(value = "/helplist", method = RequestMethod.GET)
-	public String helplist() {
+	public String helplist(BoardVO board, HttpSession session, Model model,
+			CriteriaVO cri) {
+		//세션에 저장된 아이디를 가져와서 CriteriaVO에 넣어주자
+		cri.setId((String)session.getAttribute("id"));
+		
+		model.addAttribute("helplist", bs.helplist(cri));
+		
+		int total = bs.helpTotal(cri);
+		model.addAttribute("paging", new PageVO(cri, total));
+
 		return "/board/helplist";
 	}
 	

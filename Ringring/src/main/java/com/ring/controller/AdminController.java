@@ -1,7 +1,11 @@
 package com.ring.controller;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,14 +13,17 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.ring.model.AttachVO;
 import com.ring.model.BoardVO;
 import com.ring.model.CriteriaVO;
+import com.ring.model.DateVO;
 import com.ring.model.EventVO;
 import com.ring.model.PageVO;
+import com.ring.model.TicketVO;
+import com.ring.model.UploadVO;
 import com.ring.model.UserVO;
 import com.ring.service.AdminService;
 
@@ -27,35 +34,89 @@ public class AdminController {
 	AdminService as;
 	
 	//관리자 ->메인:예매확인
+//	@RequestMapping(value="/admin", method = RequestMethod.GET)
+//	public String admin() {
+//		return "/Admin/admin";
+//	}
+	
+	//관리자 메인 : 예매 현황
 	@RequestMapping(value="/admin", method = RequestMethod.GET)
-	public String admin() {
+	public String admin(Model model, HttpServletRequest request,
+			DateVO date, TicketVO ticket) {
+		Calendar cal = Calendar.getInstance();
+		DateVO calDate;
+		//검색 날짜
+
+		if(date.getDate().equals("") && date.getMonth().equals("")){
+			date = new DateVO(String.valueOf(cal.get(Calendar.YEAR)),String.valueOf(cal.get(Calendar.MONTH)),String.valueOf(cal.get(Calendar.DATE)),null);
+		}
+		//검색 날짜 end
+
+		Map<String, Integer> today_info =  date.today_info(date);
+		List<DateVO> dateList = new ArrayList<DateVO>();
+		
+		//실질적인 달력 데이터 리스트에 데이터 삽입 시작.
+		//일단 시작 인덱스까지 아무것도 없는 데이터 삽입
+		for(int i=1; i<today_info.get("start"); i++){
+			calDate= new DateVO(null, null, null, null);
+			dateList.add(calDate);
+		}
+		
+		//날짜 삽입
+		for (int i = today_info.get("startDay"); i <= today_info.get("endDay"); i++) {
+			if(i==today_info.get("today")){
+				calDate= new DateVO(String.valueOf(date.getYear()), String.valueOf(date.getMonth()), String.valueOf(i), "today");
+			}else{
+				calDate= new DateVO(String.valueOf(date.getYear()), String.valueOf(date.getMonth()), String.valueOf(i), "normal_date");
+			}
+			dateList.add(calDate);
+		}
+
+		//달력 빈곳 빈 데이터로 삽입
+		int index = 7-dateList.size()%7;
+		
+		if(dateList.size()%7!=0){
+			
+			for (int i = 0; i < index; i++) {
+				calDate= new DateVO(null, null, null, null);
+				dateList.add(calDate);
+			}
+		}
+		System.out.println(dateList);
+		
+		//배열에 담음
+		model.addAttribute("dateList", dateList);		//날짜 데이터 배열
+		model.addAttribute("today_info", today_info);
+		
+		//날짜별 수량 파악
+		model.addAttribute("ticketCnt", as.ticketCnt(ticket));		
 		return "/Admin/admin";
 	}
+
+	
+	
 	
 	//관리자 -> 이벤트 등록
-	@RequestMapping(value="/admin_event", method = RequestMethod.GET)
+	@GetMapping(value="/admin_event")
 	public String admin_event() {
 		return "/Admin/admin_event";
 	}
 	
 	//관리자 -> 이벤트 등록 페이지(insert이루어짐)
 	@RequestMapping(value = "/admin_event", method = RequestMethod.POST)
-	public String eventPost(EventVO event, HttpSession session) {
-//		String id = (String)session.getAttribute("id");
-//		board.setId(id);
-//		System.out.println("로그인된아이디 : "+id);
-		System.out.println(event);
+	public String eventPost(EventVO event) {
 
 		as.event(event);
-		return "redirect:/event";
-	}
-	
-	//관리자 -> 게시물의 첨부파일의 데이터를 ajax로 전송
-	@RequestMapping(value = "/attach", method = RequestMethod.GET)
-	public ResponseEntity<ArrayList<AttachVO>> uploadAjaxPost(int i_no){
 		
-		return new ResponseEntity<>(as.attachlist(i_no), HttpStatus.OK);
+		return "redirect:/admin";
 	}
+
+	//해당 게시물의 첨부파일의 데이터를 ajax로 전송
+	@RequestMapping(value = "/attachlist", method = RequestMethod.GET)
+	public ResponseEntity<ArrayList<UploadVO>> uploadPost(int e_no) {
+		//					통신상태 정상이면 select된 결과를 uploadPost보내라.
+		return new ResponseEntity<>(as.uploadList(e_no), HttpStatus.OK);
+	}	
 	
 	//관리자 ->게시판(공지사항/자주하는질문)등록
 	@RequestMapping(value = "/admin_board", method = RequestMethod.GET)
@@ -80,10 +141,12 @@ public class AdminController {
 	public String admin_helplist(BoardVO board, HttpSession session, Model model,
 			CriteriaVO cri) {
 		
-		model.addAttribute("helplist", as.helplist(cri));
+		model.addAttribute("ahelplist", as.ahelplist(cri));
 		
-		int total = as.helpTotal(cri);
+		int total = as.ahelpTotal(cri);
 		model.addAttribute("paging", new PageVO(cri, total));
+		
+		as.ahelpAnswer(board);
 		
 		return "/Admin/admin_helplist";
 	}
@@ -106,4 +169,6 @@ public class AdminController {
 		
 		return "/Admin/admin_user";
 	}
+	
+
 }

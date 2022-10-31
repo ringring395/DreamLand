@@ -5,7 +5,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ring.mapper.BoardMapper">
-		<!-- 공지사항 목록 출력 -->
+<!-- 공지사항 목록 출력 -->
 	<select id="noticelist" resultType="com.ring.model.BoardVO">
 		select *
 		from (
@@ -24,7 +24,7 @@
 		]]> 
 	</select>
 	
-	<!-- 공지사항 건수 조회 -->
+<!-- 공지사항 건수 조회 -->
 	<select id="noticeTotal" resultType="int">
 		select count(*) from board
 		where b_type=&apos;notice&apos;
@@ -34,7 +34,7 @@
 			</if>			
 	</select>
 
-		<!-- 자주하는질문 목록 출력 -->
+<!-- 자주하는질문 목록 출력 -->
 	<select id="faqlist" resultType="com.ring.model.BoardVO">
 		select *
 		from (
@@ -52,7 +52,7 @@
 		]]> 
 	</select>
 	
-	<!-- 자주하는질문 건수 조회 -->
+<!-- 자주하는질문 건수 조회 -->
 	<select id="faqTotal" resultType="int">
 		select count(*) from board
 		where b_type=&apos;faq&apos;
@@ -62,12 +62,38 @@
 			</if>			
 	</select>
 
-	<!-- 1:1 문의 등록 -->
+<!-- 1:1 문의 등록 -->
 	<insert id="help">
 		insert into help(h_type, h_title, h_id, h_email, h_content) 
 		values (#{h_type}, #{h_title}, #{h_id}, #{h_email}, #{h_content})			
 	</insert>
 
-
+<!-- 1:1 목록 출력 -->
+	<select id="helplist" resultType="com.ring.model.BoardVO">
+		select *
+		from (
+				select @rownum:=@rownum+1 rownum, help.* 
+				from help, (select @rownum:=0) as tmp
+				where h_id=#{id}
+		        order by h_no desc
+		) as h 
+		<![CDATA[
+		where rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}
+		]]> 
+	</select>
+	
+<!-- 1:1 목록 건수 조회 -->
+	<select id="helpTotal" resultType="int">
+		select count(*) from help
+		where h_id=#{id}
+	</select>
+	
+<!-- 메인_공지사항 출력 -->
+	<select id="mainNotice" resultType="com.ring.model.BoardVO">
+		select * from board 
+		where b_type=&apos;notice&apos; 
+		order by b_regdate desc limit 3;
+	</select>	
+	
 
 </mapper>

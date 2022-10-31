@@ -5,10 +5,14 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.ring.mapper.AdminMapper">
+
 <!-- 관리자: 이벤트 등록 -->
 		<insert id="event">
-		insert into event(e_type, e_title, e_start, e_end, e_summary, e_contents) 
-		values (#{e_type}, #{e_title}, #{e_start}, #{e_end}, #{e_summary}, #{e_contents})			
+		<selectKey keyProperty="e_no" order="BEFORE" resultType="int">
+			select ifnull(max(e_no),0)+1 e_no from event
+		</selectKey>
+		insert into event(e_type, e_title, e_start, e_end, e_summary, e_contents, e_discount) 
+		values (#{e_type}, #{e_title}, #{e_start}, #{e_end}, #{e_summary}, #{e_contents}, #{e_discount})			
 		</insert>
 		
 <!-- 관리자: 고객센터 글 등록 -->
@@ -18,7 +22,7 @@
 		</insert>
 
 <!-- 1:1 목록 출력 -->
-	<select id="helplist" resultType="com.ring.model.BoardVO">
+	<select id="ahelplist" resultType="com.ring.model.BoardVO">
 		select *
 		from (
 				select @rownum:=@rownum+1 rownum, help.* 
@@ -31,9 +35,15 @@
 	</select>
 	
 <!-- 1:1 목록 건수 조회 -->
-	<select id="helpTotal" resultType="int">
+	<select id="ahelpTotal" resultType="int">
 		select count(*) from help
 	</select>	
+	
+<!-- 1:1 답변 등록 -->
+	<update id="ahelpAnswer">
+		update help set h_an_content=#{h_an_content}, h_answer=1
+		where h_no=#{h_no}
+  	</update>	
 		
 <!-- 회원 목록 출력 -->
 	<select id="userlist" resultType="com.ring.model.UserVO">
@@ -51,6 +61,12 @@
 <!-- 회원 건수 조회 -->
 	<select id="userTotal" resultType="int">
 		select count(*) from user
-	</select>			
-			
+	</select>	
+	
+<!-- 예매현황 파악 -->			
+	<select id="ticketCnt" resultType="com.ring.model.TicketVO">
+		select t_date, t_time, t_a_cnt, t_j_cnt, t_c_cnt
+		from ticket
+	</select>	
+
 </mapper>  
