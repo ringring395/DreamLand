@@ -5,10 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/map.css">
+<!-- 모달창 -->
 <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../resources/js/map.js"></script>
+
+<!-- slick슬라이더 -->
+<link rel="stylesheet" type="text/css" href="../resources/css/slick.css"/>
+<script type="text/javascript" src="../resources/js/slick.js"></script>
+
 <title>둘러보기</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -19,33 +25,50 @@
 		</div>
 			
 		<div id="map">
-			전체지도지도지도지도
 
-		
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button id="Btn1">
   버튼1
-</button>		
+</button>
+
+<button id="Btn2">
+  버튼2
+</button>	
+
+<button id="Btn3">
+  버튼3
+</button>	
 		
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <!-- Vertically centered modal -->
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">     
+			<div id="slider_map">
+				<div class="slider_map_img" >
+					<img src="" height="250" width="400" id="slider-img1">
+				</div>
+				<div class="slider_map_img">
+					<img src="" height="250" width="400" id="slider-img2">
+				</div>
+				<div class="slider_map_img">
+					<img src="" height="250" width="400" id="slider-img3">
+				</div>
+			</div>      
+		<p id="modal-text"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
   </div>
 </div>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="Btn2">
-  버튼2
-</button>		
-		
-
-
-<button id="Btn3">dddddd</button>
-<div id="test"></div>	
 
 		</div><!-- map -->		
 	</div><!-- wrap -->	
