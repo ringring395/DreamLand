@@ -5,15 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/map.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <!-- 모달창 -->
 <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css">
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../resources/js/map.js"></script>
 
-<!-- slick슬라이더 -->
-<link rel="stylesheet" type="text/css" href="../resources/css/slick.css"/>
-<script type="text/javascript" src="../resources/js/slick.js"></script>
+<!-- bx슬라이더 -->
+<link rel="stylesheet" href="../../../resources/css/jquery.bxslider.css">
+<script src="../resources/js/jquery.bxslider.min.js"></script>
 
 <title>둘러보기</title>
 </head>
