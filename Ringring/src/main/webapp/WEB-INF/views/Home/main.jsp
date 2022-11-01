@@ -32,9 +32,18 @@
 			<div id="main_sub">
 				<div id="main_cal">
 					<div class="slider_sub">
-						<div class="slider_sub_img">서브사진 하나</div>
-						<div class="slider_sub_img">서브 사진 둘</div>
-						<div class="slider_sub_img">서브 사진 셋</div>
+						<div class="slider_sub_img">
+							<img alt="subBX1" src="../resources/img/map/rides1_1.jpg">
+							<h3 class="slider_sub_text">대관람차</h3>
+						</div>
+						<div class="slider_sub_img">
+							<img alt="subBX2" src="../resources/img/map/rides2_1.jpg">
+							<h3 class="slider_sub_text">롤러코스터</h3>						
+						</div>
+						<div class="slider_sub_img">
+							<img alt="subBX3" src="../resources/img/map/rides3_3.jpg">
+							<h3 class="slider_sub_text">회전목마</h3>						
+						</div>
 					</div>				
 				</div>
 				<div id="main_notice">

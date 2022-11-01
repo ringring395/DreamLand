@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../resources/js/map.js"></script>
 <title>둘러보기</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -21,7 +22,6 @@
 			전체지도지도지도지도
 
 		
-		
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   버튼1
@@ -32,46 +32,20 @@
   <!-- Vertically centered modal -->
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="../resources/img/loopy01.png" height="280" width="180">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+
     </div>
   </div>
 </div>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="Btn2">
   버튼2
 </button>		
 		
-<!-- Modal -->
-<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <!-- Vertically centered modal -->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="../resources/img/loopy02.jpeg" height="280" width="180">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-		
+
+
+<button id="Btn3">dddddd</button>
+<div id="test"></div>	
 
 		</div><!-- map -->		
 	</div><!-- wrap -->	
