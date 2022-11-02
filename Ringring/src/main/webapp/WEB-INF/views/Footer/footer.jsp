@@ -12,18 +12,18 @@
 </head>
 <body>
 	<div id="footer">
-	<div id="f_size">
-		<div id="f_info">
-			<p>주소 : 00시 00구 00로 00길<br>
-			대표이사 : 000 사업자등록번호 : 000-000-000<br>
-			대표이메일 : 000@mail.com<br>
-			ⓒ0000000000.All Rights Reserved	
-			</p>
+		<div id="f_size">
+			<div id="f_info">
+				<p>주소 : 00시 00구 00로 00길<br>
+				대표이사 : 김수진   사업자등록번호 : 000-000-000<br>
+				대표이메일 : ringring395@gmail.com<br>
+				ⓒDreamLand.All Rights Reserved	
+				</p>
+			</div>
+			<div id="f_logo" onclick="location.href='../'">
+				<img id="f_logo_img" alt="footer_logo" src="../resources/img/logo.png">
+			</div>
 		</div>
-		<div id="f_logo" onclick="location.href='../'">
-			로고로고
-		</div>
-	</div>
 	</div>
 
 </body>
