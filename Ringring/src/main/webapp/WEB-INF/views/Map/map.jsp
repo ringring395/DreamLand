@@ -6,15 +6,11 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/map.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/map.js"></script>
 
 <!-- 모달창 -->
 <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css">
 <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/resources/js/map.js"></script>
-
-<!-- bx슬라이더 -->
-<link rel="stylesheet" href="../../../resources/css/jquery.bxslider.css">
-<script src="/resources/js/jquery.bxslider.min.js"></script>
 
 <title>둘러보기</title>
 </head>
@@ -46,22 +42,26 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <h5 class="modal-title" id="map_modal_title"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">     
-			<div id="slider_map">
-				<div class="slider_map_img" >
-					<img src="" id="slider-img1">
-				</div>
-				<div class="slider_map_img">
-					<img src="" height="250" width="400" id="slider-img2">
-				</div>
-				<div class="slider_map_img">
-					<img src="" height="250" width="400" id="slider-img3">
-				</div>
-			</div>      
-		<p id="modal-text"></p>
+			<div class="slider">
+			    <input type="radio" name="slide" id="slide1" checked>
+			    <input type="radio" name="slide" id="slide2">
+			    <input type="radio" name="slide" id="slide3">
+			    <ul id="imgholder" class="imgs">
+			        <li><img src="" id="slider-img1"></li>
+			        <li><img src="" id="slider-img2"></li>
+			        <li><img src="" id="slider-img3"></li>
+			    </ul>
+			    <div class="bullets">
+			        <label for="slide1">&nbsp;</label>
+			        <label for="slide2">&nbsp;</label>
+			        <label for="slide3">&nbsp;</label>
+			    </div>
+			</div>    
+		<div id="modal-text"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
