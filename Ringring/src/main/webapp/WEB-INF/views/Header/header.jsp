@@ -25,16 +25,16 @@
 				<!-- 관리자 로그인 -->
 					<div id="login_admin">
 						<div class="m_Btn">
-							<p>관리자<br>로그인중</p>
+							관리자<br>로그인중
 						</div>				
 						<div id="h_logout" class="m_Btn" onclick="location.href='../logout'">
-							<p>관리자<br>로그아웃</p>
+							관리자<br>로그아웃
 						</div>
 						<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../select'">
-							<p>예매 바로가기</p>
+							예매<br>바로가기
 						</div>						
 						<div id="h_managing" class="m_Btn" onclick="location.href='../admin'">
-							<p>관리자<br>페이지</p>
+							관리자<br>페이지
 						</div>
 					</div>
 				</c:when>
@@ -43,13 +43,13 @@
 				<!-- 회원 로그인 -->
 					<div id="login_user">
 						<div id="h_user" class="m_Btn" onclick="location.href='../mypage'">
-							<p>${sessionScope.id}님💕</p>
+							${sessionScope.id}님💕
 						</div>
 						<div id="h_logout" class="m_Btn" onclick="location.href='../logout'">
-							<p>로그아웃</p>
+							로그아웃
 						</div>
 						<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../select'">
-							<p>예매 바로가기</p>
+							예매 바로가기
 						</div>
 					</div>
 				</c:otherwise>	
@@ -60,13 +60,13 @@
 		<!-- 로그인 X -->
 			<div id="login_no">
 				<div id="h_login" class="m_Btn" onclick="location.href='../login'">
-					<p>로그인</p>
+					로그인
 				</div>
 				<div id="h_signup" class="m_Btn" onclick="location.href='../signup'">
-					<p>회원가입</p>
+					회원가입
 				</div>
 				<div id="h_ticketBuy" class="m_Btn" onclick="location.href='../select'">
-					<p>예매 바로가기</p>
+					예매 바로가기
 				</div>
 			</div>		
 		</c:otherwise>
