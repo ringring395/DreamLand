@@ -34,6 +34,18 @@
 
 <button id="Btn3">
   버튼3
+</button>
+
+<button id="Btn4">
+  버튼4
+</button>
+
+<button id="Btn5">
+  버튼5
+</button>
+
+<button id="Btn6">
+  버튼6
 </button>	
 		
 <!-- Modal -->
@@ -61,7 +73,16 @@
 			        <label for="slide3">&nbsp;</label>
 			    </div>
 			</div>    
-		<div id="modal-text"></div>
+		<div id="modal_text">
+			<table id="modal_text_table">
+				<tr><td id="modal_text_info"></td></tr>
+				<tr><td><br>[유의 사항]<br>
+						<div id="modal_text_info2"></div>
+					</td>
+				</tr>				
+			</table>
+
+		</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

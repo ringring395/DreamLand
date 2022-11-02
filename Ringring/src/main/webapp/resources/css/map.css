@@ -15,12 +15,38 @@
 
 /* map 전체지도*/
 
+#slider-img1,
+#slider-img2,
+#slider-img3{
+	width:450px;
+	height:300px;
+}
+
+/* 모달창 > 설명 */
+
+#modal_text{
+	display:flex;
+	justify-content:center;
+}
+
+#modal_text_table{
+	margin:10px 0;
+	width:420px;
+}
+
+#modal_text_table >tr{
+	border_bottom:1px solid black;
+}
+
+#modal_text_info2{
+	font-size:12px;
+}
 
 /* 모달창 > 이미지슬라이더 */
 
 .slider{
-    width: 400px;
-    height: 250px;
+    width: 450px;
+    height: 300px;
     position: relative;
     margin: 0 auto;
     overflow: hidden; /* 현재 슬라이드 오른쪽에 위치한 나머지 슬라이드 들이 보이지 않도록 가림 */
