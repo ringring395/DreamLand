@@ -9,12 +9,12 @@
 
 <!-- 모달창 -->
 <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css">
-<script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../resources/js/map.js"></script>
+<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/resources/js/map.js"></script>
 
 <!-- bx슬라이더 -->
 <link rel="stylesheet" href="../../../resources/css/jquery.bxslider.css">
-<script src="../resources/js/jquery.bxslider.min.js"></script>
+<script src="/resources/js/jquery.bxslider.min.js"></script>
 
 <title>둘러보기</title>
 </head>
@@ -52,7 +52,7 @@
       <div class="modal-body">     
 			<div id="slider_map">
 				<div class="slider_map_img" >
-					<img src="" height="250" width="400" id="slider-img1">
+					<img src="" id="slider-img1">
 				</div>
 				<div class="slider_map_img">
 					<img src="" height="250" width="400" id="slider-img2">
