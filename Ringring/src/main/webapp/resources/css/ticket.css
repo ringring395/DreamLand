@@ -38,7 +38,7 @@ a{
 	width:300px;
 	margin:10px;
 	padding:10px;
-	background-color:#8586bc;
+	background-color:#fbef86;
 	
 }
 
@@ -73,7 +73,7 @@ a{
     cursor: pointer;
     padding:5px;
 	margin:10px auto;	
-	background-color:#6768ab;
+	background-color:#dac2f0;
 	border-radius:5px;
 	font-size:12px;
 }
@@ -132,10 +132,10 @@ a{
 }
 
 .shortcut{
-	width:150px;
+	width:200px;
 	margin:10px;
 	padding:5px;
-	background-color:#8586bc;
+	background-color:#dac2f0;
 	border:none;
 	border-radius:5px;
 	cursor:pointer;
@@ -147,28 +147,31 @@ a{
 
 #orderlist_div{
 	display:flex;
-	justify-content:left;
+	justify-content:center;
+	width:700px;
+	margin:0 auto;
+	border-bottom:3px solid #dac2f0;
 }
 
 #orderlist_img{
 	width:150px;
 	height:150px;
 	margin:10px;
-	background-color:#6768ab;		
+	background-color:#dac2f0;		
 }
 
 #orderlist_table{
-	width:800px;
+	width:500px;
 	height:150px;
 	margin:10px;
-	background-color:#c9cacb;
+	background-color:#fff;
 	padding:10px;	
 	text-align:center;
 }
 
 #orderlist_ticketBtn{
 	width:100px;
-	background-color:#8586bc;
+	background-color:#dac2f0;
 	border-radius:10px;
 }
 

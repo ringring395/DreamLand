@@ -36,7 +36,7 @@
 	margin:10px 0;
 	padding:5px;
 	font-size:20px;
-	background-color:#ff8000;
+	background-color:#dac2f0;
 	border:none;
 	border-radius:5px;
 }
@@ -61,7 +61,7 @@
 
 .checkBtn{
 	padding:5px;
-	background-color:#ff8000;
+	background-color:#dac2f0;
 	border-radius:5px;
 	cursor:pointer;
 }
@@ -87,7 +87,7 @@
 	font-size:20px;
 	border:none;
 	border-radius:5px;
-	background-color:#ff8000;	
+	background-color:#dac2f0;	
 }
 
 #loginfind{
@@ -147,7 +147,7 @@
 .modify_info >input{
 	margin:10px 0;
 	font-size:20px;
-	width:400px;
+	width:370px;
 }
 
 .modify_tel{
@@ -158,16 +158,16 @@
 
 #modifyBtn{
 	padding:5px;
-	width:400px;
+	width:370px;
 	font-size:20px;
 	border:none;
 	border-radius:5px;
-	background-color:#ff8000;	
+	background-color:#dac2f0;	
 	
 }
 
 #resignDiv{
-	width:400px;
+	width:380px;
 	margin:20px auto;
 	border-top:3px solid #f8e00e;	
 }
@@ -250,7 +250,7 @@
 	font-size:20px;
 	border:none;
 	border-radius:5px;
-	background-color:#ff8000;
+	background-color:#f8e00e;
 }
 
 /* resign 회원탈퇴*/
