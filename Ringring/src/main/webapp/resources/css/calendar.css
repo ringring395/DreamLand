@@ -4,7 +4,7 @@
 	width:600px;
 	height:400px;
 	margin:10px;
-	background-color:#8080c0;
+	background-color:#c9cacb;
 }
 
 .calendar_table{
@@ -26,8 +26,7 @@
 }
 
 .cal_week {
-    background-color: #288CFF;
-    color: #fff;
+    background-color: #fbef86;
 }
 
 #price{
@@ -51,6 +50,6 @@
 }
 
 .calendar_table tbody td.select_day {
-    background-color: #288CFF;
-    color: #fff;
+    background-color: #fbef86;
+    color: #ea435d;
 }

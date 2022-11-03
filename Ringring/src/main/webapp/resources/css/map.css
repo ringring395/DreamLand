@@ -9,7 +9,7 @@
 	font-size:25px;
 	font-weight:bold;
 	margin:5px 0;
-	border-bottom:3px solid #ff8000;
+	border-bottom:3px solid #f8e00e;
 }
 
 
@@ -78,17 +78,17 @@ ul.imgs li{
 .bullets label{
     display: inline-block;
     border-radius: 50%;
-    background-color: rgba(0,0,0,0.55);
+    background-color: rgba(248,224,14,0.5);
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
 
-/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+/* 현재 선택된 불릿 배경 노랑으로 구분 표시 */
 .slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1),
 .slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2),
 .slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
-    background-color: #fff;
+    background-color: #f8e00e;
 }
 
 /* 슬라이드 순서 */

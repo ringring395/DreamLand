@@ -9,7 +9,7 @@
 	font-size:25px;
 	font-weight:bold;
 	margin:5px 0;
-	border-bottom:3px solid #ff8000;
+	border-bottom:3px solid #f8e00e;
 }
 
 /* paging 페이징 처리*/
@@ -37,7 +37,7 @@
 	justify-content:space-between;
 	margin:10px;
 	padding:10px;
-	background-color:#8080c0;	
+	background-color:#fbef86;	
 }
 
 #faq_category{
@@ -51,7 +51,7 @@
 #faq_table{
 	margin:10px;
 	padding:10px;
-	background-color:#8080c0;	
+	background-color:#c9cacb;	
 }
 
 .f_table_center{
@@ -72,7 +72,7 @@
 	justify-content:space-between;
 	margin:10px;
 	padding:10px;
-	background-color:#8080c0;	
+	background-color:#fbef86;	
 }
 
 #help_type{
@@ -86,31 +86,15 @@
 
 #help_contents{
 	margin:10px;
-	padding:10px;	
+	padding:10px;
+	background-color:#c9cacb;	
 }
 
 #help_Btn{
 	text-align:right;
 	margin:10px;
 	padding:10px;
-	background-color:#8080c0;		
-}
-
-
-/* helpdetail 1:1문의 답변확인*/
-
-#helpdetail{
-	margin:10px;
-	padding:10px;
-	background-color:#8080c0;	
-}
-
-.helpdetail_text{
-	width:920px;
-}
-
-#helpdetail_Btn{
-	text-align:right;
+	background-color:#fbef86;		
 }
 
 
@@ -119,7 +103,7 @@
 #helplist{
 	margin:10px;
 	padding:10px;
-	background-color:#8080c0;	
+	background-color:#c9cacb;	
 }
 
 #helplist_Btn{
@@ -151,7 +135,7 @@
 	margin:10px auto;
 	padding:10px;
 	width:980px;
-	background-color:#8080c0;	
+	background-color:#c9cacb;	
 }
 
 .n_table_text{
@@ -171,7 +155,7 @@
 #notice_search{
 	margin:10px auto;
 	padding:10px;
-	background-color:#8080c0;
+	background-color:#fbef86;
 	display:flex;
 	justify-content:right;
 }

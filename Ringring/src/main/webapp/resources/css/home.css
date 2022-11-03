@@ -9,7 +9,7 @@
 	font-size:25px;
 	font-weight:bold;
 	margin:5px 0;
-	border-bottom:3px solid #ff8000;
+	border-bottom:3px solid #f8e00e;
 }
 
 
@@ -24,11 +24,12 @@
 	justify-content:space-between;
 }
 
-#main_cal, #main_notice{
+#main_cal, 
+#main_notice{
 	height:200px;
 	width:480px;
 	margin:10px 0;
-	background-color:#8080c0;
+	background-color:#c9cacb;
 }
 
 .slider_sub_img{
@@ -74,18 +75,11 @@
 #here_map{
 	width:500px;
 	height:400px;
-	background-color:#8080c0;
+	background-color:#6768ab;
 }
 
 #here_info{
 	width:450px;
-	background-color:#8080c0;
+	background-color:#c9cacb;
 }
-
-
-
-
-
-
-
 
