@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-	<link rel="stylesheet" href="../../../resources/css/admin.css">
+<link rel="stylesheet" href="../../../resources/css/admin.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/upload.js"></script>
 
-<title>관리자_이벤트 등록</title>
+<title>DreamLand🦄_관리자</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
@@ -16,7 +16,7 @@
 		<jsp:include page="admin_menu.jsp"></jsp:include>
 		<div id="a_main">
 			<div id="a_pagetitle">
-				<span>관리자_이벤트 등록</span>
+				<span>이벤트 > 행사/할인/퍼레이드 등록</span>
 			</div>
 			
 			<form action="/admin_event" method="post" id="form" enctype="multipart/form-data">
@@ -72,10 +72,9 @@
 					<td><textarea rows="15" cols="90" name="e_contents" ></textarea>
 					</td>
 				</tr>
- 			<tr>
+ 				<tr>
 					<th>메인사진</th>
 					<td><input type="file" name="imgMain" id="main">
-
 						<div id="imgMainResult">
 							<ul>								
 							</ul>	

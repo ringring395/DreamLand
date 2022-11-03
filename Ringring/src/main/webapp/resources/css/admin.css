@@ -40,13 +40,14 @@ a{
 /* 관리자 페이지 메뉴 오른쪽 내용 */
 #a_main{
 	width:740px;
-	background-color:#939597;	
+	background-color:#c9cacb;	
 }
 
 #a_pagetitle{
-	font-size:25px;
+	font-size:20px;
 	font-weight:bold;
 	margin:5px 0;
+	padding:0 10px;
 	border-bottom:3px solid #f8e00e;	
 }
 
@@ -116,9 +117,27 @@ a{
 
 /* admin_event 행사/할인/퍼레이드 등록*/
 
+input[name="e_title"],
+input[name="e_summary"]{
+	width:500px;
+	font-size:15px;
+}
+
 #a_event_salebox{
 	display:none;
 }
+
+#a_eventSubmitBtn{
+	width:150px;
+	margin:10px;
+	padding:5px;
+	font-size:15px;
+	background-color:#fbef86;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;		
+}
+
 
 /* admin_board 공지사항/자주하는질문 등록*/
 
@@ -126,6 +145,43 @@ a{
 	width:700px;
 	margin:10px auto;
 }
+
+select[name="b_type"]{
+	width:150px;
+	font-size:15px;
+}
+
+input[name="b_title"]{
+	width:550px;
+	font-size:15px;
+}
+
+#a_board_submit{
+	width:150px;
+	margin:10px;
+	padding:5px;
+	font-size:15px;
+	background-color:#fbef86;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;	
+}
+
+#a_baord_BtnDiv{
+	display:flex;
+	justify-content:right;
+}
+
+.a_board_Btn{
+	width:150px;
+	margin:10px;
+	padding:5px;
+	background-color:#fbef86;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+}
+
 
 /* admin_helplist 1:1문의 목록*/
 

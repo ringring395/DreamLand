@@ -4,15 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-	<link rel="stylesheet" href="../../../resources/css/admin.css">
+<link rel="stylesheet" href="../../../resources/css/admin.css">
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><!-- include summernote css/js-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<!-- include summernote css/js-->
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 <script src="/resources/js/summernote-lite.min.js"></script>
 <!-- include summernote-ko-KR -->
 <script src="/resources/js/summernote-ko-KR.js"></script>
 
-<title>관리자 공지사항/자주하는질문</title>
+<title>DreamLand🦄_관리자</title>
 
 <script>
 $(document).ready(function() {
@@ -41,7 +42,7 @@ $(document).ready(function() {
 		<jsp:include page="admin_menu.jsp"></jsp:include>
 		<div id="a_main">
 			<div id="a_pagetitle">
-				<span>페이지제목</span>
+				<span>고객센터 > 공지사항 / 자주하는질문 등록</span>
 			</div>
 
 			<form id="form" action="/admin_board" method="post">			
@@ -63,13 +64,14 @@ $(document).ready(function() {
 				</tr>
 				<tr>
 					<th colspan="3">
-						<input type="submit" value="등록"></th>
+						<input type="submit" value="등록" id="a_board_submit"></th>
 				</tr>				
 			</table>
 			</form>
-			<button onclick="location.href='../notice'">공지사항<br>바로가기</button>
-			<button onclick="location.href='../faq'">자주하는질문<br>바로가기</button>
-			
+			<div id="a_baord_BtnDiv">
+				<button class="a_board_Btn" onclick="location.href='../notice'">공지사항<br>바로가기</button>
+				<button class="a_board_Btn" onclick="location.href='../faq'">자주하는질문<br>바로가기</button>
+			</div>
 		</div><!-- a_main -->
 	</div>
 </body>
