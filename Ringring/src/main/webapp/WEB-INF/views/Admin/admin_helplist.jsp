@@ -18,7 +18,7 @@
 
 
 <script type="text/javascript" src="/resources/js/admin.js"></script>
-<title>관리자용_1:1문의 리스트</title>
+<title>DreamLand🦄_관리자</title>
 
 <script>
 $(document).ready(function() {
@@ -47,7 +47,7 @@ $(document).ready(function() {
 	<jsp:include page="admin_menu.jsp"></jsp:include>
 		<div id="a_main">
 			<div id="a_pagetitle">
-				<span>페이지제목</span>
+				<span>고객센터 > 1:1문의 / 답변등록</span>
 			</div>
 		
 			<table id="a_helplist_table">

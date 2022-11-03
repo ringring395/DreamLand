@@ -187,7 +187,7 @@ input[name="b_title"]{
 
 #a_helplist_table{
 	width:inherit;
-	margin:10px auto;
+	margin:10px;
 }
 
 .a_helplist_table_td{
@@ -195,7 +195,6 @@ input[name="b_title"]{
 	text-align:center;
 }
 
-/* admin_help 1:1문의 답변 달기*/
 
 /* admin_user 회원목록*/
 
