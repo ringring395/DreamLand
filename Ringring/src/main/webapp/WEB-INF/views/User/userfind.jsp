@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/user.css">
+
 <title>userfind</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -20,10 +21,9 @@
 				회원정보를 입력하신 후 찾기 버튼을 클릭해주세요.</p>
 			</div>
 		
-			<!-- 버튼 클릭하면 아래에 해당 내용 출력됨 -->
 			<div id="find_click">
-				<div id="findID_click">아이디 찾기</div>
-				<div id="findPW_click">비밀번호 찾기</div>
+				<div id="findID_click">아이디 찾기 </div>
+				<div id="findPW_click">비밀번호 찾기 </div>
 			</div>
 			
 			<div id="find_info">
