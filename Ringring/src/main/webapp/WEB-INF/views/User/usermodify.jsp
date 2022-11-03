@@ -45,8 +45,7 @@
 						<input type="tel" class="modify_tel" name="phone2" id="modify_phone2">
 						<input type="tel" class="modify_tel" name="phone3" id="modify_phone3">
 						<input type="hidden" class="modify_tel" id="modify_phone" value="${userdetail.phone}">
-						<input type="hidden" class="modify_tel" name="phone">
-						<label>중복 확인</label>
+						<input type="hidden" class="modify_tel" name="phone">						
 						<br><span id="sph"></span>	
 					</div>
 					

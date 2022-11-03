@@ -9,7 +9,7 @@
 	font-size:25px;
 	font-weight:bold;
 	margin:5px 0;
-	border-bottom:3px solid #ff8000;
+	border-bottom:3px solid #f8e00e;
 }
 
 /* signup 회원가입*/
@@ -34,7 +34,11 @@
 #signupBtn{
 	width:400px;
 	margin:10px 0;
+	padding:5px;
 	font-size:20px;
+	background-color:#ff8000;
+	border:none;
+	border-radius:5px;
 }
 
 #signup_another{
@@ -43,7 +47,7 @@
 	padding:10px 0 0 0;
 	display:flex;
 	justify-content:space-between;
-	border-top:3px solid #ff8000;
+	border-top:3px solid #f8e00e;
 }
 
 #signup_naver, 
@@ -51,7 +55,7 @@
 	width:180px;
 	padding:5px;
 	text-align:center;
-	background-color:#c0c0c0;
+	background-color:#c9cacb;
 	border-radius:5px;
 }
 
@@ -76,9 +80,14 @@
 }
 
 
-#loginBtn, #login_signupBtn{
+#loginBtn, 
+#login_signupBtn{
+	padding:5px;
 	width:400px;
 	font-size:20px;
+	border:none;
+	border-radius:5px;
+	background-color:#ff8000;	
 }
 
 #loginfind{
@@ -88,7 +97,7 @@
 
 #loginfind >a{
 	text-decoration:none;
-	color:gray;
+	color:#939597;
 }
 
 #loginapi{
@@ -97,14 +106,14 @@
 	justify-content:space-between;
 	margin:20px 0;
 	padding:20px 0;
-	border-bottom:3px solid #ff8000;
-	border-top:3px solid #ff8000;	
+	border-bottom:3px solid #f8e00e;
+	border-top:3px solid #f8e00e;	
 }
 
 #login_naver >button,
 #login_kakao >button{
 	width:180px;
-	background-color:orange;
+	background-color:#c9cacb;
 	border-radius:5px;
 	border-style:none;
 }
@@ -121,44 +130,53 @@
 	width:150px;
 	height:250px;
 	margin:10px;
-	background-color:#8080c0;
+	background-color:#fbef86;
+	border-radius:5px;
+	text-align:center;
 }
+
 
 /* usermodify 정보수정*/
 
 #modify{
 	width:400px;
-	margin:0 auto;
+	margin:30px auto;
+	text-align:center;
 }
 
 .modify_info >input{
 	margin:10px 0;
 	font-size:20px;
-	width:320px;
+	width:400px;
 }
 
 .modify_tel{
-	width:93px;
+	width:110px;
 	margin:10px 0;
 	font-size:20px;
 }
 
 #modifyBtn{
+	padding:5px;
 	width:400px;
 	font-size:20px;
+	border:none;
+	border-radius:5px;
+	background-color:#ff8000;	
+	
 }
 
 #resignDiv{
 	width:400px;
 	margin:20px auto;
-	border-top:3px solid #ff8000;	
+	border-top:3px solid #f8e00e;	
 }
 
 #resignBtn{
 	width:60px;
 	font-size:10px;
 	margin:10px 0;
-	color:gray;
+	color:#939597;
 }
 
 
@@ -173,13 +191,13 @@
 	display:flex;
 	justify-content:space-between;
 	margin:10px 0;
-	border-bottom:3px solid #ff8000;	
+	border-bottom:3px solid #f8e00e;	
 }
 
 #find_click >div{
 	width:460px;
 	padding:10px;
-	background-color:#8080c0;
+	background-color:#fbef86;
 }	
 
 #find_info{
@@ -187,11 +205,12 @@
 	justify-content:space-between;
 }
 
-#findID, #findPW{
+#findID, 
+#findPW{
 	text-align:center;
 	width:460px;
 	padding:10px;
-	background-color:#8080c0;
+	background-color:#c9cacb;
 }
 
 .find_input{
@@ -208,28 +227,37 @@
 
 #findIDBtn,
 #findPWBtn{
+	margin:10px 0;
+	padding:5px;	
 	width:320px;
 	font-size:20px;	
+	border:none;
+	border-radius:5px;
+	background-color:#f8e00e;
 }
 
 .f_signupBtnDiv{
 	width:350px;
 	margin:20px auto;
-	border-top:3px solid #ff8000;	
+	border-top:3px solid #f8e00e;	
 	
 }
 
 .find_signupBtn{	
 	width:320px;
 	margin:10px;
+	padding:5px;
 	font-size:20px;
+	border:none;
+	border-radius:5px;
+	background-color:#ff8000;
 }
 
 /* resign 회원탈퇴*/
 
 #resign{
 	width:400px;
-	margin:0 auto;
+	margin:30px auto;
 }
 
 #resignBtn_div{
