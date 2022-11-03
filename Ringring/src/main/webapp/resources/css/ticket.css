@@ -13,6 +13,20 @@
 }
 
 
+/* paging 페이징 처리*/
+
+#paging{
+	font-size:20px;
+	display:flex;
+	justify-content:center;	
+	padding:5px;	
+}
+
+a{
+	text-decoration:none;
+	color:black;	
+}
+
 /* select 예매 선택 페이지*/
 
 #select{
@@ -24,7 +38,7 @@
 	width:300px;
 	margin:10px;
 	padding:10px;
-	background-color:#6768ab;
+	background-color:#8586bc;
 	
 }
 
@@ -59,8 +73,9 @@
     cursor: pointer;
     padding:5px;
 	margin:10px auto;	
-	background-color:#f8e00e;
+	background-color:#6768ab;
 	border-radius:5px;
+	font-size:12px;
 }
 
 #discountBox{
@@ -81,10 +96,11 @@
 
 
 /* order 주문페이지 */
+
 #order_table{
 	width:700px;
 	margin:20px auto 0;
-	padding:10px 0;
+	padding:10px;
 	text-align:center;
 	border-bottom:3px solid #f8e00e;	
 	background-color:#c9cacb;
@@ -93,7 +109,7 @@
 .order_table2{
 	width:700px;
 	margin:0 auto;
-	padding:10px 0;
+	padding:10px;
 	text-align:center;
 	border-bottom:3px solid #f8e00e;	
 	background-color:#c9cacb;	
@@ -101,15 +117,25 @@
 
 .order_tableT{
 	padding:10px;
+	width:210px;
 	background-color:#fbef86;
 	border-radius:5px;	
+}
+
+.order_tableT_null{
+	padding:10px;
+	width:200px;
+}
+
+#shortcutDiv{
+	text-align:center;
 }
 
 .shortcut{
 	width:150px;
 	margin:10px;
 	padding:5px;
-	background-color:#f8e00e;
+	background-color:#8586bc;
 	border:none;
 	border-radius:5px;
 	cursor:pointer;
@@ -119,50 +145,54 @@
 
 /* orderlist 주문내역*/
 
-#orderlist{
+#orderlist_div{
 	display:flex;
-	justify-content:left;	
+	justify-content:left;
 }
 
 #orderlist_img{
 	width:150px;
 	height:150px;
 	margin:10px;
-	background-color:#8080c0;		
+	background-color:#6768ab;		
 }
 
 #orderlist_table{
 	width:800px;
+	height:150px;
 	margin:10px;
-	background-color:#8080c0;
+	background-color:#c9cacb;
+	padding:10px;	
+	text-align:center;
 }
 
-#orderlist_table >tr{
-	margin:10px;
-	padding:10px;
+#orderlist_ticketBtn{
+	width:100px;
+	background-color:#8586bc;
+	border-radius:10px;
 }
-
 
 /* ticket 티켓*/
 #ticket_img{
 	width:700px;
 	margin:10px auto;
 	padding:20px;
-	background-color:#8080c0;		
+	background-color:orange;		
 }
 
 #ticket_table{
-	width:500px;
-	height:400px;
+	width:600px;
+	height:500px;
 	margin:10px auto;
-	background-color:white;
+	background-color:#fff;
 	text-align:center;
 }
 
 #ticket_info{
-	width:500px;
+	width:600px;
 	margin:10px auto;
-	background-color:white;
+	padding:5px;
+	background-color:#c9cacb;
 	text-align:center;
 	font-size:10px;		
 }

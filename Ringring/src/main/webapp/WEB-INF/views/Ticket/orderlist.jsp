@@ -17,32 +17,38 @@
 			<span>페이지제목</span>
 		</div>
 	
-		<div id="orderlist">
-
-			<table id="orderlist_table">
+		<div id="orderlist">			
 			<c:forEach items="${orderlist}" var="orderlist">
 			
-				<tr>
-					<td rowspan="3">사진사진</td>
-					<td rowspan="2">방문일</td><td>${orderlist.t_date}</td>
-					<td>성인</td><td>${orderlist.t_a_cnt} 명</td>
-					<td>결제금액</td>
-				</tr>
-				<tr>
-					<td>${orderlist.t_day}</td>
-					<td>청소년</td><td>${orderlist.t_j_cnt} 명</td>
-					<td>
-						<fmt:formatNumber value="${orderlist.t_final}" pattern="#,###" /> 원
-					</td>
-				</tr>
-				<tr>
-					<td>입장시간</td><td>${orderlist.t_time}</td>
-					<td>어린이</td><td>${orderlist.t_c_cnt} 명</td>
-					<td><a href="ticket?t_no=${orderlist.t_no}">티켓보기</a></td>
-				</tr>			
-			
+			<div id="orderlist_div">
+				<div id="orderlist_img">
+					<img alt="" src="">
+				</div>
+				<div id="orderlist_detail">
+					<table id="orderlist_table">
+						<tr>
+							<td rowspan="2" id="orderlist_table_td">방문일</td><td>${orderlist.t_date}</td>
+							<td>성인</td><td>${orderlist.t_a_cnt} 명</td>
+							<td>결제금액</td>
+						</tr>
+						<tr>
+							<td>${orderlist.t_day}</td>
+							<td>청소년</td><td>${orderlist.t_j_cnt} 명</td>
+							<td>
+								<fmt:formatNumber value="${orderlist.t_final}" pattern="#,###" /> 원
+							</td>
+						</tr>
+						<tr>
+							<td>입장시간</td><td>${orderlist.t_time}</td>
+							<td>어린이</td><td>${orderlist.t_c_cnt} 명</td>
+							<td id="orderlist_ticketBtn">
+								<a href="ticket?t_no=${orderlist.t_no}">티켓보기</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
 			</c:forEach>
-			</table>	
 
 		</div><!-- orderlist -->
 		

@@ -64,15 +64,18 @@
 				</tr>																														
 			</table>
 			<table class="order_table2">
-				<tr>				
+				<tr>
+					<td class="order_tableT_null"></td>				
 					<td class="order_tableT">적용한 할인</td>
 					<td>${noworder.e_title}</td>			
 				</tr>
 				<tr>
+					<td class="order_tableT_null"></td>	
 					<td class="order_tableT">할인율</td>
 					<td>${noworder.e_discount} %</td>
 				</tr>
 				<tr>
+					<td class="order_tableT_null"></td>					
 					<td class="order_tableT">할인금액</td>
 				 	<td>
 						<fmt:formatNumber value="${noworder.t_total - noworder.t_final}" pattern="#,###" /> 원
@@ -81,6 +84,7 @@
 			</table>
 			<table class="order_table2">				
 				<tr>
+					<td class="order_tableT_null"></td>					
 					<td class="order_tableT">최종 결제금액</td>					
 					<td>
 						<fmt:formatNumber value="${noworder.t_final}" pattern="#,###" /> 원

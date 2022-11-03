@@ -28,9 +28,10 @@
 .sortBtn{
 	text-decoration:none;
 	color:black;
-	background-color:#fbef86;
-	font-size:12px;
+	background-color:#8586bc;
+	font-size:10px;
 	padding:5px;
+	border-radius:15px;		
 }
 
 /* 더보기 */
