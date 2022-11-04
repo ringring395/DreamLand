@@ -51,9 +51,9 @@ public class UserController {
 	//로그인(select 진행)
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@ResponseBody
-	public String loginPost(UserVO user, HttpSession session) 
-	throws Exception{		
-
+	public String loginPost(UserVO user, HttpSession session, Model model) 
+	throws Exception{	
+		
         boolean result = us.login(user, session);
         String msg="";
         
