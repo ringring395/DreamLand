@@ -22,32 +22,19 @@
 		</div>
 			
 		<div id="map">
-
-<!-- Button trigger modal -->
-<button id="Btn1">
-  버튼1
-</button>
-
-<button id="Btn2">
-  버튼2
-</button>	
-
-<button id="Btn3">
-  버튼3
-</button>
-
-<button id="Btn4">
-  버튼4
-</button>
-
-<button id="Btn5">
-  버튼5
-</button>
-
-<button id="Btn6">
-  버튼6
-</button>	
-		
+			<span><img id="map_mark" src="../resources/img/icon/mark.png">
+				를 눌러서 DreamLand🦄를 둘러보세요.</span>
+<!-- Button trigger modal -->	
+			<img alt="전체둘러보기" src="../resources/img/map/map_mark.png" usemap="#dreamlandMap">
+			<map name="dreamlandMap" id="dreamlandMap">
+				<area coords="374,297,423,352" id="Btn1">
+				<area coords="472,147,520,202" id="Btn2">
+				<area coords="408,463,459,522" id="Btn3">
+				<area coords="212,342,256,398" id="Btn4">
+				<area coords="565,343,615,402" id="Btn5">
+				<area coords="288,207,330,260" id="Btn6">
+			</map>
+				
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <!-- Vertically centered modal -->

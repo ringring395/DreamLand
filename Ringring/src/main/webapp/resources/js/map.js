@@ -113,6 +113,7 @@ $(document).ready(function(){
 		$("#modal_text_info2").html(info)
 		//모달창
 		$("#exampleModal").modal("toggle");			
-	})		
+	})	
+	
 	
 })//전체닫음

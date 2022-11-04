@@ -15,6 +15,14 @@
 
 /* map 전체지도*/
 
+#map_mark{
+	height:20px;
+}
+
+#dreamlandMap >area{
+	cursor:pointer;
+}
+
 #slider-img1,
 #slider-img2,
 #slider-img3{
