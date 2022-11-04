@@ -29,7 +29,12 @@
 	height:200px;
 	width:480px;
 	margin:10px 0;
-	background-color:#c9cacb;
+}
+
+#main_notice{
+	padding:5px;
+	background-color:#fff;
+	border:2px solid #f8e00e;
 }
 
 .slider_sub_img{
@@ -52,16 +57,17 @@
 }
 
 #mainNotice_table{
-	border:1px solid;
 	margin:0px auto;
 }
 
-#mainNotice_table >tr >td{
-	border-top:1px solid;
+#mainNotice_table >tbody >tr >td{
+	border-bottom:2px solid #dac2f0;
+	padding:0 10px;
 }
 
 .mainNotice_td{
-	width:360px;
+	width:340px;
+	height:40px;
 }
 
 
