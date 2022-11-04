@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-	<link rel="stylesheet" href="../../../resources/css/admin.css">
-<title>관리자용 회원관리</title>
+<link rel="stylesheet" href="../../../resources/css/admin.css">
+<title>DreamLand🦄_관리자</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
@@ -14,17 +14,14 @@
 		<jsp:include page="admin_menu.jsp"></jsp:include>
 		<div id="a_main">
 			<div id="a_pagetitle">
-				<span>페이지제목</span>
+				<span>회원 관리</span>
 			</div>
 			
 			<table id="a_user_table">
 				<tr>
-					<th>No.</th>
-					<th>아이디(메일)</th>
-					<th>이름</th>
-					<th>전화번호</th>
-					<th>가입일</th>
-					<th>관리자</th>
+					<th>No.</th><th>아이디(메일)</th>
+					<th>이름</th><th>전화번호</th>
+					<th>가입일</th><th>관리자</th>
 				</tr>
 		<c:forEach items="${user}" var="user">
 				<tr>
@@ -35,10 +32,10 @@
 					<td class="a_user_table_td">${user.signup}</td>
 					<c:choose>
 						<c:when test="${user.grp eq '0'}">
-							<td class="a_user_table_td">N</td>
+							<td class="a_user_table_td"></td>
 						</c:when>
 						<c:otherwise>
-							<td class="a_user_table_td">Y</td>
+							<td class="a_user_table_td">✔</td>
 						</c:otherwise>
 					</c:choose>
 				</tr>		

@@ -185,25 +185,34 @@ input[name="b_title"]{
 
 /* admin_helplist 1:1문의 목록*/
 
-#a_helplist_table{
-	width:inherit;
-	margin:10px;
+#a_helplist_table{	
+	width:700px;
+	margin:10px auto;
+	padding:10px;
+	background-color:#fff;
 }
 
 .a_helplist_table_td{
+	margin:10px;
 	padding:10px;
 	text-align:center;
+	border-bottom:2px solid #f8e00e;
 }
 
 
 /* admin_user 회원목록*/
 
 #a_user_table{
-	width:inherit;
-	margin:10px auto; 
+	width:700px;
+	margin:10px auto;
+	padding:10px;
+	background-color:#fff;
 }
 
 .a_user_table_td{
+	margin:10px;
 	padding:10px;
 	text-align:center;
+	border-bottom:1px solid #f8e00e;
 }
+

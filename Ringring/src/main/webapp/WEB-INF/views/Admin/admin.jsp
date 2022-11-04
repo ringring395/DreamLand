@@ -50,8 +50,7 @@
 					<a class="before_after_year" href="/admin?year=${today_info.search_year+1}&month=${today_info.search_month-1}">
 						⏩
 					</a>
-				</div>
-				
+				</div>				
 			<table class="calendar_body">	
 				<tr id="adminCal_info">
 					<td colspan="7">a = 성인 / j = 청소년 / c = 아동</td>

@@ -16,7 +16,6 @@
 <!-- include summernote-ko-KR -->
 <script src="/resources/js/summernote-ko-KR.js"></script>
 
-
 <script type="text/javascript" src="/resources/js/admin.js"></script>
 <title>DreamLand🦄_관리자</title>
 
@@ -62,7 +61,7 @@ $(document).ready(function() {
 				<c:choose>
 					<c:when test="${ahelplist.h_answer eq '0'}">
 						<td class="a_helplist_table_td">${ahelplist.h_no}</td>
-						<td class="a_helplist_table_td">${ahelplist.h_title}📌답변 입력</td>
+						<td class="a_helplist_table_td">${ahelplist.h_title}   📌답변 입력</td>
 						<td class="a_helplist_table_td">${ahelplist.h_id}<br>${ahelplist.h_regdate}</td>
 						<td class="a_helplist_table_td">N</td>
 					</c:when>
