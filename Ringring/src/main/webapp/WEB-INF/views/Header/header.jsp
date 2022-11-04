@@ -75,7 +75,13 @@
 			</div><!-- h_header -->
 			<div id="navimenu">
 				<ul class="menu">
-					<li class="menu1"><a href="../map">둘러보기</a></li>
+					<li class="menu1"><a href="../map">둘러보기</a>
+						<ul id="menu2_sub" class="menusub_none">
+							<li>&nbsp;</li>
+							<li>&nbsp;</li>
+							<li>&nbsp;</li>
+						</ul>
+					</li>
 					<li class="menu2">이벤트
 						<ul id="menu2_sub" class="menusub">
 							<li><a href="../event">행사 일정</a></li>
@@ -83,7 +89,13 @@
 							<li><a href="../parade">퍼레이드 일정</a></li>
 						</ul>
 					</li>
-					<li class="menu3"><a href="../here">오시는길</a></li>
+					<li class="menu3"><a href="../here">오시는길</a>
+						<ul id="menu2_sub" class="menusub_none">
+							<li>&nbsp;</li>
+							<li>&nbsp;</li>
+							<li>&nbsp;</li>
+						</ul>					
+					</li>
 					<li class="menu4">고객센터
 						<ul id="menu4_sub" class="menusub">
 							<li><a href="../notice">공지사항</a></li>
