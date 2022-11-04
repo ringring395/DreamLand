@@ -13,7 +13,7 @@
 <!-- include summernote-ko-KR -->
 <script src="/resources/js/summernote-ko-KR.js"></script>
 
-<title>help1:1문의</title>
+<title>DreamLand🦄</title>
 
 
 <script>
@@ -42,7 +42,7 @@ $(document).ready(function() {
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>1:1 문의</span>
 		</div>
 			
 		<div id="help">

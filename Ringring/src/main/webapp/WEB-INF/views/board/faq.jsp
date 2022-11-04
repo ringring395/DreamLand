@@ -9,19 +9,18 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../resources/js/list.js"></script>
 <script type="text/javascript" src="../../../resources/js/board.js"></script>
-<title>faq</title>
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>자주하는 질문</span>
 		</div>
 		
 		<div id="faq">
 		
 			<div id="faq_sub">
-
 				<div id="faq_category">
 					<select>
 						<option value="none">==카테고리==</option>
@@ -40,7 +39,7 @@
 					
 					<div id="faq_searchBtn">
 						<input type="button" value="검색" >
-						<img alt="사진" src="">
+						<img alt="사진" src="../resources/img/icon/search.png">
 					</div>	
 				</div>
 				</form>	
@@ -51,8 +50,9 @@
 			<c:forEach items="${faq}" var="faq">
 				<table>
 					<tr class="table_show">
-						<th>제목</th>
-						<td class="f_table_center">${faq.b_title }</td>
+						<th></th>
+						<td class="f_table_center">${faq.b_title }
+							<span id="faq_more">&nbsp;&nbsp;&nbsp;&nbsp;+더보기</span></td>
 						<td id="f_table_date">${faq.b_regdate }</td>										
 					</tr>
 					<tr class="table_hide">
