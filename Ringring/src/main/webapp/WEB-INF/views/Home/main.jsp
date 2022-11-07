@@ -24,9 +24,22 @@
 	<div id="wrap">
 		<div id="main">
 			<div class="slider_main">
-				<div class="slider_main_img">대표사진 하나</div>
-				<div class="slider_main_img">대표 사진 둘</div>
-				<div class="slider_main_img">대표 사진 셋</div>
+				<div class="slider_main_img">
+					<img alt="mainBx1" src="../resources/img/event/christmas_1.jpg">
+					<p class="slider_main_text">크리스마스🎄🎄</p>
+				</div>
+				<div class="slider_main_img">
+					<img alt="mainBx2" src="../resources/img/event/fireworks_4.jpg">
+					<p class="slider_main_text">불꽃 축제✨✨</p>
+				</div>
+				<div class="slider_main_img">
+					<img alt="mainBx3" src="../resources/img/event/main_event_1.jpg">
+					<p class="slider_main_text">버블 매직쇼☁☁</p>
+				</div>
+				<div class="slider_main_img">
+					<img alt="mainBx4" src="../resources/img/event/main_event_3.jpg">
+					<p class="slider_main_text">Rainy Day☂☂</p>
+				</div>				
 			</div>
 
 			<div id="main_sub">

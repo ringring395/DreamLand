@@ -17,6 +17,22 @@
 
 .slider_main_img{
 	height:400px;
+	position: relative;
+	cursor:pointer;
+}
+
+.slider_main_img >img{
+	width:100%;
+	height:400px;
+}
+
+.slider_main_text{
+	position:absolute;
+	top:80%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	color: white;
+	font:30px bold;
 }
 
 #main_sub{
