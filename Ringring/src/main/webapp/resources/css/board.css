@@ -102,12 +102,17 @@
 #help_title >input,
 #help_email >input{
 	width:300px;
+	text-align:center;
+}
+
+#h_emailtxt{
+	font-size:10px;
 }
 
 #help_contents{
 	margin:10px;
 	padding:10px;
-	background-color:#c9cacb;	
+	background-color:#fff;	
 }
 
 #help_Btn{
@@ -123,7 +128,7 @@
 #helplist{
 	margin:10px;
 	padding:10px;
-	background-color:#c9cacb;	
+	background-color:#fff;	
 }
 
 #helplist_Btn{
@@ -133,6 +138,15 @@
 #helplist_table{
 	width:inherit;
 	margin:10px auto;
+}
+
+#helplist_table >tbody >tr >th{
+	padding:0 0 10px;
+	border-bottom:2px solid #dac2f0;
+}
+
+#helplist_table >tbody >tr> td{
+	border-bottom:2px solid #dac2f0;
 }
 
 .helplist_table_td{
@@ -155,7 +169,12 @@
 	margin:10px auto;
 	padding:10px;
 	width:980px;
-	background-color:#c9cacb;	
+	background-color:#fff;	
+}
+
+#notice_table >tbody >tr >th,
+#notice_table >tbody >tr >td{
+	border-bottom:2px solid #dac2f0;	
 }
 
 .n_table_text{
@@ -172,6 +191,10 @@
 	width:200px;
 }
 
+.n_table_content{
+	padding:0px 30px;
+}
+
 #notice_search{
 	margin:10px auto;
 	padding:10px;
@@ -182,4 +205,11 @@
 
 #notice_search >input{
 	width:300px;
+}
+
+#notice_searchBtn{
+	cursor:pointer;
+}
+#notice_searchBtn >img{
+	height:20px;
 }

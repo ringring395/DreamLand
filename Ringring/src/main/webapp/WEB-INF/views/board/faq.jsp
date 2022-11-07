@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +55,10 @@
 						<th></th>
 						<td class="f_table_center">${faq.b_title }
 							<span id="faq_more">&nbsp;&nbsp;&nbsp;&nbsp;+더보기</span></td>
-						<td id="f_table_date">${faq.b_regdate }</td>										
+						<td id="f_table_date">
+							<fmt:parseDate value="${faq.b_regdate }" var="dateValue" pattern="yyyy-MM-dd HH:mm:ss"/>
+							<fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd"/>					
+						</td>										
 					</tr>
 					<tr class="table_hide">
 						<th>내용</th>

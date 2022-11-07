@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +11,13 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../resources/js/list.js"></script>
 <script type="text/javascript" src="../../../resources/js/board.js"></script>
-<title>공지사항</title>
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>공지사항</span>
 		</div>
 		
 		<div id="notice">	
@@ -28,7 +30,10 @@
 				<tr class="table_show">
 					<td class="n_table_text" id="n_table_no">${notice.b_no}</td>
 					<td class="n_table_text" id="n_table_title">${notice.b_title}</td>
-					<td class="n_table_text" id="n_table_date">${notice.b_regdate}</td>										
+					<td class="n_table_text" id="n_table_date">
+						<fmt:parseDate value="${notice.b_regdate}" var="dateValue" pattern="yyyy-MM-dd HH:mm:ss"/>
+						<fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd"/>
+					</td>										
 				</tr>
 				<tr class="table_hide">
 					<td></td>
@@ -47,7 +52,7 @@
 				
 				<div id="notice_searchBtn">
 					<input type="button" value="검색" >
-					<img alt="사진" src="">
+					<img alt="사진" src="../resources/img/icon/search.png">
 				</div>	
 			</div>
 			</form>

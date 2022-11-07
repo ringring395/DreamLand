@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,19 +10,20 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../resources/js/list.js"></script>
 <script type="text/javascript" src="../../../resources/js/board.js"></script>
-<title>help1:1문의 내역</title>
+
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>1:1 문의내역</span>
 		</div>
 			
 		<div id="helplist">
 			<table id="helplist_table">
 				<tr>
-					<th>1:1문의제목</th>
+					<th>1:1문의 제목</th>
 					<th>답변여부</th>
 					<th>작성일</th>
 				</tr>
@@ -29,15 +31,18 @@
 				<tr class="table_show">				
 					<c:choose>
 						<c:when test="${helplist.h_answer eq '0'}">
-							<td class="h_title">${helplist.h_title}</td>
+							<td class="h_title">Q. ${helplist.h_title}</td>
 							<td class="helplist_table_td">N</td>
 						</c:when>
 						<c:otherwise>
-							<td class="h_title">${helplist.h_title} 👇답변보기</td>
+							<td class="h_title">Q. ${helplist.h_title} 👇답변보기</td>
 							<td class="helplist_table_td">Y</td>							
 						</c:otherwise>
 					</c:choose>
-					<td class="helplist_table_td" id="h_date">${helplist.h_regdate}</td>					
+					<td class="helplist_table_td" id="h_date">
+						<fmt:parseDate value="${helplist.h_regdate}" var="dateValue" pattern="yyyy-MM-dd HH:mm:ss"/>
+						<fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd"/>					
+					</td>					
 				</tr>
 				<tr class="table_hide">	
 					<c:choose>
@@ -48,8 +53,11 @@
 							<td colspan="3" class="h_title">${helplist.h_content}
 								<hr>
 								<div class="table_answer">
-									<div>${helplist.h_an_content}</div>
-									<div>답변일 :${helplist.h_an_date}</div>
+									<div>A. ${helplist.h_an_content}</div>
+									<div>답변일 :
+										<fmt:parseDate value="${helplist.h_an_date}" var="dateValue" pattern="yyyy-MM-dd HH:mm:ss"/>
+										<fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd"/>					
+									</div>
 								</div>
 							</td>														 						
 						</c:otherwise>

@@ -65,7 +65,7 @@ $(document).ready(function() {
 				<div id="help_email">
 					<input type="hidden" name="h_id" value="${sessionScope.id }">
 					<input type="email" name="h_email" value="${sessionScope.id }">
-					<br><span>가입시 입력한 메일로 답변여부가 전송됩니다.</span>
+					<br><span id="h_emailtxt">가입시 입력한 메일로 답변여부가 전송됩니다.</span>
 				</div>				
 			</div><!-- help_sub -->			
 
