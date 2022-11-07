@@ -8,13 +8,13 @@
 <link rel="stylesheet" href="../../../resources/css/event.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/event.js"></script>
-<title>parade퍼레이드</title>
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>이벤트 >퍼레이드 일정</span>
+			<span>퍼레이드 일정</span>
 		</div>
 
 		<div id="sortDiv">

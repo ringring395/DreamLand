@@ -8,14 +8,13 @@
 <link rel="stylesheet" href="../../../resources/css/event.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/event.js"></script>
-<script type="text/javascript" src="/resources/js/attach.js"></script> 
-<title>이벤트_행사일정</title>
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>행사 일정</span>
 		</div>
 
 		<div id="sortDiv">
