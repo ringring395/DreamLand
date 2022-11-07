@@ -17,7 +17,7 @@
 	});
 </script>
 
-<title>main</title>
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>

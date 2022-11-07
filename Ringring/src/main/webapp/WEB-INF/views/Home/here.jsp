@@ -7,17 +7,17 @@
 <link rel="stylesheet" href="../../../resources/css/home.css">
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc06e6646dc5d53a5dd5b4982d685177"></script>
 
-<title>here여기로 오세요</title>
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>	
 	<div id="wrap">	
 		<div id="pagetitle">
-			<span>페이지타이틀</span>
+			<span>오시는 길</span>
 		</div>
 		
 		<div id="here">
-			<div id="here_map">지도지도</div>
+			<div id="here_map"></div>
 <script>
 	var container = document.getElementById('here_map');
 	var options = {
@@ -29,11 +29,34 @@
 </script>	
 					
 			<div id="here_info">
-				<p>주소 : 000로 00길 </p>
-				<p>자가용 : 요리조리 </p>
-				<p>버스 : 움짝움짝 </p>
-				<p>지하철 : 둠둠둠 </p>
-				<label><a href="https://map.kakao.com/link/to/테스트,33.450701,126.570667">길찾기 바로가기</a></label>
+				<table id="here_info_table">
+					<tr>
+						<td><img class="here_img" src="../resources/img/icon/map_pin.png"></td>
+						<th>주소</th>
+						<td class="here_txt">행복시 해피구 드림로 꿈길</td>
+					</tr>
+					<tr>
+						<td><img class="here_img" src="../resources/img/icon/car.png"></td>
+						<th>자가용</th>
+						<td class="here_txt">1번 국도 드림랜드 방향</td>
+					</tr>
+					<tr>
+						<td><img class="here_img" src="../resources/img/icon/bus.png"></td>
+						<th>버스</th>
+						<td class="here_txt">드림랜드 입구 정류장 하차 도보 1분거리</td>
+					</tr>
+					<tr>
+						<td><img class="here_img" src="../resources/img/icon/subway.png"></td>
+						<th>지하철</th>
+						<td class="here_txt">9호선 드림랜드역 7번 출구에서 직진방향 도보 3분거리</td>
+					</tr>
+					<tr id="here_link" onclick="location.href='https://map.kakao.com/link/to/테스트,33.450701,126.570667'">
+						<td><img class="here_img" src="../resources/img/icon/navi.png"></td>
+						<td colspan="2">길찾기 바로가기</td>
+					</tr>
+						
+				</table>
+
 			</div>
 		</div><!-- here -->
 	</div><!-- wrap -->

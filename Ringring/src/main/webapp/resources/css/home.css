@@ -86,6 +86,22 @@
 
 #here_info{
 	width:450px;
-	background-color:#c9cacb;
 }
 
+.here_img{
+	width:30px;
+	height:30px;
+	padding:15px 0;
+}
+
+.here_txt{
+	padding:0px 10px;
+	font-size:13px;
+}
+
+#here_link{
+	cursor:pointer;
+}	
+	
+	
+	

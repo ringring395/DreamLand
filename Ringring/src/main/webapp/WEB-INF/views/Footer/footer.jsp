@@ -14,7 +14,7 @@
 	<div id="footer">
 		<div id="f_size">
 			<div id="f_info">
-				<p>주소 : 00시 00구 00로 00길<br>
+				<p>주소 : 행복시 해피구 드림로 꿈길 <br>
 				대표이사 : 김수진   사업자등록번호 : 000-000-000<br>
 				대표이메일 : ringring395@gmail.com<br>
 				ⓒDreamLand.All Rights Reserved	
