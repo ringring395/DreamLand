@@ -120,6 +120,9 @@ function sumPrice(){
 	
 	//할인선택 클릭하면
 	$("#discountBtn").on("click", function(){
+		console.log(a_cnt);
+		console.log(j_cnt);
+		console.log(c_cnt);
 		$("#discountBox").slideDown();
 		
 		//할인 종류(라디오버튼)을 선택하면
@@ -130,6 +133,7 @@ function sumPrice(){
 	})
 
 }//sumPrice 닫음
+	
 	
 
 //최종금액을 산출하는 함수

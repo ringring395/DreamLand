@@ -9,14 +9,14 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../resources/js/html2canvas.js"></script>
 <script type="text/javascript" src="../../../resources/js/ticket.js"></script>
-<title>티켓보기</title>
+<title>DreamLand🦄</title>
 
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>티켓 확인</span>
 		</div>	
 	
 		<div id="ticket">

@@ -27,6 +27,7 @@ a{
 	color:black;	
 }
 
+
 /* select 예매 선택 페이지*/
 
 #select{
@@ -44,6 +45,10 @@ a{
 
 #selectBefore{
 	text-align:center;	
+}
+
+#selectBefore >img{
+	width:30px;
 }
 
 #optBox{
@@ -85,12 +90,26 @@ a{
 	margin:0 auto;
 	padding:10px;
 	border-bottom:3px solid #f8e00e;
-	font-size:80%;	
+}
+
+.discountBox_td1{
+	width:50px;
 }
 
 #finalBox{
 	display:none;
-	margin:10px 0;	
+	text-align:right;
+	margin:10px 0;		
+}
+
+#orderBtn{
+    cursor: pointer;
+    padding:5px;
+	margin:10px auto;	
+	background-color:#dac2f0;
+	border:none;
+	border-radius:5px;
+	font-size:20px;
 }
 
 
@@ -102,8 +121,7 @@ a{
 	margin:20px auto 0;
 	padding:10px;
 	text-align:center;
-	border-bottom:3px solid #f8e00e;	
-	background-color:#c9cacb;
+	border-bottom:3px solid #f8e00e;
 }
 
 .order_table2{
@@ -111,8 +129,7 @@ a{
 	margin:0 auto;
 	padding:10px;
 	text-align:center;
-	border-bottom:3px solid #f8e00e;	
-	background-color:#c9cacb;	
+	border-bottom:3px solid #f8e00e;
 }
 
 .order_tableT{

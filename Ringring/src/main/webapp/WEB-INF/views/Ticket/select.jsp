@@ -11,21 +11,21 @@
 <script type="text/javascript" src="/resources/js/calendar.js"></script>
 <script type="text/javascript" src="/resources/js/ticket_select.js"></script>
 <script type="text/javascript" src="/resources/js/ticket_order.js"></script>
-<title>티켓예매</title>
+<title>DreamLand🦄</title>
 
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>티켓 예매</span>
 		</div>
 		
 		<div id="select">
 			<div id="calendarDiv"></div>
 
 			<div id="select_detail">
-				<p id="selectBefore">👈👈👈날짜를 선택해주세요.</p>
+				<p id="selectBefore"><img src="../resources/img/icon/pointer.png" >날짜를 선택해주세요.</p>
 				<div id="optBox">
 					<input type="hidden" name="user" value="${sessionScope.id}">
 					<input type="hidden" id="selectDate">
@@ -92,12 +92,16 @@
 				<c:forEach items="${nowsale}" var="nowsale">									
 					<c:choose>				
 						<c:when test="${nowsale !=null}">
-							<div>
-								<input type="hidden" id="e_no" value="${nowsale.e_no}">
-								<input type="radio" name="e_discount" value="${nowsale.e_discount}">
-						 		${nowsale.e_start}~${nowsale.e_end}<br>
-						 		${nowsale.e_title} / ${nowsale.e_discount}%
-						 	</div>												 
+							<table>
+								<tr>
+									<td class="discountBox_td1" rowspan="2"><input type="hidden" id="e_no" value="${nowsale.e_no}">
+									<input type="radio" name="e_discount" value="${nowsale.e_discount}"></td>
+									<td>${nowsale.e_start}~${nowsale.e_end}</td>
+								</tr>
+								<tr>
+									<td>${nowsale.e_title} / ${nowsale.e_discount}%</td>
+								</tr>
+							</table>												 
 						</c:when>
 
 						<c:otherwise>

@@ -7,14 +7,14 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/ticket.css">
-<title>티켓구매내역</title>
+<title>DreamLand🦄</title>
 
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>티켓 구매내역</span>
 		</div>
 	
 		<div id="orderlist">			
@@ -69,9 +69,7 @@
 					<a href="/orderlist?pageNum=${paging.startPage+1}&amount=${paging.cri.amount}">다음</a>
 				</c:if>					
 			</div>		
-		</div><!-- paging -->
-
-		
+		</div><!-- paging -->		
 	</div>
 </body>
 <jsp:include page="../Footer/footer.jsp"></jsp:include>

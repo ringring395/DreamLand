@@ -62,9 +62,9 @@ function calendarMaker(target, date){
 			"<col><col><col><col><col><col><col>"+
 			"</colgroup>"+
 			"<thead class='cal_date'>"+
-			"<th><button class='prev'><</button></th>"+
+			"<th><button class='prev'><img class='monthBtn' src='../resources/img/icon/left_month.png'></button></th>"+
 			"<th colspan='5'><p><span>"+year+"</span>년 <span>"+month+"</span>월</p></th>"+
-			"<th><button class='next'>></button></th>"+
+			"<th><button class='next'><img class='monthBtn' src='../resources/img/icon/right_month.png'></button></th>"+
 			"</thead>"+
 			"<thead class='cal_week'>"+
 			"<th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>"+

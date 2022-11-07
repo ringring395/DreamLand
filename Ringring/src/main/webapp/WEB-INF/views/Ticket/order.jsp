@@ -10,13 +10,13 @@
 <link rel="stylesheet" href="../../../resources/css/ticket.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/ticket_order.js"></script>
-<title>주문완료</title>
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>페이지제목</span>
+			<span>티켓 구매완료</span>
 		</div>
 		
 		<div id="order">

@@ -4,7 +4,6 @@
 	width:600px;
 	height:400px;
 	margin:10px;
-	background-color:#c9cacb;
 }
 
 .calendar_table{
@@ -52,4 +51,9 @@
 .calendar_table tbody td.select_day {
     background-color: #fbef86;
     color: #ea435d;
+}
+
+.monthBtn{
+	width:40px;
+	height:40px;
 }
