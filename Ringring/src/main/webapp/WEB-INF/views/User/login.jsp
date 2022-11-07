@@ -5,11 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/user.css">
-<title>login</title>
-<script type="text/javascript"
-	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/user_signup.js"></script>
-
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
@@ -22,14 +20,14 @@
 		<form action="/login" method="post">
 		<div id="login2">
 			<div class="login2_info">
-				<img alt="유저" src="">
+				<img alt="유저" src="../resources/img/icon/user.png">
 				<input type="text" name="id" placeholder="아이디(메일주소)">
 				<br><span id="sid"></span>
 			</div>
 			
 			
 			<div class="login2_info">
-				<img alt="비번" src="">
+				<img alt="비번" src="../resources/img/icon/pw.png">
 				<input type="password" name="pw" placeholder="password">
 				<br><span id="spw"></span>
 			</div>

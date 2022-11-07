@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/user.css">
 
-<title>userfind</title>
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
@@ -22,8 +22,8 @@
 			</div>
 		
 			<div id="find_click">
-				<div id="findID_click">아이디 찾기 </div>
-				<div id="findPW_click">비밀번호 찾기 </div>
+				<div id="findID_click"><img alt="유저" src="../resources/img/icon/user.png">아이디 찾기 </div>
+				<div id="findPW_click"><img alt="유저" src="../resources/img/icon/pw.png">비밀번호 찾기 </div>
 			</div>
 			
 			<div id="find_info">

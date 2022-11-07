@@ -60,10 +60,11 @@
 }
 
 .checkBtn{
-	padding:5px;
+	padding:5px 15px;
 	background-color:#dac2f0;
 	border-radius:5px;
 	cursor:pointer;
+	font-size:12px;
 }
 
 /* login 로그인*/
@@ -73,10 +74,14 @@
 	margin:0 auto;
 }
 
+.login2_info >img{
+	height:20px;
+}
+
 .login2_info >input{
 	margin:10px 0;
 	font-size:20px;
-	width:300px;
+	width:360px;
 }
 
 
@@ -201,6 +206,10 @@
 	cursor:pointer;
 }	
 
+#find_click >div >img{
+	height:20px;
+}
+
 #find_info{
 	display:flex;
 	justify-content:space-between;
@@ -211,7 +220,6 @@
 	text-align:center;
 	width:460px;
 	padding:10px;
-	background-color:#c9cacb;
 }
 
 .find_input{
@@ -251,7 +259,7 @@
 	font-size:20px;
 	border:none;
 	border-radius:5px;
-	background-color:#f8e00e;
+	background-color:#dac2f0;
 }
 
 /* resign 회원탈퇴*/
@@ -265,6 +273,13 @@
 	margin:0 auto;	
 }
 
-
+#resignBtn{
+	border:none;
+	width:auto;
+	padding:5px;
+	border-radius:5px;
+	cursor:pointer;
+	font-size:12px;
+}
 
 

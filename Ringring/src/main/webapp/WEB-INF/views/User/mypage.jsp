@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/user.css">
-<title>마이페이지</title>
+<title>DreamLand🦄</title>
 
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>

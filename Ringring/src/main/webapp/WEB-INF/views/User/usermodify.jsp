@@ -7,14 +7,14 @@
 <link rel="stylesheet" href="../../../resources/css/user.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="/resources/js/user_modify.js"></script>
-<title>회원정보 수정</title>
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 
 <body>
 	<div id="wrap">
 		<div id="pagetitle">
-			<span>정보 수정</span>
+			<span>회원 정보 수정</span>
 		</div>
 		
 		<div id="usermodify">

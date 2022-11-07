@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/resources/css/user.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<title>resign</title>
+<title>DreamLand🦄</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 
