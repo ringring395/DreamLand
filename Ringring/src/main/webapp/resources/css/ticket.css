@@ -170,11 +170,17 @@ a{
 	border-bottom:3px solid #dac2f0;
 }
 
-#orderlist_img{
+.orderlist_img{
 	width:150px;
 	height:150px;
 	margin:10px;
 	background-color:#dac2f0;		
+}
+
+.orderlist_random{
+	width:130px;
+	height:150px;
+	text-align:center;
 }
 
 #orderlist_table{

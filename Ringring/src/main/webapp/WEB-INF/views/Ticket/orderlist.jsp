@@ -7,6 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/ticket.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/randomImg.js"></script>
 <title>DreamLand🦄</title>
 
 </head>
@@ -21,8 +23,8 @@
 			<c:forEach items="${orderlist}" var="orderlist">
 			
 			<div id="orderlist_div">
-				<div id="orderlist_img">
-					<img alt="" src="">
+				<div class="orderlist_img">
+					<img class="orderlist_random" src="">
 				</div>
 				<div id="orderlist_detail">
 					<table id="orderlist_table">
