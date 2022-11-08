@@ -20,7 +20,7 @@
 		</div>	
 	
 		<div id="ticket">
-
+	
 			<div id="ticket_img">
 			<div class="captureDiv">
 				<table id="ticket_table">
@@ -52,9 +52,9 @@
 				</table>										
 			</div>
 			
-			<button id="capture">다운로드</button>
-			
-				<div id="ticket_info">
+			<input type="hidden" value="캡쳐">
+	
+				<div id="ticket_info" style="display:none">
 					<p>발행된 티켓은 이메일로 전송되었습니다.<br>
 					가입 시 기입한 이메일을 확인해주세요.</p>
 				</div>

@@ -110,10 +110,10 @@ public class TicketController {
 	//이미지 다운로드
 	@ResponseBody
 	@RequestMapping(value = "/imgtest/", method = RequestMethod.POST)
-	public ModelMap imgTest(@RequestParam HashMap<Object, Object> param, 
+	public ModelMap imgtest(@RequestParam HashMap<Object, Object> param, 
 			final HttpServletRequest request, 
 			final HttpServletResponse response) throws Exception {
-
+		
 		ModelMap map = new ModelMap();
 		
 		String binaryData = request.getParameter("imgSrc");

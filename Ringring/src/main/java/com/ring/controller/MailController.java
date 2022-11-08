@@ -32,10 +32,10 @@ public class MailController {
             messageHelper.setTo(to);
             messageHelper.setSubject(title);
             
-//            String contents = content +"<img src='https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1590/3428.jpg'>";
-            String contents = content +"<img src='D://01-STUDY/image/loopy08.jpg'>";
+//            String contents = content +"<img src='https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1590/3428.jpg'>";           
+//            messageHelper.setText(contents, true);  
             
-            messageHelper.setText(contents, true);         
+            messageHelper.setText(content, true);
             
             mailSender.send(message);
                     
