@@ -24,6 +24,7 @@
 			
 			<div id="orderlist_div">
 				<div class="orderlist_img">
+					<input type="hidden" class="hidden_date" value="${orderlist.t_date}">
 					<img class="orderlist_random" src="">
 				</div>
 				<div id="orderlist_detail">

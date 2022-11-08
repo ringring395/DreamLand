@@ -178,8 +178,9 @@ a{
 }
 
 .orderlist_random{
-	width:130px;
-	height:150px;
+	width:140px;
+	height:140px;
+	padding:5px;
 	text-align:center;
 }
 
