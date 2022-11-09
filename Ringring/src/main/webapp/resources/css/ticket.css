@@ -162,10 +162,13 @@ a{
 
 /* orderlist 주문내역*/
 
-#orderlist_div{
+.orderlist_tableDiv{
 	display:flex;
-	justify-content:center;
-	width:700px;
+	justify-content:flex-start;
+}
+
+#orderlist_div{
+	width:800px;
 	margin:0 auto;
 	border-bottom:3px solid #dac2f0;
 }
@@ -185,16 +188,27 @@ a{
 }
 
 #orderlist_table{
-	width:500px;
+	width:130px;
 	height:150px;
 	margin:10px;
 	background-color:#fff;
 	padding:10px;	
 	text-align:center;
+	font-size:12px;
+	border:2px dotted #dac2f0;
+}
+
+#orderlist_red{
+	color:red;
+}
+
+.orderlist_tr >td{
+	border-top:2px dotted #dac2f0;
+	padding:5px 0;
+	font-size:10px;
 }
 
 #orderlist_ticketBtn{
-	width:100px;
 	background-color:#dac2f0;
 	border-radius:10px;
 }

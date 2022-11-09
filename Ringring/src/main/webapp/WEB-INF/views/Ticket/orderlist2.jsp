@@ -19,52 +19,40 @@
 			<span>티켓 구매내역</span>
 		</div>
 	
-		<div id="orderlist">	
-<!-- 5열 2행 세팅 -->		
-		<c:set var="i" value="0"/>
-		<c:set var="j" value="5"/>
-		
-		<div id="orderlist_div">
-		<c:forEach items="${orderlist}" var="orderlist">
+		<div id="orderlist">			
+			<c:forEach items="${orderlist}" var="orderlist">
 			
-		<c:if test="${i%j == 0 }">
-			<div class="orderlist_tableDiv">	
-		</c:if>
-			<table id="orderlist_table">
-				<tr>
-					<td id="orderlist_red">${orderlist.t_date}</td>
-					<td>${orderlist.t_day}</td>
-					<td>${orderlist.t_time}</td>
-				</tr>
-				<tr class="orderlist_tr">
-					<td>성인</td>
-					<td>청소년</td>
-					<td>어린이</td>
-				</tr>
-				<tr class="orderlist_tr">
-					<td>${orderlist.t_a_cnt} 명</td>	
-					<td>${orderlist.t_j_cnt} 명</td>
-					<td>${orderlist.t_c_cnt} 명</td>
-				</tr>
-				<tr>
-					<td>결제금액</td>
-					<td>
-						<fmt:formatNumber value="${orderlist.t_final}" pattern="#,###" /> 원
-					</td>					
-					<td id="orderlist_ticketBtn">
-						<a href="ticket?t_no=${orderlist.t_no}">티켓보기</a>
-					</td>
-				</tr>
-			</table>							
-		<c:if test="${i%j == j-1 }">
-			</div><!-- orderlist_tableDiv -->	
-		</c:if>				
-			
-			<c:set var="i" value="${i+1}" />
-			
+			<div id="orderlist_div">
+				<div class="orderlist_img">
+					<input type="hidden" class="hidden_date" value="${orderlist.t_date}">
+					<img class="orderlist_random" src="">
+				</div>
+				<div id="orderlist_detail">
+					<table id="orderlist_table">
+						<tr>
+							<td rowspan="2" id="orderlist_table_td">방문일</td><td>${orderlist.t_date}</td>
+							<td>성인</td><td>${orderlist.t_a_cnt} 명</td>
+							<td>결제금액</td>
+						</tr>
+						<tr>
+							<td>${orderlist.t_day}</td>
+							<td>청소년</td><td>${orderlist.t_j_cnt} 명</td>
+							<td>
+								<fmt:formatNumber value="${orderlist.t_final}" pattern="#,###" /> 원
+							</td>
+						</tr>
+						<tr>
+							<td>입장시간</td><td>${orderlist.t_time}</td>
+							<td>어린이</td><td>${orderlist.t_c_cnt} 명</td>
+							<td id="orderlist_ticketBtn">
+								<a href="ticket?t_no=${orderlist.t_no}">티켓보기</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
 			</c:forEach>
 
-		</div><!-- orderlist_div -->
 		</div><!-- orderlist -->
 		
 		<div id="paging">	
