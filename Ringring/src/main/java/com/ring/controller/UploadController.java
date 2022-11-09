@@ -67,11 +67,11 @@ public class UploadController {
 
 		UploadVO up = new UploadVO();
 
-		String uploadFolder = "D:\\01-STUDY\\upload";
+		String uploadFolder = "D:\\dreamland";
 
 		File uploadPath = new File(uploadFolder, getFolder());
 
-		// uploadPath가 존재하지 않으면, 폴더생성(D:\\01-STUDY\\upload\\현재날짜)
+		// uploadPath가 존재하지 않으면, 폴더생성(D:\\dreamland\\현재날짜)
 		if (uploadPath.exists() == false) {	
 			uploadPath.mkdirs();
 		}
@@ -114,11 +114,11 @@ public class UploadController {
 
 		ArrayList<UploadVO> uplist = new ArrayList<>();
 
-		String uploadFolder = "D:\\01-STUDY\\upload";
+		String uploadFolder = "D:\\dreamland";
 
 		File uploadPath = new File(uploadFolder, getFolder());
 		
-		// uploadPath가 존재하지 않으면, 폴더생성(D:\\01-STUDY\\upload\\현재날짜)
+		// uploadPath가 존재하지 않으면, 폴더생성(D:\\dreamland\\현재날짜)
 		if (uploadPath.exists() == false) {	
 			uploadPath.mkdirs();			
 		}
@@ -172,7 +172,7 @@ public class UploadController {
 	public ResponseEntity<byte[]> getFile(String fileName){
 		System.out.println(fileName);
 		
-		File file = new File("D:\\01-STUDY\\upload\\"+fileName);
+		File file = new File("D:\\dreamland\\"+fileName);
 		
 		ResponseEntity<byte[]> result = null;
 		//herder가 content-type 파악할수 있다.
@@ -191,7 +191,7 @@ public class UploadController {
 	@RequestMapping(value = "/download", method = RequestMethod.GET)
 	public ResponseEntity<Resource> downloadFile(String fileName){
 		
-		Resource resource = new FileSystemResource("D:\\01-STUDY\\upload\\"+fileName);
+		Resource resource = new FileSystemResource("D:\\dreamland\\"+fileName);
 		
 		//다운로드 시 파일의 이름을 처리
 		String resourceName = resource.getFilename();
