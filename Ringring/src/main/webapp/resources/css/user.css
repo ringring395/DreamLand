@@ -140,6 +140,15 @@
 	text-align:center;
 }
 
+.mypage_img{
+	width:130px;
+	padding:10px;
+}
+
+.mypage_text{
+	font:20px bold;
+}
+
 
 /* usermodify 정보수정*/
 

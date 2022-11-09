@@ -17,13 +17,16 @@
 		
 		<div id="mypage">
 			<div class="mypageBtn" onclick="location.href='../usermodify'">
-			회원정보수정
+				<img class="mypage_img" src="../resources/img/icon/pw_2.png">
+				<p class="mypage_text">회원 정보 수정</p>		
 			</div>
 			<div class="mypageBtn" onclick="location.href='../orderlist'">
-			티켓구매내역
+				<img class="mypage_img" src="../resources/img/icon/ticket.png">
+				<p class="mypage_text">티켓 구매 내역</p>
 			</div>
 			<div class="mypageBtn" onclick="location.href='../helplist'">
-			1:1문의내역
+				<img class="mypage_img" src="../resources/img/icon/list.png">
+				<p class="mypage_text">1:1 문의 내역</p>
 			</div>					
 		</div>
 
