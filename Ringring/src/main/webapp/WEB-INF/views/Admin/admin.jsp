@@ -31,11 +31,11 @@
 				<div class="navigation">
 				<!-- 이전해 -->
 					<a class="before_after_year" href="/admin?year=${today_info.search_year-1}&month=${today_info.search_month-1}">
-						⏪					
+						<img class="cal_img" src="../resources/img/icon/left_year.png">				
 					</a> 
 				<!-- 이전달 -->
 					<a class="before_after_month" href="/admin?year=${today_info.before_year}&month=${today_info.before_month}">
-						◀				
+						<img class="cal_img" src="../resources/img/icon/left_month.png">				
 					</a> 
 				<!-- 지금 년월 -->
 					<span class="this_month" onclick="location.href='/admin'">
@@ -44,11 +44,11 @@
 					</span>
 				<!-- 다음달 -->	
 					<a class="before_after_month" href="/admin?year=${today_info.after_year}&month=${today_info.after_month}">
-						▶
+						<img class="cal_img" src="../resources/img/icon/right_month.png">
 					</a>
 				<!-- 다음해 -->	 
 					<a class="before_after_year" href="/admin?year=${today_info.search_year+1}&month=${today_info.search_month-1}">
-						⏩
+						<img class="cal_img" src="../resources/img/icon/right_year.png">
 					</a>
 				</div>				
 			<table class="calendar_body">	

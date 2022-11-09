@@ -22,12 +22,13 @@
 			<a href="/event?sort=past" class="sortBtn">지난 행사 보기</a>		
 			<a href="/event?sort=all" class="sortBtn">전체 행사 보기</a>		
 		</div>
-	
-	<c:forEach items="${event}" var="event">		
+	<c:forEach items="${event}" var="event">
+		
 		<div id="event">
-	
 			<div id="event_imgDiv">
 				<img class="event_img" src="/display?fileName=${event.fileName}">
+				<p id="event_imgText">${event.e_title}</p>
+
 			</div>
 			<div id="event_info">
 				<input type="hidden" name="e_no" value="${event.e_no }">
@@ -35,7 +36,8 @@
 				<div id="event_day">시작일 : ${event.e_start}	~ 종료일 : ${event.e_end}</div>
 				<div id="event_point">${event.e_summary}</div>
 				<div class="event_more">+ 더보기</div>
-				<div class="event_hide">${event.e_contents}</div>
+				<div class="event_hide">${event.e_contents}</div>	
+
 			</div>								
 		</div><!-- event -->
 	</c:forEach>
