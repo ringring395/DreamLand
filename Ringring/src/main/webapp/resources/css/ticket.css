@@ -162,32 +162,26 @@ a{
 
 /* orderlist 주문내역*/
 
-.orderlist_tableDiv{
-	display:flex;
-	justify-content:flex-start;
-}
-
 #orderlist_div{
 	width:800px;
 	margin:0 auto;
+	padding:20px 0;
 	border-bottom:3px solid #dac2f0;
 }
 
-.orderlist_img{
-	width:150px;
+.orderlist_tableDiv{
+	display:flex;
+	justify-content:flex-start;	
+	width:130px;
 	height:150px;
 	margin:10px;
-	background-color:#dac2f0;		
 }
 
-.orderlist_random{
-	width:140px;
-	height:140px;
-	padding:5px;
-	text-align:center;
+.orderlist_Img{
+	height:10px;
 }
 
-#orderlist_table{
+.orderlist_table{
 	width:130px;
 	height:150px;
 	margin:10px;
@@ -196,10 +190,14 @@ a{
 	text-align:center;
 	font-size:12px;
 	border:2px dotted #dac2f0;
+	background-repeat:no-repeat;
+	background-size:80px 80px;
+	background-position:center top;
 }
 
 #orderlist_red{
-	color:red;
+	color:#ea435d;
+	font-weight:bold;
 }
 
 .orderlist_tr >td{

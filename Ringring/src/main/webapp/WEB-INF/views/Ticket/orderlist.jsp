@@ -7,8 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../../resources/css/ticket.css">
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="/resources/js/randomImg.js"></script>
 <title>DreamLand🦄</title>
 
 </head>
@@ -26,14 +24,18 @@
 		
 		<div id="orderlist_div">
 		<c:forEach items="${orderlist}" var="orderlist">
-			
+		<c:set var="random" value="${orderlist.t_a_cnt+orderlist.t_j_cnt+orderlist.t_c_cnt%6}"/>	
 		<c:if test="${i%j == 0 }">
 			<div class="orderlist_tableDiv">	
 		</c:if>
-			<table id="orderlist_table">
+			
+			<table class="orderlist_table" background="../resources/img/randomImg/animal_${random%6+1}.png">		
 				<tr>
 					<td id="orderlist_red">${orderlist.t_date}</td>
-					<td>${orderlist.t_day}</td>
+					<td>
+						
+						${orderlist.t_day}
+					</td>
 					<td>${orderlist.t_time}</td>
 				</tr>
 				<tr class="orderlist_tr">
