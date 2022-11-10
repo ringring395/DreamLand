@@ -129,10 +129,10 @@
 #sale_imgText{
 	position:absolute;
 	top:5%;
-	left:40%;
+	left:25%;
 	transform:translate(-50%, -50%);
 	color: #fff;
-	font:20px bold;
+	font:25px bold;
 }
 
 #sale_imgDiscount{
@@ -146,7 +146,7 @@
 
 #sale_title{
 	width:300px;
-	height:150px;
+	height:200px;
 	margin:20px;
 	padding:5px;
 	border-bottom:2px solid #dac2f0;

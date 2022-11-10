@@ -23,7 +23,7 @@
 		<div id="faq">
 		
 			<div id="faq_sub">
-				<div id="faq_category">
+<!-- 				<div id="faq_category">
 					<select>
 						<option value="none">==카테고리==</option>
 						<option>행사</option>
@@ -32,7 +32,7 @@
 						<option>등등</option>					
 					</select>
 				</div>
-				
+ -->				
 				<form id="searchBtn" action="/faq">
 				<div id="faq_search">
 					<input type="text" name="keyword" placeholder="제목+내용 검색">
