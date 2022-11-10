@@ -20,7 +20,8 @@
 
 #f_logo{
 	text-align:right;
-	background-color:#c9cacb;	
+	background-color:#c9cacb;
+	cursor:pointer;	
 }
 
 #f_logo_img{
