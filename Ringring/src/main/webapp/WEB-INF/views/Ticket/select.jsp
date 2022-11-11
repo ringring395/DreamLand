@@ -92,7 +92,7 @@
 				<c:forEach items="${nowsale}" var="nowsale">									
 					<c:choose>				
 						<c:when test="${nowsale !=null}">
-							<table>
+							<table class="discountBox_table">
 								<tr>
 									<td class="discountBox_td1" rowspan="2"><input type="hidden" id="e_no" value="${nowsale.e_no}">
 									<input type="radio" name="e_discount" value="${nowsale.e_discount}"></td>

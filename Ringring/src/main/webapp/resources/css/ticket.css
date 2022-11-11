@@ -98,6 +98,12 @@ a{
 	border-bottom:2px solid #f8e00e;
 }
 
+.discountBox_table{
+	margin:10px auto;
+	padding:0 20px 0 0;
+	border-top:2px dotted #dac2f0;
+}
+
 .discountBox_td1{
 	width:50px;
 }
