@@ -20,12 +20,12 @@
 #h_logo{
 	width:100%;
 	text-align:left;
-	margin:10px 20px;
 	cursor:pointer;
 }
 
 #h_logo_img{
-	width:40%;
+	height:50px;
+	margin: 5px;
 }
 
 #login_no, 

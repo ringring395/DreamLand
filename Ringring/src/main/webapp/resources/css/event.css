@@ -56,7 +56,6 @@
 
 #event_imgDiv{
 	height:300px;
-	position: relative;
 }
 
 .event_img{
@@ -65,15 +64,6 @@
 	margin:10px;
 	padding:5px;
 	background-color:#dac2f0;	
-}
-
-#event_imgText{
-	position:absolute;
-	top:5%;
-	left:25%;
-	transform:translate(-50%, -50%);
-	color: #fff;
-	font:25px bold;
 }
 
 #event_info{
@@ -115,7 +105,6 @@
 
 #sale_imgDiv{
 	height:200px;
-	position: relative;
 }
 
 .sale_img{
@@ -126,23 +115,6 @@
 	background-color:#dac2f0;	
 }
 
-#sale_imgText{
-	position:absolute;
-	top:5%;
-	left:25%;
-	transform:translate(-50%, -50%);
-	color: #fff;
-	font:25px bold;
-}
-
-#sale_imgDiscount{
-	position:absolute;
-	top:60%;
-	left:60%;
-	transform:translate(-20%, -40%);
-	color: #fff;
-	font:50px bold;
-}
 
 #sale_title{
 	width:300px;

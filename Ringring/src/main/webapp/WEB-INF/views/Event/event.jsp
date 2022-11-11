@@ -27,8 +27,6 @@
 		<div id="event">
 			<div id="event_imgDiv">
 				<img class="event_img" src="/display?fileName=${event.fileName}">
-				<p id="event_imgText">${event.e_title}</p>
-
 			</div>
 			<div id="event_info">
 				<input type="hidden" name="e_no" value="${event.e_no }">

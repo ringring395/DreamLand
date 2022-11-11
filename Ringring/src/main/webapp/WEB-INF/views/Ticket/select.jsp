@@ -78,7 +78,7 @@
 						</div>
 					</div>
 													
-					<div>
+					<div id="totalPrice_Div">
 						<p>합계 <span id="totalPrice"></span>원</p>
 					</div>
 				</div><!-- optBox -->

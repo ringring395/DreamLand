@@ -37,8 +37,6 @@
 					<td>
 						<div id="sale_imgDiv">
 							<img class="sale_img" src="/display?fileName=${sale.fileName}">
-							<p id="sale_imgText">${sale.e_title}</p>
-							<p id="sale_imgDiscount">${sale.e_discount} %</p>
 						</div>
 						<div id="sale_title">
 							<div>${sale.e_title }<br>

@@ -66,11 +66,17 @@ a{
 .select_age {
 	display:flex;
 	justify-content:space-between;
+	padding:0 5px 10px;
 	align-items:baseline;
+	border-bottom:2px solid #f8e00e;
 }
 
 .select_cnt >input{
 	width:50px;
+}
+
+#totalPrice_Div{
+	text-align:right;
 }
 
 #discountBtn{
@@ -89,7 +95,7 @@ a{
 	width:auto;
 	margin:0 auto;
 	padding:10px;
-	border-bottom:3px solid #f8e00e;
+	border-bottom:2px solid #f8e00e;
 }
 
 .discountBox_td1{
