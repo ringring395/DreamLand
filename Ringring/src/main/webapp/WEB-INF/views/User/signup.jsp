@@ -52,7 +52,7 @@
 					<input type="submit" value="회원가입" id="signupBtn">
 				</div>
 			</form>
-			<div id="signup_another">
+			<div id="signup_another" style="display:none;">
 				<div id="signup_naver">네이버<br>간편가입</div>
 				<div id="signup_kakao">카카오<br>간편가입</div>
 			</div>

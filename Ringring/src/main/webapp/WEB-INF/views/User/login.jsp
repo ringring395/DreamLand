@@ -43,7 +43,7 @@
 			</a>	
 		</div>
 		
-		<div id="loginapi">
+		<div id="loginapi" style="display:none;">
 			<div id="login_naver">
 				<button>네이버<br>로그인</button>
 			</div>
