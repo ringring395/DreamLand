@@ -51,8 +51,7 @@ $(document).ready(function() {
 		
 			<table id="a_helplist_table">
 				<tr>
-					<th>No.</th>
-					<th>제목</th>
+					<th>No.</th><th>제목</th>
 					<th>작성자<br>문의일</th>
 					<th>답변여부</th>									
 				</tr>
@@ -77,6 +76,7 @@ $(document).ready(function() {
 					<c:choose>
 						<c:when test="${ahelplist.h_answer eq '0'}">						
 							<td colspan="4" class="h_title">${ahelplist.h_content}
+							<hr>
 							<form action="">
 								<div class="table_answer">
 									<input type="hidden" name="h_no" value="${ahelplist.h_no}">
@@ -84,6 +84,7 @@ $(document).ready(function() {
 									<input type="submit" value="답변 등록">
 								</div>	
 							</form>	
+							<hr>
 							</td>						
 						</c:when>
 						<c:otherwise>
@@ -93,6 +94,7 @@ $(document).ready(function() {
 									<div>${ahelplist.h_an_content}</div>
 									<div>답변일 :${ahelplist.h_an_date}</div>
 								</div>
+								<hr>
 							</td>														 						
 						</c:otherwise>
 					</c:choose>				

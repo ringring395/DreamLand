@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/resources/css/admin.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<title>관리자용 메인=예매상황 확인</title>
+<title>DreamLand🦄_관리자</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
 <body>
@@ -18,7 +18,7 @@
 		<jsp:include page="admin_menu.jsp"></jsp:include>
 		<div id="a_main">
 			<div id="a_pagetitle">
-				<span>페이지제목</span>
+				<span>예매현황</span>
 			</div>
 					
 			<div id="a_ticket">

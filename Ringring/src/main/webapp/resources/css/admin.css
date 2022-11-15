@@ -40,7 +40,6 @@ a{
 /* 관리자 페이지 메뉴 오른쪽 내용 */
 #a_main{
 	width:740px;
-	background-color:#c9cacb;	
 }
 
 #a_pagetitle{
@@ -81,6 +80,16 @@ a{
 	text-align:center;
 	padding:10px;
 	font-size:20px;
+	background-color:#fbef86;
+}
+
+.this_month{
+	cursor:pointer;
+}
+
+.cal_img{
+	width:20px;
+	margin:0 20px;
 }
 
 .calendar_body{
@@ -91,11 +100,22 @@ a{
 	background-color:#939597;
 }
 
-
 #calendar_tr2{
 	background-color:#c9cacb;
 	text-align:right;
 	font-size:12px;
+}
+
+.date{
+	background-color:#fbef86;
+}
+
+.sat{
+	background-color:#288cff82;
+}
+
+.sun{
+	background-color:#ea435d82;
 }
 
 #adminCal_info{
@@ -113,13 +133,13 @@ a{
 	font-size:13px;
 }
 
-.cal_img{
-	width:20px;
-	margin:0 20px;
-}
 
 
 /* admin_event 행사/할인/퍼레이드 등록*/
+
+#a_event_upload{
+	background-color:#c9cacb;
+}
 
 input[name="e_title"],
 input[name="e_summary"]{
@@ -193,7 +213,6 @@ input[name="b_title"]{
 	width:700px;
 	margin:10px auto;
 	padding:10px;
-	background-color:#fff;
 }
 
 .a_helplist_table_td{
@@ -203,6 +222,10 @@ input[name="b_title"]{
 	border-bottom:2px solid #f8e00e;
 }
 
+.h_title{
+	padding:0 0 0 40px;
+}
+
 
 /* admin_user 회원목록*/
 
@@ -210,12 +233,11 @@ input[name="b_title"]{
 	width:700px;
 	margin:10px auto;
 	padding:10px;
-	background-color:#fff;
 }
 
 .a_user_table_td{
 	margin:10px;
-	padding:10px;
+	padding:20px 0;
 	text-align:center;
 	border-bottom:1px solid #f8e00e;
 }

@@ -15,7 +15,7 @@
 		<div id="h_size">
 			<div id="h_header">
 				<div id="h_logo" onclick="location.href='../'">
-					<img id="h_logo_img" alt="header_logo" src="../resources/img/aaa.png">
+					<img id="h_logo_img" alt="header_logo" src="../resources/img/logo.png">
 				</div>
 
 	<c:choose>

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,11 +25,12 @@
 					<th>가입일</th><th>관리자</th>
 				</tr>
 		<c:forEach items="${user}" var="user">
+			<c:set var="phone" value="${user.phone}" />
 				<tr>
 					<td class="a_user_table_td">${user.rownum}</td>
 					<td class="a_user_table_td">${user.id}</td>
 					<td class="a_user_table_td">${user.name}</td>
-					<td class="a_user_table_td">0${user.phone}</td>
+					<td class="a_user_table_td">0${fn:substring(phone,0,2)}-${fn:substring(phone,2,6)}-${fn:substring(phone,6,10)}</td>
 					<td class="a_user_table_td">${user.signup}</td>
 					<c:choose>
 						<c:when test="${user.grp eq '0'}">
