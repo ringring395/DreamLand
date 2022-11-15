@@ -12,6 +12,7 @@
 <script src="/resources/js/summernote-lite.min.js"></script>
 <!-- include summernote-ko-KR -->
 <script src="/resources/js/summernote-ko-KR.js"></script>
+<script src="/resources/js/admin.js"></script>
 
 <title>DreamLand🦄_관리자</title>
 
@@ -43,6 +44,7 @@ $(document).ready(function() {
 		<div id="a_main">
 			<div id="a_pagetitle">
 				<span>고객센터 > 공지사항 / 자주하는질문 등록</span>
+				<input type="hidden" class="submenu_where" value="board">
 			</div>
 
 			<form id="form" action="/admin_board" method="post">			

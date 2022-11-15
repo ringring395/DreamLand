@@ -47,6 +47,7 @@ $(document).ready(function() {
 		<div id="a_main">
 			<div id="a_pagetitle">
 				<span>고객센터 > 1:1문의 / 답변등록</span>
+				<input type="hidden" class="submenu_where" value="helplist">
 			</div>
 		
 			<table id="a_helplist_table">

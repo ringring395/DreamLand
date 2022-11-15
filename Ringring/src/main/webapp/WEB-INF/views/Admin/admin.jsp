@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="/resources/css/admin.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<script type="text/javascript" src="/resources/js/admin.js"></script>
 <title>DreamLand🦄_관리자</title>
 </head>
 <jsp:include page="../Header/header.jsp"></jsp:include>
@@ -19,6 +19,7 @@
 		<div id="a_main">
 			<div id="a_pagetitle">
 				<span>예매현황</span>
+				<input type="hidden" class="submenu_where" value="admin"> 
 			</div>
 					
 			<div id="a_ticket">
