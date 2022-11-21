@@ -26,7 +26,8 @@
 		
 		<div id="event">
 			<div id="event_imgDiv">
-				<img class="event_img" src="/display?fileName=${event.fileName}">
+				<img class="event_img" src="../../../resources/img/upload/${event.fileName}">
+				<img style="display:none" src="/display?fileName=${event.fileName}">
 			</div>
 			<div id="event_info">
 				<input type="hidden" name="e_no" value="${event.e_no }">

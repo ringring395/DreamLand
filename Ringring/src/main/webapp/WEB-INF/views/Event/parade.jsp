@@ -26,7 +26,8 @@
 		<c:forEach items="${parade}" var="parade">	
 		<div id="parade">
 			<div id="parade_imgDiv">
-				<img class="parade_img" src="/display?fileName=${parade.fileName}">
+				<img class="parade_img" src="../../../resources/img/upload/${parade.fileName}">
+				<img style="display:none" src="/display?fileName=${parade.fileName}">			
 			</div>
 			<div id="parade_info">
 				<div id="parade_title">${parade.e_title }</div>

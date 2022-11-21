@@ -36,7 +36,8 @@
 			</c:if>
 					<td>
 						<div id="sale_imgDiv">
-							<img class="sale_img" src="/display?fileName=${sale.fileName}">
+							<img class="sale_img" src="../../../resources/img/upload/${sale.fileName}">
+							<img style="display:none" src="/display?fileName=${sale.fileName}">	
 						</div>
 						<div id="sale_title">
 							<div>${sale.e_title }<br>
