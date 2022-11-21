@@ -75,32 +75,38 @@
 			</div><!-- h_header -->
 			<div id="navimenu">
 				<ul class="menu">
-					<li class="menu1"><a href="../map">둘러보기</a>
+					<li class="menu1"><a id="menu_a" href="../map">둘러보기</a>
 						<ul id="menu2_sub" class="menusub_none">
-							<li>&nbsp;</li>
-							<li>&nbsp;</li>
-							<li>&nbsp;</li>
+							<li class="sub_none_li">&nbsp;</li>
+							<li class="sub_none_li">&nbsp;</li>
+							<li class="sub_none_li">&nbsp;</li>
 						</ul>
 					</li>
-					<li class="menu2">이벤트
+					<li class="menu1">이벤트
 						<ul id="menu2_sub" class="menusub">
-							<li><a href="../event">행사 일정</a></li>
-							<li><a href="../sale">할인 혜택</a></li>
-							<li><a href="../parade">퍼레이드 일정</a></li>
+							<li class="sub_li">
+								<a id="menu_a" href="../event">행사 일정</a></li>
+							<li class="sub_li">
+								<a id="menu_a" href="../sale">할인 혜택</a></li>
+							<li class="sub_li">
+								<a id="menu_a" href="../parade">퍼레이드 일정</a></li>
 						</ul>
 					</li>
-					<li class="menu3"><a href="../here">오시는길</a>
+					<li class="menu1"><a id="menu_a" href="../here">오시는길</a>
 						<ul id="menu2_sub" class="menusub_none">
-							<li>&nbsp;</li>
-							<li>&nbsp;</li>
-							<li>&nbsp;</li>
+							<li class="sub_none_li">&nbsp;</li>
+							<li class="sub_none_li">&nbsp;</li>
+							<li class="sub_none_li">&nbsp;</li>
 						</ul>					
 					</li>
-					<li class="menu4">고객센터
+					<li class="menu1">고객센터
 						<ul id="menu4_sub" class="menusub">
-							<li><a href="../notice">공지사항</a></li>
-							<li><a href="../faq">자주하는 질문</a></li>
-							<li><a href="../help">1:1 문의</a></li>
+							<li class="sub_li">
+								<a id="menu_a" href="../notice">공지사항</a></li>
+							<li class="sub_li">
+								<a id="menu_a" href="../faq">자주하는 질문</a></li>
+							<li class="sub_li">
+								<a id="menu_a" href="../help">1:1 문의</a></li>
 						</ul>
 					</li>
 				</ul>

@@ -26,19 +26,15 @@
 			<div class="slider_main">
 				<div class="slider_main_img">
 					<img alt="mainBx1" src="../resources/img/event/christmas_1.jpg">
-					<p class="slider_main_text">크리스마스🎄🎄</p>
 				</div>
 				<div class="slider_main_img">
 					<img alt="mainBx2" src="../resources/img/event/fireworks_4.jpg">
-					<p class="slider_main_text">불꽃 축제✨✨</p>
 				</div>
 				<div class="slider_main_img">
 					<img alt="mainBx3" src="../resources/img/event/main_event_1.jpg">
-					<p class="slider_main_text">버블 매직쇼☁☁</p>
 				</div>
 				<div class="slider_main_img">
 					<img alt="mainBx4" src="../resources/img/event/main_event_3.jpg">
-					<p class="slider_main_text">Rainy Day☂☂</p>
 				</div>				
 			</div>
 
@@ -47,15 +43,12 @@
 					<div class="slider_sub">
 						<div class="slider_sub_img">
 							<img alt="subBX1" src="../resources/img/map/rides1_1.jpg">
-							<h3 class="slider_sub_text">대관람차</h3>
 						</div>
 						<div class="slider_sub_img">
-							<img alt="subBX2" src="../resources/img/map/rides2_1.jpg">
-							<h3 class="slider_sub_text">롤러코스터</h3>						
+							<img alt="subBX2" src="../resources/img/map/rides2_1.jpg">	
 						</div>
 						<div class="slider_sub_img">
 							<img alt="subBX3" src="../resources/img/map/rides3_3.jpg">
-							<h3 class="slider_sub_text">회전목마</h3>						
 						</div>
 					</div>				
 				</div>

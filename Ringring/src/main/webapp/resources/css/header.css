@@ -53,10 +53,11 @@
 	background-color:#f8e00e;
 }
 
-.menu > li{
+.menu1{
 	display:inline-block;
 	width:120px;
 	padding:5px;
+	margin:5px 0;
 	background-color:#f8e00e;
 	text-align:center;
 	font-weight:bold;
@@ -82,8 +83,8 @@
 	display:block;
 }
 
-.menusub > li,
-.menusub_none >li{
+.sub_none_li,
+.sub_li{
 	list-style:none;
 	display:inline-block;
 	width:120px;
@@ -93,7 +94,7 @@
 	font-weight:bold;	
 }
 
-.menusub > li:hover{
+.sub_li:hover{
 	background-color:#f8e00e;
 }
 
