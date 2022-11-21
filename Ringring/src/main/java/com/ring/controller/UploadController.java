@@ -67,7 +67,7 @@ public class UploadController {
 
 		UploadVO up = new UploadVO();
 
-		String uploadFolder = "/webapp/resources/img/";
+		String uploadFolder = "D:\\dreamland";
 
 		File uploadPath = new File(uploadFolder, getFolder());
 
@@ -172,7 +172,7 @@ public class UploadController {
 	public ResponseEntity<byte[]> getFile(String fileName){
 		System.out.println(fileName);
 		
-		File file = new File("/webapp/resources/img/"+fileName);
+		File file = new File("D:\\dreamland\\"+fileName);
 		
 		ResponseEntity<byte[]> result = null;
 		//herder가 content-type 파악할수 있다.
@@ -191,7 +191,7 @@ public class UploadController {
 	@RequestMapping(value = "/download", method = RequestMethod.GET)
 	public ResponseEntity<Resource> downloadFile(String fileName){
 		
-		Resource resource = new FileSystemResource("/webapp/resources/img/"+fileName);
+		Resource resource = new FileSystemResource("D:\\dreamland\\"+fileName);
 		
 		//다운로드 시 파일의 이름을 처리
 		String resourceName = resource.getFilename();
