@@ -172,7 +172,7 @@ public class UploadController {
 	public ResponseEntity<byte[]> getFile(String fileName){
 		System.out.println(fileName);
 		
-		File file = new File("../../../resources/img/upload/"+fileName);
+		File file = new File("D:\\dreamland\\"+fileName);
 		
 		ResponseEntity<byte[]> result = null;
 		//herder가 content-type 파악할수 있다.
