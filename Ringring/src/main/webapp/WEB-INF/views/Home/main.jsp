@@ -25,16 +25,16 @@
 		<div id="main">
 			<div class="slider_main">
 				<div class="slider_main_img">
-					<img alt="mainBx1" src="../resources/img/event/christmas_1.jpg">
+					<img alt="mainBx1" src="../resources/img/event/main_event_1.jpg">
 				</div>
 				<div class="slider_main_img">
 					<img alt="mainBx2" src="../resources/img/event/fireworks_4.jpg">
 				</div>
 				<div class="slider_main_img">
-					<img alt="mainBx3" src="../resources/img/event/main_event_1.jpg">
+					<img alt="mainBx3" src="../resources/img/event/main_event_3.jpg">
 				</div>
 				<div class="slider_main_img">
-					<img alt="mainBx4" src="../resources/img/event/main_event_3.jpg">
+					<img alt="mainBx4" src="../resources/img/event/christmas_1.jpg">
 				</div>				
 			</div>
 
