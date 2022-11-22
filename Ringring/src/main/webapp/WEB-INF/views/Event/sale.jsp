@@ -40,10 +40,14 @@
 							<img style="display:none" src="/display?fileName=${sale.fileName}">	
 						</div>
 						<div id="sale_title">
-							<div>${sale.e_title }<br>
-							기간 : ${sale.e_start} ~ ${sale.e_end}<br>
-							${sale.e_summary}</div>
-							<div class="event_more">상세보기</div>
+							<div>
+								<ul>
+									<li>${sale.e_title }</li>
+									<li>기간 : ${sale.e_start} ~ ${sale.e_end}</li>
+									<li>${sale.e_summary}</li>
+								</ul>
+							</div>
+							<div class="event_more">+ 상세보기</div>
 
 							<div id="sale_info">
 								할인율 : ${sale.e_discount}<br>

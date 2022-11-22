@@ -30,9 +30,11 @@
 				<img style="display:none" src="/display?fileName=${parade.fileName}">			
 			</div>
 			<div id="parade_info">
-				<div id="parade_title">${parade.e_title }</div>
-				<div id="parade_day">시작일 : ${parade.e_start } ~ 종료일 : ${parade.e_end }</div>
-				<div id="parade_point">${parade.e_summary }</div>
+				<ul>
+					<li><div id="parade_title">${parade.e_title }</div></li>
+					<li><div id="parade_day">시작일 : ${parade.e_start } ~ 종료일 : ${parade.e_end }</div></li>
+					<li><div id="parade_point">${parade.e_summary }</div></li>
+				</ul>
 				<div class="event_more">+더보기</div>
 				<div class="event_hide">${parade.e_contents }</div>
 			</div>			

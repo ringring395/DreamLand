@@ -31,9 +31,11 @@
 			</div>
 			<div id="event_info">
 				<input type="hidden" name="e_no" value="${event.e_no }">
-				<div id="event_title">${event.e_title}</div>
-				<div id="event_day">시작일 : ${event.e_start}	~ 종료일 : ${event.e_end}</div>
-				<div id="event_point">${event.e_summary}</div>
+				<ul>
+					<li><div id="event_title">${event.e_title}</div></li>
+					<li><div id="event_day">시작일 : ${event.e_start}	~ 종료일 : ${event.e_end}</div></li>
+					<li><div id="event_point">${event.e_summary}</div></li>
+				</ul>
 				<div class="event_more">+ 더보기</div>
 				<div class="event_hide">${event.e_contents}</div>	
 
