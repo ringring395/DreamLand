@@ -21,7 +21,7 @@
 }
 
 #sortDiv{
-	margin:10px;
+	margin:10px 110px;
 	text-align:end;
 }
 
@@ -51,18 +51,18 @@
 
 #event{
 	display:flex;
-	justify-content:left;
+	justify-content:center;
 }
 
 #event_imgDiv{
-	height:300px;
+	height:200px;
 }
 
 .event_img{
-	width:300px;
+	width:120px;
 	height:150px;
 	margin:10px;
-	padding:5px;
+	padding:2px;
 	background-color:#dac2f0;	
 }
 
@@ -85,7 +85,7 @@
 	width:300px;
 	height:150px;
 	margin:10px;
-	padding:5px;
+	padding:2px;
 	background-color:#dac2f0;	
 }
 
@@ -111,16 +111,15 @@
 	width:300px;
 	height:200px;
 	margin:10px;
-	padding:5px;
-	background-color:#dac2f0;	
+	padding:2px;
 }
 
 
 #sale_title{
 	width:300px;
 	height:200px;
-	margin:20px;
-	padding:5px;
+	margin:20px 10px;
+	padding:20px 0;
 	border-bottom:2px solid #dac2f0;
 }
 
