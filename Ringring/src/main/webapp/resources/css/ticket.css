@@ -224,19 +224,40 @@ a{
 }
 
 /* ticket 티켓*/
+.captureDiv{
+	background-image:url(../img/loopy09.jpg);
+	background-size:contain;
+	width:700px;
+	height:400px;
+}
+
 #ticket_img{
 	width:700px;
 	margin:10px auto;
 	padding:20px;
-	background-color:orange;		
 }
 
 #ticket_table{
-	width:600px;
-	height:500px;
+	width:500px;
+	height:450px;
 	margin:10px auto;
-	background-color:#fff;
+	padding:80px 50px;
 	text-align:center;
+}
+
+.ticket_td1{
+	background-color:#c9cacb;
+	opacity:0.8;
+	border-radius:15px;
+	height:20px;
+}
+
+.ticket_td2{
+	border-radius:15px;
+	font-weight:bold;
+	font-size:large;
+	height:20px;
+	color:#fff;
 }
 
 #ticket_info{

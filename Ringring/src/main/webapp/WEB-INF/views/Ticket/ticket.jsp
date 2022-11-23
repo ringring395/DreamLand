@@ -25,27 +25,27 @@
 			<div class="captureDiv">
 				<table id="ticket_table">
 					<tr>
-						<td>입장일</td>
-						<td>${ticket.t_date}</td>
-						<td>${ticket.t_day}</td>
+						<td class="ticket_td1">입장일</td>
+						<td class="ticket_td2">${ticket.t_date}</td>
+						<td class="ticket_td2">${ticket.t_day}</td>
 					</tr>
 					<tr>
-						<td>입장시간</td>
-						<td colspan="2">${ticket.t_time}</td>
+						<td class="ticket_td1">입장시간</td>
+						<td colspan="2" class="ticket_td2">${ticket.t_time}</td>
 					</tr>
 					<tr>
-						<td>성인</td>
-						<td>청소년</td>
-						<td>어린이</td>
+						<td class="ticket_td1">성인</td>
+						<td class="ticket_td1">청소년</td>
+						<td class="ticket_td1">어린이</td>
 					</tr>
 					<tr>
-						<td>${ticket.t_a_cnt} 명</td>
-						<td>${ticket.t_j_cnt} 명</td>
-						<td>${ticket.t_c_cnt} 명</td>
+						<td class="ticket_td2">${ticket.t_a_cnt} 명</td>
+						<td class="ticket_td2">${ticket.t_j_cnt} 명</td>
+						<td class="ticket_td2">${ticket.t_c_cnt} 명</td>
 					</tr>
 					<tr>
-						<td colspan="2">결제 금액</td>
-						<td>
+						<td colspan="2" class="ticket_td1">결제 금액</td>
+						<td class="ticket_td2">
 							<fmt:formatNumber value="${ticket.t_final}" pattern="#,###" /> 원
 						</td>
 					</tr>										
