@@ -5,4 +5,4 @@
 - 가족, 친구, 연인들과 소증한 시간을 즐겁게 보낼 수 있는 놀이공원 사이트를 제작했다.
 
 ## ERD
-![image]
+![dreamland_ERD](https://user-images.githubusercontent.com/107524209/203702021-06a0a07e-b6f9-490d-8316-f52db7888334.png)
