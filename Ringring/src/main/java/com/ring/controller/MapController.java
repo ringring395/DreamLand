@@ -13,11 +13,5 @@ public class MapController {
 	public String map() {
 		return "/Map/map";
 	}
-	
-	//놀이기구1
-	@GetMapping("/rides1")
-	public String rides1() {
-		
-		return "/Map/rides1";
-	}
+
 }
