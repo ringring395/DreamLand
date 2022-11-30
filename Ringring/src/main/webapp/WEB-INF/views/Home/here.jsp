@@ -17,11 +17,16 @@
 		</div>
 		
 		<div id="here">
+<!-- 카카오 API -->		
 			<div id="here_map"></div>
 <script>
+	//지도를 담을 공간
 	var container = document.getElementById('here_map');
+	//기본 옵션
 	var options = {
+		//위치(위도,경도)
 		center: new kakao.maps.LatLng(33.450701, 126.570667),
+		//지도 레벨(확대 정도)
 		level: 5
 	};
 
@@ -50,7 +55,8 @@
 						<th>지하철</th>
 						<td class="here_txt">9호선 드림랜드역 7번 출구에서 직진방향 도보 3분거리</td>
 					</tr>
-					<tr id="here_link" onclick="location.href='https://map.kakao.com/link/to/테스트,33.450701,126.570667'">
+<!-- 카카오 API : 길찾기 바로가기 -->					
+					<tr id="here_link" onclick="location.href='https://map.kakao.com/link/to/DreamLand,33.450701,126.570667'">
 						<td><img class="here_img" src="../resources/img/icon/navi.png"></td>
 						<td colspan="2">길찾기 바로가기</td>
 					</tr>
