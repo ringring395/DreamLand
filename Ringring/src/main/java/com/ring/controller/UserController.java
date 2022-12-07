@@ -82,6 +82,46 @@ public class UserController {
 	public String userfind() {
 		return "/User/userfind";
 	}
+
+	//아이디찾기 상세
+	@RequestMapping(value="/userfind_id", method=RequestMethod.POST)
+	public String userfind_id(String findid_name, int findid_totalphone, 
+			UserVO user, Model model){
+		String name = findid_name;
+		int phone = findid_totalphone;
+		user.setName(name);
+		user.setPhone(phone);
+		UserVO findid = us.userfind_id(user);
+
+        if( findid == null) {
+        	model.addAttribute("check", 1);
+        }else {
+        	model.addAttribute("check", 0);
+        	model.addAttribute("findid", findid);
+        }
+       return "User/userfind";
+	}
+		
+	//비번찾기 상세
+	@RequestMapping(value="/userfind_pw", method=RequestMethod.POST)
+	public String userfind_pw(String findpw_id, String findpw_name, int findpw_totalphone,
+			UserVO user, Model model) {
+		String id = findpw_id;
+		String name = findpw_name;
+		int phone = findpw_totalphone;
+		user.setId(id);
+		user.setName(name);
+		user.setPhone(phone);
+		UserVO findpw = us.userfind_pw(user);
+		
+		if(findpw == null) {
+			model.addAttribute("check2", 1);
+		}else {
+			model.addAttribute("check2", 0);
+			model.addAttribute("findpw", findpw);
+		}
+		return "/User/userfind";
+	}	
 	
 	//마이페이지
 	@RequestMapping(value = "/mypage", method = RequestMethod.GET)

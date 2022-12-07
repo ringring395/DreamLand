@@ -35,6 +35,16 @@ public class UserServiceImpl implements UserService{
 		return result;
 	}
 	
+	//아이디 찾기
+	public UserVO userfind_id(UserVO user) {
+		return um.userfind_id(user);
+	}
+	
+	//비번찾기
+	public UserVO userfind_pw(UserVO user) {
+		return um.userfind_pw(user);
+	}
+	
 	//회원상세보기
 	public UserVO userdetail(UserVO user) {
 		return um.userdetail(user);

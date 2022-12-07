@@ -24,6 +24,18 @@
 		where id = #{id} and pw = #{pw}
 	</select>
 	
+<!-- id찾기 -->	
+	<select id="userfind_id" resultType="com.ring.model.UserVO">
+		select id from user
+		where name=#{name} and phone=#{phone}
+	</select>
+	
+<!-- 비번 찾기 -->	
+	<select id="userfind_pw" resultType="com.ring.model.UserVO">
+		select pw from user
+		where id=#{id} and name=#{name} and phone=#{phone} 
+	</select>
+	
 <!-- 회원 상세보기 -->	
 	<select id="userdetail" resultType="com.ring.model.UserVO">
 		select * from user where id=#{id}

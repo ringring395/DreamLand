@@ -15,6 +15,12 @@ public interface UserService {
 	//로그인
 	public boolean login(UserVO user, HttpSession session);
 	
+	//아이디찾기
+	public UserVO userfind_id(UserVO user);
+	
+	//비번 찾기
+	public UserVO userfind_pw(UserVO user);
+	
 	//회원 상세보기
 	public UserVO userdetail(UserVO user);
 	

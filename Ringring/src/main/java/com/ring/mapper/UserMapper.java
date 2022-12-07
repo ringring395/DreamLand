@@ -13,6 +13,12 @@ public interface UserMapper {
 	//로그인
 	public UserVO login(UserVO user);
 	
+	//아이디찾기
+	public UserVO userfind_id(UserVO user);
+	
+	//비번찾기
+	public UserVO userfind_pw(UserVO user);
+	
 	//회원 상세보기
 	public UserVO userdetail(UserVO user);
 	

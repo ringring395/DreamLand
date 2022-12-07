@@ -16,5 +16,8 @@ public class UserVO {
 	private String signup;	//가입일
 	private int rownum;		//순번
 	private int grp;		//권한확인
+	
+	//아이디 찾기
+	private String findid_name;
 		
 }
