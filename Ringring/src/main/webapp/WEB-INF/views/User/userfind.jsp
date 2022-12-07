@@ -44,8 +44,7 @@
 					<c:choose>
 						<c:when test="${check == 1}">
 							<p>이름 혹은 전화번호를 다시 확인해주세요.</p>
-						</c:when>
-						
+						</c:when>				
 						<c:when test="${check == 0}">
 							<p>찾으시는 아이디는 ${findid.id}입니다.</p>
 						</c:when>	
