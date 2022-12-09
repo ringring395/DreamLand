@@ -60,9 +60,7 @@
 				</tr>
 				<tr>
 					<th>기간</th>
-					<td><input type="date" name="e_start">~
-						<input type="date" name="e_end">
-					</td>
+					<td><input type="date" name="e_start">~<input type="date" name="e_end"></td>
 				</tr>
 				<tr>
 					<th>한줄설명</th>
@@ -70,15 +68,13 @@
 				</tr>
 				<tr>
 					<th>설명</th>
-					<td><textarea rows="15" cols="90" name="e_contents" ></textarea>
-					</td>
+					<td><textarea rows="15" cols="90" name="e_contents" ></textarea></td>
 				</tr>
  				<tr>
 					<th>메인사진</th>
 					<td><input type="file" name="imgMain" id="main">
 						<div id="imgMainResult">
-							<ul>								
-							</ul>	
+							<ul></ul>	
 						</div>					
 					</td>
 				</tr>
@@ -87,8 +83,7 @@
 					<th>서브사진</th>
 					<td><input type="file" name="imgSub" id="sub" multiple>
 						<div id="imgSubResult">
-							<ul>								
-							</ul>	
+							<ul></ul>	
 						</div>
 					</td>
 				</tr>

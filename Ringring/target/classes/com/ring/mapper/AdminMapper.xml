@@ -7,19 +7,19 @@
 <mapper namespace="com.ring.mapper.AdminMapper">
 
 <!-- 관리자: 이벤트 등록 -->
-		<insert id="event">
+	<insert id="event">
 		<selectKey keyProperty="e_no" order="BEFORE" resultType="int">
 			select ifnull(max(e_no),0)+1 e_no from event
 		</selectKey>
 		insert into event(e_type, e_title, e_start, e_end, e_summary, e_contents, e_discount) 
 		values (#{e_type}, #{e_title}, #{e_start}, #{e_end}, #{e_summary}, #{e_contents}, #{e_discount})			
-		</insert>
+	</insert>
 		
 <!-- 관리자: 고객센터 글 등록 -->
-		<insert id="board">
+	<insert id="board">
 		insert into board(b_type, b_title, b_content) 
 		values (#{b_type}, #{b_title}, #{b_content})			
-		</insert>
+	</insert>
 
 <!-- 1:1 목록 출력 -->
 	<select id="ahelplist" resultType="com.ring.model.BoardVO">

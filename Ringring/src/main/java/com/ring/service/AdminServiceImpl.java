@@ -34,12 +34,6 @@ public class AdminServiceImpl implements AdminService{
 	}
 	
 	/* 첨부파일 */
-	//첨부파일 등록
-//	@Override
-//	public void uploadInsert(UploadVO up) {
-//		// TODO Auto-generated method stub		
-//	}
-	
 	//첨부파일 조회
 	public ArrayList<UploadVO> uploadList(int e_no){
 		return upm.uploadList(e_no);
