@@ -8,16 +8,6 @@ import lombok.ToString;
 @Setter
 @ToString
 public class BoardVO {
-//exam DB	
-	//MySQL의 board테이블	
-	private int bno;			//게시판번호 bno
-	private String title;		//제목 title	
-	private String content;		//내용 content	
-	private String regdate;		//작성일자 regdate	
-	private int count;			//조회수 count
-	private String id;			//id
-	private int lcnt;			//좋아요 갯수
-			
 //dreamland DB	
 	//board
 	private int b_no;		//고객센터 내 글 번호
