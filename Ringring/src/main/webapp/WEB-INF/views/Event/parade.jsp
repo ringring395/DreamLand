@@ -23,7 +23,7 @@
 			<a href="/parade?sort=all" class="sortBtn">전체 퍼레이드 보기</a>		
 		</div>
 		
-		<c:forEach items="${parade}" var="parade">	
+	<c:forEach items="${parade}" var="parade">	
 		<div id="parade">
 			<div id="parade_imgDiv">
 				<img class="parade_img" src="../../../resources/img/upload/${parade.fileName}">
@@ -39,7 +39,7 @@
 				<div class="event_hide">${parade.e_contents }</div>
 			</div>			
 		</div><!-- parade -->
-		</c:forEach>
+	</c:forEach>
 
 			<div id="paging">	
 				<div>	

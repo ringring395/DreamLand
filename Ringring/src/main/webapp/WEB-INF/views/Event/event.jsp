@@ -38,30 +38,28 @@
 				</ul>
 				<div class="event_more">+ 더보기</div>
 				<div class="event_hide">${event.e_contents}</div>	
-
 			</div>								
 		</div><!-- event -->
 	</c:forEach>
-	
-	
+		
 		<div id="paging">	
-				<div>	
+			<div>	
 <!-- 이전버튼 -->
-					<c:if test="${paging.prev }">
-						<a href="/event?pageNum=${paging.startPage-1}&amount=${paging.cri.amount}">이전</a>
-					</c:if>
+				<c:if test="${paging.prev }">
+					<a href="/event?pageNum=${paging.startPage-1}&amount=${paging.cri.amount}">이전</a>
+				</c:if>
 
 <!-- 페이징 처리 -->		
-					<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="num">
-						<a href="/event?pageNum=${num}&amount=${paging.cri.amount}">${num }</a>
-					</c:forEach>
+				<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="num">
+					<a href="/event?pageNum=${num}&amount=${paging.cri.amount}">${num }</a>
+				</c:forEach>
 
 <!-- 다음버튼 -->			
-					<c:if test="${paging.next}">
-						<a href="/event?pageNum=${paging.startPage+1}&amount=${paging.cri.amount}">다음</a>
-					</c:if>					
-				</div>		
-			</div><!-- paging -->
+				<c:if test="${paging.next}">
+					<a href="/event?pageNum=${paging.startPage+1}&amount=${paging.cri.amount}">다음</a>
+				</c:if>					
+			</div>		
+		</div><!-- paging -->
 		
 		
 	</div>

@@ -13,15 +13,6 @@ $(document).ready(function (){
 		}else{
 			contents.slideDown();
 		}		
-	})
-	
-	
-	
-/*
- * sale 페이지
-*/	
-
-	
-	
+	})	
 	
 })//docu닫음
