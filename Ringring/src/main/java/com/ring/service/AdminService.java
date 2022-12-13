@@ -23,8 +23,7 @@ public interface AdminService {
 	//첨부파일 조회 설계
 	public ArrayList<UploadVO> uploadList(int e_no);
 
-	
-	
+		
 	//고객센터 글 등록
 	public void board(BoardVO board);
 	

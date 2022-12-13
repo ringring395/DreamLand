@@ -39,7 +39,6 @@ public class AdminServiceImpl implements AdminService{
 		return upm.uploadList(e_no);
 	}
 
-
 	
 	//관리자: 고객센터 글 등록
 	public void board(BoardVO board) {

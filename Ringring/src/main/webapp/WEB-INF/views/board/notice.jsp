@@ -42,8 +42,7 @@
 				</tr>
 			</c:forEach>					
 			</table>
-			
-			
+						
 			<form id="searchBtn" action="/notice">
 			<div id="notice_search">
 				<input type="text" name="keyword" placeholder="제목+내용 검색">
@@ -59,25 +58,23 @@
 		</div><!-- notice -->
 		
 		<div id="paging">	
-				<div>	
+			<div>	
 <!-- 이전버튼 -->
-					<c:if test="${paging.prev }">
-						<a href="/notice?keyword=${paging.cri.keyword}&pageNum=${paging.startPage-1}&amount=${paging.cri.amount}">이전</a>
-					</c:if>
+				<c:if test="${paging.prev }">
+					<a href="/notice?keyword=${paging.cri.keyword}&pageNum=${paging.startPage-1}&amount=${paging.cri.amount}">이전</a>
+				</c:if>
 
 <!-- 페이징 처리 -->		
-					<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="num">
-						<a href="/notice?keyword=${paging.cri.keyword}&pageNum=${num}&amount=${paging.cri.amount}">${num }</a>
-					</c:forEach>
+				<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="num">
+					<a href="/notice?keyword=${paging.cri.keyword}&pageNum=${num}&amount=${paging.cri.amount}">${num }</a>
+				</c:forEach>
 
 <!-- 다음버튼 -->			
-					<c:if test="${paging.next}">
-						<a href="/notice?keyword=${paging.cri.keyword}&pageNum=${paging.startPage+1}&amount=${paging.cri.amount}">다음</a>
-					</c:if>					
-				</div>		
-			</div><!-- paging -->		
-		
-		
+				<c:if test="${paging.next}">
+					<a href="/notice?keyword=${paging.cri.keyword}&pageNum=${paging.startPage+1}&amount=${paging.cri.amount}">다음</a>
+				</c:if>					
+			</div>		
+		</div><!-- paging -->		
 		
 	</div>
 </body>
