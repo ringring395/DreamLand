@@ -35,7 +35,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/01-STUDY/eclipse/lombok.jar"/>
-	<classpathentry kind="lib" path="C:/Users/GR/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse-jee-photon-R-win32-x86_64/eclipse/lombok.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
